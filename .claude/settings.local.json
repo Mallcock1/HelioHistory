@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --use-npm --no-turbopack)",
+      "Bash(npx create-next-app@latest:*)",
+      "Bash(cp 'C:/Users/matth/Documents/Matt work/heliohistory-temp/__TRACKED_VAR__' 'C:/Users/matth/Documents/Matt work/HelioHistory/')",
+      "Bash(cp -r 'C:/Users/matth/Documents/Matt work/heliohistory-temp/src' 'C:/Users/matth/Documents/Matt work/HelioHistory/')",
+      "Bash(cp -r 'C:/Users/matth/Documents/Matt work/heliohistory-temp/public' 'C:/Users/matth/Documents/Matt work/HelioHistory/')",
+      "Bash(cp \"C:/Users/matth/Documents/Matt work/heliohistory-temp/package.json\" \"C:/Users/matth/Documents/Matt work/HelioHistory/\")",
+      "Bash(cp \"C:/Users/matth/Documents/Matt work/heliohistory-temp/package-lock.json\" \"C:/Users/matth/Documents/Matt work/HelioHistory/\")",
+      "Bash(cp \"C:/Users/matth/Documents/Matt work/heliohistory-temp/tsconfig.json\" \"C:/Users/matth/Documents/Matt work/HelioHistory/\")",
+      "Bash(cp \"C:/Users/matth/Documents/Matt work/heliohistory-temp/postcss.config.mjs\" \"C:/Users/matth/Documents/Matt work/HelioHistory/\")",
+      "Bash(cp \"C:/Users/matth/Documents/Matt work/heliohistory-temp/eslint.config.mjs\" \"C:/Users/matth/Documents/Matt work/HelioHistory/\")",
+      "Read(//c/Users/matth/Documents/Matt work/**)",
+      "Bash(npm install:*)",
+      "Bash(npx shadcn@latest init -d)"
+    ]
+  }
+}
