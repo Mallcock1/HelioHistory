@@ -13,7 +13,28 @@
       "Bash(cp \"C:/Users/matth/Documents/Matt work/heliohistory-temp/eslint.config.mjs\" \"C:/Users/matth/Documents/Matt work/HelioHistory/\")",
       "Read(//c/Users/matth/Documents/Matt work/**)",
       "Bash(npm install:*)",
-      "Bash(npx shadcn@latest init -d)"
+      "Bash(npx shadcn@latest init -d)",
+      "Bash(npx shadcn@latest add badge card dialog scroll-area separator sheet tabs tooltip -y)",
+      "Bash(npx tsc:*)",
+      "Bash(node -e ':*)",
+      "Bash(npx next:*)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(npm ls:*)",
+      "Bash(npm run:*)",
+      "WebFetch(domain:www.nmdb.eu)",
+      "WebFetch(domain:kp.gfz.de)",
+      "WebFetch(domain:wdc.kugi.kyoto-u.ac.jp)",
+      "WebFetch(domain:services.swpc.noaa.gov)",
+      "WebFetch(domain:spdf.gsfc.nasa.gov)",
+      "WebFetch(domain:isgi.unistra.fr)",
+      "WebFetch(domain:kp.gfz-potsdam.de)",
+      "WebFetch(domain:datapub.gfz-potsdam.de)",
+      "Bash(curl -s \"https://datapub.gfz-potsdam.de/download/10.5880.Kp.0001/Kp_definitive/Kp_def1957.wdc\")",
+      "Bash(node /tmp/parse_kp.js /tmp/kp2001.wdc 4 1-12)",
+      "Bash(node /tmp/parse_kp.js /tmp/kp2001.wdc 11 4-8)",
+      "Bash(node /tmp/parse_kp.js /tmp/kp2005.wdc 1 16-22)",
+      "Bash(node /tmp/parse_kp.js /tmp/kp2011.wdc 2 3-6)",
+      "Bash(node /tmp/parse_kp.js /tmp/kp2012.wdc 3 7-12)"
     ]
   }
 }
