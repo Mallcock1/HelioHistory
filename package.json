@@ -12,6 +12,7 @@
     "data:validate": "tsx scripts/validate-data.mts",
     "data:build": "tsx scripts/build-data.mts",
     "data:sunspots": "tsx scripts/build-sunspots.mts",
+    "data:pre1700": "tsx scripts/build-pre1700.mts",
     "data:sunspots:fetch": "tsx scripts/fetch-sunspots.mts",
     "data:sunspots:update": "tsx scripts/fetch-sunspots.mts && tsx scripts/build-sunspots.mts"
   },

@@ -24,8 +24,9 @@ import {
   VERTICAL_METRIC_LABELS,
   type VerticalMetric,
 } from "@/lib/timeline-utils";
-import { SUNSPOT_YEARLY } from "@/data/sunspots";
+import { SUNSPOT_YEARLY_ALL } from "@/data/sunspots";
 import { SUNSPOT_MONTHLY } from "@/data/sunspots-monthly";
+import { GRAND_PERIODS } from "@/data/grand-periods";
 import { getEventTimeSeries } from "@/data/timeseries";
 
 
@@ -539,6 +540,51 @@ export default function TimelineCanvas({
     const yearToPx = (year: number) =>
       plotLeft + yearToPixel(year, viewport.start, viewport.end, plotW);
 
+    // ── Grand minima / maxima bands (subtle background tint + label) ──
+    for (const gp of GRAND_PERIODS) {
+      if (gp.end < viewport.start || gp.start > viewport.end) continue;
+      const x0 = Math.max(plotLeft, yearToPx(gp.start));
+      const x1 = Math.min(w, yearToPx(gp.end));
+      const bandW = x1 - x0;
+      if (bandW <= 1) continue;
+
+      const tint =
+        gp.type === "maximum"
+          ? "rgba(245, 158, 11, 0.06)" // warm amber for maxima
+          : gp.type === "secular"
+            ? "rgba(148, 163, 184, 0.05)" // muted grey for secular minima
+            : "rgba(96, 165, 250, 0.06)"; // cool blue for grand minima
+      ctx.fillStyle = tint;
+      ctx.fillRect(x0, trackTopY - 10 * dpr, bandW, h - (trackTopY - 10 * dpr));
+
+      // Boundary hairlines.
+      ctx.strokeStyle =
+        gp.type === "maximum" ? "rgba(245, 158, 11, 0.12)" : "rgba(96, 165, 250, 0.12)";
+      ctx.lineWidth = 1 * dpr;
+      for (const bx of [x0, x1]) {
+        if (bx > plotLeft && bx < w) {
+          ctx.beginPath();
+          ctx.moveTo(bx, trackTopY - 10 * dpr);
+          ctx.lineTo(bx, h);
+          ctx.stroke();
+        }
+      }
+
+      // Label, only when the band is wide enough to read.
+      ctx.font = `500 ${10 * dpr}px system-ui, sans-serif`;
+      const labelW = ctx.measureText(gp.name).width;
+      if (bandW > labelW + 12 * dpr) {
+        ctx.fillStyle =
+          gp.type === "maximum"
+            ? "rgba(245, 158, 11, 0.6)"
+            : gp.type === "secular"
+              ? "rgba(148, 163, 184, 0.6)"
+              : "rgba(96, 165, 250, 0.7)";
+        ctx.textAlign = "center";
+        ctx.fillText(gp.name, (x0 + x1) / 2, trackTopY - 16 * dpr);
+      }
+    }
+
     // ── Solar cycle line (level-of-detail; drawn through real data points) ──
     // Rather than sampling a function at viewport-relative positions every frame
     // (which makes the curve "swim" as you pan/zoom), we draw a polyline through
@@ -556,7 +602,7 @@ export default function TimelineCanvas({
       // Yearly means for any visible span before the monthly record begins (pre-1749).
       if (winLo < MONTHLY_FIRST_YEAR) {
         const cap = Math.min(MONTHLY_FIRST_YEAR, winHi + 2);
-        for (const d of SUNSPOT_YEARLY) {
+        for (const d of SUNSPOT_YEARLY_ALL) {
           if (d.year < winLo - 2) continue;
           if (d.year >= cap) break;
           cyclePts.push({ year: d.year, value: d.value });
@@ -571,7 +617,7 @@ export default function TimelineCanvas({
         }
       }
     } else {
-      for (const d of SUNSPOT_YEARLY) {
+      for (const d of SUNSPOT_YEARLY_ALL) {
         if (d.year < winLo - 5) continue;
         if (d.year > winHi + 5) break;
         cyclePts.push({ year: d.year, value: d.value });

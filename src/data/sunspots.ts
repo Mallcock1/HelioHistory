@@ -1,4 +1,5 @@
 import { SUNSPOT_MONTHLY } from "./sunspots-monthly";
+import { SUNSPOT_PRE1700 } from "./sunspots-pre1700";
 
 /**
  * Yearly mean total international sunspot numbers (version 2.0)
@@ -363,33 +364,38 @@ function getMonthlySunspot(year: number): number | null {
 }
 
 /**
+ * Full yearly series: the 1610-1699 telescopic reconstruction (Maunder era)
+ * prepended to the 1700+ SILSO sunspot numbers. Contiguous, one entry per year.
+ */
+export const SUNSPOT_YEARLY_ALL: { year: number; value: number }[] = [
+  ...SUNSPOT_PRE1700,
+  ...SUNSPOT_YEARLY,
+];
+
+const FIRST_YEAR = SUNSPOT_YEARLY_ALL[0].year; // 1610
+
+/**
  * Get the sunspot number for a given (possibly fractional) year.
  * Uses the fine-grained monthly record where available (1749 onward) so the
  * solar-cycle line sharpens when zoomed in, and falls back to linearly
- * interpolated yearly means elsewhere. Returns 0 for years before 1700.
+ * interpolated yearly means (back to 1610, incl. the telescopic Maunder-era
+ * reconstruction). Returns 0 before 1610.
  */
 export function getSunspotNumber(year: number): number {
-  if (year < 1700) return 0;
+  if (year < FIRST_YEAR) return 0;
 
   const monthly = getMonthlySunspot(year);
   if (monthly !== null) return monthly;
 
-  const lastYear = SUNSPOT_YEARLY[SUNSPOT_YEARLY.length - 1].year;
-  if (year >= lastYear) {
-    return SUNSPOT_YEARLY[SUNSPOT_YEARLY.length - 1].value;
-  }
+  const arr = SUNSPOT_YEARLY_ALL;
+  if (year >= arr[arr.length - 1].year) return arr[arr.length - 1].value;
 
   const yearFloor = Math.floor(year);
-  const fraction = year - yearFloor;
-
-  const idx = yearFloor - 1700;
+  const idx = yearFloor - FIRST_YEAR; // series is contiguous from FIRST_YEAR
   if (idx < 0) return 0;
-  if (idx >= SUNSPOT_YEARLY.length - 1) {
-    return SUNSPOT_YEARLY[SUNSPOT_YEARLY.length - 1].value;
-  }
+  if (idx >= arr.length - 1) return arr[arr.length - 1].value;
 
-  const v0 = SUNSPOT_YEARLY[idx].value;
-  const v1 = SUNSPOT_YEARLY[idx + 1].value;
-
-  return v0 + fraction * (v1 - v0);
+  const v0 = arr[idx].value;
+  const v1 = arr[idx + 1].value;
+  return v0 + (year - yearFloor) * (v1 - v0);
 }
