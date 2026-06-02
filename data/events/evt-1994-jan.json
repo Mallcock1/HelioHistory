@@ -3,9 +3,9 @@
   "slug": "1994-january-anik-e2",
   "name": "1994 January Anik E2 Failure",
   "altNames": [
-    "January 1994 Storm",
-    "Anik E2 Satellite Loss",
-    "1994 Satellite ESD Event"
+    "January 1994 Relativistic Electron Event",
+    "Anik E1/E2 Satellite Failures",
+    "1994 Satellite Internal-Charging Event"
   ],
   "startDate": "1994-01-20",
   "peakDate": "1994-01-20",
@@ -14,20 +14,20 @@
   "phenomena": [
     {
       "type": "geomag_storm",
-      "subtype": "G3",
-      "details": "Moderate geomagnetic storm with Dst ~ −112 nT; associated with elevated relativistic electron flux in the outer radiation belt."
+      "subtype": "G1",
+      "details": "Geomagnetic activity was only modest (Dst ~ −40 nT, WDC Kyoto). The event was a coronal-hole high-speed solar-wind stream that drove a sustained enhancement of relativistic (>2 MeV) electrons in the outer radiation belt."
     }
   ],
-  "noaaGScale": 3,
+  "noaaGScale": 1,
   "noaaSScale": null,
   "noaaRScale": null,
-  "peakDst": -112,
-  "peakKp": 7,
-  "peakAp": 80,
+  "peakDst": -40,
+  "peakKp": 5,
+  "peakAp": null,
   "peakAE": null,
   "flareClass": null,
   "cmeSpeedKmS": null,
-  "solarWindSpeedPeak": 600,
+  "solarWindSpeedPeak": 750,
   "bzMin": -15,
   "protonFluxPeak": null,
   "solarCycleNumber": 22,
@@ -38,7 +38,7 @@
     {
       "sector": "satellite",
       "location": "Geostationary orbit",
-      "description": "Telesat Canada's Anik E1 and E2 communications satellites suffered momentum wheel failures from electrostatic discharge due to enhanced relativistic electron environment. Anik E2 lost attitude control and was permanently damaged, while E1 was recovered after several hours. Combined losses estimated at $200+ million.",
+      "description": "Telesat Canada's Anik E1 and E2 communications satellites suffered momentum-wheel control failures from electrostatic discharge caused by deep dielectric charging in the enhanced relativistic-electron environment. Anik E1 (which failed first) was recovered within hours; Anik E2 lost attitude control and was out of service for about six months before engineers restored it with a ground-commanded backup control scheme. A textbook 'killer electron' satellite-failure case, alongside Telstar 401 (1997).",
       "severity": "extreme",
       "economicCostUsd": 200000000
     },
@@ -60,8 +60,16 @@
       "year": 1998,
       "journal": "Journal of Geophysical Research",
       "keyFinding": "Attributed the Anik E1 and E2 failures to electrostatic discharge caused by deep dielectric charging from sustained elevated relativistic electron fluxes in the outer radiation belt."
+    },
+    {
+      "doi": "10.1029/2012SW000811",
+      "title": "Anik-E1 and E2 satellite failures of January 1994 revisited",
+      "authors": "Lam, H.-L., Boteler, D. H., et al.",
+      "year": 2012,
+      "journal": "Space Weather",
+      "keyFinding": "Re-examined the 1994 Anik failures, reinforcing the coronal-hole high-speed-stream and relativistic-electron deep-dielectric-charging origin, with only modest geomagnetic (Dst) activity at the time."
     }
   ],
-  "summary": "The January 1994 storm, though only moderate in geomagnetic terms (Dst ~ −112 nT), caused the permanent loss of the Anik E2 communications satellite and temporary failure of Anik E1 due to electrostatic discharge from enhanced relativistic electrons – demonstrating that satellite-killing conditions do not require extreme Dst values.",
-  "description": "On January 20, 1994, during the descending phase of Solar Cycle 22, a moderate geomagnetic storm with Dst ~ −112 nT was associated with a sustained enhancement of relativistic electrons in the outer radiation belt. This enhanced electron environment caused deep dielectric charging in both Telesat Canada's Anik E1 and E2 geostationary communications satellites. Anik E2 suffered a catastrophic momentum wheel failure and permanently lost attitude control, while Anik E1 experienced a similar failure but was recovered after several hours of effort. The combined losses exceeded $200 million. The event powerfully demonstrated that moderate geomagnetic storms with sustained high-energy electron flux can be as damaging to satellites as more intense storms, making the Anik failures a landmark case study in satellite space weather vulnerability."
+  "summary": "In January 1994 a coronal-hole high-speed stream drove sustained relativistic-electron flux that, through deep dielectric charging, knocked out attitude control on Telesat Canada's Anik E1 and E2 – despite only modest geomagnetic activity (Dst ~ −40 nT) – a textbook demonstration that satellite-damaging conditions do not require an intense ring-current storm.",
+  "description": "In mid-to-late January 1994, during the descending phase of Solar Cycle 22, a long-lived coronal hole drove persistent high-speed solar-wind streams. Large-amplitude Pc5 ULF waves accelerated outer-belt electrons, producing roughly ten days of very high relativistic (>2 MeV) electron flux. Geomagnetic activity itself was only modest – WDC Kyoto Dst reached about −40 nT. On January 20, 1994 this electron environment caused deep dielectric (internal) charging and electrostatic discharge in Telesat Canada's Anik E1 and E2 geostationary satellites: Anik E1 lost momentum-wheel control but was recovered within hours, while Anik E2 was disabled for about six months before engineers restored it with a ground-based attitude-control workaround that required re-pointing roughly 100,000 receiving dishes. The same interval also disrupted the Intelsat-K satellite. The Anik failures are a landmark 'killer electron' case study, showing that deep dielectric charging from sustained relativistic-electron flux – not a deep Dst storm – can be the dominant satellite hazard."
 }

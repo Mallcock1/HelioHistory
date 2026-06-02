@@ -29,7 +29,7 @@
       "details": "Associated CME directed partly away from Earth (west-limb event), reducing geoeffectiveness of this particular flare."
     }
   ],
-  "noaaGScale": 2,
+  "noaaGScale": 1,
   "noaaSScale": null,
   "noaaRScale": 5,
   "peakDst": -69,

@@ -15,8 +15,8 @@
     {
       "type": "solar_flare",
       "subtype": "X15",
-      "details": "X15 flare on March 10, 1989 from AR 5395.",
-      "peakTime": "1989-03-10T06:00:00Z"
+      "details": "AR 5395 produced an X15 flare on March 6, 1989 (one of the largest of the cycle); the geoeffective driver of the March 13 storm was the region's later activity, including an X4.5 flare on March 10.",
+      "peakTime": "1989-03-06T13:54:00Z"
     },
     {
       "type": "cme",
@@ -37,7 +37,7 @@
   ],
   "noaaGScale": 5,
   "noaaSScale": 4,
-  "noaaRScale": 5,
+  "noaaRScale": 4,
   "peakDst": -589,
   "peakKp": 9,
   "peakAp": 285,
@@ -111,5 +111,5 @@
     }
   ],
   "summary": "The March 13, 1989 geomagnetic storm (Dst −589 nT) drove geomagnetically induced currents that collapsed the Hydro-Québec power grid in 92 seconds, leaving 6 million people without electricity for up to 9 hours – the most significant space weather power grid failure in North American history.",
-  "description": "Following a powerful X15 solar flare on March 10, 1989 from active region AR 5395, a fast CME (approximately 1500 km/s) arrived at Earth on March 13 and drove one of the most intense geomagnetic storms of the 20th century (Dst −589 nT, Kp 9). The resulting GICs overwhelmed relay protection systems in the Hydro-Québec power grid; in just 92 seconds, the entire 735-kV transmission system tripped, leaving approximately 6 million Québec residents without electricity. Power was restored to most within 9 hours, but some regions waited days. The storm simultaneously damaged transformers at the Salem Nuclear Power Plant in New Jersey and caused at least 200 other power system problems across North America. NASA's TDRS-1 communications satellite logged 250 anomalies in a single day, and GOES-7 lost half its solar array capacity. Aurora was visible as far south as Florida and Cuba at ~25° N geographic latitude. The event became the defining case study in power grid vulnerability to space weather and directly motivated new GIC protection standards."
+  "description": "Active region AR 5395 produced an X15 flare on March 6, 1989 – one of the largest of the cycle – and remained intensely active for days. A fast CME (approximately 1500 km/s) from the region's continued eruptions, including an X4.5 flare on March 10, arrived at Earth on March 13 and drove one of the most intense geomagnetic storms of the 20th century (Dst −589 nT, Kp 9). The resulting GICs overwhelmed relay protection systems in the Hydro-Québec power grid; in just 92 seconds, the entire 735-kV transmission system tripped, leaving approximately 6 million Québec residents without electricity. Power was restored to most within 9 hours, but some regions waited days. The storm simultaneously damaged transformers at the Salem Nuclear Power Plant in New Jersey and caused at least 200 other power system problems across North America. NASA's TDRS-1 communications satellite logged 250 anomalies in a single day, and GOES-7 lost half its solar array capacity. Aurora was visible as far south as Florida and Cuba at ~25° N geographic latitude. The event became the defining case study in power grid vulnerability to space weather and directly motivated new GIC protection standards."
 }

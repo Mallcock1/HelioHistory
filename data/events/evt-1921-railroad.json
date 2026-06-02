@@ -40,7 +40,7 @@
   "bzMin": null,
   "protonFluxPeak": null,
   "solarCycleNumber": 15,
-  "cyclePhase": "maximum",
+  "cyclePhase": "descending",
   "sourceActiveRegion": null,
   "sunspotNumberDaily": null,
   "impacts": [
@@ -93,5 +93,5 @@
     }
   ],
   "summary": "The May 1921 geomagnetic storm, with a peak Dst of approximately −907 nT, is the second most intense storm in the instrumental record, setting telegraph relay stations ablaze and producing aurora visible from Samoa at just 14° S latitude.",
-  "description": "During May 13–15, 1921, a powerful sequence of solar eruptions drove an extreme geomagnetic storm that overwhelmed telegraph and early electrical systems across North America and Europe. Geomagnetically induced currents (GICs) were strong enough to ignite fires in railroad signal relay stations in New York State, with the most dramatic reports coming from near Brewster, New York, where the signal house burned. In Sweden, all telephone and telegraph service was interrupted for nearly two hours. The storm's Dst has been estimated at −907 nT from the Apia (Western Samoa) magnetogram – the most equatorial observatory that recorded the event – making it the second largest storm after 1859. Aurora was observed from Samoa at approximately 14° S geographic latitude, one of the lowest confirmed latitudes for aurora in the historical record. The storm occurred at the maximum of Solar Cycle 15."
+  "description": "During May 13–15, 1921, a powerful sequence of solar eruptions drove an extreme geomagnetic storm that overwhelmed telegraph and early electrical systems across North America and Europe. Geomagnetically induced currents (GICs) were strong enough to ignite fires in railroad signal relay stations in New York State, with the most dramatic reports coming from near Brewster, New York, where the signal house burned. In Sweden, all telephone and telegraph service was interrupted for nearly two hours. The storm's Dst has been estimated at −907 nT from the Apia (Western Samoa) magnetogram – the most equatorial observatory that recorded the event – making it the second largest storm after 1859. Aurora was observed from Samoa at approximately 14° S geographic latitude, one of the lowest confirmed latitudes for aurora in the historical record. The storm occurred during the descending phase of Solar Cycle 15 (which peaked in 1917)."
 }

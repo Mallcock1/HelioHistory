@@ -38,7 +38,7 @@
   "bzMin": null,
   "protonFluxPeak": null,
   "solarCycleNumber": 14,
-  "cyclePhase": "maximum",
+  "cyclePhase": "descending",
   "sourceActiveRegion": null,
   "sunspotNumberDaily": null,
   "impacts": [
@@ -69,5 +69,5 @@
     }
   ],
   "summary": "The September 1909 great geomagnetic storm (estimated Dst ~ −595 nT) caused worldwide telegraph disruptions and aurora visible at very low latitudes, making it comparable in some measures to the 1859 Carrington Event.",
-  "description": "A major geomagnetic storm struck Earth on September 25, 1909, during the maximum of Solar Cycle 14. Recent reconstruction of contemporary magnetograms by Hayakawa et al. (2020) estimates a Dst of approximately −595 nT, placing it among the most intense storms in the 20th century record. Telegraph systems worldwide experienced severe interference, with reports of equipment damage and operators receiving shocks reminiscent of Carrington Event accounts. Aurora was reported at remarkably low latitudes across both hemispheres, including from Japan, southern Europe, and the southern United States. The event demonstrates that Carrington-class storms are not as rare as once believed."
+  "description": "A major geomagnetic storm struck Earth on September 25, 1909, during the descending phase of Solar Cycle 14 (which peaked in 1906). Recent reconstruction of contemporary magnetograms by Hayakawa et al. (2020) estimates a Dst of approximately −595 nT, placing it among the most intense storms in the 20th century record. Telegraph systems worldwide experienced severe interference, with reports of equipment damage and operators receiving shocks reminiscent of Carrington Event accounts. Aurora was reported at remarkably low latitudes across both hemispheres, including from Japan, southern Europe, and the southern United States. The event demonstrates that Carrington-class storms are not as rare as once believed."
 }

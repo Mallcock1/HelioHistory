@@ -23,7 +23,7 @@
     {
       "type": "geomag_storm",
       "subtype": "G3",
-      "details": "Strong G3 geomagnetic storm with Dst ~ −222 nT on March 9."
+      "details": "Strong G3 geomagnetic storm with Dst ~ −131 nT (WDC Kyoto) on March 9."
     },
     {
       "type": "sep",
@@ -31,11 +31,11 @@
       "details": "Strong SEP event with >10 MeV proton flux exceeding 6000 pfu."
     }
   ],
-  "noaaGScale": 4,
+  "noaaGScale": 3,
   "noaaSScale": 3,
   "noaaRScale": 3,
-  "peakDst": -222,
-  "peakKp": 8,
+  "peakDst": -131,
+  "peakKp": 7,
   "peakAp": 130,
   "peakAE": 2500,
   "flareClass": "X5.4",
@@ -86,6 +86,6 @@
       "keyFinding": "Detailed SDO/AIA analysis of the March 7 flares and CME initiation from AR 11429, one of the most productive active regions of SC24."
     }
   ],
-  "summary": "The March 2012 storm, driven by an X5.4 flare from AR 11429 and a fast CME, produced a G3 storm (Dst ~ −222 nT) with a significant SEP event (>6000 pfu), causing radio blackouts, aviation radiation alerts, and aurora at mid-latitudes.",
-  "description": "On March 7, 2012, AR 11429 produced an X5.4 flare followed closely by an X1.3 flare, launching fast Earth-directed CMEs. The resulting geomagnetic storm on March 9 reached G3 level with Dst ~ −222 nT and Kp 8. A significant SEP event produced >10 MeV proton flux exceeding 6,500 pfu, prompting the FAA to issue radiation advisories and airlines to reroute some polar flights. HF radio communications were severely disrupted. The event was extensively observed by SDO and other heliophysics spacecraft, providing rich multi-point data. This was one of the strongest events of Solar Cycle 24's ascending phase and demonstrated that even a relatively weak solar cycle could produce significant compound space weather events."
+  "summary": "The March 2012 storm, driven by an X5.4 flare from AR 11429 and a fast CME, produced a G3 storm (Dst ~ −131 nT) with a significant SEP event (>6000 pfu), causing radio blackouts, aviation radiation alerts, and aurora at mid-latitudes.",
+  "description": "On March 7, 2012, AR 11429 produced an X5.4 flare followed closely by an X1.3 flare, launching fast Earth-directed CMEs. The resulting geomagnetic storm on March 9 reached G3 level with Dst ~ −131 nT and Kp 7. A significant SEP event produced >10 MeV proton flux exceeding 6,500 pfu, prompting the FAA to issue radiation advisories and airlines to reroute some polar flights. HF radio communications were severely disrupted. The event was extensively observed by SDO and other heliophysics spacecraft, providing rich multi-point data. This was one of the strongest events of Solar Cycle 24's ascending phase and demonstrated that even a relatively weak solar cycle could produce significant compound space weather events."
 }

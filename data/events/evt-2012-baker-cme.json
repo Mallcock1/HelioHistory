@@ -15,8 +15,8 @@
   "phenomena": [
     {
       "type": "solar_flare",
-      "subtype": "X1.4",
-      "details": "X1.4 flare eruption on July 12; followed by the extreme CME event on July 23 from AR 11520."
+      "subtype": "X2.5",
+      "details": "The July 23 eruption from AR 11520 – by then on the Sun's far side – had an estimated soft X-ray class of ~X2.5 (Gopalswamy et al. 2016); the same region produced an X1.4 flare on July 12 while still Earth-facing."
     },
     {
       "type": "cme",
@@ -35,7 +35,7 @@
   "peakKp": null,
   "peakAp": null,
   "peakAE": null,
-  "flareClass": "X1.4",
+  "flareClass": "X2.5",
   "cmeSpeedKmS": 2500,
   "solarWindSpeedPeak": 2246,
   "bzMin": -60,

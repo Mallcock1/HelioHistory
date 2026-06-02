@@ -24,8 +24,8 @@
     },
     {
       "type": "sep",
-      "subtype": "S5",
-      "details": "Extreme SEP event; >10 MeV proton flux exceeded 1800 pfu."
+      "subtype": "S3",
+      "details": "Strong SEP event; >10 MeV proton flux peaked near 1860 pfu (S3). Its distinction was a hard, relativistic spectrum that produced the largest GLE since 1956 rather than an extreme >10 MeV fluence."
     },
     {
       "type": "radio_blackout",
@@ -44,7 +44,7 @@
   "cmeSpeedKmS": 2500,
   "solarWindSpeedPeak": 900,
   "bzMin": -15,
-  "protonFluxPeak": 1800,
+  "protonFluxPeak": 1860,
   "solarCycleNumber": 23,
   "cyclePhase": "descending",
   "sourceActiveRegion": "AR 10720",
@@ -83,5 +83,5 @@
     }
   ],
   "summary": "GLE#69 on January 20, 2005 was the largest ground-level enhancement since 1956 (GLE#5), driven by an X7.1 flare from AR 10720. The South Pole neutron monitor recorded increases exceeding 4800%, prompting extreme aviation radiation alerts and widespread flight diversions from polar routes.",
-  "description": "On January 20, 2005, an X7.1 flare from AR 10720 produced GLE#69 – the largest ground-level enhancement since February 1956. The South Pole neutron monitor recorded a count rate increase exceeding 4800%, indicating an extraordinarily hard and intense relativistic proton spectrum. The FAA issued a rare space weather advisory, and airlines worldwide diverted polar route flights to lower latitudes to reduce crew and passenger radiation exposure. The associated SEP event reached S5 (extreme) levels with >10 MeV proton flux exceeding 1800 pfu. Despite the extreme radiation storm, the geomagnetic storm was relatively moderate (Dst ~ −105 nT), illustrating that radiation storms and geomagnetic storms can be decoupled. The event remains one of the benchmark events for aviation radiation exposure planning."
+  "description": "On January 20, 2005, an X7.1 flare from AR 10720 produced GLE#69 – the largest ground-level enhancement since February 1956. The South Pole neutron monitor recorded a count rate increase exceeding 4800%, indicating an extraordinarily hard and intense relativistic proton spectrum. The FAA issued a rare space weather advisory, and airlines worldwide diverted polar route flights to lower latitudes to reduce crew and passenger radiation exposure. The associated SEP event reached S3 (strong) levels by >10 MeV proton flux (peaking near 1860 pfu), but its exceptionally hard, relativistic spectrum produced the largest GLE since 1956. Despite the extreme radiation storm, the geomagnetic storm was relatively moderate (Dst ~ −105 nT), illustrating that radiation storms and geomagnetic storms can be decoupled. The event remains one of the benchmark events for aviation radiation exposure planning."
 }

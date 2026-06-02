@@ -46,7 +46,7 @@
   "bzMin": null,
   "protonFluxPeak": 10000,
   "solarCycleNumber": 19,
-  "cyclePhase": "maximum",
+  "cyclePhase": "descending",
   "sourceActiveRegion": null,
   "sunspotNumberDaily": 211,
   "impacts": [
@@ -84,5 +84,5 @@
     }
   ],
   "summary": "The November 1960 geomagnetic storm (Dst −339 nT, Kp 9) was one of the largest events of Solar Cycle 19 – the most active sunspot cycle in recorded history – causing widespread radio blackouts, communication disruptions, and aurora visible across the continental United States.",
-  "description": "Solar Cycle 19 (peaked 1958) was the strongest cycle in the modern record with a smoothed sunspot maximum of 201.3. While the all-time peak had passed, the Sun remained highly active into late 1960. The November 1960 storm complex began with multiple X-class flares producing severe radio blackouts, followed by fast CMEs that drove a peak Dst of −339 nT and Kp 9 on November 13. Major solar energetic particle events (GLE #8 and #9, November 12 and 15) added an S4-class radiation storm. Telegraph and telephone communications in Canada and northern Europe were disrupted for days by GICs, while aurora reached latitudes of ~30°N in the United States. The event demonstrated the compounding hazard of multiple phenomena (flares, CMEs, SEPs) occurring in rapid succession during a solar cycle maximum."
+  "description": "Solar Cycle 19 (peaked 1958) was the strongest cycle in the modern record with a smoothed sunspot maximum of 201.3. While the all-time peak had passed, the Sun remained highly active into late 1960. The November 1960 storm complex began with multiple X-class flares producing severe radio blackouts, followed by fast CMEs that drove a peak Dst of −339 nT and Kp 9 on November 13. Major solar energetic particle events (GLE #8 and #9, November 12 and 15) added an S4-class radiation storm. Telegraph and telephone communications in Canada and northern Europe were disrupted for days by GICs, while aurora reached latitudes of ~30°N in the United States. The event demonstrated the compounding hazard of multiple phenomena (flares, CMEs, SEPs) occurring in rapid succession during the declining phase of a strong solar cycle."
 }

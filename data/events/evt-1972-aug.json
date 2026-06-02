@@ -25,19 +25,19 @@
     },
     {
       "type": "geomag_storm",
-      "subtype": "G4",
-      "details": "Dst approximately −125 nT; moderate main phase despite extreme particle event."
+      "subtype": "G5",
+      "details": "Dst approximately −125 nT; modest ring-current (Dst) response despite Kp reaching 9 and an extreme particle event."
     },
     {
       "type": "cme",
       "details": "Fastest CME transit of the 20th century: Earth arrival ~14.6 hours after flare onset, implying CME speed ~2850 km/s."
     }
   ],
-  "noaaGScale": 4,
+  "noaaGScale": 5,
   "noaaSScale": 4,
   "noaaRScale": 5,
   "peakDst": -125,
-  "peakKp": 8,
+  "peakKp": 9,
   "peakAp": 236,
   "peakAE": null,
   "flareClass": "X20",

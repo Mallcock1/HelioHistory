@@ -21,7 +21,7 @@
       "details": "Severe HF radio blackouts caused military communication disruptions during a critical phase of World War II."
     }
   ],
-  "noaaGScale": 4,
+  "noaaGScale": 5,
   "noaaSScale": null,
   "noaaRScale": 4,
   "peakDst": -373,

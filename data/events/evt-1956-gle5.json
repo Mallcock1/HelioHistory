@@ -21,7 +21,7 @@
     {
       "type": "solar_flare",
       "subtype": "X-class",
-      "details": "X-class white-light flare associated with the event; precise GOES class not available for this era."
+      "details": "X-class white-light flare associated with the event; soft X-ray class estimated at ~X20 (±10) by Usoskin et al. (2024), as direct GOES monitoring did not exist in 1956."
     },
     {
       "type": "sep",
@@ -29,14 +29,14 @@
       "details": "Extreme solar energetic particle event; estimated proton flux orders of magnitude above S5 threshold at relevant energies."
     }
   ],
-  "noaaGScale": 3,
+  "noaaGScale": 4,
   "noaaSScale": 5,
   "noaaRScale": 3,
   "peakDst": -130,
-  "peakKp": 7,
+  "peakKp": 8,
   "peakAp": 154,
   "peakAE": null,
-  "flareClass": "X",
+  "flareClass": "X20",
   "cmeSpeedKmS": null,
   "solarWindSpeedPeak": null,
   "bzMin": null,

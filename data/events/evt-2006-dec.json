@@ -35,11 +35,11 @@
       "details": "Severe R4 radio blackout on the sunlit hemisphere during the X9.0 flare."
     }
   ],
-  "noaaGScale": 2,
+  "noaaGScale": 4,
   "noaaSScale": 2,
   "noaaRScale": 4,
   "peakDst": -162,
-  "peakKp": 7,
+  "peakKp": 8,
   "peakAp": 132,
   "peakAE": 1800,
   "flareClass": "X9.0",
@@ -81,5 +81,5 @@
     }
   ],
   "summary": "The December 2006 X9.0 flare and GLE #70, occurring unexpectedly near Solar Cycle 23/24 minimum from isolated active region AR 10930, demonstrated that large solar events can occur at any phase of the solar cycle and disrupted GPS accuracy globally.",
-  "description": "Active region AR 10930, appearing in an otherwise quiet Sun near the transition between Solar Cycles 23 and 24, produced an X9.0 flare on December 5, 2006 – one of the largest of the entire cycle, yet occurring at or near solar minimum. The flare caused an R4 severe radio blackout on the sunlit hemisphere and measurable GPS positioning errors of up to 50 m due to ionospheric disturbances. An associated fast CME (~1774 km/s) drove a moderate G2 geomagnetic storm. A separate X3.4 flare on December 13 from the same active region (AR 10930) produced GLE #70, with >100% enhancements at high-latitude neutron monitors. The December 2006 events served as an important reminder that infrastructure planners cannot assume quiescence near solar minimum and that isolated, powerful active regions can produce extreme events out of cycle phase."
+  "description": "Active region AR 10930, appearing in an otherwise quiet Sun near the transition between Solar Cycles 23 and 24, produced an X9.0 flare on December 5, 2006 – one of the largest of the entire cycle, yet occurring at or near solar minimum. The flare caused an R4 severe radio blackout on the sunlit hemisphere and measurable GPS positioning errors of up to 50 m due to ionospheric disturbances. An associated fast CME (~1774 km/s) drove a severe (G4) geomagnetic storm (Dst −162 nT) on December 14–15. A separate X3.4 flare on December 13 from the same active region (AR 10930) produced GLE #70, with >100% enhancements at high-latitude neutron monitors. The December 2006 events served as an important reminder that infrastructure planners cannot assume quiescence near solar minimum and that isolated, powerful active regions can produce extreme events out of cycle phase."
 }
