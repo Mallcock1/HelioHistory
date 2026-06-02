@@ -4,9 +4,13 @@ import React, { useState, useMemo, useRef, useEffect, useCallback } from "react"
 import * as d3 from "d3";
 import { EVENTS } from "@/data/events";
 import NavBar from "@/components/NavBar";
+import Footer from "@/components/Footer";
+import DataExplorer from "@/components/analyse/DataExplorer";
 import type { SpaceWeatherEvent } from "@/lib/types";
 import { getEventColor, getEventSeverity, formatEventDate } from "@/lib/timeline-utils";
 import { PHENOMENON_CONFIG } from "@/lib/types";
+import { downloadSvgAsPng } from "@/lib/figure-download";
+import { Download } from "lucide-react";
 type AxisParam =
   | "peakDst"
   | "peakKp"
@@ -331,18 +335,33 @@ function ScatterPlot({
     setIsZoomed(false);
   };
 
+  const handleDownload = () => {
+    if (svgRef.current) {
+      downloadSvgAsPng(svgRef.current, `scatter-${xParam}-vs-${yParam}`);
+    }
+  };
+
   return (
-    <div ref={containerRef} className="relative w-full">
+    <div ref={containerRef} className="relative w-full group/fig">
       <svg ref={svgRef} className="w-full" style={{ display: "block" }} />
+      <button
+        type="button"
+        onClick={handleDownload}
+        title="Download PNG"
+        aria-label="Download figure as PNG"
+        className="absolute top-2 left-2 p-1 rounded-md text-foreground/30 hover:text-foreground/70 bg-overlay/10 hover:bg-overlay/15 border border-overlay/10 opacity-0 group-hover/fig:opacity-100 focus-visible:opacity-100 transition-all"
+      >
+        <Download className="w-3.5 h-3.5" />
+      </button>
       {isZoomed && (
         <button
           onClick={handleReset}
-          className="absolute top-2 right-2 px-2.5 py-1 rounded-md text-[10px] uppercase tracking-wider bg-overlay/10 hover:bg-overlay/15 text-foreground/60 hover:text-foreground/80 border border-overlay/10 transition-all"
+          className="absolute top-2 right-2 px-2.5 py-1 rounded-md text-[11px] uppercase tracking-wider bg-overlay/10 hover:bg-overlay/15 text-foreground/60 hover:text-foreground/80 border border-overlay/10 transition-all"
         >
           Reset Zoom
         </button>
       )}
-      <div className="absolute bottom-14 right-2 text-[10px] text-foreground/20">
+      <div className="absolute bottom-14 right-2 text-[11px] text-foreground/20">
         Scroll to zoom · Drag to pan
       </div>
       {tooltip && (
@@ -364,7 +383,7 @@ function ScatterPlot({
                 {tooltip.event.name}
               </span>
             </div>
-            <p className="text-[10px] text-foreground/40 mb-2">
+            <p className="text-[11px] text-foreground/40 mb-2">
               {formatEventDate(tooltip.event.startDate)}
             </p>
             <div className="space-y-1">
@@ -394,7 +413,7 @@ function ScatterPlot({
                 {tooltip.event.phenomena.slice(0, 3).map((p, i) => (
                   <span
                     key={i}
-                    className="text-[9px] px-1.5 py-0.5 rounded border border-overlay/10"
+                    className="text-[11px] px-1.5 py-0.5 rounded border border-overlay/10"
                     style={{ color: PHENOMENON_CONFIG[p.type].color }}
                   >
                     {PHENOMENON_CONFIG[p.type].shortLabel}
@@ -486,7 +505,7 @@ export default function AnalyzePage() {
     <div className="h-screen w-screen flex flex-col overflow-hidden">
       <NavBar eventCount={EVENTS.length} />
 
-      <div className="flex-1 overflow-auto p-6 space-y-6">
+      <div className="flex-1 overflow-auto p-8 space-y-6">
         <div>
           <h2 className="heading-display text-xl text-foreground mb-1">
             Cross-Event Analytics
@@ -496,6 +515,9 @@ export default function AnalyzePage() {
             catalogued events.
           </p>
         </div>
+
+        {/* Faceted explorer */}
+        <DataExplorer events={EVENTS} />
 
         {/* Scatter plot section */}
         <div className="glass rounded-xl p-6 space-y-4">
@@ -584,7 +606,7 @@ export default function AnalyzePage() {
             },
           ].map((stat) => (
             <div key={stat.label} className="glass rounded-lg p-4">
-              <p className="text-[10px] uppercase tracking-wider text-foreground/40 mb-1">
+              <p className="text-[11px] uppercase tracking-wider text-foreground/40 mb-1">
                 {stat.label}
               </p>
               <p className="text-xl font-mono font-semibold text-solar">
@@ -593,6 +615,8 @@ export default function AnalyzePage() {
             </div>
           ))}
         </div>
+
+        <Footer />
       </div>
     </div>
   );

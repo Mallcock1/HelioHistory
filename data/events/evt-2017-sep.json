@@ -1,0 +1,115 @@
+{
+  "id": "evt-2017-sep",
+  "slug": "2017-september-storms",
+  "name": "September 2017 Storms",
+  "altNames": [
+    "September 2017 Solar Storm",
+    "X9.3 Flare 2017",
+    "GLE #72",
+    "AR 12673 Storms"
+  ],
+  "startDate": "2017-09-04",
+  "peakDate": "2017-09-08",
+  "endDate": "2017-09-12",
+  "durationHours": 192,
+  "phenomena": [
+    {
+      "type": "solar_flare",
+      "subtype": "X9.3",
+      "details": "X9.3 on September 6, 2017 at 12:02 UT from AR 12673; largest flare of Solar Cycle 24. Also X2.2 on Sept 6, X8.2 on Sept 10.",
+      "peakTime": "2017-09-06T12:02:00Z"
+    },
+    {
+      "type": "cme",
+      "details": "Multiple CMEs; primary one ~1500 km/s from X9.3 flare, Sept 7 arrival at Earth."
+    },
+    {
+      "type": "geomag_storm",
+      "subtype": "G4",
+      "details": "Dst −142 nT on September 7–8; Kp 8−. G4 storm."
+    },
+    {
+      "type": "sep",
+      "subtype": "S3",
+      "details": "Major SEP event; GLE #72 on September 10, 2017 from X8.2 flare."
+    },
+    {
+      "type": "gle",
+      "subtype": "GLE #72",
+      "details": "First GLE of Solar Cycle 24; associated with the September 10 X8.2 flare and limb-directed CME."
+    },
+    {
+      "type": "radio_blackout",
+      "subtype": "R3",
+      "details": "Multiple R3 radio blackouts during the flare sequence; R3–R4 on September 6 during X9.3."
+    }
+  ],
+  "noaaGScale": 4,
+  "noaaSScale": 3,
+  "noaaRScale": 3,
+  "peakDst": -142,
+  "peakKp": 8,
+  "peakAp": 106,
+  "peakAE": 2800,
+  "flareClass": "X9.3",
+  "cmeSpeedKmS": 1571,
+  "solarWindSpeedPeak": 762,
+  "bzMin": -31,
+  "protonFluxPeak": 1000,
+  "solarCycleNumber": 24,
+  "cyclePhase": "descending",
+  "sourceActiveRegion": "AR 12673",
+  "sunspotNumberDaily": 132,
+  "impacts": [
+    {
+      "sector": "navigation",
+      "location": "Puerto Rico, Caribbean, Florida",
+      "description": "GPS and GNSS positioning errors of 10–50 m reported during peak radio blackout phases; critically impaired relief coordination during concurrent Hurricane Irma response operations – a compound disaster scenario.",
+      "severity": "severe",
+      "durationHours": 24
+    },
+    {
+      "sector": "communications",
+      "location": "Global (sunlit hemisphere)",
+      "description": "R3–R4 radio blackouts disrupted HF aviation communications; emergency frequencies were impacted during multiple hurricane landfalls (Irma, Jose) in the Caribbean.",
+      "severity": "severe",
+      "durationHours": 12
+    },
+    {
+      "sector": "aurora",
+      "location": "Northern and Southern United States",
+      "description": "Aurora visible across northern US states (Pacific Northwest, Midwest) and in the Southern Hemisphere.",
+      "severity": "moderate"
+    },
+    {
+      "sector": "aviation",
+      "location": "Polar routes",
+      "description": "Airlines rerouted polar flights due to elevated radiation and communication concerns during the GLE #72 and SEP event on September 10.",
+      "severity": "moderate",
+      "durationHours": 36
+    }
+  ],
+  "auroraLowestLatitude": 42,
+  "timeSeries": [],
+  "images": [],
+  "papers": [
+    {
+      "doi": "10.1029/2018SW001927",
+      "title": "September 2017's geoeffective space weather and impacts to Caribbean and US communication systems",
+      "authors": "Redmon, R. J., Seaton, D. B., Steenburgh, R., He, J., Rodriguez, J. V.",
+      "year": 2018,
+      "journal": "Space Weather",
+      "keyFinding": "Documented how the September 2017 space weather events compounded the humanitarian impacts of Hurricane Irma by degrading GPS accuracy and HF radio communications during active relief operations in the Caribbean."
+    },
+    {
+      "doi": "10.1029/2018SW001932",
+      "title": "Ionospheric radio occultation measurements during the September 2017 solar events",
+      "authors": "Yasyukevich, Y., Astafyeva, E., Padokhin, A., et al.",
+      "year": 2018,
+      "journal": "Space Weather",
+      "keyFinding": "Measured strong ionospheric disturbances and GPS signal delays attributable to the September 2017 flares using radio occultation data from LEO satellite constellations."
+    }
+  ],
+  "summary": "The September 2017 storm sequence – featuring the X9.3 flare (largest of Solar Cycle 24), GLE #72, and a G4 geomagnetic storm – critically disrupted GPS and HF communications during concurrent Hurricane Irma emergency response operations in the Caribbean, illustrating the compound risk of space and terrestrial weather disasters.",
+  "description": "Active region AR 12673 was the most productive flare-producing region of the weak Solar Cycle 24, generating an X2.2 and then an X9.3 flare (the cycle's largest) on September 6, 2017, followed by an X8.2 on September 10. The CME from the X9.3 event arrived September 7–8 and drove a G4 storm (Dst −142 nT, Kp 8). A major SEP event and GLE #72 – the first GLE of Cycle 24 – accompanied the September 10 X8.2. GPS positioning errors of 10–50 m were documented across the Caribbean and Florida during the peak radio blackout phases, critically affecting relief coordination for Hurricane Irma, which was simultaneously making landfall. This compound disaster scenario – extreme space weather superimposed on a major tropical cyclone emergency – illustrated a major gap in infrastructure resilience planning. HF emergency communications, relied upon as a backup when terrestrial networks fail during hurricanes, were themselves disrupted by the solar radio blackouts."
+}

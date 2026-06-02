@@ -1,0 +1,80 @@
+{
+  "id": "evt-2001-apr",
+  "slug": "2001-april-storm",
+  "name": "2001 April Storm",
+  "altNames": [
+    "April 2001 Geomagnetic Storm",
+    "April 11 2001 Storm"
+  ],
+  "startDate": "2001-04-11",
+  "peakDate": "2001-04-11",
+  "endDate": "2001-04-13",
+  "durationHours": 48,
+  "phenomena": [
+    {
+      "type": "geomag_storm",
+      "subtype": "G4",
+      "details": "Strong geomagnetic storm with Dst ~ −271 nT during a highly active period of Solar Cycle 23 maximum."
+    },
+    {
+      "type": "solar_flare",
+      "subtype": "X2.3",
+      "details": "X2.3 flare on April 10, 2001."
+    },
+    {
+      "type": "cme",
+      "details": "Fast halo CME, speed ~1200 km/s."
+    }
+  ],
+  "noaaGScale": 4,
+  "noaaSScale": 2,
+  "noaaRScale": 3,
+  "peakDst": -271,
+  "peakKp": 8,
+  "peakAp": 180,
+  "peakAE": 2500,
+  "flareClass": "X2.3",
+  "cmeSpeedKmS": 1200,
+  "solarWindSpeedPeak": 750,
+  "bzMin": -30,
+  "protonFluxPeak": 300,
+  "solarCycleNumber": 23,
+  "cyclePhase": "maximum",
+  "sourceActiveRegion": "AR 9415",
+  "sunspotNumberDaily": 160,
+  "impacts": [
+    {
+      "sector": "satellite",
+      "location": "Earth orbit",
+      "description": "Multiple spacecraft experienced anomalies; elevated radiation belt fluxes caused increased single-event upsets and charging events.",
+      "severity": "moderate"
+    },
+    {
+      "sector": "aurora",
+      "location": "Mid-latitudes",
+      "description": "Aurora widely visible across North America and Europe at mid-latitudes.",
+      "severity": "moderate"
+    },
+    {
+      "sector": "communications",
+      "location": "Global",
+      "description": "HF radio disruptions on high-latitude routes; polar cap absorption events affected transpolar aviation communications.",
+      "severity": "moderate"
+    }
+  ],
+  "auroraLowestLatitude": 35,
+  "timeSeries": [],
+  "images": [],
+  "papers": [
+    {
+      "doi": "10.1029/2001JA009154",
+      "title": "April 2001 geomagnetic storm and its effects",
+      "authors": "Tsurutani, B. T., Gonzalez, W. D., et al.",
+      "year": 2003,
+      "journal": "Journal of Geophysical Research",
+      "keyFinding": "Analyzed the April 2001 storm as part of a cluster of intense storms during the active SC23 maximum, examining the role of southward Bz in driving the ring current."
+    }
+  ],
+  "summary": "The April 2001 storm (Dst ~ −271 nT), driven by an X2.3 flare from AR 9415, was part of an unusually active period during Solar Cycle 23 maximum that produced multiple intense geomagnetic storms in rapid succession.",
+  "description": "On April 11, 2001, just weeks after the March 2001 storm, another intense geomagnetic storm struck Earth, driven by an X2.3 flare from AR 9415 and an associated fast halo CME (~1200 km/s). The storm reached Dst ~ −271 nT, making it another strong event in what was proving to be an exceptionally active period during Solar Cycle 23's maximum. The storm caused satellite anomalies, HF radio disruptions, and aurora visible at mid-latitudes. The rapid succession of intense storms during this period stressed the space weather forecasting community and demonstrated how clustered solar activity can create compound space weather impacts."
+}

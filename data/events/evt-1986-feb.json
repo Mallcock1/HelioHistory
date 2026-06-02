@@ -1,0 +1,65 @@
+{
+  "id": "evt-1986-feb",
+  "slug": "1986-february-storm",
+  "name": "1986 February Storm",
+  "altNames": [
+    "February 1986 Geomagnetic Storm",
+    "Solar Minimum Storm of 1986"
+  ],
+  "startDate": "1986-02-06",
+  "peakDate": "1986-02-08",
+  "endDate": "1986-02-09",
+  "durationHours": 72,
+  "phenomena": [
+    {
+      "type": "geomag_storm",
+      "subtype": "G4",
+      "details": "Significant storm with Dst ~ −312 nT, notably occurring during solar minimum between cycles 21 and 22."
+    }
+  ],
+  "noaaGScale": 4,
+  "noaaSScale": null,
+  "noaaRScale": null,
+  "peakDst": -312,
+  "peakKp": 8,
+  "peakAp": 202,
+  "peakAE": null,
+  "flareClass": null,
+  "cmeSpeedKmS": null,
+  "solarWindSpeedPeak": 750,
+  "bzMin": -23,
+  "protonFluxPeak": null,
+  "solarCycleNumber": 21,
+  "cyclePhase": "minimum",
+  "sourceActiveRegion": null,
+  "sunspotNumberDaily": 13,
+  "impacts": [
+    {
+      "sector": "communications",
+      "location": "High latitudes",
+      "description": "HF radio disruptions on polar routes; unexpected given the solar minimum conditions.",
+      "severity": "moderate"
+    },
+    {
+      "sector": "aurora",
+      "location": "Mid-latitudes",
+      "description": "Aurora visible at unusually low latitudes for a solar minimum period; reported from the northern United States and central Europe.",
+      "severity": "moderate"
+    }
+  ],
+  "auroraLowestLatitude": 40,
+  "timeSeries": [],
+  "images": [],
+  "papers": [
+    {
+      "doi": "10.1029/JA093iA12p14343",
+      "title": "The February 1986 magnetic storm",
+      "authors": "Cliver, E. W., Crooker, N. U.",
+      "year": 1988,
+      "journal": "Journal of Geophysical Research",
+      "keyFinding": "Analyzed the February 1986 storm as a notable example of an intense geomagnetic storm occurring during solar minimum, driven by a coronal hole high-speed stream interaction region."
+    }
+  ],
+  "summary": "The February 1986 storm (Dst ~ −312 nT) is notable for occurring during solar minimum, demonstrating that significant geomagnetic storms can arise even during periods of low solar activity, likely driven by coronal hole high-speed stream interactions.",
+  "description": "On February 6–8, 1986, an intense geomagnetic storm drove the Dst index to approximately −312 nT during the solar minimum between Solar Cycles 21 and 22, when the daily sunspot number was only ~13. This event demonstrated that significant geomagnetic storms are not confined to solar maximum; the storm was likely driven by a coronal hole high-speed stream and its associated co-rotating interaction region, which can produce sustained southward Bz conditions even during solar minimum. The event surprised forecasters and became an important case study in space weather prediction, illustrating that infrastructure must be prepared for severe storms at any phase of the solar cycle."
+}

@@ -1,0 +1,65 @@
+{
+  "id": "evt-1938-jan",
+  "slug": "1938-january-great-aurora",
+  "name": "1938 January Great Aurora Storm",
+  "altNames": [
+    "January 1938 Storm",
+    "1938 Great Geomagnetic Storm"
+  ],
+  "startDate": "1938-01-16",
+  "peakDate": "1938-01-16",
+  "endDate": "1938-01-18",
+  "durationHours": 48,
+  "phenomena": [
+    {
+      "type": "geomag_storm",
+      "subtype": "G5",
+      "details": "Intense geomagnetic storm with Dst estimated at approximately −464 nT."
+    }
+  ],
+  "noaaGScale": 5,
+  "noaaSScale": null,
+  "noaaRScale": null,
+  "peakDst": -464,
+  "peakKp": 9,
+  "peakAp": null,
+  "peakAE": null,
+  "flareClass": null,
+  "cmeSpeedKmS": null,
+  "solarWindSpeedPeak": null,
+  "bzMin": null,
+  "protonFluxPeak": null,
+  "solarCycleNumber": 17,
+  "cyclePhase": "maximum",
+  "sourceActiveRegion": null,
+  "sunspotNumberDaily": null,
+  "impacts": [
+    {
+      "sector": "aurora",
+      "location": "Global",
+      "description": "Spectacular aurora visible worldwide at very low latitudes, widely reported in newspapers across Europe, North America, and Asia.",
+      "severity": "extreme"
+    },
+    {
+      "sector": "communications",
+      "location": "Global",
+      "description": "Radio communication blackouts and telegraph disruptions reported across multiple continents; long-distance radio links particularly affected.",
+      "severity": "severe"
+    }
+  ],
+  "auroraLowestLatitude": 28,
+  "timeSeries": [],
+  "images": [],
+  "papers": [
+    {
+      "doi": "10.1029/2019JA027062",
+      "title": "The extreme space weather events in January 1938",
+      "authors": "Hayakawa, H., Ebihara, Y., et al.",
+      "year": 2021,
+      "journal": "Journal of Geophysical Research: Space Physics",
+      "keyFinding": "Documented the January 1938 storm intensity and global aurora extent, estimating Dst ~ −464 nT and confirming visibility at magnetic latitudes below 30°."
+    }
+  ],
+  "summary": "The January 1938 great aurora storm produced one of the most spectacular worldwide aurora displays of the 20th century, with aurora visible at magnetic latitudes below 30° during an intense geomagnetic storm (Dst ~ −464 nT) near Solar Cycle 17 maximum.",
+  "description": "On January 16, 1938, a powerful geomagnetic storm struck Earth during the maximum of Solar Cycle 17. The storm produced an estimated Dst of approximately −464 nT and drove aurora visible at remarkably low latitudes across both hemispheres. Newspaper reports from across Europe, North America, and Asia described vivid red and green aurora, causing considerable public excitement and some alarm. Radio communications were severely disrupted, and telegraph systems experienced interference. The event occurred just before the outbreak of World War II and is one of the stronger storms in the first half of the 20th century."
+}

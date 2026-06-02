@@ -1,0 +1,88 @@
+{
+  "id": "evt-1967-bmews",
+  "slug": "1967-solar-storm-bmews",
+  "name": "1967 Solar Storm",
+  "altNames": [
+    "1967 BMEWS Storm",
+    "May 1967 Solar Radio Burst",
+    "1967 Near Nuclear Incident"
+  ],
+  "startDate": "1967-05-23",
+  "peakDate": "1967-05-23",
+  "endDate": "1967-05-25",
+  "durationHours": 48,
+  "phenomena": [
+    {
+      "type": "solar_flare",
+      "subtype": "X-class",
+      "details": "Intense X-class flare producing powerful solar radio burst that jammed BMEWS radars.",
+      "peakTime": "1967-05-23T16:00:00Z"
+    },
+    {
+      "type": "geomag_storm",
+      "subtype": "G5",
+      "details": "Extreme geomagnetic storm, G5 equivalent; Kp reached 9."
+    },
+    {
+      "type": "radio_blackout",
+      "details": "R4 severe radio blackout on daylit hemisphere; shortwave blackout lasting hours."
+    },
+    {
+      "type": "sep",
+      "details": "S3 radiation storm."
+    }
+  ],
+  "noaaGScale": 5,
+  "noaaSScale": 3,
+  "noaaRScale": 4,
+  "peakDst": -387,
+  "peakKp": 9,
+  "peakAp": 236,
+  "peakAE": null,
+  "flareClass": "X",
+  "cmeSpeedKmS": null,
+  "solarWindSpeedPeak": null,
+  "bzMin": null,
+  "protonFluxPeak": 1000,
+  "solarCycleNumber": 20,
+  "cyclePhase": "ascending",
+  "sourceActiveRegion": null,
+  "sunspotNumberDaily": 112,
+  "impacts": [
+    {
+      "sector": "military",
+      "location": "Alaska, Greenland, United Kingdom (BMEWS sites)",
+      "description": "Ballistic Missile Early Warning System (BMEWS) radars at Thule (Greenland), Clear (Alaska), and Fylingdales (UK) were jammed by intense solar radio emission; US Air Force Strategic Air Command scrambled nuclear bombers before solar forecasters at ESSA's Space Disturbances Laboratory identified the jamming as solar in origin, averting a potential nuclear confrontation.",
+      "severity": "extreme",
+      "durationHours": 6
+    },
+    {
+      "sector": "communications",
+      "location": "High latitudes",
+      "description": "Polar cap absorption event disrupted high-latitude HF radio communications for multiple days.",
+      "severity": "severe",
+      "durationHours": 72
+    },
+    {
+      "sector": "aurora",
+      "location": "Northern United States",
+      "description": "Intense aurora visible well into the mid-latitudes of the United States.",
+      "severity": "moderate"
+    }
+  ],
+  "auroraLowestLatitude": 40,
+  "timeSeries": [],
+  "images": [],
+  "papers": [
+    {
+      "doi": "10.1029/2016SW001423",
+      "title": "The May 1967 great storm and radio disruption event: Extreme space weather and extraordinary responses",
+      "authors": "Knipp, D. J., Ramsay, A. C., Beard, E. D., et al.",
+      "year": 2016,
+      "journal": "Space Weather",
+      "keyFinding": "First detailed declassified account revealing that US Air Force scrambled nuclear-armed bombers in response to BMEWS radar jamming caused by the solar radio burst, and that ESSA space weather forecasters' identification of the solar source prevented a potential military miscalculation."
+    }
+  ],
+  "summary": "A major solar radio burst in May 1967 jammed US Ballistic Missile Early Warning System radars, triggering nuclear bomber scrambles under the belief of a Soviet jamming attack – one of the closest nuclear near-misses attributable to space weather.",
+  "description": "On May 23, 1967, an intense X-class solar flare unleashed a powerful broadband solar radio burst that flooded the frequency bands used by the Ballistic Missile Early Warning System (BMEWS) at its three Cold War radar sites. BMEWS controllers, detecting simultaneous jamming at all three geographically separated sites, raised the alarm of a Soviet electronic warfare attack and US Air Force Strategic Air Command placed nuclear-armed bombers on alert for launch. ESSA's Space Disturbances Laboratory forecasters, who had been tracking the extreme solar activity, urgently communicated that the interference was solar in origin – preventing what could have been a catastrophic miscalculation. The event was classified for decades, and the near-nuclear aspect was only fully declassified and published by Knipp et al. in 2016. The accompanying geomagnetic storm reached G5 intensity and caused severe HF polar communications disruptions. The event is now a central case study in space weather policy and the value of real-time solar monitoring."
+}

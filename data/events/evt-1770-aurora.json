@@ -1,0 +1,70 @@
+{
+  "id": "evt-1770-aurora",
+  "slug": "1770-extreme-aurora",
+  "name": "1770 Extreme Aurora",
+  "altNames": [
+    "Great Aurora of 1770",
+    "Meiwa Aurora",
+    "1770 Japanese Aurora"
+  ],
+  "startDate": "1770-09-17",
+  "peakDate": "1770-09-17",
+  "endDate": "1770-09-26",
+  "durationHours": 216,
+  "phenomena": [
+    {
+      "type": "geomag_storm",
+      "subtype": "Extreme",
+      "details": "Estimated Dst far below -500 nT based on aurora visibility at ~24° magnetic latitude."
+    },
+    {
+      "type": "solar_flare",
+      "details": "Inferred large X-class flare; no photometric record."
+    }
+  ],
+  "noaaGScale": 5,
+  "noaaSScale": null,
+  "noaaRScale": null,
+  "peakDst": null,
+  "peakKp": null,
+  "peakAp": null,
+  "peakAE": null,
+  "flareClass": null,
+  "cmeSpeedKmS": null,
+  "solarWindSpeedPeak": null,
+  "bzMin": null,
+  "protonFluxPeak": null,
+  "solarCycleNumber": 2,
+  "cyclePhase": "maximum",
+  "sourceActiveRegion": null,
+  "sunspotNumberDaily": null,
+  "impacts": [
+    {
+      "sector": "aurora",
+      "location": "Japan, China, Korea",
+      "description": "Red aurora visible from Japan (Kyoto, ~24° magnetic latitude) for nine consecutive nights; described in dozens of samurai diaries and official records as a 'red flames across the sky'.",
+      "severity": "extreme"
+    },
+    {
+      "sector": "cultural",
+      "location": "East Asia",
+      "description": "Widely recorded in Japanese historical documents including domain records and personal diaries; provided critical calibration for historical geomagnetic storm intensity estimates.",
+      "severity": "moderate"
+    }
+  ],
+  "auroraLowestLatitude": 24,
+  "timeSeries": [],
+  "images": [],
+  "papers": [
+    {
+      "doi": "10.1002/2017SW001693",
+      "title": "The extreme space weather event in September 1770",
+      "authors": "Hayakawa, H., Ebihara, Y., Willis, D. M., et al.",
+      "year": 2017,
+      "journal": "Space Weather",
+      "keyFinding": "Compiled Japanese historical records of aurora visible for 9 nights at latitudes as low as ~24° magnetic latitude, suggesting a storm rivaling or exceeding the Carrington Event."
+    }
+  ],
+  "summary": "A geomagnetic storm in September 1770 produced aurora visible across Japan for nine consecutive nights, with observations at magnetic latitudes as low as ~24°, suggesting an intensity potentially comparable to the 1859 Carrington Event.",
+  "description": "Contemporary Japanese records – including samurai diaries, domain reports, and astronomical logs – describe vivid red aurora that persisted for nine nights starting on September 17, 1770, visible from locations corresponding to magnetic latitudes of ~24°. Modern analysis by Hayakawa et al. (2017) compiled over 50 historical sources and estimated a peak Dst of roughly −440 to −600 nT or lower, making this storm one of the most intense pre-instrumental events on record. The event occurred near the maximum of Solar Cycle 1 (the first cycle in the modern numbering convention). The nine-day duration of visible aurora indicates sustained severe to extreme geomagnetic disturbance, potentially from multiple CME arrivals."
+}

@@ -1,0 +1,76 @@
+{
+  "id": "evt-2015-mar",
+  "slug": "2015-march-st-patricks-day-storm",
+  "name": "2015 St Patrick's Day Storm",
+  "altNames": [
+    "March 2015 Geomagnetic Storm",
+    "St Patrick's Day Storm 2015",
+    "March 17 2015 Storm"
+  ],
+  "startDate": "2015-03-15",
+  "peakDate": "2015-03-17",
+  "endDate": "2015-03-18",
+  "durationHours": 72,
+  "phenomena": [
+    {
+      "type": "geomag_storm",
+      "subtype": "G4",
+      "details": "Strongest geomagnetic storm of Solar Cycle 24 (prior to May 2024); Dst ~ −223 nT."
+    },
+    {
+      "type": "cme",
+      "details": "CME arrived March 17 from filament eruption and C-class flare activity; not an obvious candidate for a strong storm, highlighting forecasting challenges."
+    }
+  ],
+  "noaaGScale": 4,
+  "noaaSScale": null,
+  "noaaRScale": null,
+  "peakDst": -223,
+  "peakKp": 8,
+  "peakAp": 108,
+  "peakAE": 2800,
+  "flareClass": "C9.1",
+  "cmeSpeedKmS": 700,
+  "solarWindSpeedPeak": 650,
+  "bzMin": -22,
+  "protonFluxPeak": null,
+  "solarCycleNumber": 24,
+  "cyclePhase": "descending",
+  "sourceActiveRegion": "AR 12297",
+  "sunspotNumberDaily": 62,
+  "impacts": [
+    {
+      "sector": "aurora",
+      "location": "Mid-latitudes",
+      "description": "Widespread aurora visible across the northern United States, UK, and northern Europe on St Patrick's Day; widely photographed and shared on social media.",
+      "severity": "moderate"
+    },
+    {
+      "sector": "navigation",
+      "location": "Global",
+      "description": "GPS/GNSS positioning errors detected; ionospheric irregularities caused significant signal degradation, particularly at high and equatorial latitudes.",
+      "severity": "moderate"
+    },
+    {
+      "sector": "power",
+      "location": "High-latitude grids",
+      "description": "Elevated GIC levels detected in power grids in Scandinavia and North America; no major failures reported.",
+      "severity": "minor"
+    }
+  ],
+  "auroraLowestLatitude": 38,
+  "timeSeries": [],
+  "images": [],
+  "papers": [
+    {
+      "doi": "10.1002/2015JA021524",
+      "title": "The 17 March 2015 storm: A problem for space weather forecasting",
+      "authors": "Kamide, Y., Kusano, K.",
+      "year": 2015,
+      "journal": "Journal of Geophysical Research: Space Physics",
+      "keyFinding": "Highlighted the St Patrick's Day 2015 storm as a forecasting challenge, as the responsible CME originated from relatively modest solar activity (C-class flare, filament eruption), yet produced the strongest geomagnetic storm of SC24 at that time."
+    }
+  ],
+  "summary": "The 2015 St Patrick's Day storm (Dst ~ −223 nT) was the strongest geomagnetic storm of Solar Cycle 24 until May 2024, notable for being driven by relatively modest solar activity (C-class flare) that was underestimated by forecasters – highlighting persistent challenges in space weather prediction.",
+  "description": "On March 17, 2015, a geomagnetic storm reached G4 (severe) level with Dst ~ −223 nT – the strongest storm of Solar Cycle 24 until the Gannon superstorm of May 2024. The storm was driven by a CME associated with a filament eruption and a modest C9.1 flare from AR 12297, which had not been expected to produce such intense geoeffective conditions. The southward Bz component reached −22 nT and was sustained for an extended period. The timing on St Patrick's Day led to widespread public engagement with aurora photographs shared on social media across the UK, northern Europe, and the northern United States. The event became a key case study in the challenges of space weather forecasting, as the modest solar source belied the eventual geomagnetic impact."
+}

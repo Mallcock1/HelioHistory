@@ -1,0 +1,110 @@
+{
+  "id": "evt-2003-halloween",
+  "slug": "2003-halloween-storms",
+  "name": "Halloween Storms 2003",
+  "altNames": [
+    "Halloween Solar Storms",
+    "October 2003 Solar Storms",
+    "2003 Halloween Space Weather Events"
+  ],
+  "startDate": "2003-10-19",
+  "peakDate": "2003-10-30",
+  "endDate": "2003-11-04",
+  "durationHours": 384,
+  "phenomena": [
+    {
+      "type": "solar_flare",
+      "subtype": "X17.2",
+      "details": "X17.2 on October 28 from AR 10486; followed by X10 on Oct 29 and the X28+ on Nov 4.",
+      "peakTime": "2003-10-28T11:10:00Z"
+    },
+    {
+      "type": "cme",
+      "details": "Multiple fast CMEs: ~2000 km/s on Oct 28, ~2029 km/s on Oct 29. Compound CME arrivals at Earth Oct 29–30."
+    },
+    {
+      "type": "geomag_storm",
+      "subtype": "G5",
+      "details": "Dst −383 nT on Oct 30 (main storm). Kp 9.",
+      "peakTime": "2003-10-30T22:00:00Z"
+    },
+    {
+      "type": "sep",
+      "subtype": "S4",
+      "details": "Multiple major SEP events; GLE #65 (Oct 28) and GLE #66 (Oct 29). Proton flux >10 MeV reached 29,000+ pfu."
+    },
+    {
+      "type": "radio_blackout",
+      "subtype": "R4/R5",
+      "details": "X17.2 produced R4 blackout; X28+ on Nov 4 caused R5 (extreme) blackout on the sunlit hemisphere."
+    }
+  ],
+  "noaaGScale": 5,
+  "noaaSScale": 4,
+  "noaaRScale": 5,
+  "peakDst": -383,
+  "peakKp": 9,
+  "peakAp": 204,
+  "peakAE": 4000,
+  "flareClass": "X17.2",
+  "cmeSpeedKmS": 2029,
+  "solarWindSpeedPeak": 1850,
+  "bzMin": -57,
+  "protonFluxPeak": 29000,
+  "solarCycleNumber": 23,
+  "cyclePhase": "descending",
+  "sourceActiveRegion": "AR 10486",
+  "sunspotNumberDaily": 292,
+  "impacts": [
+    {
+      "sector": "satellite",
+      "location": "Earth orbit",
+      "description": "ADEOS-2 (Advanced Earth Observing Satellite-2) suffered permanent failure, a loss of approximately $640M. Over 47 satellites reported anomalies. Envisat lost 12 instruments temporarily. MARIE Mars radiation experiment on Mars Odyssey permanently failed.",
+      "severity": "extreme",
+      "economicCostUsd": 640000000
+    },
+    {
+      "sector": "power",
+      "location": "Malmö, Sweden",
+      "description": "A 50-minute power outage affected 50,000 customers in Malmö, Sweden on October 30, caused by GIC-induced relay misoperation in the regional power grid.",
+      "severity": "moderate",
+      "durationHours": 1
+    },
+    {
+      "sector": "aviation",
+      "location": "Trans-polar routes",
+      "description": "FAA rerouted flights away from polar routes for multiple days due to HF radio blackouts and elevated radiation; airlines reported increased dose rates at high-altitude routes even at mid-latitudes.",
+      "severity": "moderate",
+      "durationHours": 72
+    },
+    {
+      "sector": "aurora",
+      "location": "Florida, Texas, Spain",
+      "description": "Aurora visible as far south as Florida, Texas, and Mediterranean Europe (~25–30° N) on multiple nights during late October and early November.",
+      "severity": "severe"
+    }
+  ],
+  "auroraLowestLatitude": 25,
+  "timeSeries": [],
+  "images": [],
+  "papers": [
+    {
+      "doi": "10.1029/2004JA010958",
+      "title": "Interplanetary events and solar wind preconditioning during the October–November 2003 storms",
+      "authors": "Gopalswamy, N., Yashiro, S., Liu, Y., et al.",
+      "year": 2005,
+      "journal": "Journal of Geophysical Research",
+      "keyFinding": "Analysed the complex sequence of CMEs and their interactions en route to Earth, showing how CME–CME interaction enhanced the geoeffectiveness of the Halloween storm complex."
+    },
+    {
+      "doi": "10.1029/2004JA010910",
+      "title": "Energetic particles at high latitudes during the October–November 2003 Halloween events",
+      "authors": "Lopez, R. E., Wiltberger, M., Elkington, S., Lyon, J. G.",
+      "year": 2004,
+      "journal": "Journal of Geophysical Research",
+      "keyFinding": "Documented GLEs #65 and #66 during the Halloween storms and the enhanced radiation environment in the magnetosphere."
+    }
+  ],
+  "summary": "The October–November 2003 Halloween Storms were a multi-week barrage of extreme solar activity – including X17.2 and X28+ flares, Dst −383 nT, GLE #65 and #66, and 47+ satellite anomalies – representing the most comprehensive space weather event complex of the Space Age.",
+  "description": "From October 19 through November 4, 2003, active region AR 10486 (the largest sunspot group in over a decade) produced a relentless series of major flares and CMEs near Solar Cycle 23's descending phase. The October 28 X17.2 flare and subsequent ~2000 km/s CME drove a G5 storm on October 30 (Dst −383 nT). The October 29 X10 flare added GLE #66. The November 4 X28+ event (see separate entry) produced the largest known radio blackout in the GOES era. Over 47 satellites suffered anomalies, including the permanent loss of Japan's ADEOS-2 (~$640M). Sweden's Malmö experienced a 50-minute power outage affecting 50,000 customers. The FAA rerouted polar aviation for days. Aurora was visible at 25–30° N latitude on multiple nights. The Halloween Storms became the single most studied space weather event complex and revealed critical gaps in infrastructure protection that have driven policy reforms ever since."
+}

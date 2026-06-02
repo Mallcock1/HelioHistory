@@ -3,11 +3,17 @@
 import { useRef, useEffect, useCallback } from "react";
 import * as d3 from "d3";
 import type { TimeSeriesDataPoint } from "@/lib/types";
+import FigureFrame from "@/components/charts/FigureFrame";
 
 interface KpChartProps {
   data: TimeSeriesDataPoint[];
   width?: number;
   height?: number;
+  downloadName?: string;
+  /** Optional shared x-domain (epoch ms) so multiple charts align in time. */
+  domain?: [number, number];
+  /** Left margin, overridable to align plot areas across charts. */
+  marginLeft?: number;
 }
 
 const KP_COLORS = [
@@ -27,6 +33,9 @@ export default function KpChart({
   data,
   width = 420,
   height = 140,
+  downloadName = "kp-index",
+  domain,
+  marginLeft = 48,
 }: KpChartProps) {
   const svgRef = useRef<SVGSVGElement>(null);
   const drawRef = useRef<(() => void) | null>(null);
@@ -38,7 +47,7 @@ export default function KpChart({
     const svg = d3.select(svgRef.current);
     svg.selectAll("*").remove();
 
-    const margin = { top: 16, right: 16, bottom: 28, left: 32 };
+    const margin = { top: 16, right: 16, bottom: 28, left: marginLeft };
     const w = width - margin.left - margin.right;
     const h = height - margin.top - margin.bottom;
 
@@ -47,13 +56,27 @@ export default function KpChart({
       .attr("transform", `translate(${margin.left},${margin.top})`);
 
     const times = data.map((d) => new Date(d.time));
-    const barWidth = Math.max(4, w / data.length - 1);
 
+    // Time-based x-axis (shared domain when provided) so Kp bars align with the
+    // Dst/neutron-monitor charts above. Bars are placed at their real timestamp.
     const xScale = d3
-      .scaleBand<number>()
-      .domain(d3.range(data.length))
-      .range([0, w])
-      .padding(0.15);
+      .scaleTime()
+      .domain(
+        domain
+          ? [new Date(domain[0]), new Date(domain[1])]
+          : (d3.extent(times) as [Date, Date])
+      )
+      .range([0, w]);
+
+    // Bar width derived from the tightest observed cadence, so bars never overlap.
+    const sortedMs = times.map((t) => +t).sort((a, b) => a - b);
+    let minDt = Infinity;
+    for (let i = 1; i < sortedMs.length; i++) {
+      minDt = Math.min(minDt, sortedMs[i] - sortedMs[i - 1]);
+    }
+    if (!Number.isFinite(minDt) || minDt <= 0) minDt = 3 * 3600 * 1000; // default 3h
+    const t0 = sortedMs[0] ?? 0;
+    const barWidth = Math.max(2, (xScale(new Date(t0 + minDt)) - xScale(new Date(t0))) * 0.8);
 
     const yScale = d3.scaleLinear().domain([0, 9]).range([h, 0]);
 
@@ -73,9 +96,9 @@ export default function KpChart({
       .data(data)
       .enter()
       .append("rect")
-      .attr("x", (_, i) => xScale(i) || 0)
+      .attr("x", (d) => xScale(new Date(d.time)) - barWidth / 2)
       .attr("y", (d) => yScale(d.value))
-      .attr("width", xScale.bandwidth())
+      .attr("width", barWidth)
       .attr("height", (d) => h - yScale(d.value))
       .attr("rx", 2)
       .attr("fill", (d) => KP_COLORS[Math.min(9, Math.round(d.value))]);
@@ -87,25 +110,21 @@ export default function KpChart({
         g.selectAll("line").remove();
         g.selectAll("text")
           .attr("fill", isDark ? "rgba(255,255,255,0.4)" : "rgba(0,0,0,0.5)")
-          .attr("font-size", "9px");
+          .attr("font-size", "11px");
         g.select(".domain").remove();
       });
 
-    // X axis labels (sparse)
-    const step = Math.max(1, Math.floor(data.length / 6));
-    for (let i = 0; i < data.length; i += step) {
-      const x = (xScale(i) || 0) + xScale.bandwidth() / 2;
-      const d = times[i];
-      g.append("text")
-        .attr("x", x)
-        .attr("y", h + 16)
-        .attr("text-anchor", "middle")
-        .attr("fill", isDark ? "rgba(255,255,255,0.4)" : "rgba(0,0,0,0.5)")
-        .attr("font-size", "9px")
-        .text(
-          d.toLocaleDateString("en-US", { month: "short", day: "numeric" })
-        );
-    }
+    // X axis (time): matches the Dst chart's formatting and ticks.
+    g.append("g")
+      .attr("transform", `translate(0,${h})`)
+      .call(d3.axisBottom(xScale).ticks(5).tickSize(-h))
+      .call((g) => {
+        g.selectAll("line").attr("stroke", isDark ? "rgba(255,255,255,0.05)" : "rgba(0,0,0,0.06)");
+        g.selectAll("text")
+          .attr("fill", isDark ? "rgba(255,255,255,0.4)" : "rgba(0,0,0,0.5)")
+          .attr("font-size", "11px");
+        g.select(".domain").remove();
+      });
 
     // Label
     svg
@@ -113,9 +132,9 @@ export default function KpChart({
       .attr("x", margin.left)
       .attr("y", 12)
       .attr("fill", isDark ? "rgba(255,255,255,0.5)" : "rgba(0,0,0,0.55)")
-      .attr("font-size", "10px")
+      .attr("font-size", "12px")
       .text("Kp Index (3-hour)");
-  }, [data, width, height]);
+  }, [data, width, height, domain, marginLeft]);
 
   useEffect(() => { draw(); }, [draw]);
 
@@ -128,11 +147,13 @@ export default function KpChart({
   drawRef.current = draw;
 
   return (
-    <svg
-      ref={svgRef}
-      width={width}
-      height={height}
-      className="overflow-visible"
-    />
+    <FigureFrame filename={downloadName}>
+      <svg
+        ref={svgRef}
+        width={width}
+        height={height}
+        className="overflow-visible"
+      />
+    </FigureFrame>
   );
 }

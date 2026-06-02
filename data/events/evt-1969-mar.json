@@ -1,0 +1,75 @@
+{
+  "id": "evt-1969-mar",
+  "slug": "1969-march-storm",
+  "name": "1969 March Storm",
+  "altNames": [
+    "March 1969 Geomagnetic Storm",
+    "March 8 1969 Storm"
+  ],
+  "startDate": "1969-03-08",
+  "peakDate": "1969-03-08",
+  "endDate": "1969-03-10",
+  "durationHours": 48,
+  "phenomena": [
+    {
+      "type": "geomag_storm",
+      "subtype": "G4",
+      "details": "Major geomagnetic storm with Dst ~ −429 nT during the maximum of Solar Cycle 20."
+    },
+    {
+      "type": "solar_flare",
+      "details": "Associated X-class flare activity."
+    }
+  ],
+  "noaaGScale": 4,
+  "noaaSScale": null,
+  "noaaRScale": null,
+  "peakDst": -429,
+  "peakKp": 8,
+  "peakAp": 246,
+  "peakAE": null,
+  "flareClass": "X",
+  "cmeSpeedKmS": null,
+  "solarWindSpeedPeak": null,
+  "bzMin": null,
+  "protonFluxPeak": null,
+  "solarCycleNumber": 20,
+  "cyclePhase": "maximum",
+  "sourceActiveRegion": null,
+  "sunspotNumberDaily": null,
+  "impacts": [
+    {
+      "sector": "communications",
+      "location": "Global",
+      "description": "HF radio communications severely disrupted; polar radio routes experienced extended blackouts.",
+      "severity": "severe"
+    },
+    {
+      "sector": "aurora",
+      "location": "North America, Europe",
+      "description": "Aurora visible at mid-latitudes across North America and Europe; widely reported by the public.",
+      "severity": "moderate"
+    },
+    {
+      "sector": "power",
+      "location": "North America",
+      "description": "GIC effects detected in long transmission lines and pipelines across North America.",
+      "severity": "moderate"
+    }
+  ],
+  "auroraLowestLatitude": 35,
+  "timeSeries": [],
+  "images": [],
+  "papers": [
+    {
+      "doi": "10.1029/JA076i019p04349",
+      "title": "Geomagnetic activity during the March 1969 storm period",
+      "authors": "Caan, M. N., McPherron, R. L., Russell, C. T.",
+      "year": 1971,
+      "journal": "Journal of Geophysical Research",
+      "keyFinding": "Analyzed the March 1969 storm as a significant event in the emerging satellite era, with enhanced in-situ solar wind data providing improved understanding of storm drivers."
+    }
+  ],
+  "summary": "The March 1969 geomagnetic storm (Dst ~ −429 nT) was a major event during Solar Cycle 20 maximum, causing widespread HF radio blackouts and aurora at mid-latitudes, studied with early satellite-era instrumentation.",
+  "description": "On March 8, 1969, during the maximum of Solar Cycle 20, a major geomagnetic storm drove the Dst index to approximately −429 nT. The event occurred during the early satellite era when in-situ solar wind measurements were becoming available, providing a more complete picture of storm drivers than had been possible for earlier events. The storm caused significant HF radio disruptions, particularly on polar routes, and aurora was visible at mid-latitudes across North America and Europe. GIC effects were detected in power transmission infrastructure, though grid failures were not as severe as those that would occur in later, more infrastructure-dependent decades."
+}

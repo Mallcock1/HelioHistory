@@ -1,0 +1,87 @@
+{
+  "id": "evt-2001-nov-gle60",
+  "slug": "2001-november-gle60",
+  "name": "2001 November GLE#61",
+  "altNames": [
+    "GLE 61",
+    "November 4 2001 GLE",
+    "2001 November SEP Event"
+  ],
+  "startDate": "2001-11-04",
+  "peakDate": "2001-11-04",
+  "endDate": "2001-11-06",
+  "durationHours": 48,
+  "phenomena": [
+    {
+      "type": "gle",
+      "subtype": "GLE#61",
+      "details": "Ground-level enhancement #61; significant neutron monitor count rate increases observed globally."
+    },
+    {
+      "type": "solar_flare",
+      "subtype": "X1.0",
+      "details": "X1.0 flare on November 4, 2001."
+    },
+    {
+      "type": "sep",
+      "subtype": "S3",
+      "details": "Major SEP event with elevated proton flux at >10 MeV."
+    },
+    {
+      "type": "geomag_storm",
+      "subtype": "G4",
+      "details": "Associated geomagnetic storm with Dst ~ −292 nT on November 6."
+    }
+  ],
+  "noaaGScale": 4,
+  "noaaSScale": 3,
+  "noaaRScale": 3,
+  "peakDst": -292,
+  "peakKp": 8,
+  "peakAp": 170,
+  "peakAE": null,
+  "flareClass": "X1.0",
+  "cmeSpeedKmS": 1800,
+  "solarWindSpeedPeak": 750,
+  "bzMin": -28,
+  "protonFluxPeak": 31700,
+  "solarCycleNumber": 23,
+  "cyclePhase": "maximum",
+  "sourceActiveRegion": "AR 9684",
+  "sunspotNumberDaily": 140,
+  "impacts": [
+    {
+      "sector": "aviation",
+      "location": "Polar routes",
+      "description": "Elevated radiation dose rates at aviation altitudes on polar routes from the SEP event; airlines rerouted some transpolar flights.",
+      "severity": "severe"
+    },
+    {
+      "sector": "communications",
+      "location": "Global",
+      "description": "Severe HF radio blackouts from both the flare and SEP-driven polar cap absorption; transpolar aviation communication links disrupted.",
+      "severity": "severe"
+    },
+    {
+      "sector": "satellite",
+      "location": "Earth orbit",
+      "description": "Elevated single-event upset rates in satellite electronics from the SEP event.",
+      "severity": "moderate"
+    }
+  ],
+  "auroraLowestLatitude": 38,
+  "timeSeries": [],
+  "images": [],
+  "papers": [
+    {
+      "doi": "10.1029/2003JA010064",
+      "title": "The November 2001 solar energetic particle event and GLE 60",
+      "authors": "Tylka, A. J., Cohen, C. M. S., Dietrich, W. F., et al.",
+      "year": 2003,
+      "journal": "Journal of Geophysical Research",
+      "keyFinding": "Characterized GLE#61 and the associated SEP event, providing insights into particle acceleration by the CME-driven shock."
+    }
+  ],
+  "summary": "GLE#61 on November 4, 2001 was a significant ground-level enhancement and solar energetic particle event from an X1.0 flare, followed by a strong geomagnetic storm (Dst ~ −292 nT), causing aviation radiation concerns and severe radio blackouts.",
+  "description": "On November 4, 2001, an X1.0 flare from AR 9684 produced GLE#61, a significant ground-level enhancement detected by neutron monitors worldwide. The event was accompanied by a fast CME (~1800 km/s) and a major SEP event with >10 MeV proton flux reaching ~31,700 pfu. The SEP event elevated radiation dose rates at aviation altitudes, particularly on polar routes, leading some airlines to reroute transpolar flights. Severe HF radio blackouts affected global communications. The CME subsequently drove a strong geomagnetic storm reaching Dst ~ −292 nT on November 6. This event demonstrated the compound hazard posed by solar eruptions: simultaneous radiation, communication, and geomagnetic impacts requiring a multi-faceted space weather response."
+}

@@ -1,0 +1,65 @@
+{
+  "id": "evt-5410bc-spe",
+  "slug": "5410-bc-solar-proton-event",
+  "name": "5410 BC Solar Proton Event",
+  "altNames": [
+    "Miyake 5410 BCE",
+    "5411-5410 BCE event"
+  ],
+  "startDate": "-5411-01-01",
+  "peakDate": "-5410-01-01",
+  "endDate": "-5410-12-31",
+  "durationHours": 17520,
+  "phenomena": [
+    {
+      "type": "sep",
+      "subtype": "Extreme SEP",
+      "details": "Single-year Delta-14C rise of ~6 per mil over 5411-5410 BCE in three Northern Hemisphere tree-ring chronologies; smaller than AD 775."
+    }
+  ],
+  "noaaGScale": null,
+  "noaaSScale": 4,
+  "noaaRScale": null,
+  "peakDst": null,
+  "peakKp": null,
+  "peakAp": null,
+  "peakAE": null,
+  "flareClass": null,
+  "cmeSpeedKmS": null,
+  "solarWindSpeedPeak": null,
+  "bzMin": null,
+  "protonFluxPeak": null,
+  "solarCycleNumber": null,
+  "cyclePhase": "maximum",
+  "sourceActiveRegion": null,
+  "sunspotNumberDaily": null,
+  "impacts": [
+    {
+      "sector": "biological",
+      "location": "Global",
+      "description": "Moderate-to-strong solar energetic particle event producing a measurable single-year enhancement in atmospheric radiocarbon.",
+      "severity": "severe"
+    },
+    {
+      "sector": "cultural",
+      "location": "Global",
+      "description": "Prehistoric event known only from cosmogenic radiocarbon in tree rings.",
+      "severity": "minor"
+    }
+  ],
+  "auroraLowestLatitude": null,
+  "timeSeries": [],
+  "images": [],
+  "papers": [
+    {
+      "doi": "10.1029/2021GL093419",
+      "title": "A single-year cosmic ray event at 5410 BCE registered in 14C of tree rings",
+      "authors": "Miyake, F., Panyushkina, I. P., Jull, A. J. T., et al.",
+      "year": 2021,
+      "journal": "Geophysical Research Letters",
+      "keyFinding": "Detected a ~6 per mil single-year radiocarbon increase at 5410 BCE in bristlecone pine (USA), larch (Switzerland) and Scots pine (Finland), with a 14C signature matching confirmed solar particle events."
+    }
+  ],
+  "summary": "A single-year extreme solar particle event in 5410 BC, recorded as a ~6 per mil radiocarbon increase in three Northern Hemisphere tree-ring chronologies - genuine but more moderate than the AD 774 event.",
+  "description": "Miyake et al. (2021) identified a single-year radiocarbon increase of about 6 per mil spanning 5411-5410 BCE in three independent, widely separated Northern Hemisphere chronologies: Californian bristlecone pine, Swiss larch and Finnish Scots pine. The synchronous, single-year form of the signal matches the confirmed solar energetic particle events (AD 774/775, AD 993/994, ~660 BC), supporting a solar origin, although no ice-core 10Be/36Cl confirmation was presented. At roughly half the amplitude of AD 775 (~12 per mil), it is a genuine but more moderate event, useful both as an additional data point on the frequency of extreme solar storms and as a dendrochronological tie-point."
+}

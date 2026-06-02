@@ -1,0 +1,75 @@
+{
+  "id": "evt-2023-apr",
+  "slug": "2023-april-storm",
+  "name": "2023 April Storm",
+  "altNames": [
+    "April 2023 Geomagnetic Storm",
+    "April 24 2023 Storm"
+  ],
+  "startDate": "2023-04-23",
+  "peakDate": "2023-04-24",
+  "endDate": "2023-04-25",
+  "durationHours": 48,
+  "phenomena": [
+    {
+      "type": "geomag_storm",
+      "subtype": "G4",
+      "details": "Strong G4 geomagnetic storm with Dst ~ −212 nT; the strongest storm of Solar Cycle 25 prior to the May 2024 Gannon superstorm."
+    },
+    {
+      "type": "cme",
+      "details": "CME associated with recurrent active region activity."
+    }
+  ],
+  "noaaGScale": 4,
+  "noaaSScale": null,
+  "noaaRScale": null,
+  "peakDst": -212,
+  "peakKp": 8,
+  "peakAp": 100,
+  "peakAE": null,
+  "flareClass": null,
+  "cmeSpeedKmS": 800,
+  "solarWindSpeedPeak": 650,
+  "bzMin": -25,
+  "protonFluxPeak": null,
+  "solarCycleNumber": 25,
+  "cyclePhase": "ascending",
+  "sourceActiveRegion": null,
+  "sunspotNumberDaily": 120,
+  "impacts": [
+    {
+      "sector": "aurora",
+      "location": "Mid-latitudes",
+      "description": "Aurora visible from the northern United States, UK, and northern Europe; widely photographed and shared on social media, generating significant public interest in Solar Cycle 25 activity.",
+      "severity": "moderate"
+    },
+    {
+      "sector": "navigation",
+      "location": "Global",
+      "description": "GPS/GNSS positioning degradation detected during the storm; ionospheric irregularities affected precision applications.",
+      "severity": "moderate"
+    },
+    {
+      "sector": "satellite",
+      "location": "Low-Earth orbit",
+      "description": "Enhanced atmospheric drag from thermospheric heating; satellite operators adjusted conjunction assessments and orbit maintenance schedules.",
+      "severity": "minor"
+    }
+  ],
+  "auroraLowestLatitude": 38,
+  "timeSeries": [],
+  "images": [],
+  "papers": [
+    {
+      "doi": "10.1029/2023SW003816",
+      "title": "The April 2023 G4 geomagnetic storm: An early marker of Solar Cycle 25 vigor",
+      "authors": "Piersanti, M., et al.",
+      "year": 2024,
+      "journal": "Space Weather",
+      "keyFinding": "Characterized the April 2023 storm as the strongest of SC25's ascending phase, reinforcing evidence that SC25 was tracking well above initial weak-cycle predictions."
+    }
+  ],
+  "summary": "The April 2023 geomagnetic storm (Dst ~ −212 nT) was the strongest event of Solar Cycle 25 prior to the May 2024 Gannon superstorm, producing aurora at mid-latitudes and providing further evidence that SC25 was significantly exceeding initial weak-cycle forecasts.",
+  "description": "On April 23–24, 2023, a strong G4 geomagnetic storm drove the Dst index to approximately −212 nT during the ascending phase of Solar Cycle 25. The storm produced aurora visible from the northern United States, the UK, and northern Europe, generating substantial public interest in space weather. GPS/GNSS systems experienced positioning degradation, and satellite operators adjusted their operations for the enhanced drag environment. The event was significant as the strongest storm of SC25 up to that point, confirming that the solar cycle was tracking well above the initial consensus prediction of a weak cycle similar to SC24. The April 2023 storm was a precursor to the even more intense activity that would culminate in the May 2024 Gannon superstorm."
+}

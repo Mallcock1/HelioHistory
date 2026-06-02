@@ -1,0 +1,80 @@
+{
+  "id": "evt-2011-feb",
+  "slug": "2011-february-valentines-storm",
+  "name": "2011 February Valentine's Day Storm",
+  "altNames": [
+    "Valentine's Day 2011 Flare",
+    "February 15 2011 X-flare",
+    "First X-flare of SC24"
+  ],
+  "startDate": "2011-02-14",
+  "peakDate": "2011-02-15",
+  "endDate": "2011-02-18",
+  "durationHours": 96,
+  "phenomena": [
+    {
+      "type": "solar_flare",
+      "subtype": "X2.2",
+      "details": "X2.2 flare on February 15, 2011 from AR 11158 – the first X-class flare of Solar Cycle 24."
+    },
+    {
+      "type": "cme",
+      "details": "Earth-directed CME from the X2.2 flare, speed ~900 km/s."
+    },
+    {
+      "type": "geomag_storm",
+      "subtype": "G1",
+      "details": "Moderate geomagnetic storm on February 18 with Dst ~ −55 nT."
+    },
+    {
+      "type": "radio_blackout",
+      "subtype": "R3",
+      "details": "R3 strong radio blackout from the X2.2 flare."
+    }
+  ],
+  "noaaGScale": 1,
+  "noaaSScale": 1,
+  "noaaRScale": 3,
+  "peakDst": -55,
+  "peakKp": 5,
+  "peakAp": 40,
+  "peakAE": null,
+  "flareClass": "X2.2",
+  "cmeSpeedKmS": 900,
+  "solarWindSpeedPeak": 550,
+  "bzMin": -10,
+  "protonFluxPeak": 10,
+  "solarCycleNumber": 24,
+  "cyclePhase": "ascending",
+  "sourceActiveRegion": "AR 11158",
+  "sunspotNumberDaily": 80,
+  "impacts": [
+    {
+      "sector": "communications",
+      "location": "Global",
+      "description": "R3 radio blackout from the X2.2 flare; HF communications disrupted on the sunlit side for approximately one hour.",
+      "severity": "moderate"
+    },
+    {
+      "sector": "aviation",
+      "location": "China",
+      "description": "Some Chinese airports experienced temporary disruptions to radio communications during the flare peak.",
+      "severity": "minor"
+    }
+  ],
+  "auroraLowestLatitude": 55,
+  "timeSeries": [],
+  "images": [],
+  "papers": [
+    {
+      "doi": "10.1088/0004-637X/738/2/167",
+      "title": "The 2011 February 15 X2.2 flare, sunquake, and CME",
+      "authors": "Schrijver, C. J., Title, A. M., Yeates, A. R., et al.",
+      "year": 2011,
+      "journal": "The Astrophysical Journal",
+      "keyFinding": "Analyzed the first X-class flare of SC24 using SDO/AIA data, demonstrating the capabilities of the new Solar Dynamics Observatory for studying major solar eruptions."
+    }
+  ],
+  "summary": "The X2.2 flare on February 15, 2011 from AR 11158 was the first X-class flare of Solar Cycle 24, signaling the Sun's awakening from an unusually prolonged solar minimum and providing one of the first major events for the recently launched Solar Dynamics Observatory.",
+  "description": "On February 15, 2011, AR 11158 produced an X2.2 flare – the first X-class flare of Solar Cycle 24, which had begun after an unusually extended and deep solar minimum. The event marked a milestone in solar activity and was one of the first major eruptions observed by NASA's Solar Dynamics Observatory (SDO), launched in February 2010. SDO's unprecedented high-cadence, multi-wavelength imaging provided extraordinary detail of the flare dynamics, including the associated sunquake and CME initiation. While the geomagnetic impact was relatively modest (Dst ~ −55 nT), the event's significance lay in confirming that Solar Cycle 24 was indeed producing major activity and in demonstrating SDO's transformative observing capabilities."
+}

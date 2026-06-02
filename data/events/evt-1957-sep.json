@@ -1,0 +1,76 @@
+{
+  "id": "evt-1957-sep",
+  "slug": "1957-september-igy-storm",
+  "name": "1957 September IGY Storm",
+  "altNames": [
+    "September 1957 Storm",
+    "IGY Great Storm",
+    "International Geophysical Year Storm"
+  ],
+  "startDate": "1957-09-13",
+  "peakDate": "1957-09-13",
+  "endDate": "1957-09-15",
+  "durationHours": 48,
+  "phenomena": [
+    {
+      "type": "geomag_storm",
+      "subtype": "G5",
+      "details": "One of the most intense storms of Solar Cycle 19, the strongest solar cycle on record. Dst ~ −427 nT."
+    },
+    {
+      "type": "solar_flare",
+      "details": "Major solar flare from highly active solar disk during the maximum of SC19."
+    }
+  ],
+  "noaaGScale": 5,
+  "noaaSScale": null,
+  "noaaRScale": null,
+  "peakDst": -427,
+  "peakKp": 9,
+  "peakAp": 300,
+  "peakAE": null,
+  "flareClass": null,
+  "cmeSpeedKmS": null,
+  "solarWindSpeedPeak": null,
+  "bzMin": null,
+  "protonFluxPeak": null,
+  "solarCycleNumber": 19,
+  "cyclePhase": "maximum",
+  "sourceActiveRegion": null,
+  "sunspotNumberDaily": 253,
+  "impacts": [
+    {
+      "sector": "communications",
+      "location": "Global",
+      "description": "Severe HF radio blackouts lasting several days; significant disruption to transatlantic and polar radio links during a period of heavy reliance on shortwave communications.",
+      "severity": "severe"
+    },
+    {
+      "sector": "aurora",
+      "location": "Global",
+      "description": "Aurora visible at very low latitudes; the event occurred during the International Geophysical Year, resulting in exceptional scientific documentation.",
+      "severity": "extreme"
+    },
+    {
+      "sector": "power",
+      "location": "North America, Europe",
+      "description": "GIC effects detected in power transmission lines and telegraph cables; early reports of transformer anomalies in North American grids.",
+      "severity": "moderate"
+    }
+  ],
+  "auroraLowestLatitude": 30,
+  "timeSeries": [],
+  "images": [],
+  "papers": [
+    {
+      "doi": "10.1029/JZ066i010p03311",
+      "title": "The great geomagnetic storm of September 13, 1957",
+      "authors": "Akasofu, S.-I., Chapman, S.",
+      "year": 1961,
+      "journal": "Journal of Geophysical Research",
+      "keyFinding": "Provided detailed analysis of the September 1957 storm as one of the premier events studied during the International Geophysical Year, establishing key morphological patterns of extreme storms."
+    }
+  ],
+  "summary": "The September 1957 great storm (Dst ~ −427 nT) was one of the first major events of the space age, occurring during the International Geophysical Year and the maximum of Solar Cycle 19 – the strongest solar cycle on record – providing unprecedented scientific documentation of an extreme geomagnetic storm.",
+  "description": "On September 13, 1957, during the maximum of Solar Cycle 19 (the strongest solar cycle in the sunspot record), an extreme geomagnetic storm drove the Dst index to approximately −427 nT. The event coincided with the International Geophysical Year (IGY, 1957–1958), a landmark international scientific collaboration that had deployed an unprecedented network of geophysical observing stations worldwide. As a result, this storm was among the best-documented severe space weather events up to that time, with comprehensive magnetometer, ionosonde, and aurora camera data collected globally. The storm caused severe HF radio blackouts and produced aurora at very low latitudes. Akasofu and Chapman's subsequent analysis of this event helped establish foundational understanding of geomagnetic storm morphology."
+}

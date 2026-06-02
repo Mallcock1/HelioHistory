@@ -1,0 +1,86 @@
+{
+  "id": "evt-0660bc-spe",
+  "slug": "660-bc-solar-proton-event",
+  "name": "660 BC Solar Proton Event",
+  "altNames": [
+    "664-663 BCE event",
+    "2610 BP event",
+    "Miyake 660 BC"
+  ],
+  "startDate": "-0664-01-01",
+  "peakDate": "-0663-06-01",
+  "endDate": "-0663-12-31",
+  "durationHours": 17520,
+  "phenomena": [
+    {
+      "type": "sep",
+      "subtype": "Extreme SEP",
+      "details": "Sharp Delta-14C rise of ~10 per mil over 3-4 years in tree rings, corroborated by 10Be and 36Cl in Greenland ice cores - a hard-spectrum solar proton event."
+    },
+    {
+      "type": "gle",
+      "details": "Hard energy spectrum inferred: F(>30 MeV) = 2.09 (+/-0.75) x 10^10 cm^-2 and F(>200 MeV) = 6.3 x 10^9 cm^-2 (O'Hare et al. 2019)."
+    }
+  ],
+  "noaaGScale": null,
+  "noaaSScale": 5,
+  "noaaRScale": null,
+  "peakDst": null,
+  "peakKp": null,
+  "peakAp": null,
+  "peakAE": null,
+  "flareClass": null,
+  "cmeSpeedKmS": null,
+  "solarWindSpeedPeak": null,
+  "bzMin": null,
+  "protonFluxPeak": null,
+  "solarCycleNumber": null,
+  "cyclePhase": "maximum",
+  "sourceActiveRegion": null,
+  "sunspotNumberDaily": null,
+  "impacts": [
+    {
+      "sector": "biological",
+      "location": "Global",
+      "description": "Extreme solar proton fluence with a hard energy spectrum, depositing ionising radiation into the atmosphere and driving cosmogenic isotope production worldwide.",
+      "severity": "extreme"
+    },
+    {
+      "sector": "cultural",
+      "location": "Global",
+      "description": "No contemporary written records linked to the event; identified entirely from cosmogenic isotopes in tree rings and ice cores.",
+      "severity": "minor"
+    }
+  ],
+  "auroraLowestLatitude": null,
+  "timeSeries": [],
+  "images": [],
+  "papers": [
+    {
+      "doi": "10.1073/pnas.1815725116",
+      "title": "Multiradionuclide evidence for an extreme solar proton event around 2,610 B.P. (~660 BC)",
+      "authors": "O'Hare, P., Mekhaldi, F., Adolphi, F., et al.",
+      "year": 2019,
+      "journal": "Proceedings of the National Academy of Sciences",
+      "keyFinding": "Confirmed the event in 14C, 10Be and 36Cl, deriving a hard-spectrum proton fluence comparable to (about 26% below, within uncertainty) the AD 774/775 event."
+    },
+    {
+      "doi": "10.1017/RDC.2017.59",
+      "title": "Relationship between solar activity and Delta-14C peaks in AD 775, AD 994, and 660 BC",
+      "authors": "Park, J., Southon, J., Fahrni, S., Creasman, P. P., Mewaldt, R.",
+      "year": 2017,
+      "journal": "Radiocarbon",
+      "keyFinding": "First identified the ~660 BC radiocarbon peak in German oak and Californian sequoia, with a 3-4 year rise."
+    },
+    {
+      "doi": "10.1029/2022JA031186",
+      "title": "Multiproxy reconstructions of integral energy spectra for extreme solar particle events of 7176 BCE, 660 BCE, 775 CE, and 994 CE",
+      "authors": "Koldobskiy, S., Mekhaldi, F., Kovaltsov, G., Usoskin, I.",
+      "year": 2023,
+      "journal": "Journal of Geophysical Research: Space Physics",
+      "keyFinding": "Reconstructed the integral energy spectrum of the 660 BC event alongside the other major extreme SPEs."
+    }
+  ],
+  "summary": "A hard-spectrum extreme solar proton event around 664-663 BC, confirmed independently by radiocarbon in tree rings and by 10Be and 36Cl in ice cores, with a fluence comparable to the AD 774 event.",
+  "description": "First identified as a radiocarbon peak around 660 BC (Park et al. 2017) and later confirmed as a genuine solar proton event by O'Hare et al. (2019) using sub-annual 10Be from the NGRIP ice core together with GRIP 10Be and 36Cl records, this is one of the firmly established pre-instrumental extreme solar particle events. A 2024 study refined its timing to between 664 and 663 BCE. The inferred integral proton fluences, F(>30 MeV) = 2.09 (+/-0.75) x 10^10 cm^-2 and F(>200 MeV) = 6.3 x 10^9 cm^-2, indicate an unusually hard spectrum and a total fluence comparable to (roughly 26% smaller than, but consistent within uncertainty with) the AD 774/775 event, and about an order of magnitude larger than the strongest event of the instrumental era. The 3-4 year rise in radiocarbon has prompted suggestions that the signal may represent one exceptional event or a short cluster of energetic events."
+}

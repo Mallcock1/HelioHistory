@@ -1,0 +1,254 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://heliohistory.org/schema/event.schema.json",
+  "title": "SpaceWeatherEvent",
+  "description": "A single catalogued space weather event in the HelioHistory database. This schema is the canonical, language-neutral contract for the dataset; src/lib/types.ts mirrors it for the TypeScript app.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "slug",
+    "name",
+    "altNames",
+    "startDate",
+    "peakDate",
+    "endDate",
+    "durationHours",
+    "phenomena",
+    "noaaGScale",
+    "noaaSScale",
+    "noaaRScale",
+    "peakDst",
+    "peakKp",
+    "peakAp",
+    "peakAE",
+    "flareClass",
+    "cmeSpeedKmS",
+    "solarWindSpeedPeak",
+    "bzMin",
+    "protonFluxPeak",
+    "solarCycleNumber",
+    "cyclePhase",
+    "sourceActiveRegion",
+    "sunspotNumberDaily",
+    "impacts",
+    "auroraLowestLatitude",
+    "timeSeries",
+    "images",
+    "papers",
+    "summary",
+    "description"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Stable unique identifier, also used as the data filename. Convention: evt-<year>-<shortname>.",
+      "pattern": "^evt-[a-z0-9-]+$"
+    },
+    "slug": {
+      "type": "string",
+      "description": "URL-safe slug for routing.",
+      "pattern": "^[a-z0-9-]+$"
+    },
+    "name": { "type": "string", "minLength": 1 },
+    "altNames": {
+      "type": "array",
+      "description": "Alternative names the event is known by.",
+      "items": { "type": "string" }
+    },
+    "startDate": {
+      "type": "string",
+      "description": "ISO-8601-style date marking the start of the event. A leading minus denotes BC (e.g. -0660-01-01 = 660 BC, -12350-01-01 = 12350 BC).",
+      "pattern": "^-?[0-9]{1,5}-[0-9]{2}-[0-9]{2}"
+    },
+    "peakDate": {
+      "type": "string",
+      "pattern": "^-?[0-9]{1,5}-[0-9]{2}-[0-9]{2}"
+    },
+    "endDate": {
+      "type": "string",
+      "pattern": "^-?[0-9]{1,5}-[0-9]{2}-[0-9]{2}"
+    },
+    "durationHours": { "type": "number", "minimum": 0 },
+
+    "phenomena": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/definitions/phenomenon" }
+    },
+    "noaaGScale": { "$ref": "#/definitions/noaaScale" },
+    "noaaSScale": { "$ref": "#/definitions/noaaScale" },
+    "noaaRScale": { "$ref": "#/definitions/noaaScale" },
+
+    "peakDst": {
+      "type": ["number", "null"],
+      "description": "Peak (most negative) Dst index in nT."
+    },
+    "peakKp": {
+      "type": ["number", "null"],
+      "description": "Peak planetary Kp index (0-9).",
+      "minimum": 0,
+      "maximum": 9
+    },
+    "peakAp": { "type": ["number", "null"], "minimum": 0 },
+    "peakAE": { "type": ["number", "null"], "minimum": 0 },
+    "flareClass": {
+      "type": ["string", "null"],
+      "description": "GOES soft X-ray flare class. Magnitude optional for older events; '>' and '+' denote estimates/saturation. e.g. X45, M9.3, X20+, >X10, X.",
+      "pattern": "^[><]?[ABCMX][0-9]*(\\.[0-9]+)?\\+?$"
+    },
+    "cmeSpeedKmS": { "type": ["number", "null"], "minimum": 0 },
+    "solarWindSpeedPeak": { "type": ["number", "null"], "minimum": 0 },
+    "bzMin": { "type": ["number", "null"] },
+    "protonFluxPeak": { "type": ["number", "null"], "minimum": 0 },
+
+    "solarCycleNumber": {
+      "type": ["number", "null"],
+      "description": "Solar cycle number in modern numbering, or null/negative if unknown."
+    },
+    "cyclePhase": {
+      "type": "string",
+      "enum": ["ascending", "maximum", "descending", "minimum"]
+    },
+    "sourceActiveRegion": { "type": ["string", "null"] },
+    "sunspotNumberDaily": { "type": ["number", "null"], "minimum": 0 },
+
+    "impacts": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/impact" }
+    },
+    "auroraLowestLatitude": {
+      "type": ["number", "null"],
+      "description": "Lowest geomagnetic latitude (degrees) at which aurora was reported."
+    },
+
+    "timeSeries": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/timeSeriesRef" }
+    },
+    "images": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/image" }
+    },
+    "papers": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/paper" }
+    },
+
+    "summary": { "type": "string", "minLength": 1 },
+    "description": { "type": "string", "minLength": 1 }
+  },
+
+  "definitions": {
+    "noaaScale": {
+      "type": ["integer", "null"],
+      "minimum": 1,
+      "maximum": 5,
+      "description": "NOAA space weather scale 1-5, or null if not applicable."
+    },
+    "phenomenon": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "geomag_storm",
+            "solar_flare",
+            "cme",
+            "sep",
+            "gle",
+            "radio_blackout",
+            "forbush_decrease"
+          ]
+        },
+        "subtype": { "type": "string" },
+        "details": { "type": "string" },
+        "peakTime": { "type": "string" }
+      }
+    },
+    "impact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["sector", "description", "severity"],
+      "properties": {
+        "sector": {
+          "type": "string",
+          "enum": [
+            "power",
+            "satellite",
+            "aviation",
+            "communications",
+            "navigation",
+            "pipeline",
+            "aurora",
+            "cultural",
+            "biological",
+            "military"
+          ]
+        },
+        "location": { "type": "string" },
+        "description": { "type": "string", "minLength": 1 },
+        "severity": {
+          "type": "string",
+          "enum": ["minor", "moderate", "severe", "extreme"]
+        },
+        "durationHours": { "type": "number", "minimum": 0 },
+        "economicCostUsd": { "type": "number", "minimum": 0 }
+      }
+    },
+    "timeSeriesRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["parameter", "source"],
+      "properties": {
+        "parameter": {
+          "type": "string",
+          "description": "Measured parameter, e.g. dst, kp, proton_flux, neutron_monitor."
+        },
+        "source": {
+          "type": "string",
+          "description": "Provenance of the series, e.g. WDC Kyoto, GOES, NMDB."
+        },
+        "data": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/timeSeriesDataPoint" }
+        }
+      }
+    },
+    "timeSeriesDataPoint": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["time", "value"],
+      "properties": {
+        "time": { "type": "string" },
+        "value": { "type": "number" }
+      }
+    },
+    "image": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["url", "caption"],
+      "properties": {
+        "url": { "type": "string" },
+        "caption": { "type": "string" },
+        "credit": { "type": "string" },
+        "date": { "type": "string" }
+      }
+    },
+    "paper": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["title", "authors", "year"],
+      "properties": {
+        "doi": { "type": "string" },
+        "title": { "type": "string", "minLength": 1 },
+        "authors": { "type": "string" },
+        "year": { "type": "integer" },
+        "journal": { "type": "string" },
+        "keyFinding": { "type": "string" }
+      }
+    }
+  }
+}

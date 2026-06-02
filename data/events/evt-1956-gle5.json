@@ -1,0 +1,93 @@
+{
+  "id": "evt-1956-gle5",
+  "slug": "1956-gle-5",
+  "name": "February 1956 GLE #5",
+  "altNames": [
+    "GLE 5",
+    "1956 Solar Proton Event",
+    "February 23 1956 GLE"
+  ],
+  "startDate": "1956-02-23",
+  "peakDate": "1956-02-23",
+  "endDate": "1956-02-24",
+  "durationHours": 18,
+  "phenomena": [
+    {
+      "type": "gle",
+      "subtype": "GLE #5",
+      "details": "Largest GLE ever recorded: 4554% increase at Leeds neutron monitor. Proton energies extended to >10 GeV.",
+      "peakTime": "1956-02-23T04:00:00Z"
+    },
+    {
+      "type": "solar_flare",
+      "subtype": "X-class",
+      "details": "X-class white-light flare associated with the event; precise GOES class not available for this era."
+    },
+    {
+      "type": "sep",
+      "subtype": "S4+",
+      "details": "Extreme solar energetic particle event; estimated proton flux orders of magnitude above S5 threshold at relevant energies."
+    }
+  ],
+  "noaaGScale": 3,
+  "noaaSScale": 5,
+  "noaaRScale": 3,
+  "peakDst": -130,
+  "peakKp": 7,
+  "peakAp": 154,
+  "peakAE": null,
+  "flareClass": "X",
+  "cmeSpeedKmS": null,
+  "solarWindSpeedPeak": null,
+  "bzMin": null,
+  "protonFluxPeak": 100000,
+  "solarCycleNumber": 19,
+  "cyclePhase": "ascending",
+  "sourceActiveRegion": null,
+  "sunspotNumberDaily": 175,
+  "impacts": [
+    {
+      "sector": "aviation",
+      "location": "High latitudes",
+      "description": "Extremely high radiation dose rates at aircraft altitudes over polar routes; estimated effective dose rates of hundreds of mSv/hr – orders of magnitude above safe occupational limits.",
+      "severity": "extreme",
+      "durationHours": 8
+    },
+    {
+      "sector": "communications",
+      "location": "High latitudes",
+      "description": "Polar radio blackouts for several hours due to ionospheric absorption of radio waves by the SEP event.",
+      "severity": "severe",
+      "durationHours": 12
+    },
+    {
+      "sector": "biological",
+      "location": "High latitudes",
+      "description": "Radiation dose to personnel at high-latitude surface stations (e.g., polar expeditions) estimated to exceed annual dose limits; potentially the largest radiation dose event of the 20th century at ground level.",
+      "severity": "severe"
+    }
+  ],
+  "auroraLowestLatitude": 45,
+  "timeSeries": [],
+  "images": [],
+  "papers": [
+    {
+      "title": "Solar cosmic rays of February 23, 1956 and their propagation through interplanetary space",
+      "authors": "Meyer, P., Parker, E. N., Simpson, J. A.",
+      "year": 1956,
+      "journal": "Physical Review",
+      "doi": "10.1103/PhysRev.104.768",
+      "keyFinding": "Measured a 4554% increase in cosmic ray intensity at the Leeds monitor, establishing GLE #5 as the largest solar particle event on record, and derived the interplanetary propagation of the particles."
+    },
+    {
+      "doi": "10.1029/2011SW000743",
+      "title": "The historical progression of SEP and GLE research",
+      "authors": "Shea, M. A., Smart, D. F.",
+      "year": 2012,
+      "journal": "Space Science Reviews",
+      "keyFinding": "Placed GLE #5 in historical context, confirming it as the most intense GLE by ground-level count rate increase of any event in the 70+ year catalog."
+    }
+  ],
+  "summary": "The February 23, 1956 solar particle event produced the largest ground-level enhancement ever recorded – a 4554% increase at the Leeds neutron monitor – driven by solar protons accelerated to energies exceeding 10 GeV, far beyond any other event in the modern catalog.",
+  "description": "At approximately 0330 UT on February 23, 1956, neutron monitors at stations across the globe registered a sudden, dramatic surge in secondary cosmic ray intensity. The Leeds monitor in England recorded a peak increase of 4554% above background – by far the largest in the GLE catalog of 73 events spanning seven decades. The particle energies extended to at least 10–20 GeV, allowing the protons to deeply penetrate Earth's magnetic field and atmosphere even at mid-latitudes. The associated X-class white-light flare is believed to have accelerated particles in an extremely efficient shock or flare process. The geomagnetic storm was relatively moderate (Dst ~−130 nT), suggesting the particle acceleration and the bulk CME properties were somewhat decoupled. This event remains the benchmark for extreme SEP scenarios in spacecraft shielding design, polar aviation radiation dose assessment, and nuclear facility event planning."
+}

@@ -1,0 +1,115 @@
+{
+  "id": "evt-1989-quebec",
+  "slug": "1989-quebec-blackout",
+  "name": "March 1989 Quebec Blackout",
+  "altNames": [
+    "1989 Quebec Geomagnetic Storm",
+    "March 13 1989 Storm",
+    "SC22 Maximum Storm"
+  ],
+  "startDate": "1989-03-08",
+  "peakDate": "1989-03-13",
+  "endDate": "1989-03-15",
+  "durationHours": 168,
+  "phenomena": [
+    {
+      "type": "solar_flare",
+      "subtype": "X15",
+      "details": "X15 flare on March 10, 1989 from AR 5395.",
+      "peakTime": "1989-03-10T06:00:00Z"
+    },
+    {
+      "type": "cme",
+      "details": "Fast CME ~1500 km/s; transit time ~3.5 days.",
+      "peakTime": "1989-03-13T00:00:00Z"
+    },
+    {
+      "type": "geomag_storm",
+      "subtype": "G5",
+      "details": "Dst −589 nT, Kp 9 (9−); one of the largest storms of the 20th century.",
+      "peakTime": "1989-03-13T22:00:00Z"
+    },
+    {
+      "type": "sep",
+      "subtype": "S4",
+      "details": "Major solar energetic particle event; proton flux >10 MeV exceeded 40,000 pfu."
+    }
+  ],
+  "noaaGScale": 5,
+  "noaaSScale": 4,
+  "noaaRScale": 5,
+  "peakDst": -589,
+  "peakKp": 9,
+  "peakAp": 285,
+  "peakAE": 3500,
+  "flareClass": "X15",
+  "cmeSpeedKmS": 1500,
+  "solarWindSpeedPeak": 870,
+  "bzMin": -52,
+  "protonFluxPeak": 40000,
+  "solarCycleNumber": 22,
+  "cyclePhase": "maximum",
+  "sourceActiveRegion": "AR 5395",
+  "sunspotNumberDaily": 257,
+  "impacts": [
+    {
+      "sector": "power",
+      "location": "Quebec, Canada",
+      "description": "The Hydro-Québec power grid collapsed within 92 seconds as GICs tripped relay protection systems in a cascading failure; 6 million people lost power for up to 9 hours. Estimated economic loss ~$2 billion CAD.",
+      "severity": "extreme",
+      "durationHours": 9,
+      "economicCostUsd": 1400000000
+    },
+    {
+      "sector": "power",
+      "location": "United States",
+      "description": "Salem Nuclear Power Plant in New Jersey experienced transformer damage; at least 200 power system problems reported in the US including seven power transformer failures.",
+      "severity": "severe",
+      "durationHours": 12
+    },
+    {
+      "sector": "satellite",
+      "location": "Earth orbit",
+      "description": "GOES-7 weather satellite lost about half its solar array capacity. Multiple satellite attitude control anomalies from electrostatic charging. NASA TDRS-1 experienced 250 anomalies in one day.",
+      "severity": "severe",
+      "durationHours": 72
+    },
+    {
+      "sector": "aurora",
+      "location": "Florida, Cuba, Mexico",
+      "description": "Aurora visible as far south as Florida, Cuba, and Mexico (~25° N latitude); seen across most of North America, Europe, and Asia.",
+      "severity": "extreme"
+    }
+  ],
+  "auroraLowestLatitude": 25,
+  "timeSeries": [],
+  "images": [],
+  "papers": [
+    {
+      "doi": "10.1109/61.105006",
+      "title": "Geomagnetic disturbance and its effects on power systems",
+      "authors": "Bolduc, L.",
+      "year": 2002,
+      "journal": "Journal of Atmospheric and Solar-Terrestrial Physics",
+      "keyFinding": "Detailed analysis of the Hydro-Québec cascade failure, finding the grid collapsed in 92 seconds due to GIC-induced relay misoperation, and recommending protective measures."
+    },
+    {
+      "doi": "10.1029/89EO00316",
+      "title": "The effects of geomagnetic disturbances on electrical systems at the earth's surface",
+      "authors": "Allen, J., Frank, L., Sauer, H., Reiff, P.",
+      "year": 1989,
+      "journal": "Eos, Transactions American Geophysical Union",
+      "keyFinding": "Catalogued the extensive range of electrical and technological impacts of the March 1989 storm in the immediate aftermath."
+    },
+    {
+      "doi": "10.1029/2018SW002054",
+      "title": "Reanalysis of the March 1989 great geomagnetic storm",
+      "authors": "Boteler, D. H.",
+      "year": 2019,
+      "journal": "Space Weather",
+      "keyFinding": "Revised storm chronology and GIC estimates, confirming the Quebec blackout mechanism and providing updated infrastructure vulnerability assessments."
+    }
+  ],
+  "summary": "The March 13, 1989 geomagnetic storm (Dst −589 nT) drove geomagnetically induced currents that collapsed the Hydro-Québec power grid in 92 seconds, leaving 6 million people without electricity for up to 9 hours – the most significant space weather power grid failure in North American history.",
+  "description": "Following a powerful X15 solar flare on March 10, 1989 from active region AR 5395, a fast CME (approximately 1500 km/s) arrived at Earth on March 13 and drove one of the most intense geomagnetic storms of the 20th century (Dst −589 nT, Kp 9). The resulting GICs overwhelmed relay protection systems in the Hydro-Québec power grid; in just 92 seconds, the entire 735-kV transmission system tripped, leaving approximately 6 million Québec residents without electricity. Power was restored to most within 9 hours, but some regions waited days. The storm simultaneously damaged transformers at the Salem Nuclear Power Plant in New Jersey and caused at least 200 other power system problems across North America. NASA's TDRS-1 communications satellite logged 250 anomalies in a single day, and GOES-7 lost half its solar array capacity. Aurora was visible as far south as Florida and Cuba at ~25° N geographic latitude. The event became the defining case study in power grid vulnerability to space weather and directly motivated new GIC protection standards."
+}

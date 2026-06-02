@@ -1,0 +1,60 @@
+{
+  "id": "evt-0993-miyake",
+  "slug": "993-ad-miyake-event",
+  "name": "993 AD Miyake Event",
+  "altNames": [
+    "Miyake 993",
+    "993–994 Carbon-14 Event",
+    "AD 993 Event"
+  ],
+  "startDate": "0993-01-01",
+  "peakDate": "0993-06-01",
+  "endDate": "0994-12-31",
+  "durationHours": 8760,
+  "phenomena": [
+    {
+      "type": "sep",
+      "subtype": "Extreme SEP",
+      "details": "~9‰ Δ14C spike in global tree rings; second largest known cosmogenic isotope event after 774 AD."
+    }
+  ],
+  "noaaGScale": null,
+  "noaaSScale": 5,
+  "noaaRScale": null,
+  "peakDst": null,
+  "peakKp": null,
+  "peakAp": null,
+  "peakAE": null,
+  "flareClass": null,
+  "cmeSpeedKmS": null,
+  "solarWindSpeedPeak": null,
+  "bzMin": null,
+  "protonFluxPeak": null,
+  "solarCycleNumber": null,
+  "cyclePhase": "maximum",
+  "sourceActiveRegion": null,
+  "sunspotNumberDaily": null,
+  "impacts": [
+    {
+      "sector": "biological",
+      "location": "Global",
+      "description": "High-energy particle bombardment of the atmosphere inferred from cosmogenic isotope records; likely caused significant ionospheric disturbance.",
+      "severity": "extreme"
+    }
+  ],
+  "auroraLowestLatitude": null,
+  "timeSeries": [],
+  "images": [],
+  "papers": [
+    {
+      "doi": "10.1038/ngeo1823",
+      "title": "Another rapid event in the carbon-14 content of tree rings",
+      "authors": "Miyake, F., Masuda, K., Nakamura, T.",
+      "year": 2013,
+      "journal": "Nature Geoscience",
+      "keyFinding": "Identified a second rapid 14C increase (~9‰) at AD 993–994, establishing that extreme solar particle events recur on timescales of centuries."
+    }
+  ],
+  "summary": "A second major cosmogenic isotope spike at AD 993–994, roughly three-quarters the magnitude of the 774 event, demonstrates that solar particle events of extreme intensity are not unique occurrences in the Holocene.",
+  "description": "Analysis of tree-ring 14C records published by Miyake et al. in 2013 revealed a rapid increase of ~9‰ in Δ14C spanning AD 993–994, later confirmed in multiple tree-ring chronologies from the Northern and Southern Hemispheres. The event is approximately 75% the magnitude of the 774 AD event and similarly requires a very large SEP fluence to explain the observed isotope production. The existence of two such events within ~220 years suggests these extreme solar particle storms may occur once or twice per millennium. No contemporary aurora reports or other written records have been unambiguously connected to this event."
+}

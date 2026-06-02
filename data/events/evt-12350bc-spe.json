@@ -1,0 +1,73 @@
+{
+  "id": "evt-12350bc-spe",
+  "slug": "12350-bc-solar-proton-event",
+  "name": "12350 BC Solar Particle Event",
+  "altNames": [
+    "Late-Glacial Miyake event",
+    "14300 cal BP event"
+  ],
+  "startDate": "-12350-01-01",
+  "peakDate": "-12350-06-01",
+  "endDate": "-12350-12-31",
+  "durationHours": 8760,
+  "phenomena": [
+    {
+      "type": "sep",
+      "subtype": "Extreme SEP",
+      "details": "Single-year radiocarbon spike in Late-Glacial subfossil pines, estimated ~18% stronger than AD 775 and >500x the largest satellite-era event - the strongest known solar particle event."
+    }
+  ],
+  "noaaGScale": null,
+  "noaaSScale": 5,
+  "noaaRScale": null,
+  "peakDst": null,
+  "peakKp": null,
+  "peakAp": null,
+  "peakAE": null,
+  "flareClass": null,
+  "cmeSpeedKmS": null,
+  "solarWindSpeedPeak": null,
+  "bzMin": null,
+  "protonFluxPeak": null,
+  "solarCycleNumber": null,
+  "cyclePhase": "maximum",
+  "sourceActiveRegion": null,
+  "sunspotNumberDaily": null,
+  "impacts": [
+    {
+      "sector": "biological",
+      "location": "Global",
+      "description": "The strongest known solar particle event, delivering an unprecedented ionising-radiation dose to the Late-Glacial atmosphere.",
+      "severity": "extreme"
+    },
+    {
+      "sector": "cultural",
+      "location": "Global",
+      "description": "Occurred during the Late Glacial, long before writing; reconstructed solely from radiocarbon in subfossil trees and ice-core 10Be.",
+      "severity": "minor"
+    }
+  ],
+  "auroraLowestLatitude": null,
+  "timeSeries": [],
+  "images": [],
+  "papers": [
+    {
+      "doi": "10.1016/j.epsl.2025.119383",
+      "title": "New SOCOL:14C-Ex model reveals that the Late-Glacial radiocarbon spike in 12350 BC was caused by the record-strong extreme solar storm",
+      "authors": "Golubenko, K., Usoskin, I., Rozanov, E., Bard, E., et al.",
+      "year": 2025,
+      "journal": "Earth and Planetary Science Letters",
+      "keyFinding": "Using a glacial-climate carbon-cycle model, quantified the 12350 BC event as about 18% stronger than AD 775 and more than 500 times the January 2005 storm - the strongest known SPE."
+    },
+    {
+      "doi": "10.1098/rsta.2022.0206",
+      "title": "A radiocarbon spike at 14,300 cal yr BP in subfossil trees provides the impulse response function of the global carbon cycle during the Late Glacial",
+      "authors": "Bard, E., Miramont, C., Capano, M., et al.",
+      "year": 2023,
+      "journal": "Philosophical Transactions of the Royal Society A",
+      "keyFinding": "Reported the single-year 14C spike at 14,300 cal BP in subfossil pines from the Drouzet (French Alps) and proposed a solar energetic particle origin."
+    }
+  ],
+  "summary": "A single-year radiocarbon spike in Late-Glacial subfossil trees, dated to ~12350 BC and modelled as roughly 18% stronger than AD 775 - currently the most intense solar particle event known, and the only confirmed example outside the Holocene.",
+  "description": "Identified by Bard et al. (2023) as a sharp single-year radiocarbon spike at 14,300 cal BP in subfossil Scots pines from the Drouzet watercourse in the southern French Alps, and quantified by Golubenko et al. (2025), the 12350 BC event is currently the strongest known solar particle event and the only one confirmed outside the Holocene. Dating it required a dedicated floating tree-ring chronology and a new glacial-climate carbon-cycle model (SOCOL:14C-Ex), because the period predates the robust part of the IntCal radiocarbon calibration and standard Holocene-tuned models do not apply to Late-Glacial atmospheric conditions. The coincidence of the 14C spike with anomalies in the GRIP Greenland 10Be record supports a solar origin. The modelled magnitude is about 18% greater than the AD 774/775 event and more than 500 times the largest event of the satellite era (January 2005); because the magnitude depends on the new glacial-climate model, the headline figures carry larger model uncertainty than for Holocene events."
+}

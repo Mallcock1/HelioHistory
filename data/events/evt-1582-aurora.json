@@ -1,0 +1,65 @@
+{
+  "id": "evt-1582-aurora",
+  "slug": "1582-great-aurora",
+  "name": "1582 Great Aurora",
+  "altNames": [
+    "March 1582 Aurora",
+    "1582 Red Aurora Event"
+  ],
+  "startDate": "1582-03-08",
+  "peakDate": "1582-03-08",
+  "endDate": "1582-03-10",
+  "durationHours": 48,
+  "phenomena": [
+    {
+      "type": "geomag_storm",
+      "subtype": "Extreme",
+      "details": "Inferred extreme geomagnetic storm from widespread aurora reports across Europe and East Asia at low magnetic latitudes."
+    }
+  ],
+  "noaaGScale": 5,
+  "noaaSScale": null,
+  "noaaRScale": null,
+  "peakDst": null,
+  "peakKp": null,
+  "peakAp": null,
+  "peakAE": null,
+  "flareClass": null,
+  "cmeSpeedKmS": null,
+  "solarWindSpeedPeak": null,
+  "bzMin": null,
+  "protonFluxPeak": null,
+  "solarCycleNumber": -8,
+  "cyclePhase": "maximum",
+  "sourceActiveRegion": null,
+  "sunspotNumberDaily": null,
+  "impacts": [
+    {
+      "sector": "aurora",
+      "location": "Europe, Japan, China, Korea",
+      "description": "Extraordinary red aurora observed across Europe (Portugal, Spain, Germany, Flanders) and independently in Japan, China, and Korea, indicating visibility at magnetic latitudes below 30°.",
+      "severity": "extreme"
+    },
+    {
+      "sector": "cultural",
+      "location": "Europe, East Asia",
+      "description": "Extensively documented in European chronicles and East Asian court records; described as 'fire in the sky' and 'blood-red clouds', often interpreted as divine omens.",
+      "severity": "moderate"
+    }
+  ],
+  "auroraLowestLatitude": 28,
+  "timeSeries": [],
+  "images": [],
+  "papers": [
+    {
+      "doi": "10.3847/1538-4357/abc269",
+      "title": "The Great Space Weather Event during 1582 March 8",
+      "authors": "Hayakawa, H., Ribeiro, P., Vaquero, J. M., et al.",
+      "year": 2020,
+      "journal": "The Astrophysical Journal",
+      "keyFinding": "Compiled European and East Asian records to confirm a major geomagnetic storm on March 8, 1582, with aurora visible at latitudes below 30° on both continents simultaneously."
+    }
+  ],
+  "summary": "A major geomagnetic storm on March 8, 1582 produced spectacular red aurora observed simultaneously across Europe and East Asia, with visibility at magnetic latitudes below 30°, making it one of the most extreme pre-instrumental space weather events.",
+  "description": "Historical records from Portugal, Spain, Germany, Flanders, Japan, China, and Korea describe a vivid red aurora on March 8, 1582 that lasted at least two nights. European observers noted 'fire in the heavens' and 'blood-red vapors', while East Asian court records documented similar phenomena. The simultaneous observation across two continents at low magnetic latitudes confirms the event's extreme intensity, placing it among the strongest known historical geomagnetic storms. Hayakawa et al. (2020) compiled and cross-referenced these records, demonstrating that pre-telescopic era observations can provide valuable constraints on the occurrence rate of extreme space weather events."
+}

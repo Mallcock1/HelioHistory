@@ -3,17 +3,26 @@
 import { useRef, useEffect, useCallback } from "react";
 import * as d3 from "d3";
 import type { TimeSeriesDataPoint } from "@/lib/types";
+import FigureFrame from "@/components/charts/FigureFrame";
 
 interface NeutronMonitorChartProps {
   data: TimeSeriesDataPoint[];
   width?: number;
   height?: number;
+  downloadName?: string;
+  /** Optional shared x-domain (epoch ms) so multiple charts align in time. */
+  domain?: [number, number];
+  /** Left margin, overridable to align plot areas across charts. */
+  marginLeft?: number;
 }
 
 export default function NeutronMonitorChart({
   data,
   width = 420,
   height = 180,
+  downloadName = "neutron-monitor",
+  domain,
+  marginLeft = 48,
 }: NeutronMonitorChartProps) {
   const svgRef = useRef<SVGSVGElement>(null);
   const drawRef = useRef<(() => void) | null>(null);
@@ -25,7 +34,7 @@ export default function NeutronMonitorChart({
     const svg = d3.select(svgRef.current);
     svg.selectAll("*").remove();
 
-    const margin = { top: 16, right: 16, bottom: 28, left: 48 };
+    const margin = { top: 16, right: 16, bottom: 28, left: marginLeft };
     const w = width - margin.left - margin.right;
     const h = height - margin.top - margin.bottom;
 
@@ -38,7 +47,11 @@ export default function NeutronMonitorChart({
 
     const xScale = d3
       .scaleTime()
-      .domain(d3.extent(times) as [Date, Date])
+      .domain(
+        domain
+          ? [new Date(domain[0]), new Date(domain[1])]
+          : (d3.extent(times) as [Date, Date])
+      )
       .range([0, w]);
 
     const yMin = d3.min(values) || -5;
@@ -108,7 +121,7 @@ export default function NeutronMonitorChart({
       .call(xAxis)
       .call((g) => {
         g.selectAll("line").attr("stroke", isDark ? "rgba(255,255,255,0.05)" : "rgba(0,0,0,0.06)");
-        g.selectAll("text").attr("fill", isDark ? "rgba(255,255,255,0.4)" : "rgba(0,0,0,0.5)").attr("font-size", "9px");
+        g.selectAll("text").attr("fill", isDark ? "rgba(255,255,255,0.4)" : "rgba(0,0,0,0.5)").attr("font-size", "11px");
         g.select(".domain").remove();
       });
 
@@ -116,7 +129,7 @@ export default function NeutronMonitorChart({
       .call(yAxis)
       .call((g) => {
         g.selectAll("line").attr("stroke", isDark ? "rgba(255,255,255,0.05)" : "rgba(0,0,0,0.06)");
-        g.selectAll("text").attr("fill", isDark ? "rgba(255,255,255,0.4)" : "rgba(0,0,0,0.5)").attr("font-size", "9px");
+        g.selectAll("text").attr("fill", isDark ? "rgba(255,255,255,0.4)" : "rgba(0,0,0,0.5)").attr("font-size", "11px");
         g.select(".domain").remove();
       });
 
@@ -126,7 +139,7 @@ export default function NeutronMonitorChart({
       .attr("x", margin.left)
       .attr("y", 12)
       .attr("fill", isDark ? "rgba(255,255,255,0.5)" : "rgba(0,0,0,0.55)")
-      .attr("font-size", "10px")
+      .attr("font-size", "12px")
       .text("Neutron Monitor (% deviation)");
 
     // Peak annotation
@@ -137,10 +150,10 @@ export default function NeutronMonitorChart({
       g.append("circle").attr("cx", peakX).attr("cy", peakY).attr("r", 3).attr("fill", "#a855f7");
       g.append("text")
         .attr("x", peakX + 6).attr("y", peakY - 6)
-        .attr("fill", "#a855f7").attr("font-size", "9px").attr("font-weight", "bold")
+        .attr("fill", "#a855f7").attr("font-size", "11px").attr("font-weight", "bold")
         .text(`+${values[maxIdx].toFixed(1)}%`);
     }
-  }, [data, width, height]);
+  }, [data, width, height, domain, marginLeft]);
 
   useEffect(() => { draw(); }, [draw]);
 
@@ -153,11 +166,13 @@ export default function NeutronMonitorChart({
   drawRef.current = draw;
 
   return (
-    <svg
-      ref={svgRef}
-      width={width}
-      height={height}
-      className="overflow-visible"
-    />
+    <FigureFrame filename={downloadName}>
+      <svg
+        ref={svgRef}
+        width={width}
+        height={height}
+        className="overflow-visible"
+      />
+    </FigureFrame>
   );
 }

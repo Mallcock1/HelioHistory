@@ -1,0 +1,65 @@
+{
+  "id": "evt-5480bc-excursion",
+  "slug": "5480-bc-radiocarbon-excursion",
+  "name": "5480 BC Radiocarbon Excursion (debated)",
+  "altNames": [
+    "5480 BCE anomaly",
+    "Miyake 5480 BCE (anomalous)"
+  ],
+  "startDate": "-5481-01-01",
+  "peakDate": "-5475-01-01",
+  "endDate": "-5471-12-31",
+  "durationHours": 87600,
+  "phenomena": [
+    {
+      "type": "sep",
+      "subtype": "Anomalous / contested",
+      "details": "Very large ~20 per mil 14C increase over ~10-15 years with a multi-phase profile unlike an impulsive SPE; interpretation debated between an anomalous grand-minimum onset and a cluster of solar proton events."
+    }
+  ],
+  "noaaGScale": null,
+  "noaaSScale": null,
+  "noaaRScale": null,
+  "peakDst": null,
+  "peakKp": null,
+  "peakAp": null,
+  "peakAE": null,
+  "flareClass": null,
+  "cmeSpeedKmS": null,
+  "solarWindSpeedPeak": null,
+  "bzMin": null,
+  "protonFluxPeak": null,
+  "solarCycleNumber": null,
+  "cyclePhase": "minimum",
+  "sourceActiveRegion": null,
+  "sunspotNumberDaily": null,
+  "impacts": [
+    {
+      "sector": "biological",
+      "location": "Global",
+      "description": "Sustained elevation of atmospheric radiocarbon production over a decade or more, indicating an unusual and prolonged change in solar activity or particle flux.",
+      "severity": "moderate"
+    },
+    {
+      "sector": "cultural",
+      "location": "Global",
+      "description": "Prehistoric anomaly with no written record; known only from tree-ring radiocarbon.",
+      "severity": "minor"
+    }
+  ],
+  "auroraLowestLatitude": null,
+  "timeSeries": [],
+  "images": [],
+  "papers": [
+    {
+      "doi": "10.1073/pnas.1613144114",
+      "title": "Large 14C excursion in 5480 BC indicates an abnormal sun in the mid-Holocene",
+      "authors": "Miyake, F., Jull, A. J. T., Panyushkina, I. P., et al.",
+      "year": 2017,
+      "journal": "Proceedings of the National Academy of Sciences",
+      "keyFinding": "Found a ~20 per mil 14C increase whose prolonged, multi-phase shape cannot be explained by a single solar proton event, suggesting an unusual grand-minimum onset, a series of SPEs, or a combination."
+    }
+  ],
+  "summary": "A very large but unusually shaped radiocarbon excursion centred on the 5480s BC. The signal is real and well measured, but its cause is debated and it is not a clean single solar particle event.",
+  "description": "Miyake et al. (2017) measured a ~20 per mil increase in tree-ring radiocarbon over roughly a decade beginning around 5481 BC - larger in total amplitude than the AD 774/775 event. However, its time signature is anomalous: instead of the sharp 1-2 year rise and decay expected from an impulsive solar proton event, it shows a rapid rise followed by a prolonged, plateau-like enhancement lasting around fifteen years. The inferred production rate approaches the theoretical zero-modulation maximum, which strains a pure grand-solar-minimum explanation, while the long duration strains a single-SPE explanation. The authors propose it reflects an unusual state of a grand solar minimum, a cluster of successive solar proton events, or a combination of the two. It is included here as a debated case rather than a confirmed single extreme SPE."
+}

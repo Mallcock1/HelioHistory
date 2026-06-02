@@ -1,0 +1,58 @@
+{
+  "id": "evt-1052-candidate",
+  "slug": "1052-ad-candidate-spe",
+  "name": "AD 1052 Candidate Event",
+  "altNames": [
+    "1052 CE 14C candidate"
+  ],
+  "startDate": "1052-01-01",
+  "peakDate": "1052-06-01",
+  "endDate": "1052-12-31",
+  "durationHours": 8760,
+  "phenomena": [
+    {
+      "type": "sep",
+      "subtype": "Candidate SEP",
+      "details": "A smaller, weaker 14C production peak flagged by Brehm et al. (2021) as a candidate solar particle event, awaiting multi-archive confirmation."
+    }
+  ],
+  "noaaGScale": null,
+  "noaaSScale": null,
+  "noaaRScale": null,
+  "peakDst": null,
+  "peakKp": null,
+  "peakAp": null,
+  "peakAE": null,
+  "flareClass": null,
+  "cmeSpeedKmS": null,
+  "solarWindSpeedPeak": null,
+  "bzMin": null,
+  "protonFluxPeak": null,
+  "solarCycleNumber": null,
+  "cyclePhase": "maximum",
+  "sourceActiveRegion": null,
+  "sunspotNumberDaily": null,
+  "impacts": [
+    {
+      "sector": "biological",
+      "location": "Global",
+      "description": "If solar in origin, a modest enhancement of atmospheric radiocarbon production; substantially weaker than the confirmed AD 774 and AD 993 events.",
+      "severity": "minor"
+    }
+  ],
+  "auroraLowestLatitude": null,
+  "timeSeries": [],
+  "images": [],
+  "papers": [
+    {
+      "doi": "10.1038/s41561-020-00674-0",
+      "title": "Eleven-year solar cycles over the last millennium revealed by radiocarbon in tree rings",
+      "authors": "Brehm, N., Bayliss, A., Christl, M., et al.",
+      "year": 2021,
+      "journal": "Nature Geoscience",
+      "keyFinding": "Flagged AD 1052 and AD 1279 as two new, smaller candidate production events in an annually resolved AD 969-1933 radiocarbon record, distinct from the confirmed AD 993 event."
+    }
+  ],
+  "summary": "A candidate, unconfirmed solar particle event near AD 1052, seen as a small radiocarbon production peak in a single tree-ring record and awaiting independent corroboration.",
+  "description": "Brehm et al. (2021) identified AD 1052 as one of two smaller candidate production peaks (with AD 1279) in their annually resolved AD 969-1933 atmospheric radiocarbon record, alongside the confirmed AD 993 event. The signal is markedly weaker than the firmly established events and currently rests largely on a single 14C record without the multi-archive, multi-continent corroboration (independent tree-ring chronologies plus 10Be and 36Cl in ice cores) that confirmed AD 774 and AD 993. Alternative explanations, including astrophysical sources or broader solar-modulation structure, have been discussed. It is included here as a candidate pending confirmation."
+}

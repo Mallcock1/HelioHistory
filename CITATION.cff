@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+title: "HelioHistory: A Living Database of Space Weather History"
+message: "If you use this dataset or software, please cite it as below."
+type: dataset
+authors:
+  - family-names: "Allcock"
+    given-names: "M."
+  - name: "HelioHistory contributors"
+license: CC-BY-4.0
+repository-code: "https://github.com/Mallcock1/HelioHistory"
+url: "https://github.com/Mallcock1/HelioHistory"
+abstract: >-
+  HelioHistory is an open, community-curated catalogue of major space weather
+  events spanning from antiquity to the present, including geomagnetic indices,
+  solar context, terrestrial impacts, and scientific references. Data are
+  published as machine-readable JSON and CSV validated against a JSON Schema.
+keywords:
+  - space weather
+  - heliophysics
+  - geomagnetic storms
+  - solar flares
+  - open data
+# When you cut a release and (recommended) archive it on Zenodo, fill these in:
+# version: 1.0.0
+# date-released: 2026-01-01
+# doi: 10.5281/zenodo.XXXXXXX

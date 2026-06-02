@@ -41,7 +41,7 @@ export default function EventTooltip({
               {event.phenomena.slice(0, 3).map((p, i) => (
                 <span
                   key={i}
-                  className="text-[10px] px-1.5 py-0.5 rounded border border-overlay/10"
+                  className="text-[11px] px-1.5 py-0.5 rounded border border-overlay/10"
                   style={{ color: PHENOMENON_CONFIG[p.type].color }}
                 >
                   {PHENOMENON_CONFIG[p.type].shortLabel}

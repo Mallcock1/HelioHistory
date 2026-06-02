@@ -10,6 +10,7 @@ const NAV_ITEMS = [
   { href: "/events", label: "Events" },
   { href: "/analyse", label: "Analyse" },
   { href: "/compare", label: "Compare" },
+  { href: "/about", label: "About" },
 ];
 
 function SunIcon({ className }: { className?: string }) {
@@ -78,7 +79,7 @@ export default function NavBar({ eventCount }: { eventCount: number }) {
             <h1 className="heading-display text-[15px] text-foreground tracking-wide leading-tight">
               HelioHistory
             </h1>
-            <span className="text-[10px] text-foreground/30 tracking-widest uppercase leading-tight">
+            <span className="text-[11px] text-foreground/30 tracking-widest uppercase leading-tight">
               Space Weather Living Archive
             </span>
           </div>
@@ -102,10 +103,10 @@ export default function NavBar({ eventCount }: { eventCount: number }) {
         </nav>
       </div>
 
-      <div className="flex items-center gap-5 text-[11px] text-foreground/30">
+      <div className="flex items-center gap-5 text-[12px] text-foreground/30">
         <span className="font-mono tracking-wide">{eventCount} events catalogued</span>
         <span className="w-px h-3 bg-overlay/10" />
-        <span className="tracking-wider">774 AD – Present</span>
+        <span className="tracking-wider">12,350 BC – Present</span>
         <span className="w-px h-3 bg-overlay/10" />
         <button
           onClick={toggleTheme}

@@ -1,0 +1,75 @@
+{
+  "id": "evt-1941-sep",
+  "slug": "1941-september-storms",
+  "name": "1941 September Storms",
+  "altNames": [
+    "September 1941 Geomagnetic Storms",
+    "WWII Magnetic Storm"
+  ],
+  "startDate": "1941-09-18",
+  "peakDate": "1941-09-19",
+  "endDate": "1941-09-21",
+  "durationHours": 72,
+  "phenomena": [
+    {
+      "type": "geomag_storm",
+      "subtype": "G5",
+      "details": "Extreme geomagnetic storm during WWII with Dst estimated at approximately −373 nT."
+    },
+    {
+      "type": "radio_blackout",
+      "details": "Severe HF radio blackouts caused military communication disruptions during a critical phase of World War II."
+    }
+  ],
+  "noaaGScale": 4,
+  "noaaSScale": null,
+  "noaaRScale": 4,
+  "peakDst": -373,
+  "peakKp": 9,
+  "peakAp": null,
+  "peakAE": null,
+  "flareClass": null,
+  "cmeSpeedKmS": null,
+  "solarWindSpeedPeak": null,
+  "bzMin": null,
+  "protonFluxPeak": null,
+  "solarCycleNumber": 17,
+  "cyclePhase": "descending",
+  "sourceActiveRegion": null,
+  "sunspotNumberDaily": null,
+  "impacts": [
+    {
+      "sector": "military",
+      "location": "Global",
+      "description": "Severe radio disruptions during WWII caused confusion among military forces in the European and Pacific theaters; some Allied commanders initially suspected enemy jamming of communications.",
+      "severity": "severe"
+    },
+    {
+      "sector": "communications",
+      "location": "Global",
+      "description": "Widespread HF radio blackouts disrupted both civilian and military communications; transatlantic radio links were intermittently unavailable.",
+      "severity": "severe"
+    },
+    {
+      "sector": "aurora",
+      "location": "Global",
+      "description": "Aurora visible at low latitudes; wartime blackout conditions meant many observers in Europe had unusually dark skies to witness the display.",
+      "severity": "moderate"
+    }
+  ],
+  "auroraLowestLatitude": 30,
+  "timeSeries": [],
+  "images": [],
+  "papers": [
+    {
+      "doi": "10.1029/2020SW002601",
+      "title": "The extreme space weather events in September 1941",
+      "authors": "Hayakawa, H., Ebihara, Y., et al.",
+      "year": 2021,
+      "journal": "Space Weather",
+      "keyFinding": "Documented the September 1941 storm series during WWII, including military impacts and estimated Dst ~ −373 nT."
+    }
+  ],
+  "summary": "The September 1941 geomagnetic storms occurred during World War II, causing severe radio disruptions that confused Allied military communications – some commanders initially suspected enemy jamming – while producing aurora visible at low latitudes.",
+  "description": "In September 1941, during the descending phase of Solar Cycle 17, a series of geomagnetic storms struck Earth at a critical period of World War II. The strongest storm on September 18–19 reached an estimated Dst of approximately −373 nT. The severe HF radio blackouts disrupted military communications on multiple fronts; some Allied commanders reportedly suspected enemy jamming before the solar origin was recognized. The wartime blackout conditions in Europe ironically provided excellent viewing conditions for the resulting aurora. The event highlights the military significance of space weather, a concern that would become more prominent during the Cold War era."
+}

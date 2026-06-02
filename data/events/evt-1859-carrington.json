@@ -1,0 +1,113 @@
+{
+  "id": "evt-1859-carrington",
+  "slug": "carrington-event-1859",
+  "name": "Carrington Event",
+  "altNames": [
+    "Solar Superstorm of 1859",
+    "1859 Great Geomagnetic Storm",
+    "Carrington-Hodgson Flare"
+  ],
+  "startDate": "1859-08-28",
+  "peakDate": "1859-09-02",
+  "endDate": "1859-09-05",
+  "durationHours": 174,
+  "phenomena": [
+    {
+      "type": "solar_flare",
+      "subtype": "X45+",
+      "details": "White-light flare observed visually by Richard Carrington and Richard Hodgson on Sept 1, 1859; estimated X45+ based on ionospheric and geomagnetic proxies.",
+      "peakTime": "1859-09-01T11:18:00Z"
+    },
+    {
+      "type": "cme",
+      "details": "Transit time ~17.5 hours; implied CME speed ~2200–2500 km/s.",
+      "peakTime": "1859-09-02T04:00:00Z"
+    },
+    {
+      "type": "geomag_storm",
+      "subtype": "G5+",
+      "details": "Dst estimated −850 to −1760 nT from Colaba magnetogram; most intense storm in instrumental record.",
+      "peakTime": "1859-09-02T04:30:00Z"
+    },
+    {
+      "type": "sep",
+      "subtype": "Extreme SEP",
+      "details": "Extreme solar energetic particle event inferred from the white-light flare intensity and concurrent cosmic ray observations."
+    }
+  ],
+  "noaaGScale": 5,
+  "noaaSScale": 5,
+  "noaaRScale": 5,
+  "peakDst": -850,
+  "peakKp": 9,
+  "peakAp": 400,
+  "peakAE": null,
+  "flareClass": "X45",
+  "cmeSpeedKmS": 2380,
+  "solarWindSpeedPeak": 2300,
+  "bzMin": null,
+  "protonFluxPeak": null,
+  "solarCycleNumber": 10,
+  "cyclePhase": "maximum",
+  "sourceActiveRegion": "1859 Great Sunspot Group",
+  "sunspotNumberDaily": 167,
+  "impacts": [
+    {
+      "sector": "communications",
+      "location": "North America, Europe, Australia",
+      "description": "Telegraph systems worldwide failed catastrophically; some operators received strong shocks, and paper in telegraph offices caught fire. Some systems briefly operated without battery power via geomagnetically induced currents.",
+      "severity": "extreme",
+      "durationHours": 48
+    },
+    {
+      "sector": "aurora",
+      "location": "Global",
+      "description": "Aurora visible worldwide including Cuba, the Bahamas, Hawaii, and northern Australia (~18° magnetic latitude). Described as bright enough to read newspaper print at midnight.",
+      "severity": "extreme"
+    },
+    {
+      "sector": "communications",
+      "location": "Cuba, Caribbean",
+      "description": "Ships at sea reported their compass needles deflecting wildly, rendering navigation by compass unreliable during the storm's peak.",
+      "severity": "severe",
+      "durationHours": 12
+    },
+    {
+      "sector": "power",
+      "location": "Global (hypothetical modern equivalent)",
+      "description": "Modern analyses estimate a recurrence of this event today would cause $1–2 trillion in damage to electrical infrastructure with recovery timescales of months to years.",
+      "severity": "extreme"
+    }
+  ],
+  "auroraLowestLatitude": 18,
+  "timeSeries": [],
+  "images": [],
+  "papers": [
+    {
+      "title": "Description of a Singular Appearance seen in the Sun on September 1, 1859",
+      "authors": "Carrington, R. C.",
+      "year": 1859,
+      "journal": "Monthly Notices of the Royal Astronomical Society",
+      "doi": "10.1093/mnras/20.1.13",
+      "keyFinding": "First eyewitness account of a white-light solar flare, observed simultaneously with Hodgson, marking the discovery of solar flares."
+    },
+    {
+      "doi": "10.1029/2002JA009504",
+      "title": "The extreme magnetic storm of 1–2 September 1859",
+      "authors": "Tsurutani, B. T., Gonzalez, W. D., Lakhina, G. S., Alex, S.",
+      "year": 2003,
+      "journal": "Journal of Geophysical Research",
+      "keyFinding": "Used the Colaba (Bombay) magnetogram to estimate peak Dst of approximately −1760 nT, the most intense geomagnetic disturbance in the instrumental era."
+    },
+    {
+      "doi": "10.1051/swsc/2013053",
+      "title": "The 1859 space weather event revisited: Limits of extreme activity",
+      "authors": "Cliver, E. W., Dietrich, W. F.",
+      "year": 2013,
+      "journal": "Journal of Space Weather and Space Climate",
+      "keyFinding": "Revised peak Dst estimate to −850 nT (vs. the −1760 nT from the Colaba magnetogram alone), still the largest in recorded history, and estimated the flare class at X45±5."
+    }
+  ],
+  "summary": "The Carrington Event of September 1859 is the most intense geomagnetic storm and the largest solar flare in the recorded instrumental era, collapsing telegraph networks worldwide and producing aurora visible to within 18° of the equator.",
+  "description": "On September 1, 1859, astronomers Richard Carrington and Richard Hodgson independently observed a brilliant white-light brightening on the solar disk – the first ever recorded solar flare. Approximately 17.5 hours later, the leading edge of an extremely fast coronal mass ejection (CME) struck Earth, compressing the magnetosphere and driving the most powerful geomagnetic storm measured by the Colaba observatory in Bombay, with a peak horizontal-field depression estimated at −850 to −1760 nT depending on interpretation. The global telegraph network – the internet of its day – went haywire: operators received electric shocks, some paper in relay stations caught fire, and remarkably, some lines operated autonomously using only the geomagnetically induced current (GIC) for power. The event occurred at the maximum of Solar Cycle 10, sourced from the largest sunspot group observed to that date. Modern risk assessments estimate a comparable event striking today's infrastructure could cause $1–2 trillion in damage and take months to years to fully restore electrical grids."
+}

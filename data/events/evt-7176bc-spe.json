@@ -1,0 +1,85 @@
+{
+  "id": "evt-7176bc-spe",
+  "slug": "7176-bc-solar-proton-event",
+  "name": "7176 BC Solar Proton Event",
+  "altNames": [
+    "Miyake 7176 BCE",
+    "9125 BP event"
+  ],
+  "startDate": "-7176-01-01",
+  "peakDate": "-7176-06-01",
+  "endDate": "-7176-12-31",
+  "durationHours": 8760,
+  "phenomena": [
+    {
+      "type": "sep",
+      "subtype": "Extreme SEP",
+      "details": "Delta-14C rise of +19.5 (+/-0.6) per mil; among the three largest known 14C production events. Confirmed in 14C, 10Be and 36Cl across both hemispheres."
+    },
+    {
+      "type": "gle",
+      "details": "Very hard spectrum: 36Cl/10Be ratio 1.59 (+/-0.38), F(>30 MeV) = 1.64 (+/-0.53) x 10^11 cm^-2 (Paleari et al. 2022). Occurred near a solar minimum."
+    }
+  ],
+  "noaaGScale": null,
+  "noaaSScale": 5,
+  "noaaRScale": null,
+  "peakDst": null,
+  "peakKp": null,
+  "peakAp": null,
+  "peakAE": null,
+  "flareClass": null,
+  "cmeSpeedKmS": null,
+  "solarWindSpeedPeak": null,
+  "bzMin": null,
+  "protonFluxPeak": null,
+  "solarCycleNumber": null,
+  "cyclePhase": "minimum",
+  "sourceActiveRegion": null,
+  "sunspotNumberDaily": null,
+  "impacts": [
+    {
+      "sector": "biological",
+      "location": "Global",
+      "description": "One of the largest known solar particle storms, with a very hard proton spectrum delivering an intense ionising-radiation dose to the atmosphere.",
+      "severity": "extreme"
+    },
+    {
+      "sector": "cultural",
+      "location": "Global",
+      "description": "Early Holocene event with no human record; reconstructed from three cosmogenic isotopes in trees and polar ice.",
+      "severity": "minor"
+    }
+  ],
+  "auroraLowestLatitude": null,
+  "timeSeries": [],
+  "images": [],
+  "papers": [
+    {
+      "doi": "10.1038/s41467-022-28804-9",
+      "title": "Tree-rings reveal two strong solar proton events in 7176 and 5259 BCE",
+      "authors": "Brehm, N., Christl, M., Knowles, T. D. J., et al.",
+      "year": 2022,
+      "journal": "Nature Communications",
+      "keyFinding": "Measured a +19.5 per mil radiocarbon spike at 7176 BCE, ranking it among the three largest known 14C production events, slightly weaker than AD 775 in 14C terms."
+    },
+    {
+      "doi": "10.1038/s41467-021-27891-4",
+      "title": "Cosmogenic radionuclides reveal an extreme solar particle storm near a solar minimum 9125 years BP",
+      "authors": "Paleari, C. I., Mekhaldi, F., Adolphi, F., et al.",
+      "year": 2022,
+      "journal": "Nature Communications",
+      "keyFinding": "Confirmed the event in 10Be and 36Cl from Greenland (NGRIP, EGRIP, GRIP) and Antarctica (EDML), deriving a very hard spectrum and showing it occurred near a solar minimum."
+    },
+    {
+      "doi": "10.1029/2022JA031186",
+      "title": "Multiproxy reconstructions of integral energy spectra for extreme solar particle events of 7176 BCE, 660 BCE, 775 CE, and 994 CE",
+      "authors": "Koldobskiy, S., Mekhaldi, F., Kovaltsov, G., Usoskin, I.",
+      "year": 2023,
+      "journal": "Journal of Geophysical Research: Space Physics",
+      "keyFinding": "Reconstructed the integral energy spectrum of the 7176 BCE event, among the hardest and most energetic of the known extreme SPEs."
+    }
+  ],
+  "summary": "An exceptionally energetic, hard-spectrum extreme solar particle event in 7176 BC - one of the largest known - confirmed in radiocarbon plus 10Be and 36Cl across both hemispheres, and notable for occurring near a solar minimum.",
+  "description": "The 7176 BCE event is one of the most robustly confirmed and energetic extreme solar particle events on record, detected independently in all three cosmogenic isotopes. Brehm et al. (2022) measured a +19.5 (+/-0.6) per mil radiocarbon spike in tree rings, ranking it among the three largest known 14C production events. Paleari et al. (2022) confirmed it in 10Be and 36Cl from Greenland (NGRIP, EGRIP, GRIP) and Antarctica (EDML), finding a 36Cl/10Be ratio of 1.59 (+/-0.38) that indicates a very hard energy spectrum, comparable in hardness to the February 1956 ground-level event but with a fluence F(>30 MeV) of 1.64 (+/-0.53) x 10^11 cm^-2 - similar to or larger than AD 774/775 and up to two orders of magnitude above the strongest instrumental-era event. Strikingly, the 10Be modulation evidence places it near a solar minimum, challenging the assumption that the most extreme particle events occur only near solar maximum."
+}

@@ -3,17 +3,26 @@
 import { useRef, useEffect, useCallback } from "react";
 import * as d3 from "d3";
 import type { TimeSeriesDataPoint } from "@/lib/types";
+import FigureFrame from "@/components/charts/FigureFrame";
 
 interface DstChartProps {
   data: TimeSeriesDataPoint[];
   width?: number;
   height?: number;
+  downloadName?: string;
+  /** Optional shared x-domain (epoch ms) so multiple charts align in time. */
+  domain?: [number, number];
+  /** Left margin, overridable to align plot areas across charts. */
+  marginLeft?: number;
 }
 
 export default function DstChart({
   data,
   width = 420,
   height = 180,
+  downloadName = "dst-index",
+  domain,
+  marginLeft = 48,
 }: DstChartProps) {
   const svgRef = useRef<SVGSVGElement>(null);
   const drawRef = useRef<(() => void) | null>(null);
@@ -25,7 +34,7 @@ export default function DstChart({
     const svg = d3.select(svgRef.current);
     svg.selectAll("*").remove();
 
-    const margin = { top: 16, right: 16, bottom: 28, left: 48 };
+    const margin = { top: 16, right: 16, bottom: 28, left: marginLeft };
     const w = width - margin.left - margin.right;
     const h = height - margin.top - margin.bottom;
 
@@ -38,7 +47,11 @@ export default function DstChart({
 
     const xScale = d3
       .scaleTime()
-      .domain(d3.extent(times) as [Date, Date])
+      .domain(
+        domain
+          ? [new Date(domain[0]), new Date(domain[1])]
+          : (d3.extent(times) as [Date, Date])
+      )
       .range([0, w]);
 
     const yMin = d3.min(values) || -500;
@@ -104,7 +117,7 @@ export default function DstChart({
         g.selectAll("line").attr("stroke", isDark ? "rgba(255,255,255,0.05)" : "rgba(0,0,0,0.06)");
         g.selectAll("text")
           .attr("fill", isDark ? "rgba(255,255,255,0.4)" : "rgba(0,0,0,0.5)")
-          .attr("font-size", "9px");
+          .attr("font-size", "11px");
         g.select(".domain").remove();
       });
 
@@ -114,7 +127,7 @@ export default function DstChart({
         g.selectAll("line").attr("stroke", isDark ? "rgba(255,255,255,0.05)" : "rgba(0,0,0,0.06)");
         g.selectAll("text")
           .attr("fill", isDark ? "rgba(255,255,255,0.4)" : "rgba(0,0,0,0.5)")
-          .attr("font-size", "9px");
+          .attr("font-size", "11px");
         g.select(".domain").remove();
       });
 
@@ -124,7 +137,7 @@ export default function DstChart({
       .attr("x", margin.left)
       .attr("y", 12)
       .attr("fill", isDark ? "rgba(255,255,255,0.5)" : "rgba(0,0,0,0.55)")
-      .attr("font-size", "10px")
+      .attr("font-size", "12px")
       .text("Dst Index (nT)");
 
     // Peak annotation
@@ -141,11 +154,11 @@ export default function DstChart({
         .attr("x", peakX + 6)
         .attr("y", peakY - 6)
         .attr("fill", "#ef4444")
-        .attr("font-size", "9px")
+        .attr("font-size", "11px")
         .attr("font-weight", "bold")
         .text(`${values[minIdx]} nT`);
     }
-  }, [data, width, height]);
+  }, [data, width, height, domain, marginLeft]);
 
   useEffect(() => { draw(); }, [draw]);
 
@@ -158,11 +171,13 @@ export default function DstChart({
   drawRef.current = draw;
 
   return (
-    <svg
-      ref={svgRef}
-      width={width}
-      height={height}
-      className="overflow-visible"
-    />
+    <FigureFrame filename={downloadName}>
+      <svg
+        ref={svgRef}
+        width={width}
+        height={height}
+        className="overflow-visible"
+      />
+    </FigureFrame>
   );
 }

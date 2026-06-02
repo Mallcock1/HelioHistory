@@ -1,0 +1,80 @@
+{
+  "id": "evt-2001-mar",
+  "slug": "2001-march-storm",
+  "name": "2001 March Storm",
+  "altNames": [
+    "March 2001 Geomagnetic Storm",
+    "March 31 2001 Storm"
+  ],
+  "startDate": "2001-03-29",
+  "peakDate": "2001-03-31",
+  "endDate": "2001-04-02",
+  "durationHours": 96,
+  "phenomena": [
+    {
+      "type": "geomag_storm",
+      "subtype": "G5",
+      "details": "Extreme geomagnetic storm with Dst ~ −387 nT, one of the strongest of Solar Cycle 23."
+    },
+    {
+      "type": "solar_flare",
+      "subtype": "X1.7",
+      "details": "X1.7 flare on March 29, 2001."
+    },
+    {
+      "type": "cme",
+      "details": "Fast halo CME, speed ~1000 km/s."
+    }
+  ],
+  "noaaGScale": 5,
+  "noaaSScale": 2,
+  "noaaRScale": 3,
+  "peakDst": -387,
+  "peakKp": 9,
+  "peakAp": 246,
+  "peakAE": 3200,
+  "flareClass": "X1.7",
+  "cmeSpeedKmS": 1000,
+  "solarWindSpeedPeak": 800,
+  "bzMin": -40,
+  "protonFluxPeak": 500,
+  "solarCycleNumber": 23,
+  "cyclePhase": "maximum",
+  "sourceActiveRegion": "AR 9393",
+  "sunspotNumberDaily": 175,
+  "impacts": [
+    {
+      "sector": "power",
+      "location": "Global",
+      "description": "Elevated GIC levels detected in power grids across North America, Europe, and Australasia; protective measures activated at multiple utilities.",
+      "severity": "severe"
+    },
+    {
+      "sector": "aurora",
+      "location": "Global",
+      "description": "Aurora visible at latitudes below 30° in both hemispheres; reported from Mexico, southern Europe, and Japan.",
+      "severity": "extreme"
+    },
+    {
+      "sector": "satellite",
+      "location": "Earth orbit",
+      "description": "Multiple satellite anomalies reported; enhanced radiation belt environment caused elevated single-event upset rates.",
+      "severity": "moderate"
+    }
+  ],
+  "auroraLowestLatitude": 28,
+  "timeSeries": [],
+  "images": [],
+  "papers": [
+    {
+      "doi": "10.1029/2003JA010050",
+      "title": "Storm and substorm effects on the ring current and the radiation belts during the March 2001 event",
+      "authors": "Daglis, I. A., Kozyra, J. U.",
+      "year": 2003,
+      "journal": "Journal of Geophysical Research",
+      "keyFinding": "Analyzed the ring current and radiation belt response to the March 2001 storm, one of the most intense events of Solar Cycle 23."
+    }
+  ],
+  "summary": "The March 2001 geomagnetic storm (Dst ~ −387 nT) was one of the strongest events of Solar Cycle 23, driven by an X1.7 flare from AR 9393, producing aurora visible at latitudes below 30° and causing widespread GIC effects in power grids.",
+  "description": "On March 29, 2001, an X1.7 flare from active region AR 9393 launched a fast halo CME (~1000 km/s) that drove an extreme geomagnetic storm reaching Dst ~ −387 nT on March 31. The storm was one of the most intense of Solar Cycle 23 and occurred during the cycle maximum when solar activity was at its peak. Aurora was visible at latitudes below 30° across both hemispheres. Power grid operators in North America, Europe, and Australasia detected elevated GIC levels and activated protective measures. The event contributed to the growing body of data used to improve geomagnetic storm forecasting and GIC prediction models."
+}

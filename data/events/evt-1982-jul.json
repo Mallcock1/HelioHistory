@@ -1,0 +1,80 @@
+{
+  "id": "evt-1982-jul",
+  "slug": "1982-july-storm",
+  "name": "1982 July Storm",
+  "altNames": [
+    "July 1982 Geomagnetic Storm",
+    "July 13 1982 Storm"
+  ],
+  "startDate": "1982-07-13",
+  "peakDate": "1982-07-13",
+  "endDate": "1982-07-15",
+  "durationHours": 48,
+  "phenomena": [
+    {
+      "type": "geomag_storm",
+      "subtype": "G4",
+      "details": "Intense geomagnetic storm with Dst ~ −325 nT during the descending phase of Solar Cycle 21."
+    },
+    {
+      "type": "solar_flare",
+      "subtype": "X-class",
+      "details": "X-class flare associated with the storm."
+    },
+    {
+      "type": "cme",
+      "details": "Fast CME directed at Earth."
+    }
+  ],
+  "noaaGScale": 4,
+  "noaaSScale": null,
+  "noaaRScale": null,
+  "peakDst": -325,
+  "peakKp": 8,
+  "peakAp": 207,
+  "peakAE": null,
+  "flareClass": "X",
+  "cmeSpeedKmS": null,
+  "solarWindSpeedPeak": 800,
+  "bzMin": -25,
+  "protonFluxPeak": null,
+  "solarCycleNumber": 21,
+  "cyclePhase": "descending",
+  "sourceActiveRegion": null,
+  "sunspotNumberDaily": null,
+  "impacts": [
+    {
+      "sector": "communications",
+      "location": "Global",
+      "description": "Severe HF radio disruptions; polar route communications affected for extended periods.",
+      "severity": "severe"
+    },
+    {
+      "sector": "satellite",
+      "location": "Earth orbit",
+      "description": "Multiple satellite anomalies reported due to enhanced radiation belt environment; increased single-event upsets in spacecraft electronics.",
+      "severity": "moderate"
+    },
+    {
+      "sector": "power",
+      "location": "North America",
+      "description": "GIC-related anomalies detected in power grid systems; transformer heating reported at several locations.",
+      "severity": "moderate"
+    }
+  ],
+  "auroraLowestLatitude": 38,
+  "timeSeries": [],
+  "images": [],
+  "papers": [
+    {
+      "doi": "10.1029/JA089iA09p07413",
+      "title": "Great geomagnetic storms of July 1982",
+      "authors": "Allen, J. H., Sauer, H. H., Frank, L. A., Reiff, P.",
+      "year": 1984,
+      "journal": "Journal of Geophysical Research",
+      "keyFinding": "Documented the July 1982 storm as one of the strongest of Solar Cycle 21, with extensive technological impacts on communications and satellite systems."
+    }
+  ],
+  "summary": "The July 1982 geomagnetic storm (Dst ~ −325 nT) was one of the strongest events of Solar Cycle 21, causing severe HF radio blackouts, satellite anomalies, and GIC effects in power grids.",
+  "description": "On July 13, 1982, during the descending phase of Solar Cycle 21, a fast CME driven by an X-class solar flare produced an intense geomagnetic storm with Dst reaching approximately −325 nT. The storm caused severe disruptions to HF radio communications, particularly on high-latitude routes, and multiple satellites experienced anomalies from the enhanced radiation belt environment. GIC effects were detected in North American power grids, with transformer heating reported at several locations. The event was well-documented by the expanding network of space weather monitoring systems and contributed to growing awareness of infrastructure vulnerability to space weather."
+}

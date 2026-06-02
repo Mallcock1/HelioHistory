@@ -1,0 +1,38 @@
+name: Validate data
+
+# Every push / PR that touches the dataset or its tooling is schema-validated
+# and test-built, so contributions get instant automated feedback.
+on:
+  push:
+    branches: [master, main]
+  pull_request:
+    paths:
+      - "data/**"
+      - "schema/**"
+      - "scripts/**"
+      - "src/**"
+      - "package.json"
+      - ".github/workflows/validate-data.yml"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Validate event files against JSON Schema
+        run: npm run data:validate
+
+      - name: Build compiled dataset
+        run: npm run data:build
+
+      - name: Type-check application
+        run: npx tsc --noEmit

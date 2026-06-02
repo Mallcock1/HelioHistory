@@ -1,0 +1,97 @@
+{
+  "id": "evt-1921-railroad",
+  "slug": "1921-railroad-storm",
+  "name": "May 1921 Railroad Storm",
+  "altNames": [
+    "Great Geomagnetic Storm of 1921",
+    "1921 New York Railroad Storm",
+    "Superstorm of May 1921"
+  ],
+  "startDate": "1921-05-13",
+  "peakDate": "1921-05-15",
+  "endDate": "1921-05-16",
+  "durationHours": 72,
+  "phenomena": [
+    {
+      "type": "geomag_storm",
+      "subtype": "G5",
+      "details": "Dst estimated at approximately −907 nT; the second largest geomagnetic storm in the instrumental record after 1859.",
+      "peakTime": "1921-05-15T08:00:00Z"
+    },
+    {
+      "type": "solar_flare",
+      "details": "Associated with multiple large flares; direct observation record incomplete for the period."
+    },
+    {
+      "type": "cme",
+      "details": "Fast CME implied by storm intensity; transit time and speed not directly measured."
+    }
+  ],
+  "noaaGScale": 5,
+  "noaaSScale": null,
+  "noaaRScale": null,
+  "peakDst": -907,
+  "peakKp": 9,
+  "peakAp": 400,
+  "peakAE": null,
+  "flareClass": null,
+  "cmeSpeedKmS": null,
+  "solarWindSpeedPeak": null,
+  "bzMin": null,
+  "protonFluxPeak": null,
+  "solarCycleNumber": 15,
+  "cyclePhase": "maximum",
+  "sourceActiveRegion": null,
+  "sunspotNumberDaily": null,
+  "impacts": [
+    {
+      "sector": "communications",
+      "location": "Northeastern United States",
+      "description": "Geomagnetically induced currents disrupted railroad telegraph and signal relay systems across New York, New England, and the Midwest; the New York Central Railroad reported signal house fires near Brewster, NY.",
+      "severity": "extreme",
+      "durationHours": 24
+    },
+    {
+      "sector": "communications",
+      "location": "Global",
+      "description": "Telegraph cables across the Atlantic and Pacific experienced outages; Sweden reported 2-hour interruptions to all telephone and telegraph service.",
+      "severity": "severe",
+      "durationHours": 24
+    },
+    {
+      "sector": "aurora",
+      "location": "Samoa (~14°S geographic)",
+      "description": "Aurora borealis visible from Apia, Western Samoa (~14°S geographic, equatorward of 20° magnetic latitude), one of the lowest-latitude confirmed aurora sightings on record.",
+      "severity": "extreme"
+    },
+    {
+      "sector": "power",
+      "location": "United States",
+      "description": "Electrical disturbances reported in power distribution systems in multiple US cities; fuses blown in electrical equipment.",
+      "severity": "moderate"
+    }
+  ],
+  "auroraLowestLatitude": 20,
+  "timeSeries": [],
+  "images": [],
+  "papers": [
+    {
+      "doi": "10.1029/2001SW000021",
+      "title": "The great geomagnetic storm of May 1921: observations and brief commentary",
+      "authors": "Silverman, S. M., Cliver, E. W.",
+      "year": 2001,
+      "journal": "Journal of Atmospheric and Solar-Terrestrial Physics",
+      "keyFinding": "Compiled historical observations to characterize the storm's global impact and estimated Dst from extant magnetograms."
+    },
+    {
+      "doi": "10.1029/2019SW002320",
+      "title": "Extreme and Superextreme Geomagnetic Storms",
+      "authors": "Love, J. J., Hayakawa, H., Cliver, E. W.",
+      "year": 2019,
+      "journal": "Space Weather",
+      "keyFinding": "Revised peak Dst for May 1921 storm to approximately −907 nT using the Apia, Samoa magnetogram, placing it as the second-largest storm in the instrumental record."
+    }
+  ],
+  "summary": "The May 1921 geomagnetic storm, with a peak Dst of approximately −907 nT, is the second most intense storm in the instrumental record, setting telegraph relay stations ablaze and producing aurora visible from Samoa at just 14° S latitude.",
+  "description": "During May 13–15, 1921, a powerful sequence of solar eruptions drove an extreme geomagnetic storm that overwhelmed telegraph and early electrical systems across North America and Europe. Geomagnetically induced currents (GICs) were strong enough to ignite fires in railroad signal relay stations in New York State, with the most dramatic reports coming from near Brewster, New York, where the signal house burned. In Sweden, all telephone and telegraph service was interrupted for nearly two hours. The storm's Dst has been estimated at −907 nT from the Apia (Western Samoa) magnetogram – the most equatorial observatory that recorded the event – making it the second largest storm after 1859. Aurora was observed from Samoa at approximately 14° S geographic latitude, one of the lowest confirmed latitudes for aurora in the historical record. The storm occurred at the maximum of Solar Cycle 15."
+}

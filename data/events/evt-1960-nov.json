@@ -1,0 +1,88 @@
+{
+  "id": "evt-1960-nov",
+  "slug": "1960-great-storm",
+  "name": "November 1960 Great Storm",
+  "altNames": [
+    "1960 Halloween-Season Storm",
+    "SC19 Maximum Storm",
+    "November 1960 Solar Proton Events"
+  ],
+  "startDate": "1960-11-12",
+  "peakDate": "1960-11-13",
+  "endDate": "1960-11-17",
+  "durationHours": 120,
+  "phenomena": [
+    {
+      "type": "geomag_storm",
+      "subtype": "G5",
+      "details": "Dst −339 nT, Kp 9; one of the most intense storms during Solar Cycle 19 (the historically most active cycle).",
+      "peakTime": "1960-11-13T18:00:00Z"
+    },
+    {
+      "type": "solar_flare",
+      "subtype": "X-class",
+      "details": "Multiple X-class flares from large active regions."
+    },
+    {
+      "type": "sep",
+      "subtype": "S4",
+      "details": "Major SEP event with high proton flux; GLE #8 and #9 on November 12 and 15, 1960."
+    },
+    {
+      "type": "radio_blackout",
+      "details": "Widespread shortwave radio blackouts across sunlit hemisphere."
+    }
+  ],
+  "noaaGScale": 5,
+  "noaaSScale": 4,
+  "noaaRScale": 5,
+  "peakDst": -339,
+  "peakKp": 9,
+  "peakAp": 300,
+  "peakAE": null,
+  "flareClass": "X",
+  "cmeSpeedKmS": null,
+  "solarWindSpeedPeak": null,
+  "bzMin": null,
+  "protonFluxPeak": 10000,
+  "solarCycleNumber": 19,
+  "cyclePhase": "maximum",
+  "sourceActiveRegion": null,
+  "sunspotNumberDaily": 211,
+  "impacts": [
+    {
+      "sector": "communications",
+      "location": "Canada, Northern Europe",
+      "description": "Widespread disruption to telegraph, telephone, and early data communication lines due to geomagnetically induced currents; multiple days of degraded service.",
+      "severity": "severe",
+      "durationHours": 72
+    },
+    {
+      "sector": "aurora",
+      "location": "United States, Europe",
+      "description": "Aurora widely visible across the continental United States and Europe; observers as far south as New Mexico and Arizona reported vivid displays.",
+      "severity": "severe"
+    },
+    {
+      "sector": "communications",
+      "location": "Global",
+      "description": "Shortwave radio blackouts on the sunlit hemisphere for multiple hours during the peak X-class flares; polar cap absorption disrupted high-latitude communications for days.",
+      "severity": "severe",
+      "durationHours": 48
+    }
+  ],
+  "auroraLowestLatitude": 30,
+  "timeSeries": [],
+  "images": [],
+  "papers": [
+    {
+      "title": "Solar and Terrestrial Relationships During the International Geophysical Year",
+      "authors": "Akasofu, S.-I., Chapman, S.",
+      "year": 1963,
+      "journal": "Geophysics (various chapters)",
+      "keyFinding": "Comprehensive analysis of solar-terrestrial connections during 1957–1962, including the November 1960 storm complex during the highest sunspot maximum of the modern era."
+    }
+  ],
+  "summary": "The November 1960 geomagnetic storm (Dst −339 nT, Kp 9) was one of the largest events of Solar Cycle 19 – the most active sunspot cycle in recorded history – causing widespread radio blackouts, communication disruptions, and aurora visible across the continental United States.",
+  "description": "Solar Cycle 19 (peaked 1958) was the strongest cycle in the modern record with a smoothed sunspot maximum of 201.3. While the all-time peak had passed, the Sun remained highly active into late 1960. The November 1960 storm complex began with multiple X-class flares producing severe radio blackouts, followed by fast CMEs that drove a peak Dst of −339 nT and Kp 9 on November 13. Major solar energetic particle events (GLE #8 and #9, November 12 and 15) added an S4-class radiation storm. Telegraph and telephone communications in Canada and northern Europe were disrupted for days by GICs, while aurora reached latitudes of ~30°N in the United States. The event demonstrated the compounding hazard of multiple phenomena (flares, CMEs, SEPs) occurring in rapid succession during a solar cycle maximum."
+}

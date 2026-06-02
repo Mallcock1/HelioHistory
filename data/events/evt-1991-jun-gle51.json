@@ -1,0 +1,76 @@
+{
+  "id": "evt-1991-jun-gle51",
+  "slug": "1991-june-gle51",
+  "name": "1991 June GLE#51",
+  "altNames": [
+    "GLE 51",
+    "June 15 1991 GLE",
+    "1991 June Solar Particle Event"
+  ],
+  "startDate": "1991-06-15",
+  "peakDate": "1991-06-15",
+  "endDate": "1991-06-16",
+  "durationHours": 24,
+  "phenomena": [
+    {
+      "type": "gle",
+      "subtype": "GLE#51",
+      "details": "Ground-level enhancement #51; one of the larger GLEs in the record, detected by neutron monitors worldwide."
+    },
+    {
+      "type": "solar_flare",
+      "subtype": "X12.0",
+      "details": "X12.0 flare on June 15, 1991 from AR 6659, one of the most active regions of SC22."
+    },
+    {
+      "type": "sep",
+      "subtype": "Extreme SEP",
+      "details": "Major solar energetic particle event with >10 MeV proton flux exceeding 10,000 pfu."
+    }
+  ],
+  "noaaGScale": null,
+  "noaaSScale": 4,
+  "noaaRScale": 5,
+  "peakDst": null,
+  "peakKp": null,
+  "peakAp": null,
+  "peakAE": null,
+  "flareClass": "X12.0",
+  "cmeSpeedKmS": 1500,
+  "solarWindSpeedPeak": null,
+  "bzMin": null,
+  "protonFluxPeak": 11000,
+  "solarCycleNumber": 22,
+  "cyclePhase": "maximum",
+  "sourceActiveRegion": "AR 6659",
+  "sunspotNumberDaily": null,
+  "impacts": [
+    {
+      "sector": "aviation",
+      "location": "Polar routes",
+      "description": "Elevated radiation dose rates at aviation altitudes on polar routes; one of the events that later informed aviation radiation exposure guidelines.",
+      "severity": "severe"
+    },
+    {
+      "sector": "communications",
+      "location": "Global",
+      "description": "Severe radio blackouts across the sunlit hemisphere from the X12.0 flare; complete HF absorption on polar and sub-polar routes.",
+      "severity": "severe"
+    }
+  ],
+  "auroraLowestLatitude": null,
+  "timeSeries": [],
+  "images": [],
+  "papers": [
+    {
+      "doi": "10.1029/93GL00052",
+      "title": "Observations of the June 1991 ground level enhancement with the Climax neutron monitor",
+      "authors": "Shea, M. A., Smart, D. F.",
+      "year": 1993,
+      "journal": "Geophysical Research Letters",
+      "keyFinding": "Documented GLE#51 as one of the major ground-level enhancements of Solar Cycle 22, with significant neutron monitor count rate increases observed worldwide."
+    }
+  ],
+  "summary": "GLE#51 on June 15, 1991, produced by an X12.0 flare from the highly active AR 6659, was one of the largest ground-level enhancements of Solar Cycle 22, with significant radiation implications for aviation and severe radio blackouts.",
+  "description": "On June 15, 1991, active region AR 6659 – one of the most prolific active regions of Solar Cycle 22 – produced an X12.0 flare that generated GLE#51, a major ground-level enhancement detected by neutron monitors worldwide. The associated SEP event produced >10 MeV proton fluxes exceeding 10,000 pfu. The X12.0 flare caused severe radio blackouts across the sunlit hemisphere. The event was one of several major eruptions from AR 6659, which also produced X-class flares earlier in June 1991. The radiation dose rates at aviation altitudes on polar routes were significantly elevated, making this event one of the key case studies for aviation radiation exposure guidelines."
+}

@@ -1,0 +1,76 @@
+{
+  "id": "evt-1998-may",
+  "slug": "1998-may-galaxy-iv",
+  "name": "1998 May Galaxy IV Failure",
+  "altNames": [
+    "May 1998 Storm",
+    "Galaxy IV Satellite Loss",
+    "Galaxy IV Pager Outage"
+  ],
+  "startDate": "1998-05-01",
+  "peakDate": "1998-05-04",
+  "endDate": "1998-05-05",
+  "durationHours": 96,
+  "phenomena": [
+    {
+      "type": "geomag_storm",
+      "subtype": "G4",
+      "details": "Strong geomagnetic storm with Dst ~ −205 nT during the ascending phase of Solar Cycle 23."
+    },
+    {
+      "type": "solar_flare",
+      "subtype": "M-class",
+      "details": "M-class flare activity preceding the storm."
+    },
+    {
+      "type": "cme",
+      "details": "CME associated with the geomagnetic storm."
+    }
+  ],
+  "noaaGScale": 4,
+  "noaaSScale": null,
+  "noaaRScale": null,
+  "peakDst": -205,
+  "peakKp": 8,
+  "peakAp": 150,
+  "peakAE": null,
+  "flareClass": "M",
+  "cmeSpeedKmS": 800,
+  "solarWindSpeedPeak": 700,
+  "bzMin": -22,
+  "protonFluxPeak": null,
+  "solarCycleNumber": 23,
+  "cyclePhase": "ascending",
+  "sourceActiveRegion": null,
+  "sunspotNumberDaily": null,
+  "impacts": [
+    {
+      "sector": "satellite",
+      "location": "Geostationary orbit",
+      "description": "PanAmSat's Galaxy IV communications satellite suffered a control processor failure on May 19, 1998, approximately two weeks after the main geomagnetic storm, during a sustained period of elevated electron flux. The causal link to space weather remains debated. The satellite provided paging services to approximately 80% of US pager users.",
+      "severity": "extreme",
+      "economicCostUsd": 250000000
+    },
+    {
+      "sector": "communications",
+      "location": "United States",
+      "description": "Loss of Galaxy IV knocked out approximately 80% of US pager service (roughly 45 million pagers), disrupted NPR radio feeds, television broadcast services, and some credit card authorization systems. The outage lasted for days as services were migrated to backup satellites.",
+      "severity": "extreme"
+    }
+  ],
+  "auroraLowestLatitude": 40,
+  "timeSeries": [],
+  "images": [],
+  "papers": [
+    {
+      "doi": "10.1029/1998GL900173",
+      "title": "Galaxy IV – when bad things happen to good satellites",
+      "authors": "Baker, D. N.",
+      "year": 1998,
+      "journal": "Eos, Transactions American Geophysical Union",
+      "keyFinding": "Analyzed the Galaxy IV failure in the context of the space weather environment, highlighting the vulnerability of geostationary satellites to radiation belt enhancements."
+    }
+  ],
+  "summary": "The May 1998 space weather environment contributed to the failure of the Galaxy IV satellite, which knocked out approximately 80% of US pager service (affecting ~45 million users) and disrupted television and radio feeds – one of the most publicly visible space weather impacts of the 1990s.",
+  "description": "In early May 1998, during the ascending phase of Solar Cycle 23, a geomagnetic storm (Dst ~ −205 nT) enhanced the outer radiation belt electron environment. On May 19, approximately two weeks after the main geomagnetic storm, PanAmSat's Galaxy IV geostationary communications satellite suffered a control processor failure during a sustained period of elevated electron flux. The causal link between the space weather environment and the failure remains debated, as the delay between the storm and the failure complicates attribution. Galaxy IV was a critical communications node: it carried approximately 80% of US pager traffic (serving ~45 million subscribers), NPR radio distribution, television broadcast feeds, and some financial transaction systems. The loss triggered one of the most publicly visible space weather-related failures, as millions of pager users suddenly lost service. The event highlighted the concentration risk of critical communications infrastructure on individual satellites and spurred improvements in satellite redundancy planning."
+}

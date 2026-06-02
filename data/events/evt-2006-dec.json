@@ -1,0 +1,85 @@
+{
+  "id": "evt-2006-dec",
+  "slug": "2006-december-x9",
+  "name": "December 2006 X9.0 Flare",
+  "altNames": [
+    "December 5 2006 Flare",
+    "X9 Flare 2006",
+    "GLE #70",
+    "Solar Cycle 23/24 Minimum Flare"
+  ],
+  "startDate": "2006-12-05",
+  "peakDate": "2006-12-06",
+  "endDate": "2006-12-15",
+  "durationHours": 240,
+  "phenomena": [
+    {
+      "type": "solar_flare",
+      "subtype": "X9.0",
+      "details": "X9.0 flare on December 5, 2006 at 10:18 UT from AR 10930; unexpectedly intense for a near-solar-minimum period.",
+      "peakTime": "2006-12-05T10:18:00Z"
+    },
+    {
+      "type": "sep",
+      "subtype": "S2",
+      "details": "Moderate SEP event; GLE #70 detected at high-latitude neutron monitors."
+    },
+    {
+      "type": "gle",
+      "subtype": "GLE #70",
+      "details": "Ground-level enhancement on December 13, 2006; >100% increase at some monitors."
+    },
+    {
+      "type": "radio_blackout",
+      "subtype": "R4",
+      "details": "Severe R4 radio blackout on the sunlit hemisphere during the X9.0 flare."
+    }
+  ],
+  "noaaGScale": 2,
+  "noaaSScale": 2,
+  "noaaRScale": 4,
+  "peakDst": -162,
+  "peakKp": 7,
+  "peakAp": 132,
+  "peakAE": 1800,
+  "flareClass": "X9.0",
+  "cmeSpeedKmS": 1774,
+  "solarWindSpeedPeak": 750,
+  "bzMin": -28,
+  "protonFluxPeak": 1980,
+  "solarCycleNumber": 23,
+  "cyclePhase": "minimum",
+  "sourceActiveRegion": "AR 10930",
+  "sunspotNumberDaily": 89,
+  "impacts": [
+    {
+      "sector": "communications",
+      "location": "Global (sunlit hemisphere)",
+      "description": "R4 severe radio blackout disrupted shortwave HF communications for several hours; GPS navigation errors were measured to be up to 50 m during the X-ray pulse peak.",
+      "severity": "severe",
+      "durationHours": 6
+    },
+    {
+      "sector": "navigation",
+      "location": "Global",
+      "description": "Enhanced solar X-ray and EUV flux caused ionospheric disturbances significantly degrading GPS and GNSS positioning accuracy for hours after the flare.",
+      "severity": "moderate",
+      "durationHours": 8
+    }
+  ],
+  "auroraLowestLatitude": 50,
+  "timeSeries": [],
+  "images": [],
+  "papers": [
+    {
+      "doi": "10.1029/2007GL033330",
+      "title": "Long-term energetic particle observations and the December 2006 SEP event",
+      "authors": "Mewaldt, R. A., Davis, A. J., Lave, K. A., et al.",
+      "year": 2008,
+      "journal": "Geophysical Research Letters",
+      "keyFinding": "Characterized the December 2006 SEP event and GLE #70 particle energy spectra; noted the surprisingly high intensity given the solar cycle minimum conditions."
+    }
+  ],
+  "summary": "The December 2006 X9.0 flare and GLE #70, occurring unexpectedly near Solar Cycle 23/24 minimum from isolated active region AR 10930, demonstrated that large solar events can occur at any phase of the solar cycle and disrupted GPS accuracy globally.",
+  "description": "Active region AR 10930, appearing in an otherwise quiet Sun near the transition between Solar Cycles 23 and 24, produced an X9.0 flare on December 5, 2006 – one of the largest of the entire cycle, yet occurring at or near solar minimum. The flare caused an R4 severe radio blackout on the sunlit hemisphere and measurable GPS positioning errors of up to 50 m due to ionospheric disturbances. An associated fast CME (~1774 km/s) drove a moderate G2 geomagnetic storm. A separate X3.4 flare on December 13 from the same active region (AR 10930) produced GLE #70, with >100% enhancements at high-latitude neutron monitors. The December 2006 events served as an important reminder that infrastructure planners cannot assume quiescence near solar minimum and that isolated, powerful active regions can produce extreme events out of cycle phase."
+}

@@ -1,0 +1,91 @@
+{
+  "id": "evt-2005-sep",
+  "slug": "2005-september-storms",
+  "name": "2005 September Storms",
+  "altNames": [
+    "September 2005 Solar Storms",
+    "2005 September X-class Flare Sequence"
+  ],
+  "startDate": "2005-09-07",
+  "peakDate": "2005-09-11",
+  "endDate": "2005-09-15",
+  "durationHours": 192,
+  "phenomena": [
+    {
+      "type": "solar_flare",
+      "subtype": "X17.0",
+      "details": "X17.0 flare on September 7, 2005 from AR 10808 – the fifth largest flare in the GOES record at the time."
+    },
+    {
+      "type": "solar_flare",
+      "subtype": "X6.2",
+      "details": "X6.2 flare on September 9, 2005."
+    },
+    {
+      "type": "geomag_storm",
+      "subtype": "G4",
+      "details": "Strong geomagnetic storm with Dst ~ −139 nT on September 11."
+    },
+    {
+      "type": "sep",
+      "subtype": "S3",
+      "details": "Significant SEP event associated with the X17 flare."
+    },
+    {
+      "type": "radio_blackout",
+      "subtype": "R5",
+      "details": "Extreme R5 radio blackout from the X17 flare – one of the strongest HF disruptions of SC23."
+    }
+  ],
+  "noaaGScale": 4,
+  "noaaSScale": 3,
+  "noaaRScale": 5,
+  "peakDst": -139,
+  "peakKp": 8,
+  "peakAp": 120,
+  "peakAE": null,
+  "flareClass": "X17.0",
+  "cmeSpeedKmS": 2200,
+  "solarWindSpeedPeak": 800,
+  "bzMin": -20,
+  "protonFluxPeak": 1880,
+  "solarCycleNumber": 23,
+  "cyclePhase": "descending",
+  "sourceActiveRegion": "AR 10808",
+  "sunspotNumberDaily": 60,
+  "impacts": [
+    {
+      "sector": "communications",
+      "location": "Global",
+      "description": "Extreme R5 radio blackout from the X17 flare on September 7; complete HF radio absorption across the entire sunlit hemisphere for several hours.",
+      "severity": "extreme"
+    },
+    {
+      "sector": "navigation",
+      "location": "Global",
+      "description": "GPS positioning errors during the geomagnetic storm phase; ionospheric scintillation affected precision GNSS applications.",
+      "severity": "moderate"
+    },
+    {
+      "sector": "aviation",
+      "location": "Polar routes",
+      "description": "Elevated radiation from SEP event prompted flight rerouting on some polar routes.",
+      "severity": "moderate"
+    }
+  ],
+  "auroraLowestLatitude": 40,
+  "timeSeries": [],
+  "images": [],
+  "papers": [
+    {
+      "doi": "10.1029/2006JA011710",
+      "title": "Solar and interplanetary sources of the September 2005 events",
+      "authors": "Gopalswamy, N., Yashiro, S., Akiyama, S.",
+      "year": 2007,
+      "journal": "Journal of Geophysical Research",
+      "keyFinding": "Analyzed the September 2005 event sequence, demonstrating how AR 10808 produced multiple X-class flares and CMEs in rapid succession during the descending phase of SC23."
+    }
+  ],
+  "summary": "The September 2005 storm sequence featured an X17.0 flare – one of the largest in the GOES record – that caused an extreme R5 radio blackout, along with multiple X-class flares from AR 10808, significant SEP events, and a G4 geomagnetic storm, demonstrating the continued vigor of Solar Cycle 23 during its descending phase.",
+  "description": "In September 2005, AR 10808 produced a remarkable sequence of major solar eruptions during the descending phase of Solar Cycle 23. The X17.0 flare on September 7 was one of the five largest flares in the GOES record and caused an extreme R5 radio blackout – complete HF absorption across the entire sunlit hemisphere. An X6.2 flare followed on September 9. The associated CMEs drove a G4 geomagnetic storm with Dst ~ −139 nT and a significant SEP event. The event sequence demonstrated that the descending phase of the solar cycle can produce extremely powerful individual flares even as overall activity declines, and it contributed to the 'extended maximum' character of Solar Cycle 23."
+}

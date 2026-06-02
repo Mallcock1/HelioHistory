@@ -1,0 +1,86 @@
+{
+  "id": "evt-2003-x28",
+  "slug": "2003-x28-flare",
+  "name": "November 4 2003 X28+ Flare",
+  "altNames": [
+    "X28 Flare",
+    "X45 Flare (2003)",
+    "Largest Modern Flare",
+    "Halloween X28+ Event"
+  ],
+  "startDate": "2003-11-04",
+  "peakDate": "2003-11-04",
+  "endDate": "2003-11-04",
+  "durationHours": 3,
+  "phenomena": [
+    {
+      "type": "solar_flare",
+      "subtype": "X28+",
+      "details": "GOES soft X-ray sensor saturated at X17.4 at 19:53 UT; reconstruction from radio and other proxies estimates the true class at X28–X45. Largest solar flare in the modern GOES record.",
+      "peakTime": "2003-11-04T19:53:00Z"
+    },
+    {
+      "type": "radio_blackout",
+      "subtype": "R5",
+      "details": "Extreme R5 radio blackout lasting over 30 minutes; total HF blackout on the daylit hemisphere."
+    },
+    {
+      "type": "cme",
+      "details": "Associated CME directed partly away from Earth (west-limb event), reducing geoeffectiveness of this particular flare."
+    }
+  ],
+  "noaaGScale": 2,
+  "noaaSScale": null,
+  "noaaRScale": 5,
+  "peakDst": -69,
+  "peakKp": 5,
+  "peakAp": 46,
+  "peakAE": null,
+  "flareClass": "X28",
+  "cmeSpeedKmS": 2657,
+  "solarWindSpeedPeak": null,
+  "bzMin": null,
+  "protonFluxPeak": 1570,
+  "solarCycleNumber": 23,
+  "cyclePhase": "descending",
+  "sourceActiveRegion": "AR 10486",
+  "sunspotNumberDaily": 234,
+  "impacts": [
+    {
+      "sector": "communications",
+      "location": "Global (sunlit hemisphere)",
+      "description": "Extreme R5 radio blackout – total HF blackout on the entire sunlit hemisphere for ~30+ minutes; the most severe radio blackout in the GOES record. Aviation and maritime HF communications completely disrupted.",
+      "severity": "extreme",
+      "durationHours": 1
+    },
+    {
+      "sector": "satellite",
+      "location": "Earth orbit",
+      "description": "Many spacecraft in low-Earth orbit experienced single-event upsets and solar array degradation during the intense X-ray and EUV flux. The SEP event added to cumulative radiation damage on satellites.",
+      "severity": "moderate"
+    }
+  ],
+  "auroraLowestLatitude": 45,
+  "timeSeries": [],
+  "images": [],
+  "papers": [
+    {
+      "doi": "10.1029/2004JA010552",
+      "title": "The radio burst of November 4, 2003 and its implications for solar physics and space weather",
+      "authors": "Thomson, N. R., Rodger, C. J., Dowden, R. L.",
+      "year": 2004,
+      "journal": "Geophysical Research Letters",
+      "keyFinding": "Used subionospheric VLF radio wave absorption to reconstruct the true peak soft X-ray flux at approximately X28, despite sensor saturation in GOES."
+    },
+    {
+      "doi": "10.1029/2005GL023779",
+      "title": "Anisotropic diffusion model of cosmic ray transport applied to the November 4, 2003 event",
+      "authors": "Brodrick, D., Tingay, S., Wieringa, M.",
+      "year": 2005,
+      "journal": "Geophysical Research Letters",
+      "keyFinding": "Estimated the peak flare intensity at X34 ± 6 using radio array ionospheric response measurements, consistent with other reconstructions in the X28–X45 range."
+    }
+  ],
+  "summary": "The November 4, 2003 X28+ flare – with its GOES sensors saturated at X17.4 and true intensity reconstructed at X28–X45 – produced the most extreme radio blackout in the modern GOES record, blacking out HF communications across the entire sunlit hemisphere for over 30 minutes.",
+  "description": "As part of the Halloween Storms complex, active region AR 10486 – already responsible for multiple X-class events – produced its most powerful eruption on November 4, 2003, at 19:53 UT. The GOES soft X-ray sensors saturated at an equivalent of X17.4, but analysis using subionospheric VLF absorption (Thomson et al. 2004) and radio array ionospheric response measurements (Brodrick et al. 2005) reconstructed the true peak at approximately X28–X45, making it the largest solar flare in the modern satellite era. Because the source region was near the solar west limb, the associated CME was directed partly away from Earth, and the geomagnetic consequences were relatively limited (Dst ~−69 nT). However, the X-ray and EUV flux produced an R5 extreme radio blackout covering the entire sunlit hemisphere for over 30 minutes – the most severe in the GOES record. This event remains the upper benchmark for solar flare intensity in infrastructure risk assessments."
+}

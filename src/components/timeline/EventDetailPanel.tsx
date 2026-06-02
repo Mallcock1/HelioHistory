@@ -8,6 +8,8 @@ import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { X } from "lucide-react";
+import CopyButton from "@/components/CopyButton";
+import { eventCitation } from "@/lib/citation";
 import DstChart from "@/components/charts/DstChart";
 import KpChart from "@/components/charts/KpChart";
 import NeutronMonitorChart from "@/components/charts/NeutronMonitorChart";
@@ -30,7 +32,7 @@ function IndexCard({
   if (value === null || value === undefined) return null;
   return (
     <div className="glass rounded-lg p-3 flex flex-col gap-1">
-      <span className="text-[10px] uppercase tracking-wider text-foreground/40">
+      <span className="text-[11px] uppercase tracking-wider text-foreground/40">
         {label}
       </span>
       <span className="text-lg font-mono font-semibold text-foreground">
@@ -170,6 +172,11 @@ export default function EventDetailPanel({
                     </Badge>
                   )}
                 </div>
+
+                {/* Cite this event */}
+                <div className="mt-3">
+                  <CopyButton value={eventCitation(event)} label="Cite event" />
+                </div>
               </div>
 
               {/* Summary */}
@@ -280,6 +287,16 @@ export default function EventDetailPanel({
               {(() => {
                 const ts = getEventTimeSeries(event.id);
                 const hasData = ts.dst || ts.kp || ts.protonFlux || ts.neutronMonitor;
+
+                // Shared time x-domain across all charts so they stack in time.
+                const allMs = [
+                  ...(ts.dst ?? []),
+                  ...(ts.kp ?? []),
+                  ...(ts.neutronMonitor ?? []),
+                ].map((d) => new Date(d.time).getTime());
+                const sharedDomain = allMs.length
+                  ? ([Math.min(...allMs), Math.max(...allMs)] as [number, number])
+                  : undefined;
                 return (
                   <>
                     <Separator className="bg-overlay/10" />
@@ -291,17 +308,17 @@ export default function EventDetailPanel({
                         <div className="space-y-4">
                           {ts.dst && (
                             <div className="glass rounded-lg p-3 overflow-x-auto">
-                              <DstChart data={ts.dst} width={400} height={170} />
+                              <DstChart data={ts.dst} width={400} height={170} domain={sharedDomain} downloadName={`${event.id}-dst`} />
                             </div>
                           )}
                           {ts.kp && (
                             <div className="glass rounded-lg p-3 overflow-x-auto">
-                              <KpChart data={ts.kp} width={400} height={140} />
+                              <KpChart data={ts.kp} width={400} height={140} domain={sharedDomain} downloadName={`${event.id}-kp`} />
                             </div>
                           )}
                           {ts.neutronMonitor && (
                             <div className="glass rounded-lg p-3 overflow-x-auto">
-                              <NeutronMonitorChart data={ts.neutronMonitor} width={400} height={170} />
+                              <NeutronMonitorChart data={ts.neutronMonitor} width={400} height={170} domain={sharedDomain} downloadName={`${event.id}-neutron-monitor`} />
                             </div>
                           )}
                         </div>

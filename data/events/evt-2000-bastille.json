@@ -1,0 +1,103 @@
+{
+  "id": "evt-2000-bastille",
+  "slug": "2000-bastille-day-event",
+  "name": "Bastille Day Event",
+  "altNames": [
+    "July 14 2000 Solar Storm",
+    "Bastille Day Storm 2000",
+    "GLE #59"
+  ],
+  "startDate": "2000-07-14",
+  "peakDate": "2000-07-15",
+  "endDate": "2000-07-17",
+  "durationHours": 72,
+  "phenomena": [
+    {
+      "type": "solar_flare",
+      "subtype": "X5.7",
+      "details": "X5.7 flare at 10:24 UT on July 14, 2000 from AR 9077.",
+      "peakTime": "2000-07-14T10:24:00Z"
+    },
+    {
+      "type": "cme",
+      "details": "Full-halo CME at ~1800 km/s; arrival at Earth approximately 28 hours after the flare."
+    },
+    {
+      "type": "geomag_storm",
+      "subtype": "G5",
+      "details": "Dst −301 nT, Kp 9 on July 15; G5 storm.",
+      "peakTime": "2000-07-15T23:00:00Z"
+    },
+    {
+      "type": "sep",
+      "subtype": "S3",
+      "details": "Large proton event; proton flux >10 MeV reached ~24,000 pfu."
+    },
+    {
+      "type": "gle",
+      "subtype": "GLE #59",
+      "details": "Ground-level enhancement detected at high-latitude neutron monitors."
+    }
+  ],
+  "noaaGScale": 5,
+  "noaaSScale": 4,
+  "noaaRScale": 3,
+  "peakDst": -301,
+  "peakKp": 9,
+  "peakAp": 246,
+  "peakAE": 4000,
+  "flareClass": "X5.7",
+  "cmeSpeedKmS": 1800,
+  "solarWindSpeedPeak": 1050,
+  "bzMin": -55,
+  "protonFluxPeak": 24000,
+  "solarCycleNumber": 23,
+  "cyclePhase": "maximum",
+  "sourceActiveRegion": "AR 9077",
+  "sunspotNumberDaily": 190,
+  "impacts": [
+    {
+      "sector": "satellite",
+      "location": "Geostationary orbit",
+      "description": "GOES-10 and GOES-8 both experienced anomalies; ACE solar wind monitor entered safe mode. Multiple GEO satellites reported single-event upsets. SOHO and WIND spacecraft affected.",
+      "severity": "severe",
+      "durationHours": 48
+    },
+    {
+      "sector": "aurora",
+      "location": "United States, Europe",
+      "description": "Aurora visible across the continental US as far south as Texas and Florida (~25–30° N); brilliant displays reported across all of Europe and most of the Northern Hemisphere.",
+      "severity": "moderate"
+    },
+    {
+      "sector": "communications",
+      "location": "Global (high latitude)",
+      "description": "Polar cap absorption disrupted HF radio communications on trans-polar flight routes for more than 36 hours.",
+      "severity": "moderate",
+      "durationHours": 36
+    }
+  ],
+  "auroraLowestLatitude": 25,
+  "timeSeries": [],
+  "images": [],
+  "papers": [
+    {
+      "doi": "10.1029/2001JA000351",
+      "title": "Large solar energetic particle events of solar cycle 23: A catalog",
+      "authors": "Bieber, J. W., Dröge, W., Evenson, P., et al.",
+      "year": 2002,
+      "journal": "Journal of Geophysical Research",
+      "keyFinding": "Characterized the Bastille Day event as one of the most geoeffective events of Cycle 23 and analysed the GLE #59 proton energy spectrum."
+    },
+    {
+      "doi": "10.1029/2006SW000302",
+      "title": "A new GLE catalog",
+      "authors": "Bombardieri, D. J., Duldig, M. L., Michael, K. J., Humble, J. E.",
+      "year": 2006,
+      "journal": "Space Weather",
+      "keyFinding": "Updated GLE catalog entry for GLE #59 (Bastille Day) with revised neutron monitor response spectra."
+    }
+  ],
+  "summary": "The Bastille Day event of July 14, 2000 – an X5.7 flare with a 1800 km/s CME and resulting G5 storm (Dst −301 nT) – was the defining space weather event of Solar Cycle 23's maximum, disabling multiple spacecraft and producing aurora visible across the continental United States.",
+  "description": "On July 14, 2000 – Bastille Day – active region AR 9077 unleashed an X5.7 solar flare at 10:24 UT, producing a full-halo CME at ~1800 km/s. The CME arrived at Earth approximately 28 hours later, initiating a G5 geomagnetic storm with a peak Dst of −301 nT and Kp 9 on July 15. The associated SEP event (S3-class, 24,000 pfu at >10 MeV) and ground-level enhancement (GLE #59) added to the multi-hazard nature of the event. Multiple spacecraft experienced anomalies, including GOES, ACE (which briefly entered safe mode), and several commercial geostationary satellites. Aurora was observed from Florida and Texas in the United States and across all of Europe. The Bastille Day event served as a key calibration event for space weather forecasting models and highlighted the multi-hazard complexity of extreme solar events at cycle maximum."
+}

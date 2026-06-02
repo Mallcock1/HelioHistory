@@ -1,0 +1,78 @@
+{
+  "id": "evt-1997-telstar",
+  "slug": "1997-telstar-401",
+  "name": "January 1997 Telstar 401 Loss",
+  "altNames": [
+    "Telstar 401 Failure",
+    "January 1997 Geomagnetic Storm",
+    "1997 Satellite ESD Event"
+  ],
+  "startDate": "1997-01-06",
+  "peakDate": "1997-01-11",
+  "endDate": "1997-01-12",
+  "durationHours": 144,
+  "phenomena": [
+    {
+      "type": "geomag_storm",
+      "subtype": "G3",
+      "details": "Moderate geomagnetic storm Kp ~7; sustained electron flux enhancement in the outer radiation belt caused deep dielectric charging.",
+      "peakTime": "1997-01-11T00:00:00Z"
+    },
+    {
+      "type": "solar_flare",
+      "subtype": "M-class",
+      "details": "Moderate flare preceding the storm; event sequence typical of early solar cycle 23 ascending phase."
+    },
+    {
+      "type": "cme",
+      "details": "Moderately fast CME driving a moderate geomagnetic storm; enhanced relativistic electron environment that persisted for days."
+    }
+  ],
+  "noaaGScale": 3,
+  "noaaSScale": null,
+  "noaaRScale": null,
+  "peakDst": -78,
+  "peakKp": 7,
+  "peakAp": 111,
+  "peakAE": 1200,
+  "flareClass": "M",
+  "cmeSpeedKmS": 600,
+  "solarWindSpeedPeak": 620,
+  "bzMin": -14,
+  "protonFluxPeak": null,
+  "solarCycleNumber": 23,
+  "cyclePhase": "ascending",
+  "sourceActiveRegion": null,
+  "sunspotNumberDaily": null,
+  "impacts": [
+    {
+      "sector": "satellite",
+      "location": "Geostationary orbit",
+      "description": "AT&T's Telstar 401 communications satellite was permanently lost on January 11, 1997, almost certainly due to an electrostatic discharge (ESD) event triggered by deep dielectric charging from enhanced relativistic electrons in the outer radiation belt. The satellite was worth approximately $200–400 million USD.",
+      "severity": "extreme",
+      "economicCostUsd": 300000000
+    },
+    {
+      "sector": "communications",
+      "location": "United States",
+      "description": "Telstar 401 provided broadcast relay services for major US networks; its loss caused temporary disruption to television distribution and required emergency rerouting to backup satellites.",
+      "severity": "moderate",
+      "durationHours": 72
+    }
+  ],
+  "auroraLowestLatitude": 50,
+  "timeSeries": [],
+  "images": [],
+  "papers": [
+    {
+      "doi": "10.1029/97GL02975",
+      "title": "Satellite anomalies linked to electron increase in the magnetosphere",
+      "authors": "Baker, D. N., Kanekal, S. G., Pulkkinen, A., Blake, J. B.",
+      "year": 1997,
+      "journal": "Geophysical Research Letters",
+      "keyFinding": "Demonstrated a statistical link between enhanced relativistic electron flux in the outer radiation belt and the January 1997 Telstar 401 failure, establishing the 'killer electron' paradigm for satellite failures."
+    }
+  ],
+  "summary": "The loss of AT&T's Telstar 401 communications satellite on January 11, 1997, during an otherwise moderate geomagnetic storm, established the paradigm of 'killer electrons' – enhanced relativistic electron flux in the outer radiation belt causing deep dielectric charging and catastrophic electrostatic discharge in spacecraft.",
+  "description": "In early January 1997, a solar energetic electron event and associated moderate CME-driven geomagnetic storm enhanced the relativistic electron flux in Earth's outer radiation belt by orders of magnitude. These high-energy electrons penetrated the surface shielding of geostationary satellites and embedded within deep dielectric materials inside spacecraft, gradually charging them. On January 11, 1997, AT&T's Telstar 401 experienced a sudden, unrecoverable failure consistent with an internal electrostatic discharge (ESD) event. The satellite went permanently silent without warning and was never recovered. Analysis by Baker et al. (1998) established the causal link between the electron environment and the loss, coining the 'killer electron' concept that now forms a major part of space weather hazard assessments for satellite operators. The event catalyzed industry-wide review of spacecraft dielectric design and space weather monitoring requirements."
+}

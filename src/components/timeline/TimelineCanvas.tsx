@@ -20,10 +20,12 @@ import {
   getVisibleEvents,
   formatYear,
   getVerticalMetricValue,
+  currentDecimalYear,
   VERTICAL_METRIC_LABELS,
   type VerticalMetric,
 } from "@/lib/timeline-utils";
-import { getSunspotNumber } from "@/data/sunspots";
+import { SUNSPOT_YEARLY } from "@/data/sunspots";
+import { SUNSPOT_MONTHLY } from "@/data/sunspots-monthly";
 import { getEventTimeSeries } from "@/data/timeseries";
 
 
@@ -37,10 +39,11 @@ interface TimelineCanvasProps {
   verticalMetric: VerticalMetric;
 }
 
-const MIN_YEAR = 700;
-const MAX_YEAR = 2026;
+const MIN_YEAR = -12600; // reach the deep-history cosmogenic-isotope events (e.g. 12350 BC)
+const NOW_YEAR = currentDecimalYear(); // present moment, advances automatically each load
+const MAX_YEAR = NOW_YEAR + 2 / 12; // small margin past "now" so the marker isn't flush to the edge
 const INITIAL_START = 1840;
-const INITIAL_END = 2026;
+const INITIAL_END = MAX_YEAR;
 
 // Canvas layout
 const GRID_LABEL_Y = 50;
@@ -48,7 +51,24 @@ const EVENT_MARKER_MIN_WIDTH = 24;
 const TRACK_TOP = 100;
 const TRACK_BOTTOM_PAD = 60;
 const BASELINE_FRACTION = 0.75;
-const Y_AXIS_WIDTH = 52; // pixels reserved for Y-axis labels
+const Y_AXIS_WIDTH = 58; // pixels reserved for Y-axis labels
+
+const MONTHLY_FIRST_YEAR = SUNSPOT_MONTHLY.length ? SUNSPOT_MONTHLY[0][0] : Infinity;
+const MONTHLY_LAST_YEAR = SUNSPOT_MONTHLY.length
+  ? SUNSPOT_MONTHLY[SUNSPOT_MONTHLY.length - 1][0]
+  : -Infinity;
+
+/** First index in SUNSPOT_MONTHLY whose decimal year is >= target. */
+function lowerBoundMonthly(target: number): number {
+  let lo = 0;
+  let hi = SUNSPOT_MONTHLY.length;
+  while (lo < hi) {
+    const mid = (lo + hi) >> 1;
+    if (SUNSPOT_MONTHLY[mid][0] < target) lo = mid + 1;
+    else hi = mid;
+  }
+  return lo;
+}
 
 // Y-axis tick configurations per metric
 function getYAxisTicks(metric: VerticalMetric): { label: string; value: number }[] {
@@ -519,46 +539,88 @@ export default function TimelineCanvas({
     const yearToPx = (year: number) =>
       plotLeft + yearToPixel(year, viewport.start, viewport.end, plotW);
 
-    // ── Solar cycle waveform ──
+    // ── Solar cycle line (level-of-detail; drawn through real data points) ──
+    // Rather than sampling a function at viewport-relative positions every frame
+    // (which makes the curve "swim" as you pan/zoom), we draw a polyline through
+    // the actual sunspot observations at their fixed years. Resolution steps up
+    // with zoom: yearly means when zoomed out, the monthly record when zoomed in,
+    // plus a scatter of the monthly observations when zoomed in far enough.
     const maxSunspot = 285;
     const cycleAmplitude = trackArea * 0.4;
-    const steps = Math.min(Math.ceil(plotW / 2), 1200);
+    const winLo = viewport.start;
+    const winHi = viewport.end;
+    const useMonthly = range <= 120;
 
-    ctx.beginPath();
-    for (let i = 0; i <= steps; i++) {
-      const x = plotLeft + (i / steps) * plotW;
-      const year = viewport.start + (i / steps) * range;
-      const ssn = getSunspotNumber(year);
-      const cy = baselineY - (Math.min(1, ssn / maxSunspot)) * cycleAmplitude;
-      i === 0 ? ctx.moveTo(x, cy) : ctx.lineTo(x, cy);
+    const cyclePts: { year: number; value: number }[] = [];
+    if (useMonthly) {
+      // Yearly means for any visible span before the monthly record begins (pre-1749).
+      if (winLo < MONTHLY_FIRST_YEAR) {
+        const cap = Math.min(MONTHLY_FIRST_YEAR, winHi + 2);
+        for (const d of SUNSPOT_YEARLY) {
+          if (d.year < winLo - 2) continue;
+          if (d.year >= cap) break;
+          cyclePts.push({ year: d.year, value: d.value });
+        }
+      }
+      // Monthly record within the window (+1 neighbour each side for edge continuity).
+      if (winHi >= MONTHLY_FIRST_YEAR) {
+        const a = Math.max(0, lowerBoundMonthly(winLo) - 1);
+        const b = Math.min(SUNSPOT_MONTHLY.length - 1, lowerBoundMonthly(winHi) + 1);
+        for (let i = a; i <= b; i++) {
+          cyclePts.push({ year: SUNSPOT_MONTHLY[i][0], value: SUNSPOT_MONTHLY[i][1] });
+        }
+      }
+    } else {
+      for (const d of SUNSPOT_YEARLY) {
+        if (d.year < winLo - 5) continue;
+        if (d.year > winHi + 5) break;
+        cyclePts.push({ year: d.year, value: d.value });
+      }
     }
-    ctx.lineTo(plotLeft + plotW, baselineY);
-    ctx.lineTo(plotLeft, baselineY);
-    ctx.closePath();
 
-    const cycleGrad = ctx.createLinearGradient(0, baselineY - cycleAmplitude, 0, baselineY);
-    cycleGrad.addColorStop(0, "rgba(245, 158, 11, 0.10)");
-    cycleGrad.addColorStop(0.5, "rgba(245, 158, 11, 0.04)");
-    cycleGrad.addColorStop(1, "rgba(245, 158, 11, 0.01)");
-    ctx.fillStyle = cycleGrad;
-    ctx.fill();
+    if (cyclePts.length >= 2) {
+      const ptX = (p: { year: number }) => yearToPx(p.year);
+      const ptY = (p: { value: number }) =>
+        baselineY - Math.min(1, p.value / maxSunspot) * cycleAmplitude;
 
-    // Cycle stroke
-    ctx.beginPath();
-    for (let i = 0; i <= steps; i++) {
-      const x = plotLeft + (i / steps) * plotW;
-      const year = viewport.start + (i / steps) * range;
-      const ssn = getSunspotNumber(year);
-      const cy = baselineY - (Math.min(1, ssn / maxSunspot)) * cycleAmplitude;
-      i === 0 ? ctx.moveTo(x, cy) : ctx.lineTo(x, cy);
+      // Filled area under the line.
+      ctx.beginPath();
+      ctx.moveTo(ptX(cyclePts[0]), ptY(cyclePts[0]));
+      for (let i = 1; i < cyclePts.length; i++) ctx.lineTo(ptX(cyclePts[i]), ptY(cyclePts[i]));
+      ctx.lineTo(ptX(cyclePts[cyclePts.length - 1]), baselineY);
+      ctx.lineTo(ptX(cyclePts[0]), baselineY);
+      ctx.closePath();
+      const cycleGrad = ctx.createLinearGradient(0, baselineY - cycleAmplitude, 0, baselineY);
+      cycleGrad.addColorStop(0, "rgba(245, 158, 11, 0.10)");
+      cycleGrad.addColorStop(0.5, "rgba(245, 158, 11, 0.04)");
+      cycleGrad.addColorStop(1, "rgba(245, 158, 11, 0.01)");
+      ctx.fillStyle = cycleGrad;
+      ctx.fill();
+
+      // Line.
+      ctx.beginPath();
+      ctx.moveTo(ptX(cyclePts[0]), ptY(cyclePts[0]));
+      for (let i = 1; i < cyclePts.length; i++) ctx.lineTo(ptX(cyclePts[i]), ptY(cyclePts[i]));
+      ctx.strokeStyle = "rgba(245, 158, 11, 0.18)";
+      ctx.lineWidth = 1.5 * dpr;
+      ctx.stroke();
+
+      // Scatter of the actual monthly observations once zoomed in enough that the
+      // points are visually separated.
+      if (useMonthly && range <= 35) {
+        ctx.fillStyle = "rgba(245, 158, 11, 0.55)";
+        for (const p of cyclePts) {
+          if (p.year < MONTHLY_FIRST_YEAR || p.year > MONTHLY_LAST_YEAR) continue;
+          ctx.beginPath();
+          ctx.arc(ptX(p), ptY(p), 1.7 * dpr, 0, Math.PI * 2);
+          ctx.fill();
+        }
+      }
     }
-    ctx.strokeStyle = "rgba(245, 158, 11, 0.18)";
-    ctx.lineWidth = 1.5 * dpr;
-    ctx.stroke();
 
     // ── Grid lines with overlap-aware labels ──
     const startMajor = Math.floor(viewport.start / grid.major) * grid.major;
-    ctx.font = `500 ${11 * dpr}px system-ui, sans-serif`;
+    ctx.font = `500 ${13 * dpr}px system-ui, sans-serif`;
     const minLabelSpacing = 60 * dpr; // minimum pixels between label centres
     let lastLabelRight = -Infinity;
 
@@ -599,6 +661,23 @@ export default function TimelineCanvas({
       ctx.stroke();
     }
 
+    // ── "Now" marker ──
+    const nowX = yearToPx(NOW_YEAR);
+    if (nowX >= plotLeft && nowX <= w) {
+      ctx.strokeStyle = "rgba(245, 158, 11, 0.35)";
+      ctx.lineWidth = 1 * dpr;
+      ctx.setLineDash([3 * dpr, 3 * dpr]);
+      ctx.beginPath();
+      ctx.moveTo(nowX, trackTopY - 10 * dpr);
+      ctx.lineTo(nowX, h);
+      ctx.stroke();
+      ctx.setLineDash([]);
+      ctx.fillStyle = "rgba(245, 158, 11, 0.6)";
+      ctx.font = `500 ${10 * dpr}px system-ui, sans-serif`;
+      ctx.textAlign = "right";
+      ctx.fillText("now", nowX - 4 * dpr, trackTopY - 2 * dpr);
+    }
+
     // ── Baseline ──
     ctx.strokeStyle = isDark ? "rgba(255,255,255,0.06)" : "rgba(0,0,0,0.08)";
     ctx.lineWidth = 1 * dpr;
@@ -621,8 +700,8 @@ export default function TimelineCanvas({
 
     // Metric label (rotated)
     ctx.save();
-    ctx.fillStyle = isDark ? "rgba(255,255,255,0.2)" : "rgba(0,0,0,0.25)";
-    ctx.font = `500 ${9 * dpr}px system-ui, sans-serif`;
+    ctx.fillStyle = isDark ? "rgba(255,255,255,0.35)" : "rgba(0,0,0,0.4)";
+    ctx.font = `600 ${13 * dpr}px system-ui, sans-serif`;
     ctx.textAlign = "center";
     ctx.translate(12 * dpr, trackTopY + trackArea * 0.35);
     ctx.rotate(-Math.PI / 2);
@@ -631,7 +710,7 @@ export default function TimelineCanvas({
 
     // Tick marks and labels
     const ticks = getYAxisTicks(verticalMetric);
-    ctx.font = `400 ${9 * dpr}px system-ui, sans-serif`;
+    ctx.font = `500 ${13 * dpr}px system-ui, sans-serif`;
     ctx.textAlign = "right";
     for (const tick of ticks) {
       const y = baselineY - tick.value * maxVerticalDisplacement;
@@ -651,8 +730,8 @@ export default function TimelineCanvas({
       ctx.stroke();
       ctx.setLineDash([]);
       // Label
-      ctx.fillStyle = isDark ? "rgba(255,255,255,0.3)" : "rgba(0,0,0,0.35)";
-      ctx.fillText(tick.label, axisW - 8 * dpr, y + 3 * dpr);
+      ctx.fillStyle = isDark ? "rgba(255,255,255,0.5)" : "rgba(0,0,0,0.55)";
+      ctx.fillText(tick.label, axisW - 8 * dpr, y + 4 * dpr);
     }
 
     // ── Events ──
@@ -664,7 +743,7 @@ export default function TimelineCanvas({
     );
 
     // Pre-measure label widths
-    ctx.font = `500 ${11 * dpr}px system-ui, sans-serif`;
+    ctx.font = `500 ${13 * dpr}px system-ui, sans-serif`;
     const labelWidths = new Map<string, number>();
     for (const event of sortedEvents) {
       labelWidths.set(event.id, ctx.measureText(event.name).width);
@@ -1008,7 +1087,7 @@ export default function TimelineCanvas({
 
           // "Dst" label + peak value
           ctx.fillStyle = "rgba(74, 222, 128, 0.6)";
-          ctx.font = `500 ${8 * dpr}px system-ui, sans-serif`;
+          ctx.font = `500 ${10 * dpr}px system-ui, sans-serif`;
           ctx.textAlign = "left";
           ctx.fillText(`Dst ${Math.round(minDst)} nT`, chartLeft + 4 * dpr, chartTop + chartH - 3 * dpr);
 
@@ -1022,7 +1101,7 @@ export default function TimelineCanvas({
 
       // ── Label ──
       const labelText = event.name;
-      const fontSize = (isHovered || isSelected ? 12 : 11) * dpr;
+      const fontSize = (isHovered || isSelected ? 14 : 13) * dpr;
       ctx.font = `${isHovered || isSelected ? "600 " : "500 "}${fontSize}px system-ui, sans-serif`;
       const labelMetrics = ctx.measureText(labelText);
 
@@ -1053,7 +1132,7 @@ export default function TimelineCanvas({
 
     // ── Viewport info ──
     ctx.fillStyle = isDark ? "rgba(255,255,255,0.25)" : "rgba(0,0,0,0.3)";
-    ctx.font = `400 ${10 * dpr}px system-ui, sans-serif`;
+    ctx.font = `400 ${11 * dpr}px system-ui, sans-serif`;
     ctx.textAlign = "right";
     ctx.fillText(
       `${formatYear(viewport.start)} – ${formatYear(viewport.end)}`,
@@ -1135,13 +1214,13 @@ export default function TimelineCanvas({
         </button>
         <button
           onClick={() => setViewport({ start: MIN_YEAR, end: MAX_YEAR })}
-          className="h-8 px-3 rounded-lg glass-strong flex items-center justify-center text-foreground/40 hover:text-foreground hover:bg-overlay/[0.08] transition-all text-[10px] tracking-wider uppercase"
+          className="h-8 px-3 rounded-lg glass-strong flex items-center justify-center text-foreground/40 hover:text-foreground hover:bg-overlay/[0.08] transition-all text-[11px] tracking-wider uppercase"
         >
           Fit All
         </button>
       </div>
 
-      <div className="absolute bottom-5 left-16 text-foreground/20 text-[10px] tracking-wider">
+      <div className="absolute bottom-5 left-16 text-foreground/20 text-[11px] tracking-wider">
         Scroll to zoom · Drag to pan · Click event for details
       </div>
     </div>

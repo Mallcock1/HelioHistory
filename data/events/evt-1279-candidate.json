@@ -1,0 +1,58 @@
+{
+  "id": "evt-1279-candidate",
+  "slug": "1279-ad-candidate-spe",
+  "name": "AD 1279 Candidate Event",
+  "altNames": [
+    "1279 CE 14C candidate"
+  ],
+  "startDate": "1279-01-01",
+  "peakDate": "1279-06-01",
+  "endDate": "1279-12-31",
+  "durationHours": 8760,
+  "phenomena": [
+    {
+      "type": "sep",
+      "subtype": "Candidate SEP",
+      "details": "A smaller, weaker 14C production peak flagged by Brehm et al. (2021) as a candidate solar particle event; sits near the onset of the Wolf grand solar minimum."
+    }
+  ],
+  "noaaGScale": null,
+  "noaaSScale": null,
+  "noaaRScale": null,
+  "peakDst": null,
+  "peakKp": null,
+  "peakAp": null,
+  "peakAE": null,
+  "flareClass": null,
+  "cmeSpeedKmS": null,
+  "solarWindSpeedPeak": null,
+  "bzMin": null,
+  "protonFluxPeak": null,
+  "solarCycleNumber": null,
+  "cyclePhase": "minimum",
+  "sourceActiveRegion": null,
+  "sunspotNumberDaily": null,
+  "impacts": [
+    {
+      "sector": "biological",
+      "location": "Global",
+      "description": "If solar in origin, a modest enhancement of atmospheric radiocarbon production; substantially weaker than the confirmed AD 774 and AD 993 events.",
+      "severity": "minor"
+    }
+  ],
+  "auroraLowestLatitude": null,
+  "timeSeries": [],
+  "images": [],
+  "papers": [
+    {
+      "doi": "10.1038/s41561-020-00674-0",
+      "title": "Eleven-year solar cycles over the last millennium revealed by radiocarbon in tree rings",
+      "authors": "Brehm, N., Bayliss, A., Christl, M., et al.",
+      "year": 2021,
+      "journal": "Nature Geoscience",
+      "keyFinding": "Flagged AD 1279 and AD 1052 as two new, smaller candidate production events in an annually resolved AD 969-1933 radiocarbon record; AD 1279 lies near the onset of the Wolf grand solar minimum."
+    }
+  ],
+  "summary": "A candidate, unconfirmed solar particle event near AD 1279, seen as a small radiocarbon production peak and complicated by its position near the onset of the Wolf grand solar minimum.",
+  "description": "Brehm et al. (2021) flagged AD 1279 as one of two smaller candidate production peaks (with AD 1052) in their annually resolved AD 969-1933 atmospheric radiocarbon record. The amplitude is weak relative to the confirmed events, and there is no published multi-archive (10Be/36Cl) confirmation of a hard solar-proton spectrum. Complicating interpretation, AD 1279-1280 lies near the onset of the Wolf grand solar minimum, so nearby radiocarbon structure may reflect a broad decline in solar modulation rather than a discrete impulsive particle event. It is included here as a candidate pending confirmation."
+}

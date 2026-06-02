@@ -1,0 +1,65 @@
+{
+  "id": "evt-1847-aurora",
+  "slug": "1847-great-aurora",
+  "name": "1847 Great Aurora",
+  "altNames": [
+    "October 1847 Aurora",
+    "1847 Geomagnetic Storm"
+  ],
+  "startDate": "1847-10-24",
+  "peakDate": "1847-10-24",
+  "endDate": "1847-10-26",
+  "durationHours": 48,
+  "phenomena": [
+    {
+      "type": "geomag_storm",
+      "subtype": "Extreme",
+      "details": "Major geomagnetic storm during the ascending phase of Solar Cycle 9; widespread aurora reports."
+    }
+  ],
+  "noaaGScale": 5,
+  "noaaSScale": null,
+  "noaaRScale": null,
+  "peakDst": null,
+  "peakKp": null,
+  "peakAp": null,
+  "peakAE": null,
+  "flareClass": null,
+  "cmeSpeedKmS": null,
+  "solarWindSpeedPeak": null,
+  "bzMin": null,
+  "protonFluxPeak": null,
+  "solarCycleNumber": 9,
+  "cyclePhase": "ascending",
+  "sourceActiveRegion": null,
+  "sunspotNumberDaily": null,
+  "impacts": [
+    {
+      "sector": "aurora",
+      "location": "Europe, North America",
+      "description": "Brilliant aurora observed across Europe and North America at low latitudes, widely reported in newspapers and scientific correspondence of the era.",
+      "severity": "extreme"
+    },
+    {
+      "sector": "communications",
+      "location": "Europe, North America",
+      "description": "Early telegraph systems experienced disturbances, though the telegraph network was still in its infancy during this period.",
+      "severity": "minor"
+    }
+  ],
+  "auroraLowestLatitude": 30,
+  "timeSeries": [],
+  "images": [],
+  "papers": [
+    {
+      "doi": "10.1002/2015JA021280",
+      "title": "Historical auroral records and the Schwabe cycle",
+      "authors": "Vaquero, J. M., Trigo, R. M.",
+      "year": 2015,
+      "journal": "Journal of Geophysical Research: Space Physics",
+      "keyFinding": "Documented the October 1847 aurora as one of the notable events of Solar Cycle 9, occurring during a period of rapidly increasing solar activity in the early era of systematic sunspot observations."
+    }
+  ],
+  "summary": "The October 1847 great aurora, occurring during the ascending phase of Solar Cycle 9 in the early era of systematic solar observations, produced widespread aurora across Europe and North America at low latitudes.",
+  "description": "In late October 1847, a major geomagnetic storm produced aurora visible across much of Europe and North America. This event occurred during Solar Cycle 9, when systematic sunspot observation programs established by Heinrich Schwabe were providing the first continuous records of solar activity. The storm affected early telegraph systems, though the network was still limited compared to its extent at the time of the 1859 Carrington Event. The event demonstrates that intense space weather was occurring well before the Carrington Event, during a period when instrumentation was just beginning to capture solar-terrestrial connections."
+}

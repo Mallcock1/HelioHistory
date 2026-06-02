@@ -4,14 +4,33 @@ import type { SpaceWeatherEvent, ZoomLevel, PhenomenonType } from "./types";
 // Timeline coordinate system utilities
 // ============================================
 
-/** Convert a date string to a year number (fractional for sub-year precision) */
+/**
+ * Convert a date string to a year number (fractional for sub-year precision).
+ * Handles ancient AD dates like "0774-01-01" and BC dates with a leading
+ * minus like "-0660-01-01" (660 BC) or "-12350-01-01" (12350 BC).
+ */
 export function dateToYear(dateStr: string): number {
-  // Handle ancient dates like "0774-01-01"
-  const parts = dateStr.split("-");
+  const neg = dateStr.startsWith("-");
+  const body = neg ? dateStr.slice(1) : dateStr;
+  const parts = body.split("-");
   const year = parseInt(parts[0], 10);
   const month = parts[1] ? parseInt(parts[1], 10) - 1 : 0;
   const day = parts[2] ? parseInt(parts[2], 10) - 1 : 0;
-  return year + month / 12 + day / 365;
+  // For BC the base year is negative; sub-year fractions still advance forward in time.
+  return (neg ? -year : year) + month / 12 + day / 365;
+}
+
+/**
+ * The present moment expressed as a fractional year (e.g. mid-2026 -> 2026.45).
+ * Evaluated from the client clock, so the timeline's "now" edge advances on its
+ * own as months pass, with no rebuild required.
+ */
+export function currentDecimalYear(): number {
+  const now = new Date();
+  const year = now.getUTCFullYear();
+  const start = Date.UTC(year, 0, 1);
+  const end = Date.UTC(year + 1, 0, 1);
+  return year + (now.getTime() - start) / (end - start);
 }
 
 /** Convert a fractional year number back to a Date object */
@@ -247,25 +266,31 @@ export function getVerticalMetricValue(
 
 /** Format date string for display */
 export function formatEventDate(dateStr: string): string {
-  const parts = dateStr.split("-");
+  const neg = dateStr.startsWith("-");
+  const body = neg ? dateStr.slice(1) : dateStr;
+  const parts = body.split("-");
   const year = parseInt(parts[0], 10);
-  if (year < 1000) {
-    const months = [
-      "Jan",
-      "Feb",
-      "Mar",
-      "Apr",
-      "May",
-      "Jun",
-      "Jul",
-      "Aug",
-      "Sep",
-      "Oct",
-      "Nov",
-      "Dec",
-    ];
+  const months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+  if (neg) {
     const month = parts[1] ? months[parseInt(parts[1], 10) - 1] : "";
-    return `${month} ${year} AD`;
+    return `${month} ${year} BC`.trim();
+  }
+  if (year < 1000) {
+    const month = parts[1] ? months[parseInt(parts[1], 10) - 1] : "";
+    return `${month} ${year} AD`.trim();
   }
   try {
     return new Date(dateStr).toLocaleDateString("en-US", {

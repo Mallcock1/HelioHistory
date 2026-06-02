@@ -1,0 +1,38 @@
+name: Data correction
+description: Report an incorrect or outdated value in an existing event
+title: "[Correction] <event id>: <field>"
+labels: ["data", "correction"]
+body:
+  - type: input
+    id: event
+    attributes:
+      label: Event id
+      placeholder: "evt-1859-carrington"
+    validations:
+      required: true
+  - type: input
+    id: field
+    attributes:
+      label: Field
+      placeholder: "peakDst"
+    validations:
+      required: true
+  - type: input
+    id: current
+    attributes:
+      label: Current value
+    validations:
+      required: false
+  - type: input
+    id: proposed
+    attributes:
+      label: Proposed value
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Source(s) supporting the correction (required)
+      description: Papers (DOIs preferred) or authoritative data centres.
+    validations:
+      required: true

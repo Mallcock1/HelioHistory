@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { EVENTS } from "@/data/events";
 import NavBar from "@/components/NavBar";
+import Footer from "@/components/Footer";
 import { PHENOMENON_CONFIG, G_SCALE_LABELS } from "@/lib/types";
 import type { SpaceWeatherEvent } from "@/lib/types";
 import { formatEventDate, getEventSeverity, getEventColor } from "@/lib/timeline-utils";
@@ -93,7 +94,7 @@ export default function ComparePage() {
     <div className="h-screen w-screen flex flex-col overflow-hidden">
       <NavBar eventCount={EVENTS.length} />
 
-      <div className="flex-1 overflow-auto p-6 space-y-6">
+      <div className="flex-1 overflow-auto p-8 space-y-6">
         <div>
           <h2 className="heading-display text-xl text-foreground mb-1">
             Event Comparison
@@ -131,7 +132,7 @@ export default function ComparePage() {
                     {event.phenomena.slice(0, 2).map((p, i) => (
                       <span
                         key={i}
-                        className="text-[9px] px-1 py-0.5 rounded border border-overlay/10"
+                        className="text-[11px] px-1 py-0.5 rounded border border-overlay/10"
                         style={{ color: PHENOMENON_CONFIG[p.type].color }}
                       >
                         {PHENOMENON_CONFIG[p.type].shortLabel}
@@ -222,7 +223,7 @@ export default function ComparePage() {
                     return (
                       <div key={event.id} className="glass rounded-lg p-3">
                         <p className="text-xs text-foreground/50 mb-2">{event.name}</p>
-                        <DstChart data={ts.dst} width={320} height={150} />
+                        <DstChart data={ts.dst} width={320} height={150} downloadName={`${event.id}-dst`} />
                       </div>
                     );
                   })}
@@ -288,6 +289,8 @@ export default function ComparePage() {
             </div>
           </div>
         )}
+
+        <Footer />
       </div>
     </div>
   );

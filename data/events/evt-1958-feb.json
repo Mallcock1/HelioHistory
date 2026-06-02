@@ -1,0 +1,69 @@
+{
+  "id": "evt-1958-feb",
+  "slug": "1958-february-storm",
+  "name": "1958 February Storm",
+  "altNames": [
+    "February 1958 Great Storm",
+    "February 11 1958 Storm"
+  ],
+  "startDate": "1958-02-10",
+  "peakDate": "1958-02-11",
+  "endDate": "1958-02-12",
+  "durationHours": 48,
+  "phenomena": [
+    {
+      "type": "geomag_storm",
+      "subtype": "G5",
+      "details": "Extreme geomagnetic storm with Dst ~ −426 nT during the peak of Solar Cycle 19."
+    },
+    {
+      "type": "solar_flare",
+      "details": "Associated with major solar flare activity during the most active period of SC19."
+    }
+  ],
+  "noaaGScale": 5,
+  "noaaSScale": null,
+  "noaaRScale": null,
+  "peakDst": -426,
+  "peakKp": 9,
+  "peakAp": 295,
+  "peakAE": null,
+  "flareClass": null,
+  "cmeSpeedKmS": null,
+  "solarWindSpeedPeak": null,
+  "bzMin": null,
+  "protonFluxPeak": null,
+  "solarCycleNumber": 19,
+  "cyclePhase": "maximum",
+  "sourceActiveRegion": null,
+  "sunspotNumberDaily": 200,
+  "impacts": [
+    {
+      "sector": "aurora",
+      "location": "Global",
+      "description": "Extremely vivid aurora observed worldwide at very low latitudes; widely photographed and reported in newspapers across both hemispheres.",
+      "severity": "extreme"
+    },
+    {
+      "sector": "communications",
+      "location": "Global",
+      "description": "Severe HF radio blackouts; shortwave communications disrupted for multiple days during a period of maximum solar activity.",
+      "severity": "severe"
+    }
+  ],
+  "auroraLowestLatitude": 28,
+  "timeSeries": [],
+  "images": [],
+  "papers": [
+    {
+      "doi": "10.1016/0032-0633(64)90151-5",
+      "title": "The development of the auroral substorm",
+      "authors": "Akasofu, S.-I.",
+      "year": 1964,
+      "journal": "Planetary and Space Science",
+      "keyFinding": "Used the February 1958 storm among others to develop the substorm concept and characterize the morphology of extreme geomagnetic disturbances."
+    }
+  ],
+  "summary": "The February 1958 storm (Dst ~ −426 nT), occurring near the peak of Solar Cycle 19, produced worldwide aurora and severe radio blackouts, contributing to the foundational dataset for understanding extreme geomagnetic storms.",
+  "description": "In February 1958, near the peak of Solar Cycle 19, another extreme geomagnetic storm drove the Dst index to approximately −426 nT. Like the September 1957 event, this storm benefited from the enhanced observing infrastructure of the International Geophysical Year. The aurora was spectacular, photographed and reported from latitudes well below 30° in both hemispheres. HF radio communications were severely disrupted worldwide. This storm, along with the September 1957 event, contributed significantly to Akasofu's development of the substorm concept and to the broader understanding of magnetospheric dynamics during extreme conditions."
+}

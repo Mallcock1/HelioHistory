@@ -1,0 +1,65 @@
+{
+  "id": "evt-2022-feb-starlink",
+  "slug": "2022-february-starlink-loss",
+  "name": "2022 February Starlink Loss",
+  "altNames": [
+    "February 2022 Starlink Event",
+    "Starlink Deorbit Event",
+    "February 3 2022 CME"
+  ],
+  "startDate": "2022-02-03",
+  "peakDate": "2022-02-04",
+  "endDate": "2022-02-06",
+  "durationHours": 72,
+  "phenomena": [
+    {
+      "type": "geomag_storm",
+      "subtype": "G1",
+      "details": "Minor G1 geomagnetic storm with Dst ~ −68 nT; modest by historical standards but catastrophic for newly deployed LEO satellites."
+    },
+    {
+      "type": "cme",
+      "details": "CME from M1.1 flare on January 30; moderate speed ~600 km/s."
+    }
+  ],
+  "noaaGScale": 1,
+  "noaaSScale": null,
+  "noaaRScale": null,
+  "peakDst": -68,
+  "peakKp": 5,
+  "peakAp": 40,
+  "peakAE": null,
+  "flareClass": "M1.1",
+  "cmeSpeedKmS": 600,
+  "solarWindSpeedPeak": 500,
+  "bzMin": -10,
+  "protonFluxPeak": null,
+  "solarCycleNumber": 25,
+  "cyclePhase": "ascending",
+  "sourceActiveRegion": "AR 12936",
+  "sunspotNumberDaily": 55,
+  "impacts": [
+    {
+      "sector": "satellite",
+      "location": "Low-Earth orbit",
+      "description": "38 of 49 newly launched SpaceX Starlink satellites reentered and were destroyed when thermospheric heating from the minor geomagnetic storm increased atmospheric drag beyond their ability to raise orbits from the initial 210 km deployment altitude. Estimated loss ~$50 million.",
+      "severity": "extreme",
+      "economicCostUsd": 50000000
+    }
+  ],
+  "auroraLowestLatitude": null,
+  "timeSeries": [],
+  "images": [],
+  "papers": [
+    {
+      "doi": "10.1029/2022SW003152",
+      "title": "Satellite drag and the February 2022 Starlink deorbit event",
+      "authors": "Dang, T., Li, X., Luo, B., et al.",
+      "year": 2022,
+      "journal": "Space Weather",
+      "keyFinding": "Analyzed how a minor G1 geomagnetic storm caused thermospheric density increases of up to 60% at 210 km altitude, sufficient to prevent orbit-raising of the newly deployed Starlink satellites."
+    }
+  ],
+  "summary": "A minor G1 geomagnetic storm (Dst ~ −68 nT) on February 4, 2022 caused the loss of 38 out of 49 newly launched Starlink satellites when thermospheric heating increased drag beyond their ability to raise orbits – demonstrating that even minor storms can have catastrophic satellite impacts at low deployment altitudes.",
+  "description": "On February 3, 2022, SpaceX launched 49 Starlink satellites to an initial deployment orbit at ~210 km altitude. The following day, a minor G1 geomagnetic storm (Dst ~ −68 nT) heated the thermosphere, increasing atmospheric density by up to 60% at that altitude. The increased drag prevented 38 of the 49 satellites from raising their orbits to the operational altitude of ~550 km, and they reentered the atmosphere over the following weeks. The estimated loss was approximately $50 million. The event was remarkable because the storm was geomagnetically minor – the kind that occurs dozens of times per solar cycle – yet it had catastrophic consequences for spacecraft at the vulnerable low deployment altitude. The incident sparked significant discussion about space weather risk management for mega-constellation deployment operations and led SpaceX to modify its Starlink deployment procedures to include higher initial orbits."
+}

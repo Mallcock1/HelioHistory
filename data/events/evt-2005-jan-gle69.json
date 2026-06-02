@@ -1,0 +1,87 @@
+{
+  "id": "evt-2005-jan-gle69",
+  "slug": "2005-january-gle69",
+  "name": "2005 January GLE#69",
+  "altNames": [
+    "GLE 69",
+    "January 20 2005 SEP Event",
+    "2005 Extreme Radiation Storm"
+  ],
+  "startDate": "2005-01-17",
+  "peakDate": "2005-01-20",
+  "endDate": "2005-01-21",
+  "durationHours": 96,
+  "phenomena": [
+    {
+      "type": "gle",
+      "subtype": "GLE#69",
+      "details": "GLE#69 on January 20, 2005; the largest ground-level enhancement since February 1956 (GLE#5), with neutron monitor increases exceeding 4800% at South Pole station."
+    },
+    {
+      "type": "solar_flare",
+      "subtype": "X7.1",
+      "details": "X7.1 flare on January 20, 2005 from AR 10720."
+    },
+    {
+      "type": "sep",
+      "subtype": "S5",
+      "details": "Extreme SEP event; >10 MeV proton flux exceeded 1800 pfu."
+    },
+    {
+      "type": "radio_blackout",
+      "subtype": "R4",
+      "details": "Severe radio blackout from the X7.1 flare."
+    }
+  ],
+  "noaaGScale": 3,
+  "noaaSScale": 3,
+  "noaaRScale": 4,
+  "peakDst": -105,
+  "peakKp": 7,
+  "peakAp": 60,
+  "peakAE": null,
+  "flareClass": "X7.1",
+  "cmeSpeedKmS": 2500,
+  "solarWindSpeedPeak": 900,
+  "bzMin": -15,
+  "protonFluxPeak": 1800,
+  "solarCycleNumber": 23,
+  "cyclePhase": "descending",
+  "sourceActiveRegion": "AR 10720",
+  "sunspotNumberDaily": 60,
+  "impacts": [
+    {
+      "sector": "aviation",
+      "location": "Global, especially polar routes",
+      "description": "Extreme radiation dose rates at aviation altitudes; the FAA issued a rare space weather advisory. Airline crews on polar routes would have received significant radiation exposure without rerouting. Transpolar flights were widely diverted.",
+      "severity": "extreme"
+    },
+    {
+      "sector": "communications",
+      "location": "Global",
+      "description": "Severe HF radio blackout across the sunlit hemisphere from the X7.1 flare; polar cap absorption persisted for days due to the intense SEP event.",
+      "severity": "severe"
+    },
+    {
+      "sector": "satellite",
+      "location": "Earth orbit, interplanetary",
+      "description": "Multiple spacecraft experienced elevated single-event upset rates; some sensors were temporarily blinded by the intense particle flux. The Mars rovers Spirit and Opportunity also detected elevated radiation.",
+      "severity": "severe"
+    }
+  ],
+  "auroraLowestLatitude": 50,
+  "timeSeries": [],
+  "images": [],
+  "papers": [
+    {
+      "doi": "10.1029/2005GL024573",
+      "title": "The January 20, 2005 GLE: The largest neutron monitor event since GLE#5 in February 1956",
+      "authors": "Mewaldt, R. A., Cohen, C. M. S., Labrador, A. W., et al.",
+      "year": 2005,
+      "journal": "Geophysical Research Letters",
+      "keyFinding": "Confirmed GLE#69 as the largest ground-level enhancement since 1956, with South Pole neutron monitor increases exceeding 4800%, and characterized the relativistic proton spectrum."
+    }
+  ],
+  "summary": "GLE#69 on January 20, 2005 was the largest ground-level enhancement since 1956 (GLE#5), driven by an X7.1 flare from AR 10720. The South Pole neutron monitor recorded increases exceeding 4800%, prompting extreme aviation radiation alerts and widespread flight diversions from polar routes.",
+  "description": "On January 20, 2005, an X7.1 flare from AR 10720 produced GLE#69 – the largest ground-level enhancement since February 1956. The South Pole neutron monitor recorded a count rate increase exceeding 4800%, indicating an extraordinarily hard and intense relativistic proton spectrum. The FAA issued a rare space weather advisory, and airlines worldwide diverted polar route flights to lower latitudes to reduce crew and passenger radiation exposure. The associated SEP event reached S5 (extreme) levels with >10 MeV proton flux exceeding 1800 pfu. Despite the extreme radiation storm, the geomagnetic storm was relatively moderate (Dst ~ −105 nT), illustrating that radiation storms and geomagnetic storms can be decoupled. The event remains one of the benchmark events for aviation radiation exposure planning."
+}

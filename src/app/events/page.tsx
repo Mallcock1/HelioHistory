@@ -5,17 +5,19 @@ import { EVENTS } from "@/data/events";
 import NavBar from "@/components/NavBar";
 import { PHENOMENON_CONFIG, G_SCALE_LABELS } from "@/lib/types";
 import type { SpaceWeatherEvent, PhenomenonType } from "@/lib/types";
-import { formatEventDate, getEventSeverity, getEventColor } from "@/lib/timeline-utils";
+import { formatEventDate, getEventSeverity, getEventColor, dateToYear } from "@/lib/timeline-utils";
 import { Badge } from "@/components/ui/badge";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import EventDetailPanel from "@/components/timeline/EventDetailPanel";
 
-type SortKey = "date" | "name" | "severity" | "dst" | "kp" | "flare";
+type SortKey = "date" | "name" | "severity" | "dst" | "kp" | "flare" | "duration" | "impacts";
 type SortDir = "asc" | "desc";
+type MatchMode = "any" | "all";
 
 export default function EventsPage() {
   const [search, setSearch] = useState("");
   const [selectedPhenomena, setSelectedPhenomena] = useState<PhenomenonType[]>([]);
+  const [matchMode, setMatchMode] = useState<MatchMode>("any");
   const [sortKey, setSortKey] = useState<SortKey>("date");
   const [sortDir, setSortDir] = useState<SortDir>("desc");
   const [selectedEvent, setSelectedEvent] = useState<SpaceWeatherEvent | null>(null);
@@ -34,11 +36,15 @@ export default function EventsPage() {
       );
     }
 
-    // Phenomena filter
+    // Phenomena filter: "any" = union (has at least one selected),
+    // "all" = intersection (has every selected phenomenon).
     if (selectedPhenomena.length > 0) {
-      events = events.filter((e) =>
-        e.phenomena.some((p) => selectedPhenomena.includes(p.type))
-      );
+      events = events.filter((e) => {
+        const types = new Set(e.phenomena.map((p) => p.type));
+        return matchMode === "all"
+          ? selectedPhenomena.every((t) => types.has(t))
+          : selectedPhenomena.some((t) => types.has(t));
+      });
     }
 
     // Sort
@@ -46,7 +52,7 @@ export default function EventsPage() {
       let cmp = 0;
       switch (sortKey) {
         case "date":
-          cmp = a.startDate.localeCompare(b.startDate);
+          cmp = dateToYear(a.startDate) - dateToYear(b.startDate);
           break;
         case "name":
           cmp = a.name.localeCompare(b.name);
@@ -63,12 +69,18 @@ export default function EventsPage() {
         case "flare":
           cmp = (a.flareClass || "").localeCompare(b.flareClass || "");
           break;
+        case "duration":
+          cmp = (a.durationHours || 0) - (b.durationHours || 0);
+          break;
+        case "impacts":
+          cmp = a.impacts.length - b.impacts.length;
+          break;
       }
       return sortDir === "asc" ? cmp : -cmp;
     });
 
     return events;
-  }, [search, selectedPhenomena, sortKey, sortDir]);
+  }, [search, selectedPhenomena, matchMode, sortKey, sortDir]);
 
   const toggleSort = (key: SortKey) => {
     if (sortKey === key) {
@@ -94,7 +106,8 @@ export default function EventsPage() {
 
       <div className="flex-1 flex flex-col overflow-hidden">
         {/* Filter bar */}
-        <div className="flex-none p-4 border-b border-overlay/5 space-y-3">
+        <div className="flex-none border-b border-overlay/5">
+          <div className="px-8 py-5 space-y-3">
           {/* Search */}
           <input
             type="text"
@@ -130,6 +143,28 @@ export default function EventsPage() {
                 </button>
               );
             })}
+            {selectedPhenomena.length >= 2 && (
+              <div className="flex items-center rounded-md border border-overlay/10 overflow-hidden">
+                {(["any", "all"] as MatchMode[]).map((mode) => (
+                  <button
+                    key={mode}
+                    onClick={() => setMatchMode(mode)}
+                    title={
+                      mode === "any"
+                        ? "Match any selected phenomenon (union)"
+                        : "Match all selected phenomena (intersection)"
+                    }
+                    className={`px-2.5 py-1 text-xs font-medium transition-colors ${
+                      matchMode === mode
+                        ? "bg-overlay/10 text-foreground"
+                        : "text-foreground/40 hover:text-foreground/60"
+                    }`}
+                  >
+                    {mode === "any" ? "Match any" : "Match all"}
+                  </button>
+                ))}
+              </div>
+            )}
             {selectedPhenomena.length > 0 && (
               <button
                 onClick={() => setSelectedPhenomena([])}
@@ -139,11 +174,12 @@ export default function EventsPage() {
               </button>
             )}
           </div>
+          </div>
         </div>
 
         {/* Table */}
-        <ScrollArea className="flex-1">
-          <div className="min-w-[900px]">
+        <ScrollArea className="flex-1 min-h-0">
+          <div className="min-w-[900px] px-8">
             <table className="w-full">
               <thead className="sticky top-0 bg-background/90 backdrop-blur-xl z-10">
                 <tr className="border-b border-overlay/5 text-xs text-foreground/40 uppercase tracking-wider">
@@ -188,9 +224,30 @@ export default function EventsPage() {
                       Kp {sortKey === "kp" && (sortDir === "asc" ? "↑" : "↓")}
                     </button>
                   </th>
-                  <th className="px-4 py-3 text-center font-medium">Flare</th>
-                  <th className="px-4 py-3 text-right font-medium">Duration</th>
-                  <th className="px-4 py-3 text-right font-medium">Impacts</th>
+                  <th className="px-4 py-3 text-center font-medium">
+                    <button
+                      onClick={() => toggleSort("flare")}
+                      className="hover:text-foreground/70 transition-colors"
+                    >
+                      Flare {sortKey === "flare" && (sortDir === "asc" ? "↑" : "↓")}
+                    </button>
+                  </th>
+                  <th className="px-4 py-3 text-right font-medium">
+                    <button
+                      onClick={() => toggleSort("duration")}
+                      className="hover:text-foreground/70 transition-colors"
+                    >
+                      Duration {sortKey === "duration" && (sortDir === "asc" ? "↑" : "↓")}
+                    </button>
+                  </th>
+                  <th className="px-4 py-3 text-right font-medium">
+                    <button
+                      onClick={() => toggleSort("impacts")}
+                      className="hover:text-foreground/70 transition-colors"
+                    >
+                      Impacts {sortKey === "impacts" && (sortDir === "asc" ? "↑" : "↓")}
+                    </button>
+                  </th>
                 </tr>
               </thead>
               <tbody>
@@ -218,7 +275,7 @@ export default function EventsPage() {
                           {event.phenomena.slice(0, 3).map((p, i) => (
                             <span
                               key={i}
-                              className="text-[10px] px-1.5 py-0.5 rounded border border-overlay/10"
+                              className="text-[11px] px-1.5 py-0.5 rounded border border-overlay/10"
                               style={{ color: PHENOMENON_CONFIG[p.type].color }}
                             >
                               {PHENOMENON_CONFIG[p.type].shortLabel}
@@ -230,7 +287,7 @@ export default function EventsPage() {
                         {event.noaaGScale ? (
                           <Badge
                             variant="outline"
-                            className="text-[10px] border-overlay/20"
+                            className="text-[11px] border-overlay/20"
                             style={{
                               color:
                                 severity >= 4

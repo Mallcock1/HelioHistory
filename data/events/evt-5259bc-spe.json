@@ -1,0 +1,64 @@
+{
+  "id": "evt-5259bc-spe",
+  "slug": "5259-bc-solar-proton-event",
+  "name": "5259 BC Solar Proton Event",
+  "altNames": [
+    "Miyake 5259 BCE"
+  ],
+  "startDate": "-5259-01-01",
+  "peakDate": "-5259-06-01",
+  "endDate": "-5259-12-31",
+  "durationHours": 8760,
+  "phenomena": [
+    {
+      "type": "sep",
+      "subtype": "Extreme SEP",
+      "details": "Average Delta-14C jump of +19.1 (+/-0.6) per mil within ~2 years across four absolutely dated tree-ring chronologies; modelled production spike ~0.3 yr."
+    }
+  ],
+  "noaaGScale": null,
+  "noaaSScale": 5,
+  "noaaRScale": null,
+  "peakDst": null,
+  "peakKp": null,
+  "peakAp": null,
+  "peakAE": null,
+  "flareClass": null,
+  "cmeSpeedKmS": null,
+  "solarWindSpeedPeak": null,
+  "bzMin": null,
+  "protonFluxPeak": null,
+  "solarCycleNumber": null,
+  "cyclePhase": "maximum",
+  "sourceActiveRegion": null,
+  "sunspotNumberDaily": null,
+  "impacts": [
+    {
+      "sector": "biological",
+      "location": "Global",
+      "description": "Brief, intense solar energetic particle event driving a sharp rise in atmospheric radiocarbon production worldwide.",
+      "severity": "extreme"
+    },
+    {
+      "sector": "cultural",
+      "location": "Global",
+      "description": "Prehistoric event with no written record; detected only through tree-ring radiocarbon.",
+      "severity": "minor"
+    }
+  ],
+  "auroraLowestLatitude": null,
+  "timeSeries": [],
+  "images": [],
+  "papers": [
+    {
+      "doi": "10.1038/s41467-022-28804-9",
+      "title": "Tree-rings reveal two strong solar proton events in 7176 and 5259 BCE",
+      "authors": "Brehm, N., Christl, M., Knowles, T. D. J., et al.",
+      "year": 2022,
+      "journal": "Nature Communications",
+      "keyFinding": "Identified a +19.1 per mil radiocarbon spike at 5259 BCE across chronologies from Switzerland/Germany, Ireland, Russia and the USA; after geomagnetic correction the event is similar to but slightly weaker than AD 775."
+    }
+  ],
+  "summary": "A short, intense extreme solar particle event in 5259 BC, detected as a large radiocarbon spike across four independent, absolutely dated tree-ring chronologies, of magnitude similar to the AD 774 event.",
+  "description": "Reported by Brehm et al. (2022), the 5259 BCE event appears as an average Delta-14C increase of +19.1 (+/-0.6) per mil within about two years, measured in absolutely dated tree-ring chronologies from Switzerland/Germany, Ireland, Russia and the United States. Its 14C excess mass (29.2 +/-0.9 kg) is marginally larger than that of AD 775 (26.2 +/-1.0 kg) in raw terms, but after accounting for the weaker contemporaneous geomagnetic field the event is judged similar to, but slightly weaker than, the AD 774/775 benchmark. The modelled production spike of roughly 0.3 years is far shorter than the annual sampling, consistent with a single brief extreme solar eruption. Unlike 660 BC and 7176 BC, no high-resolution ice-core 10Be/36Cl confirmation has yet been published, so the solar origin rests on the global synchroneity of the tree-ring signal."
+}

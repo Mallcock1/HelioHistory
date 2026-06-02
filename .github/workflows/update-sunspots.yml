@@ -1,0 +1,42 @@
+name: Update sunspot data
+
+# Refreshes the monthly sunspot record from SILSO and commits any new months.
+# SILSO publishes the previous month's value in the first days of each month, so
+# we run on the 5th. A push to the default branch will trigger your host's
+# redeploy (Vercel/Netlify/Pages) so the new data reaches the live site.
+
+on:
+  schedule:
+    - cron: "0 6 5 * *" # 06:00 UTC on the 5th of every month
+  workflow_dispatch: {} # also runnable on demand from the Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      - name: Fetch latest SILSO data and regenerate
+        run: npm run data:sunspots:update
+
+      - name: Commit if the data changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/sunspots/SN_m_tot_V2.0.csv src/data/sunspots-monthly.ts
+          if git diff --staged --quiet; then
+            echo "No new sunspot data this run."
+          else
+            git commit -m "data: monthly sunspot update from SILSO"
+            git push
+          fi

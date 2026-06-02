@@ -1,0 +1,74 @@
+{
+  "id": "evt-0774-miyake",
+  "slug": "774-ad-miyake-event",
+  "name": "774 AD Miyake Event",
+  "altNames": [
+    "Miyake 774",
+    "774–775 Carbon-14 Event",
+    "AD 775 Event"
+  ],
+  "startDate": "0774-01-01",
+  "peakDate": "0774-06-01",
+  "endDate": "0775-12-31",
+  "durationHours": 8760,
+  "phenomena": [
+    {
+      "type": "sep",
+      "subtype": "Extreme SEP",
+      "details": "Inferred from ~14C spike of ~12‰ in tree rings worldwide; largest known cosmogenic isotope event."
+    }
+  ],
+  "noaaGScale": null,
+  "noaaSScale": 5,
+  "noaaRScale": null,
+  "peakDst": null,
+  "peakKp": null,
+  "peakAp": null,
+  "peakAE": null,
+  "flareClass": null,
+  "cmeSpeedKmS": null,
+  "solarWindSpeedPeak": null,
+  "bzMin": null,
+  "protonFluxPeak": null,
+  "solarCycleNumber": null,
+  "cyclePhase": "maximum",
+  "sourceActiveRegion": null,
+  "sunspotNumberDaily": null,
+  "impacts": [
+    {
+      "sector": "biological",
+      "location": "Global",
+      "description": "Extreme SEP radiation dose delivered to Earth's atmosphere; potential ionospheric chemistry alterations detectable via 14C and 10Be proxies.",
+      "severity": "extreme"
+    },
+    {
+      "sector": "cultural",
+      "location": "Global",
+      "description": "No contemporary written accounts definitively linked to the event; impact inferred entirely from cosmogenic isotope records preserved in tree rings and ice cores.",
+      "severity": "minor"
+    }
+  ],
+  "auroraLowestLatitude": null,
+  "timeSeries": [],
+  "images": [],
+  "papers": [
+    {
+      "doi": "10.1038/nature11123",
+      "title": "A signature of cosmic-ray increase in AD 774–775 from tree rings in Japan",
+      "authors": "Miyake, F., Nagaya, K., Masuda, K., Nakamura, T.",
+      "year": 2012,
+      "journal": "Nature",
+      "keyFinding": "Identified a ~12‰ spike in Δ14C at AD 774–775, two orders of magnitude larger than any previously known solar-cycle variation."
+    },
+    {
+      "doi": "10.1088/0004-637X/756/1/L30",
+      "title": "Cosmic-ray event of A.D. 775 – Short-duration or extended in time?",
+      "authors": "Usoskin, I. G., Kromer, B., Ludlow, F., et al.",
+      "year": 2013,
+      "journal": "The Astrophysical Journal Letters",
+      "keyFinding": "Constrained the event to a duration of months to ~1 year; consistent with a short, extreme SEP episode."
+    }
+  ],
+  "summary": "An extraordinary spike in atmospheric 14C recorded globally in tree rings points to a solar energetic particle event of unprecedented intensity around AD 774–775, far exceeding anything in the instrumental record.",
+  "description": "Dendrochronological studies of Japanese cedar trees published in 2012 revealed a ~12‰ jump in radiocarbon (14C) between the growth rings of AD 774 and 775 – roughly 20 times larger than any solar-cycle modulation. Corroborating signals in 10Be ice cores from Greenland and Antarctica confirm the cosmogenic nature of the event. Current best estimates place the required SEP fluence at S5+ levels, making this the most energetic solar particle event identified in the Holocene record. No contemporary written observations have been definitively linked to the event, and the precise solar source mechanism (superflare, extreme coronal mass ejection, or series of large flares) remains an active research question."
+}

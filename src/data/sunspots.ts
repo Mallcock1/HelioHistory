@@ -1,9 +1,14 @@
+import { SUNSPOT_MONTHLY } from "./sunspots-monthly";
+
 /**
  * Yearly mean total international sunspot numbers (version 2.0)
  * Source: WDC-SILSO, Royal Observatory of Belgium, Brussels
  * https://www.sidc.be/SILSO/datafiles
  *
- * Years 1700–2024 inclusive (325 data points)
+ * Years 1700-2024 inclusive (325 data points). Used for the deep-history span
+ * before monthly observations begin (pre-1749) and as a fallback. From 1749
+ * onward, getSunspotNumber() uses the finer monthly record (SUNSPOT_MONTHLY)
+ * so the solar-cycle line gains detail as the timeline is zoomed in.
  */
 export const SUNSPOT_YEARLY: { year: number; value: number }[] = [
   { year: 1700, value: 8.3 },
@@ -334,12 +339,40 @@ export const SUNSPOT_YEARLY: { year: number; value: number }[] = [
 ];
 
 /**
+ * Linearly interpolate the monthly sunspot record at a (fractional) year.
+ * Returns null when the year is outside the monthly coverage (pre-1749 / future).
+ */
+function getMonthlySunspot(year: number): number | null {
+  const arr = SUNSPOT_MONTHLY;
+  if (arr.length === 0) return null;
+  if (year < arr[0][0] || year > arr[arr.length - 1][0]) return null;
+
+  // Binary search for the first sample at or after `year`.
+  let lo = 0;
+  let hi = arr.length - 1;
+  while (lo <= hi) {
+    const mid = (lo + hi) >> 1;
+    if (arr[mid][0] < year) lo = mid + 1;
+    else hi = mid - 1;
+  }
+  if (lo === 0) return arr[0][1];
+  const [t1, v1] = arr[lo];
+  const [t0, v0] = arr[lo - 1];
+  if (t1 === t0) return v1;
+  return v0 + ((year - t0) / (t1 - t0)) * (v1 - v0);
+}
+
+/**
  * Get the sunspot number for a given (possibly fractional) year.
- * Linearly interpolates between yearly values for smooth rendering.
- * Returns 0 for years before 1700.
+ * Uses the fine-grained monthly record where available (1749 onward) so the
+ * solar-cycle line sharpens when zoomed in, and falls back to linearly
+ * interpolated yearly means elsewhere. Returns 0 for years before 1700.
  */
 export function getSunspotNumber(year: number): number {
   if (year < 1700) return 0;
+
+  const monthly = getMonthlySunspot(year);
+  if (monthly !== null) return monthly;
 
   const lastYear = SUNSPOT_YEARLY[SUNSPOT_YEARLY.length - 1].year;
   if (year >= lastYear) {

@@ -34,7 +34,18 @@
       "Bash(node /tmp/parse_kp.js /tmp/kp2001.wdc 11 4-8)",
       "Bash(node /tmp/parse_kp.js /tmp/kp2005.wdc 1 16-22)",
       "Bash(node /tmp/parse_kp.js /tmp/kp2011.wdc 2 3-6)",
-      "Bash(node /tmp/parse_kp.js /tmp/kp2012.wdc 3 7-12)"
+      "Bash(node /tmp/parse_kp.js /tmp/kp2012.wdc 3 7-12)",
+      "Bash(npx tsx *)",
+      "WebSearch",
+      "WebFetch(domain:www.pnas.org)",
+      "WebFetch(domain:agupubs.onlinelibrary.wiley.com)",
+      "WebFetch(domain:www.nature.com)",
+      "WebFetch(domain:www.eurekalert.org)",
+      "WebFetch(domain:pmc.ncbi.nlm.nih.gov)",
+      "WebFetch(domain:pubmed.ncbi.nlm.nih.gov)",
+      "WebFetch(domain:www.ncbi.nlm.nih.gov)",
+      "WebFetch(domain:portal.research.lu.se)",
+      "WebFetch(domain:ui.adsabs.harvard.edu)"
     ]
   }
 }

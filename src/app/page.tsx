@@ -42,6 +42,7 @@ export default function Home() {
   const [activeFilters, setActiveFilters] = useState<Set<PhenomenonType>>(
     new Set()
   );
+  const [matchMode, setMatchMode] = useState<"any" | "all">("any");
 
   const toggleFilter = useCallback((type: PhenomenonType) => {
     setActiveFilters((prev) => {
@@ -57,10 +58,13 @@ export default function Home() {
 
   const filteredEvents = useMemo(() => {
     if (activeFilters.size === 0) return EVENTS;
-    return EVENTS.filter((e) =>
-      e.phenomena.some((p) => activeFilters.has(p.type))
-    );
-  }, [activeFilters]);
+    return EVENTS.filter((e) => {
+      const types = new Set(e.phenomena.map((p) => p.type));
+      return matchMode === "all"
+        ? [...activeFilters].every((t) => types.has(t))
+        : [...activeFilters].some((t) => types.has(t));
+    });
+  }, [activeFilters, matchMode]);
 
   const handleEventClick = useCallback((event: SpaceWeatherEvent) => {
     setSelectedEvent((prev) => (prev?.id === event.id ? null : event));
@@ -93,7 +97,7 @@ export default function Home() {
         <div className="absolute top-3 left-1/2 -translate-x-1/2 flex items-center gap-4">
           {/* Phenomenon filters */}
           <div className="flex items-center gap-1.5">
-            <label className="text-[10px] text-foreground/30 uppercase tracking-widest mr-0.5">
+            <label className="text-[11px] text-foreground/30 uppercase tracking-widest mr-0.5">
               Filter
             </label>
             {ALL_PHENOMENON_TYPES.map((type) => {
@@ -103,7 +107,7 @@ export default function Home() {
                 <button
                   key={type}
                   onClick={() => toggleFilter(type)}
-                  className={`px-2 py-0.5 rounded text-[10px] font-medium transition-all border ${
+                  className={`px-2 py-0.5 rounded text-[11px] font-medium transition-all border ${
                     isActive
                       ? "border-overlay/20 bg-overlay/10 text-foreground"
                       : "border-overlay/[0.06] text-foreground/30 hover:text-foreground/50 hover:bg-overlay/[0.03]"
@@ -119,10 +123,32 @@ export default function Home() {
                 </button>
               );
             })}
+            {activeFilters.size >= 2 && (
+              <div className="flex items-center rounded border border-overlay/10 overflow-hidden ml-1">
+                {(["any", "all"] as const).map((mode) => (
+                  <button
+                    key={mode}
+                    onClick={() => setMatchMode(mode)}
+                    title={
+                      mode === "any"
+                        ? "Match any selected phenomenon (union)"
+                        : "Match all selected phenomena (intersection)"
+                    }
+                    className={`px-1.5 py-0.5 text-[11px] font-medium transition-colors ${
+                      matchMode === mode
+                        ? "bg-overlay/10 text-foreground"
+                        : "text-foreground/30 hover:text-foreground/50"
+                    }`}
+                  >
+                    {mode === "any" ? "Any" : "All"}
+                  </button>
+                ))}
+              </div>
+            )}
             {activeFilters.size > 0 && (
               <button
                 onClick={() => setActiveFilters(new Set())}
-                className="text-[10px] text-foreground/30 hover:text-foreground/60 ml-1 transition-colors"
+                className="text-[11px] text-foreground/30 hover:text-foreground/60 ml-1 transition-colors"
               >
                 Clear
               </button>
@@ -133,13 +159,13 @@ export default function Home() {
 
           {/* Vertical metric selector */}
           <div className="flex items-center gap-2">
-            <label className="text-[10px] text-foreground/30 uppercase tracking-widest">
+            <label className="text-[11px] text-foreground/30 uppercase tracking-widest">
               Y-Axis
             </label>
             <select
               value={verticalMetric}
               onChange={(e) => setVerticalMetric(e.target.value as VerticalMetric)}
-              className="bg-overlay/[0.05] border border-overlay/[0.08] rounded-md px-2.5 py-1 text-[11px] text-foreground/70 focus:outline-none focus:border-solar/40 transition-colors cursor-pointer"
+              className="bg-overlay/[0.05] border border-overlay/[0.08] rounded-md px-2.5 py-1 text-[12px] text-foreground/70 focus:outline-none focus:border-solar/40 transition-colors cursor-pointer"
             >
               {METRIC_OPTIONS.map((m) => (
                 <option key={m} value={m} className="bg-background text-foreground">

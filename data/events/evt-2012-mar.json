@@ -1,0 +1,91 @@
+{
+  "id": "evt-2012-mar",
+  "slug": "2012-march-storm",
+  "name": "2012 March Storm",
+  "altNames": [
+    "March 2012 Geomagnetic Storm",
+    "March 7 2012 CME Event"
+  ],
+  "startDate": "2012-03-07",
+  "peakDate": "2012-03-09",
+  "endDate": "2012-03-10",
+  "durationHours": 72,
+  "phenomena": [
+    {
+      "type": "solar_flare",
+      "subtype": "X5.4",
+      "details": "X5.4 flare on March 7, 2012 from AR 11429, followed by an X1.3 flare the same day."
+    },
+    {
+      "type": "cme",
+      "details": "Fast Earth-directed CME, ~1300 km/s."
+    },
+    {
+      "type": "geomag_storm",
+      "subtype": "G3",
+      "details": "Strong G3 geomagnetic storm with Dst ~ −222 nT on March 9."
+    },
+    {
+      "type": "sep",
+      "subtype": "S3",
+      "details": "Strong SEP event with >10 MeV proton flux exceeding 6000 pfu."
+    }
+  ],
+  "noaaGScale": 4,
+  "noaaSScale": 3,
+  "noaaRScale": 3,
+  "peakDst": -222,
+  "peakKp": 8,
+  "peakAp": 130,
+  "peakAE": 2500,
+  "flareClass": "X5.4",
+  "cmeSpeedKmS": 1300,
+  "solarWindSpeedPeak": 700,
+  "bzMin": -18,
+  "protonFluxPeak": 6530,
+  "solarCycleNumber": 24,
+  "cyclePhase": "ascending",
+  "sourceActiveRegion": "AR 11429",
+  "sunspotNumberDaily": 70,
+  "impacts": [
+    {
+      "sector": "communications",
+      "location": "Global",
+      "description": "R3 radio blackouts from the X5.4 flare; HF communications disrupted across the sunlit hemisphere.",
+      "severity": "severe"
+    },
+    {
+      "sector": "satellite",
+      "location": "Earth orbit",
+      "description": "Elevated radiation environment from the SEP event; satellite operators reported increased anomaly rates.",
+      "severity": "moderate"
+    },
+    {
+      "sector": "aviation",
+      "location": "Polar routes",
+      "description": "FAA issued radiation advisory; some polar flights were rerouted to lower latitudes.",
+      "severity": "moderate"
+    },
+    {
+      "sector": "aurora",
+      "location": "Mid-latitudes",
+      "description": "Aurora observed at mid-latitudes in North America and Europe during the G3 storm phase.",
+      "severity": "moderate"
+    }
+  ],
+  "auroraLowestLatitude": 38,
+  "timeSeries": [],
+  "images": [],
+  "papers": [
+    {
+      "doi": "10.1029/2012JA017536",
+      "title": "The March 2012 solar event complex: SDO observations and space weather implications",
+      "authors": "Patsourakos, S., Georgoulis, M. K., et al.",
+      "year": 2016,
+      "journal": "The Astrophysical Journal",
+      "keyFinding": "Detailed SDO/AIA analysis of the March 7 flares and CME initiation from AR 11429, one of the most productive active regions of SC24."
+    }
+  ],
+  "summary": "The March 2012 storm, driven by an X5.4 flare from AR 11429 and a fast CME, produced a G3 storm (Dst ~ −222 nT) with a significant SEP event (>6000 pfu), causing radio blackouts, aviation radiation alerts, and aurora at mid-latitudes.",
+  "description": "On March 7, 2012, AR 11429 produced an X5.4 flare followed closely by an X1.3 flare, launching fast Earth-directed CMEs. The resulting geomagnetic storm on March 9 reached G3 level with Dst ~ −222 nT and Kp 8. A significant SEP event produced >10 MeV proton flux exceeding 6,500 pfu, prompting the FAA to issue radiation advisories and airlines to reroute some polar flights. HF radio communications were severely disrupted. The event was extensively observed by SDO and other heliophysics spacecraft, providing rich multi-point data. This was one of the strongest events of Solar Cycle 24's ascending phase and demonstrated that even a relatively weak solar cycle could produce significant compound space weather events."
+}

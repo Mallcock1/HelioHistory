@@ -1,0 +1,90 @@
+{
+  "id": "evt-1991-mar",
+  "slug": "1991-march-storm",
+  "name": "1991 March Storm",
+  "altNames": [
+    "March 1991 Geomagnetic Storm",
+    "March 24 1991 Storm"
+  ],
+  "startDate": "1991-03-22",
+  "peakDate": "1991-03-24",
+  "endDate": "1991-03-26",
+  "durationHours": 96,
+  "phenomena": [
+    {
+      "type": "geomag_storm",
+      "subtype": "G5",
+      "details": "Extreme storm with Dst ~ −298 nT and sudden storm commencement impulse of ~134 nT – one of the largest SSC amplitudes ever recorded."
+    },
+    {
+      "type": "solar_flare",
+      "subtype": "X9.4",
+      "details": "X9.4 flare on March 22 from AR 6555."
+    },
+    {
+      "type": "cme",
+      "details": "Very fast CME; transit time approximately 40 hours."
+    },
+    {
+      "type": "sep",
+      "details": "Major SEP event associated with the flare and CME."
+    }
+  ],
+  "noaaGScale": 5,
+  "noaaSScale": 4,
+  "noaaRScale": 4,
+  "peakDst": -298,
+  "peakKp": 9,
+  "peakAp": 246,
+  "peakAE": 3000,
+  "flareClass": "X9.4",
+  "cmeSpeedKmS": 1800,
+  "solarWindSpeedPeak": 900,
+  "bzMin": -35,
+  "protonFluxPeak": 43000,
+  "solarCycleNumber": 22,
+  "cyclePhase": "maximum",
+  "sourceActiveRegion": "AR 6555",
+  "sunspotNumberDaily": 210,
+  "impacts": [
+    {
+      "sector": "satellite",
+      "location": "Earth orbit",
+      "description": "The sudden storm commencement compressed the magnetosphere so rapidly that a new radiation belt was formed at ~2.5 Earth radii. Multiple satellite anomalies reported across various orbits.",
+      "severity": "severe"
+    },
+    {
+      "sector": "power",
+      "location": "North America",
+      "description": "GIC effects detected in power grids; the event contributed to heightened awareness following the 1989 Quebec blackout just two years earlier.",
+      "severity": "moderate"
+    },
+    {
+      "sector": "aurora",
+      "location": "Global",
+      "description": "Vivid aurora visible at low latitudes across both hemispheres.",
+      "severity": "extreme"
+    },
+    {
+      "sector": "communications",
+      "location": "Global",
+      "description": "Severe HF radio blackouts and polar cap absorption events lasting multiple days.",
+      "severity": "severe"
+    }
+  ],
+  "auroraLowestLatitude": 30,
+  "timeSeries": [],
+  "images": [],
+  "papers": [
+    {
+      "doi": "10.1029/91JA01202",
+      "title": "The great storm of March 1991: An extreme event in the solar-terrestrial environment",
+      "authors": "Li, X., Roth, I., Temerin, M., et al.",
+      "year": 1993,
+      "journal": "Geophysical Research Letters",
+      "keyFinding": "Documented the formation of a new radiation belt at ~2.5 RE during the March 1991 storm, produced by the extraordinarily large sudden storm commencement impulse of ~134 nT."
+    }
+  ],
+  "summary": "The March 1991 storm, driven by an X9.4 flare and fast CME, produced one of the largest sudden storm commencements ever recorded (~134 nT), forming a new radiation belt at ~2.5 Earth radii and causing widespread satellite anomalies and aurora at low latitudes.",
+  "description": "On March 22, 1991, an X9.4 flare from active region AR 6555 launched a very fast CME that arrived at Earth approximately 40 hours later, driving an extreme geomagnetic storm with Dst ~ −298 nT. The sudden storm commencement was extraordinary – the magnetic impulse of ~134 nT was one of the largest ever recorded. This impulsive compression of the magnetosphere created a new trapped radiation belt at approximately 2.5 Earth radii, an event that was definitively observed by the CRRES (Combined Release and Radiation Effects Satellite) spacecraft. The new belt persisted for years and caused ongoing elevated radiation exposure for satellites in medium-Earth orbit. Coming just two years after the 1989 Quebec blackout, the March 1991 event reinforced concerns about infrastructure vulnerability to extreme space weather."
+}
