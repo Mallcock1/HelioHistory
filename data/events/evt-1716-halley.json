@@ -1,0 +1,59 @@
+{
+  "id": "evt-1716-halley",
+  "slug": "1716-halley-great-aurora",
+  "name": "1716 Great Aurora (Halley)",
+  "altNames": [
+    "Halley's aurora",
+    "March 1716 aurora"
+  ],
+  "startDate": "1716-03-06",
+  "peakDate": "1716-03-06",
+  "endDate": "1716-03-07",
+  "durationHours": 12,
+  "phenomena": [
+    {
+      "type": "geomag_storm",
+      "subtype": "Aurora",
+      "details": "A bright mid-latitude aurora over England and Europe on 6 March 1716 (Old Style; 17 March New Style), described firsthand by Edmond Halley."
+    }
+  ],
+  "noaaGScale": null,
+  "noaaSScale": null,
+  "noaaRScale": null,
+  "peakDst": null,
+  "peakKp": null,
+  "peakAp": null,
+  "peakAE": null,
+  "flareClass": null,
+  "cmeSpeedKmS": null,
+  "solarWindSpeedPeak": null,
+  "bzMin": null,
+  "protonFluxPeak": null,
+  "solarCycleNumber": null,
+  "cyclePhase": "ascending",
+  "sourceActiveRegion": null,
+  "sunspotNumberDaily": null,
+  "impacts": [
+    {
+      "sector": "cultural",
+      "location": "England and Europe",
+      "description": "Edmond Halley published a Royal Society paper describing the aurora of 6 March 1716 and attempting a physical (magnetic) explanation. Because England had seen essentially no major aurorae through the decades of the Maunder Minimum, the brilliant display caused widespread public alarm and excitement, and effectively marked the return of the aurora as solar activity recovered.",
+      "severity": "minor"
+    }
+  ],
+  "auroraLowestLatitude": null,
+  "timeSeries": [],
+  "images": [],
+  "papers": [
+    {
+      "doi": "10.1098/rstl.1714.0050",
+      "title": "An account of the late surprizing appearance of the lights seen in the air, on the sixth of March last",
+      "authors": "Halley, E.",
+      "year": 1716,
+      "journal": "Philosophical Transactions of the Royal Society",
+      "keyFinding": "Halley's firsthand scientific account of the March 1716 aurora and one of the first attempts to explain the phenomenon, recorded as aurorae returned at the end of the Maunder Minimum."
+    }
+  ],
+  "summary": "The great aurora of 6 March 1716, described by Edmond Halley in a famous Royal Society paper, stunned an England that had seen almost no aurorae through the decades of the Maunder Minimum, marking the return of solar activity.",
+  "description": "On the night of 6 March 1716 (Old Style; 17 March in the modern calendar), a brilliant aurora spread across the skies of England and continental Europe. It caused considerable public alarm, because the long decades of the Maunder Minimum had left much of the population having never seen a great auroral display. Edmond Halley, then in his late fifties, observed it himself and published a detailed account in the Philosophical Transactions of the Royal Society, proposing that the lights were related to the Earth's magnetism, an early step toward understanding the aurora's physical cause. The event is a cultural and scientific landmark marking the recovery of solar activity from the Maunder Minimum."
+}

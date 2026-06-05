@@ -1,0 +1,67 @@
+{
+  "id": "evt-0567bc-aurora",
+  "slug": "567-bc-babylonian-aurora",
+  "name": "567 BC Babylonian Aurora",
+  "altNames": [
+    "Babylonian red glow of 567 BC",
+    "Earliest datable aurora"
+  ],
+  "startDate": "-0567-03-12",
+  "peakDate": "-0567-03-12",
+  "endDate": "-0567-03-13",
+  "durationHours": 24,
+  "phenomena": [
+    {
+      "type": "geomag_storm",
+      "subtype": "Aurora candidate",
+      "details": "A cuneiform 'red glow' recorded in a Babylonian Astronomical Diary; widely cited as the earliest datable aurora observation. A meteorological red glow cannot be fully excluded."
+    }
+  ],
+  "noaaGScale": null,
+  "noaaSScale": null,
+  "noaaRScale": null,
+  "peakDst": null,
+  "peakKp": null,
+  "peakAp": null,
+  "peakAE": null,
+  "flareClass": null,
+  "cmeSpeedKmS": null,
+  "solarWindSpeedPeak": null,
+  "bzMin": null,
+  "protonFluxPeak": null,
+  "solarCycleNumber": null,
+  "cyclePhase": "maximum",
+  "sourceActiveRegion": null,
+  "sunspotNumberDaily": null,
+  "impacts": [
+    {
+      "sector": "cultural",
+      "location": "Babylon",
+      "description": "The earliest datable aurora observation. A Babylonian Astronomical Diary records a 'red glow' on the night of 12/13 March 567 BC, in regnal year 37 of Nebuchadnezzar II. Babylon lay at roughly 41 degrees geomagnetic latitude at the time (versus about 28 degrees today), making a low-latitude aurora plausible there during a moderate-to-strong storm.",
+      "severity": "minor"
+    }
+  ],
+  "auroraLowestLatitude": null,
+  "timeSeries": [],
+  "images": [],
+  "papers": [
+    {
+      "doi": "10.1046/j.1468-4004.2003.45615.x",
+      "title": "The earliest datable observation of the aurora borealis",
+      "authors": "Stephenson, F. R., Willis, D. M., Hallinan, T. J.",
+      "year": 2004,
+      "journal": "Astronomy & Geophysics",
+      "keyFinding": "Identified the 'red glow' in a Babylonian astronomical diary of 12/13 March 567 BC as the earliest datable aurora observation."
+    },
+    {
+      "doi": "10.1186/s40623-016-0571-5",
+      "title": "Earliest datable records of aurora-like phenomena in the astronomical diaries from Babylonia",
+      "authors": "Hayakawa, H., Mitsuma, Y., Ebihara, Y., et al.",
+      "year": 2016,
+      "journal": "Earth, Planets and Space",
+      "keyFinding": "Re-examined Babylonian cuneiform 'red glow' records as candidate low-latitude aurorae, accounting for the higher geomagnetic latitude of Babylon in antiquity."
+    }
+  ],
+  "summary": "A 'red glow' recorded in a Babylonian cuneiform Astronomical Diary on the night of 12/13 March 567 BC is the earliest datable aurora observation, made possible by Babylon's much higher geomagnetic latitude at the time.",
+  "description": "Among the astronomical diaries of Babylon, one tablet records a 'red glow' in the night sky on 12/13 March 567 BC, during the 37th regnal year of Nebuchadnezzar II. Stephenson, Willis and Hallinan (2004) identified it as the earliest datable observation of the aurora borealis, a status it still holds. The interpretation is supported by the fact that Babylon sat near 41 degrees geomagnetic latitude in the sixth century BC (compared with about 28 degrees today, owing to drift of the geomagnetic pole), so a moderately strong geomagnetic storm could push the auroral oval to within sight of Mesopotamian observers. As with all single 'red glow' records, an ordinary atmospheric or meteorological cause cannot be entirely ruled out, so the aurora interpretation, while well supported, is not certain."
+}

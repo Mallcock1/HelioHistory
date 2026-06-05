@@ -66,6 +66,12 @@
       "severity": "extreme"
     },
     {
+      "sector": "cultural",
+      "location": "North America",
+      "description": "The display became part of folklore: people read newspapers by the auroral light, gold miners in the Rocky Mountains reportedly rose and began cooking breakfast believing dawn had broken, and labourers started their day as birds began to sing. The shared experience, widely reported in the press, made 1859 the defining popular image of a great solar storm.",
+      "severity": "moderate"
+    },
+    {
       "sector": "communications",
       "location": "Cuba, Caribbean",
       "description": "Ships at sea reported their compass needles deflecting wildly, rendering navigation by compass unreliable during the storm's peak.",
@@ -81,7 +87,14 @@
   ],
   "auroraLowestLatitude": 18,
   "timeSeries": [],
-  "images": [],
+  "images": [
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Frederic%20Edwin%20Church%20-%20Aurora%20Borealis%20-%20Google%20Art%20Project.jpg",
+      "caption": "Frederic Edwin Church, 'Aurora Borealis' (1865) - a celebrated artistic depiction of the northern lights from the Carrington era (inspired by I. I. Hayes's 1860-61 Arctic expedition, not the 1859 storm itself).",
+      "credit": "Smithsonian American Art Museum / Wikimedia Commons (public domain)",
+      "date": "1865-01-01"
+    }
+  ],
   "papers": [
     {
       "title": "Description of a Singular Appearance seen in the Sun on September 1, 1859",
@@ -106,6 +119,14 @@
       "year": 2013,
       "journal": "Journal of Space Weather and Space Climate",
       "keyFinding": "Revised peak Dst estimate to −850 nT (vs. the −1760 nT from the Colaba magnetogram alone), still the largest in recorded history, and estimated the flare class at X45±5."
+    },
+    {
+      "doi": "10.1016/j.asr.2005.08.054",
+      "title": "Duration and extent of the great auroral storm of 1859",
+      "authors": "Green, J. L., Boardsen, S.",
+      "year": 2006,
+      "journal": "Advances in Space Research",
+      "keyFinding": "Compiled primary eyewitness accounts of the 1859 aurora, documenting its global extent and the cultural reactions to a sky bright enough to read by."
     }
   ],
   "summary": "The Carrington Event of September 1859 is the most intense geomagnetic storm and the largest solar flare in the recorded instrumental era, collapsing telegraph networks worldwide and producing aurora visible to within 18° of the equator.",

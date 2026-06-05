@@ -43,8 +43,8 @@
     },
     {
       "sector": "cultural",
-      "location": "Global",
-      "description": "No contemporary written accounts definitively linked to the event; impact inferred entirely from cosmogenic isotope records preserved in tree rings and ice cores.",
+      "location": "Britain",
+      "description": "The Anglo-Saxon Chronicle reports a 'red crucifix' seen in the sky after sunset in 774, an account often popularly linked to this event. However, specialists now consider it most likely an atmospheric halo display rather than an aurora (Hayakawa et al. 2019; Neuhauser & Neuhauser 2015), so it is not reliable evidence for the particle event. Otherwise no contemporary written record is securely tied to the 774/775 event, which is inferred from cosmogenic isotopes.",
       "severity": "minor"
     }
   ],
@@ -67,8 +67,16 @@
       "year": 2013,
       "journal": "The Astrophysical Journal Letters",
       "keyFinding": "Constrained the event to a duration of months to ~1 year; consistent with a short, extreme SEP episode."
+    },
+    {
+      "doi": "10.1007/s11207-019-1424-8",
+      "title": "The celestial sign in the Anglo-Saxon Chronicle in the 770s: Insights on contemporary solar activity",
+      "authors": "Hayakawa, H., Stephenson, F. R., Uchikawa, Y., et al.",
+      "year": 2019,
+      "journal": "Solar Physics",
+      "keyFinding": "Re-examined the 'red crucifix' of 774 and concluded it was most plausibly a halo display rather than an aurora, cautioning against using it as evidence for the AD 774/775 particle event."
     }
   ],
   "summary": "An extraordinary spike in atmospheric 14C recorded globally in tree rings points to a solar energetic particle event of unprecedented intensity around AD 774–775, far exceeding anything in the instrumental record.",
-  "description": "Dendrochronological studies of Japanese cedar trees published in 2012 revealed a ~12‰ jump in radiocarbon (14C) between the growth rings of AD 774 and 775 – roughly 20 times larger than any solar-cycle modulation. Corroborating signals in 10Be ice cores from Greenland and Antarctica confirm the cosmogenic nature of the event. Current best estimates place the required SEP fluence at S5+ levels, making this the most energetic solar particle event identified in the Holocene record. No contemporary written observations have been definitively linked to the event, and the precise solar source mechanism (superflare, extreme coronal mass ejection, or series of large flares) remains an active research question."
+  "description": "Dendrochronological studies of Japanese cedar trees published in 2012 revealed a ~12‰ jump in radiocarbon (14C) between the growth rings of AD 774 and 775 – roughly 20 times larger than any solar-cycle modulation. Corroborating signals in 10Be ice cores from Greenland and Antarctica confirm the cosmogenic nature of the event. Current best estimates place the required SEP fluence at S5+ levels, making this the most energetic solar particle event identified in the Holocene record. A 'red crucifix' reported in the Anglo-Saxon Chronicle for 774 is often popularly associated with the event, but recent scholarship judges it most likely an atmospheric halo rather than an aurora, so no contemporary written observation is securely linked to the event. The precise solar source mechanism (a superflare, an extreme coronal mass ejection, or a series of large flares) remains an active research question."
 }

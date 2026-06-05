@@ -1,0 +1,58 @@
+{
+  "id": "evt-0620-aurora",
+  "slug": "620-nihon-shoki-aurora",
+  "name": "AD 620 Nihon Shoki Aurora",
+  "altNames": [
+    "Pheasant-tail red sign",
+    "Earliest Japanese aurora record"
+  ],
+  "startDate": "0620-12-30",
+  "peakDate": "0620-12-30",
+  "endDate": "0620-12-31",
+  "durationHours": 12,
+  "phenomena": [
+    {
+      "type": "geomag_storm",
+      "subtype": "Aurora candidate",
+      "details": "A 'red sign shaped like a pheasant's tail' (sekki) recorded in the Nihon Shoki; the oldest astronomical record in Japan and most likely a low-latitude red aurora."
+    }
+  ],
+  "noaaGScale": null,
+  "noaaSScale": null,
+  "noaaRScale": null,
+  "peakDst": null,
+  "peakKp": null,
+  "peakAp": null,
+  "peakAE": null,
+  "flareClass": null,
+  "cmeSpeedKmS": null,
+  "solarWindSpeedPeak": null,
+  "bzMin": null,
+  "protonFluxPeak": null,
+  "solarCycleNumber": null,
+  "cyclePhase": "maximum",
+  "sourceActiveRegion": null,
+  "sunspotNumberDaily": null,
+  "impacts": [
+    {
+      "sector": "cultural",
+      "location": "Japan",
+      "description": "Japan's oldest astronomical record. The Nihon Shoki (Chronicles of Japan, compiled AD 720) describes a 'red sign' (sekki) more than about 10 degrees long and shaped like a pheasant's tail in the 12th month of AD 620. The fan-like shape is most consistent with a low-latitude red aurora; a comet has been proposed as an alternative but is considered less likely.",
+      "severity": "minor"
+    }
+  ],
+  "auroraLowestLatitude": null,
+  "timeSeries": [],
+  "images": [],
+  "papers": [
+    {
+      "title": "Pheasant tail: Consideration of the shape of the red sign in the Nihon Shoki",
+      "authors": "Kataoka, R., Iwahashi, K., et al.",
+      "year": 2020,
+      "journal": "Sokendai Review of Cultural and Social Studies",
+      "keyFinding": "Argued that the AD 620 'pheasant tail' red sign is most consistent with a fan-shaped low-latitude red aurora, given Japan's higher geomagnetic latitude at the time."
+    }
+  ],
+  "summary": "The Nihon Shoki's 'red sign shaped like a pheasant's tail' in AD 620 is Japan's oldest astronomical record and most likely a low-latitude red aurora.",
+  "description": "The Nihon Shoki, completed in AD 720, contains Japan's oldest astronomical observation: an entry for the 12th month of AD 620 describing a 'red sign' (sekki) more than about ten degrees long and shaped like a pheasant's tail. Modern analysis (Kataoka et al. 2020) argues the distinctive fan shape matches the appearance of a great low-latitude aurora rather than a comet, which had been suggested as an alternative. Japan lay near 33 degrees geomagnetic latitude in the seventh century, so an intense storm could bring auroral rays into view. The record is firmly attested, but as with other early 'red sky' accounts the auroral interpretation is probable rather than certain."
+}

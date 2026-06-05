@@ -15,7 +15,7 @@
     {
       "type": "geomag_storm",
       "subtype": "Extreme",
-      "details": "Estimated Dst far below -500 nT based on aurora visibility at ~24° magnetic latitude."
+      "details": "Modelled minimum Dst ~ -1300 nT (Ebihara et al. 2017), based on red aurora at ~24 degrees magnetic latitude over ~9 nights."
     },
     {
       "type": "solar_flare",
@@ -48,7 +48,7 @@
     {
       "sector": "cultural",
       "location": "East Asia",
-      "description": "Widely recorded in Japanese historical documents including domain records and personal diaries; provided critical calibration for historical geomagnetic storm intensity estimates.",
+      "description": "Widely recorded across East Asia, including a vivid red-aurora painting in the Japanese manuscript 'Seikai' (Understanding of the Stars), held by the Matsusaka City Museum of History and Folklore, which has been used to reconstruct the storm's geometry over Kyoto. These records provide critical calibration for historical geomagnetic storm intensity estimates.",
       "severity": "moderate"
     }
   ],
@@ -57,14 +57,30 @@
   "images": [],
   "papers": [
     {
-      "doi": "10.1002/2017SW001693",
-      "title": "The extreme space weather event in September 1770",
+      "doi": "10.3847/2041-8213/aa9661",
+      "title": "Long-lasting extreme magnetic storm activities in 1770 found in historical documents",
       "authors": "Hayakawa, H., Ebihara, Y., Willis, D. M., et al.",
       "year": 2017,
+      "journal": "The Astrophysical Journal Letters",
+      "keyFinding": "Compiled 111 East Asian historical records of aurora visible for ~9 nights at magnetic latitudes as low as ~24 degrees, indicating a storm rivalling or exceeding the Carrington Event."
+    },
+    {
+      "doi": "10.1002/2017SW001690",
+      "title": "Inclined zenith aurora over Kyoto on 17 September 1770: Graphical evidence of extreme magnetic storm",
+      "authors": "Kataoka, R., Iwahashi, K.",
+      "year": 2017,
       "journal": "Space Weather",
-      "keyFinding": "Compiled Japanese historical records of aurora visible for 9 nights at latitudes as low as ~24° magnetic latitude, suggesting a storm rivaling or exceeding the Carrington Event."
+      "keyFinding": "Used the red-aurora painting in the 'Seikai' manuscript to reconstruct the auroral geometry over Kyoto, concluding the storm was comparable to or larger than the 1859 Carrington event."
+    },
+    {
+      "doi": "10.1002/2017SW001693",
+      "title": "Possible cause of extremely bright aurora witnessed in East Asia on 17 September 1770",
+      "authors": "Ebihara, Y., Hayakawa, H., Iwahashi, K., et al.",
+      "year": 2017,
+      "journal": "Space Weather",
+      "keyFinding": "Modelled the auroral emission and inferred a minimum Dst of roughly -1300 nT (model-dependent), potentially exceeding the Carrington event."
     }
   ],
-  "summary": "A geomagnetic storm in September 1770 produced aurora visible across Japan for nine consecutive nights, with observations at magnetic latitudes as low as ~24°, suggesting an intensity potentially comparable to the 1859 Carrington Event.",
-  "description": "Contemporary Japanese records – including samurai diaries, domain reports, and astronomical logs – describe vivid red aurora that persisted for nine nights starting on September 17, 1770, visible from locations corresponding to magnetic latitudes of ~24°. Modern analysis by Hayakawa et al. (2017) compiled over 50 historical sources and estimated a peak Dst of roughly −440 to −600 nT or lower, making this storm one of the most intense pre-instrumental events on record. The event occurred near the maximum of Solar Cycle 1 (the first cycle in the modern numbering convention). The nine-day duration of visible aurora indicates sustained severe to extreme geomagnetic disturbance, potentially from multiple CME arrivals."
+  "summary": "A geomagnetic storm in September 1770 produced aurora visible across East Asia for nine consecutive nights, down to ~24 degrees magnetic latitude, and is famously depicted in the Japanese 'Seikai' manuscript - with a modelled minimum Dst of about -1300 nT, comparable to or exceeding the 1859 Carrington Event.",
+  "description": "Contemporary East Asian records - including samurai diaries, domain reports, and astronomical logs - describe vivid red aurora that persisted for nine nights starting on September 17, 1770, visible from locations near 24 degrees magnetic latitude. Modern analysis by Hayakawa et al. (2017) compiled 111 historical sources, and a striking red-aurora painting in the Japanese manuscript 'Seikai' was used by Kataoka and Iwahashi (2017) to reconstruct the display over Kyoto. Emission modelling by Ebihara et al. (2017) inferred a minimum Dst of roughly -1300 nT (with estimates ranging to about -1700 nT, model-dependent), placing the storm in the Carrington class or beyond. The event occurred near the maximum of Solar Cycle 2, and the nine-day duration of visible aurora indicates sustained extreme geomagnetic disturbance, probably from multiple CME arrivals."
 }

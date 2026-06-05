@@ -1,0 +1,72 @@
+{
+  "id": "evt-1128-worcester",
+  "slug": "1128-john-of-worcester-sunspots",
+  "name": "AD 1128 Sunspots & Aurora",
+  "altNames": [
+    "John of Worcester sunspot drawing",
+    "December 1128 storm"
+  ],
+  "startDate": "1128-12-08",
+  "peakDate": "1128-12-13",
+  "endDate": "1128-12-15",
+  "durationHours": 48,
+  "phenomena": [
+    {
+      "type": "geomag_storm",
+      "subtype": "Aurora",
+      "details": "A mid-latitude aurora ('vapour like red smoke') recorded in Korea on 13 December 1128, about five days after a large sunspot group was drawn in England, implying an intense (and likely recurrent) geomagnetic storm."
+    }
+  ],
+  "noaaGScale": null,
+  "noaaSScale": null,
+  "noaaRScale": null,
+  "peakDst": null,
+  "peakKp": null,
+  "peakAp": null,
+  "peakAE": null,
+  "flareClass": null,
+  "cmeSpeedKmS": null,
+  "solarWindSpeedPeak": null,
+  "bzMin": null,
+  "protonFluxPeak": null,
+  "solarCycleNumber": null,
+  "cyclePhase": "maximum",
+  "sourceActiveRegion": "Large naked-eye sunspot group (drawn 8 December 1128)",
+  "sunspotNumberDaily": null,
+  "impacts": [
+    {
+      "sector": "cultural",
+      "location": "England",
+      "description": "The earliest surviving drawing of sunspots. On 8 December 1128 the monk John of Worcester recorded two dark spots ('guttae', a larger above a smaller) on the face of the Sun in his Chronicle, preserved as Oxford, Corpus Christi College MS 157 - over 500 years before the first telescopic sunspot observations.",
+      "severity": "minor"
+    },
+    {
+      "sector": "aurora",
+      "location": "Korea (Songdo / Kaesong)",
+      "description": "An aurora described as 'vapour like red smoke' was recorded in the Goryeosa, the official chronicle of the Goryeo dynasty, on 13 December 1128 - about five days after the sunspot drawing, consistent with the source region rotating into a geoeffective position and driving a geomagnetic storm.",
+      "severity": "moderate"
+    }
+  ],
+  "auroraLowestLatitude": null,
+  "timeSeries": [],
+  "images": [
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/John%20of%20Worcester%20sunspot%20drawing%201128.png",
+      "caption": "The earliest surviving drawing of sunspots, by John of Worcester, 8 December 1128 (Chronicle of John of Worcester, Oxford, Corpus Christi College MS 157).",
+      "credit": "Corpus Christi College, Oxford / Wikimedia Commons (public domain)",
+      "date": "1128-12-08"
+    }
+  ],
+  "papers": [
+    {
+      "doi": "10.5194/angeo-19-289-2001",
+      "title": "Solar and auroral evidence for an intense recurrent geomagnetic storm during December in AD 1128",
+      "authors": "Willis, D. M., Stephenson, F. R.",
+      "year": 2001,
+      "journal": "Annales Geophysicae",
+      "keyFinding": "Identified John of Worcester's 1128 drawing as the earliest known record of sunspots and linked it to an aurora recorded in Korea five days later, evidencing an intense recurrent geomagnetic storm."
+    }
+  ],
+  "summary": "In December 1128 the monk John of Worcester drew two sunspots - the earliest surviving sunspot drawing - and five days later an aurora was recorded in Korea, a naked-eye Sun-to-Earth storm link captured five centuries before the telescope.",
+  "description": "On 8 December 1128, John of Worcester added to his Chronicle a small illustration of two dark spots on the solar disk, the earliest surviving drawing of sunspots (Oxford, Corpus Christi College MS 157). Remarkably, the Goryeosa chronicle of Korea records an aurora, 'vapour like red smoke', on 13 December 1128 - roughly five days later. Willis and Stephenson (2001) interpreted the pairing as a large active region that, having been visible from England near the centre of the disk, rotated toward a geoeffective position and drove an intense geomagnetic storm whose aurora reached the mid-latitudes of East Asia. The episode is one of the most striking pre-telescopic demonstrations of the connection between sunspots and terrestrial aurorae, and the drawing itself is a landmark in the history of solar observation."
+}

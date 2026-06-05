@@ -184,6 +184,29 @@ export default function EventDetailPanel({
                 {event.description}
               </p>
 
+              {/* Historical images / artwork */}
+              {event.images.length > 0 && (
+                <div className="space-y-3">
+                  {event.images.map((img, i) => (
+                    <figure key={i} className="glass rounded-lg overflow-hidden">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={img.url}
+                        alt={img.caption}
+                        loading="lazy"
+                        className="w-full h-auto bg-overlay/5"
+                      />
+                      <figcaption className="p-3 text-xs text-foreground/50 leading-relaxed">
+                        {img.caption}
+                        {img.credit && (
+                          <span className="block text-foreground/30 mt-1">{img.credit}</span>
+                        )}
+                      </figcaption>
+                    </figure>
+                  ))}
+                </div>
+              )}
+
               <Separator className="bg-overlay/10" />
 
               {/* Key Indices */}
