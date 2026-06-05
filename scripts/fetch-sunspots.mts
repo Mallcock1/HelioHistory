@@ -16,7 +16,15 @@ import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { get } from "node:https";
 
-const SILSO_URL = "https://www.sidc.be/SILSO/INFO/snmtotcsv.php";
+// Try the static data file first, then the dynamic PHP endpoint as a fallback.
+const SILSO_URLS = [
+  "https://www.sidc.be/SILSO/DATA/SN_m_tot_V2.0.csv",
+  "https://www.sidc.be/SILSO/INFO/snmtotcsv.php",
+];
+// A realistic browser User-Agent; SILSO's server resets connections from some
+// non-browser / "bot" user agents.
+const USER_AGENT =
+  "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36";
 const TIMEOUT_MS = 30000;
 const MAX_ATTEMPTS = 4;
 
@@ -29,8 +37,9 @@ function download(url: string, redirectsLeft = 3): Promise<string> {
       url,
       {
         headers: {
-          "User-Agent": "HelioHistory-data-bot/1.0 (+https://github.com/Mallcock1/HelioHistory)",
+          "User-Agent": USER_AGENT,
           Accept: "text/csv,text/plain,*/*",
+          "Accept-Language": "en-US,en;q=0.9",
         },
       },
       (res) => {
@@ -59,21 +68,23 @@ function download(url: string, redirectsLeft = 3): Promise<string> {
 
 let csv: string | undefined;
 let lastErr: unknown;
-for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
-  try {
-    csv = await download(SILSO_URL);
-    break;
-  } catch (err) {
-    lastErr = err;
-    console.warn(`SILSO fetch attempt ${attempt}/${MAX_ATTEMPTS} failed: ${(err as Error).message}`);
-    if (attempt < MAX_ATTEMPTS) {
-      await new Promise((r) => setTimeout(r, attempt * 4000)); // 4s, 8s, 12s backoff
+outer: for (const url of SILSO_URLS) {
+  for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
+    try {
+      csv = await download(url);
+      break outer;
+    } catch (err) {
+      lastErr = err;
+      console.warn(`SILSO fetch ${url} attempt ${attempt}/${MAX_ATTEMPTS} failed: ${(err as Error).message}`);
+      if (attempt < MAX_ATTEMPTS) {
+        await new Promise((r) => setTimeout(r, attempt * 4000)); // 4s, 8s, 12s backoff
+      }
     }
   }
 }
 
 if (csv === undefined) {
-  throw new Error(`SILSO fetch failed after ${MAX_ATTEMPTS} attempts: ${(lastErr as Error)?.message}`);
+  throw new Error(`SILSO fetch failed from all sources: ${(lastErr as Error)?.message}`);
 }
 
 // Sanity check so we never overwrite good data with a garbage/HTML error page.
