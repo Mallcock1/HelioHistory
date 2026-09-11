@@ -7,7 +7,6 @@ import {
   useCallback,
   useMemo,
   type MouseEvent,
-  type WheelEvent,
 } from "react";
 import type { SpaceWeatherEvent } from "@/lib/types";
 import {
@@ -26,6 +25,7 @@ import {
 } from "@/lib/timeline-utils";
 import { SUNSPOT_YEARLY_ALL } from "@/data/sunspots";
 import { SUNSPOT_MONTHLY } from "@/data/sunspots-monthly";
+import { SUNSPOT_C14 } from "@/data/sunspots-c14";
 import { GRAND_PERIODS } from "@/data/grand-periods";
 import { getEventTimeSeries } from "@/data/timeseries";
 
@@ -49,12 +49,17 @@ const INITIAL_END = MAX_YEAR;
 // Canvas layout
 const GRID_LABEL_Y = 50;
 const EVENT_MARKER_MIN_WIDTH = 24;
+const ZOOM_RATE = 0.002; // zoom factor = exp(deltaY * ZOOM_RATE); one mouse-wheel notch (~100) ≈ ×1.22
 const TRACK_TOP = 100;
 const TRACK_BOTTOM_PAD = 60;
 const BASELINE_FRACTION = 0.75;
 const Y_AXIS_WIDTH = 58; // pixels reserved for Y-axis labels
 
 const MONTHLY_FIRST_YEAR = SUNSPOT_MONTHLY.length ? SUNSPOT_MONTHLY[0][0] : Infinity;
+// The 14C reconstruction is shown only where no telescopic record exists; the
+// observed SILSO series takes precedence from its first year (1610) onward.
+const C14_FIRST_YEAR = SUNSPOT_C14[0][0]; // 971
+const C14_LAST_YEAR = SUNSPOT_YEARLY_ALL[0].year; // 1610
 const MONTHLY_LAST_YEAR = SUNSPOT_MONTHLY.length
   ? SUNSPOT_MONTHLY[SUNSPOT_MONTHLY.length - 1][0]
   : -Infinity;
@@ -230,7 +235,10 @@ export default function TimelineCanvas({
         // Zooming in – stop if already at minimum range
         if (range <= 0.02) return;
       }
-      const zoomFactor = deltaY > 0 ? 1.15 : 0.87;
+      // Scale by the wheel delta so a trackpad (many small deltas per gesture)
+      // and a mouse wheel (~100 per notch) both zoom at a comfortable rate.
+      // Clamped so a single large delta can't jump more than ~40%.
+      const zoomFactor = Math.max(0.7, Math.min(1.4, Math.exp(deltaY * ZOOM_RATE)));
       const newRange = Math.max(0.01, Math.min(MAX_YEAR - MIN_YEAR, range * zoomFactor));
       const mouseYear = viewport.start + fraction * range;
       let newStart = mouseYear - fraction * newRange;
@@ -244,18 +252,40 @@ export default function TimelineCanvas({
     [viewport]
   );
 
-  const handleWheel = useCallback(
-    (e: WheelEvent<HTMLCanvasElement>) => {
-      e.preventDefault();
-      doZoom(e.clientX, e.deltaY);
+  // Pan the viewport by a horizontal pixel delta (trackpad swipe / tilt wheel)
+  const doPan = useCallback(
+    (deltaPx: number) => {
+      const canvas = canvasRef.current;
+      if (!canvas) return;
+      if (animFrameRef.current) cancelAnimationFrame(animFrameRef.current);
+      const rect = canvas.getBoundingClientRect();
+      const plotWidth = rect.width - Y_AXIS_WIDTH;
+      const range = viewport.end - viewport.start;
+      const newStart = Math.max(MIN_YEAR, Math.min(MAX_YEAR - range, viewport.start + (deltaPx / plotWidth) * range));
+      setViewport({ start: newStart, end: newStart + range });
     },
-    [doZoom]
+    [viewport]
   );
 
-  // Capture wheel events on the page so scrolling anywhere zooms the timeline,
-  // EXCEPT when the cursor is over a scrollable panel (e.g. event detail)
-  const doZoomRef = useRef(doZoom);
-  doZoomRef.current = doZoom;
+  // Horizontal wheel input pans along the timeline; vertical zooms.
+  const handleWheelInput = useCallback(
+    (e: { clientX: number; deltaX: number; deltaY: number; deltaMode: number }) => {
+      // deltaMode 1 = lines, 2 = pages (Firefox mouse wheels); normalise to pixels.
+      const unit = e.deltaMode === 1 ? 16 : e.deltaMode === 2 ? 400 : 1;
+      const dx = e.deltaX * unit;
+      const dy = e.deltaY * unit;
+      if (Math.abs(dx) > Math.abs(dy)) doPan(dx);
+      else if (dy !== 0) doZoom(e.clientX, dy);
+    },
+    [doPan, doZoom]
+  );
+
+  // Wheel events are handled by a non-passive window listener (below) rather
+  // than React's onWheel, which is passive and cannot preventDefault.
+  // Scrolling anywhere on the page drives the timeline, EXCEPT when the cursor
+  // is over a scrollable panel (e.g. event detail).
+  const wheelInputRef = useRef(handleWheelInput);
+  wheelInputRef.current = handleWheelInput;
   useEffect(() => {
     const handler = (e: globalThis.WheelEvent) => {
       // Allow normal scrolling inside scrollable containers (detail panel, etc.)
@@ -270,7 +300,7 @@ export default function TimelineCanvas({
         el = el.parentElement;
       }
       e.preventDefault();
-      doZoomRef.current(e.clientX, e.deltaY);
+      wheelInputRef.current(e);
     };
     window.addEventListener("wheel", handler, { passive: false });
     return () => window.removeEventListener("wheel", handler);
@@ -585,16 +615,72 @@ export default function TimelineCanvas({
       }
     }
 
+    const maxSunspot = 285;
+    const cycleAmplitude = trackArea * 0.4;
+    const winLo = viewport.start;
+    const winHi = viewport.end;
+    const snY = (v: number) =>
+      baselineY - Math.min(1, Math.max(0, v) / maxSunspot) * cycleAmplitude;
+
+    // ── 14C sunspot reconstruction (971-1609; Usoskin et al. 2021) ──
+    // Drawn as a visibly distinct series - dashed line with a 1-sigma band and
+    // no area fill - so it reads as a reconstruction rather than a continuation
+    // of the observed record. Values below zero mean activity beneath the
+    // sunspot-formation threshold and are clamped to the baseline for display.
+    if (winLo < C14_LAST_YEAR && winHi > C14_FIRST_YEAR) {
+      const c14Pts: [number, number, number][] = [];
+      for (const p of SUNSPOT_C14) {
+        if (p[0] > C14_LAST_YEAR) break;
+        if (p[0] < winLo - 5 || p[0] > winHi + 5) continue;
+        c14Pts.push(p);
+      }
+      if (c14Pts.length >= 2) {
+        // 1-sigma uncertainty band: upper edge forwards, lower edge back.
+        ctx.beginPath();
+        c14Pts.forEach(([year, sn, sig], i) => {
+          const x = yearToPx(year);
+          if (i === 0) ctx.moveTo(x, snY(sn + sig));
+          else ctx.lineTo(x, snY(sn + sig));
+        });
+        for (let i = c14Pts.length - 1; i >= 0; i--) {
+          const [year, sn, sig] = c14Pts[i];
+          ctx.lineTo(yearToPx(year), snY(sn - sig));
+        }
+        ctx.closePath();
+        ctx.fillStyle = "rgba(245, 158, 11, 0.05)";
+        ctx.fill();
+
+        // Central estimate, dashed.
+        ctx.beginPath();
+        c14Pts.forEach(([year, sn], i) => {
+          const x = yearToPx(year);
+          if (i === 0) ctx.moveTo(x, snY(sn));
+          else ctx.lineTo(x, snY(sn));
+        });
+        ctx.setLineDash([4 * dpr, 3 * dpr]);
+        ctx.strokeStyle = "rgba(245, 158, 11, 0.22)";
+        ctx.lineWidth = 1.2 * dpr;
+        ctx.stroke();
+        ctx.setLineDash([]);
+
+        // Provenance tag under the baseline, when the visible span is wide enough.
+        const x0 = Math.max(plotLeft, yearToPx(C14_FIRST_YEAR));
+        const x1 = Math.min(w, yearToPx(C14_LAST_YEAR));
+        if (x1 - x0 > 260 * dpr) {
+          ctx.fillStyle = "rgba(245, 158, 11, 0.35)";
+          ctx.font = `400 ${10 * dpr}px system-ui, sans-serif`;
+          ctx.textAlign = "center";
+          ctx.fillText("¹⁴C reconstruction · Usoskin et al. 2021", (x0 + x1) / 2, baselineY + 14 * dpr);
+        }
+      }
+    }
+
     // ── Solar cycle line (level-of-detail; drawn through real data points) ──
     // Rather than sampling a function at viewport-relative positions every frame
     // (which makes the curve "swim" as you pan/zoom), we draw a polyline through
     // the actual sunspot observations at their fixed years. Resolution steps up
     // with zoom: yearly means when zoomed out, the monthly record when zoomed in,
     // plus a scatter of the monthly observations when zoomed in far enough.
-    const maxSunspot = 285;
-    const cycleAmplitude = trackArea * 0.4;
-    const winLo = viewport.start;
-    const winHi = viewport.end;
     const useMonthly = range <= 120;
 
     const cyclePts: { year: number; value: number }[] = [];
@@ -626,8 +712,7 @@ export default function TimelineCanvas({
 
     if (cyclePts.length >= 2) {
       const ptX = (p: { year: number }) => yearToPx(p.year);
-      const ptY = (p: { value: number }) =>
-        baselineY - Math.min(1, p.value / maxSunspot) * cycleAmplitude;
+      const ptY = (p: { value: number }) => snY(p.value);
 
       // Filled area under the line.
       ctx.beginPath();
@@ -667,7 +752,6 @@ export default function TimelineCanvas({
     // ── Grid lines with overlap-aware labels ──
     const startMajor = Math.floor(viewport.start / grid.major) * grid.major;
     ctx.font = `500 ${13 * dpr}px system-ui, sans-serif`;
-    const minLabelSpacing = 60 * dpr; // minimum pixels between label centres
     let lastLabelRight = -Infinity;
 
     for (let year = startMajor; year <= viewport.end; year += grid.major) {
@@ -807,8 +891,9 @@ export default function TimelineCanvas({
       displaced: boolean;  // whether this event was moved
       severity: number;
       color: string;
-      importance: number;  // 0-10 importance score for collapse decisions
+      importance: number;  // importance score (~1.5–12.5, uncapped so G5 events still rank) for collapse/label decisions
       collapsed: boolean;  // if true, render as small marker without label
+      labelX: number;      // horizontal centre of the label (may be nudged inwards at the edges)
     }
 
     const layouts: EventLayout[] = sortedEvents.map((event) => {
@@ -840,14 +925,13 @@ export default function TimelineCanvas({
       const trueY = baselineY - normalizedVal * maxVerticalDisplacement;
       const barH = 36 * dpr; // constant height – position encodes severity
 
-      // Importance score (0-10): higher = always shown with label
+      // Importance score: higher = label wins when space is contested
       let importance = severity * 1.5; // base: 1.5 to 7.5
       if (event.noaaGScale && event.noaaGScale >= 4) importance += 2;
       if (event.noaaGScale === 5) importance += 1;
       if (event.peakDst !== null && Math.abs(event.peakDst) >= 300) importance += 1;
       if (event.impacts.length >= 3) importance += 0.5;
       if (event.auroraLowestLatitude !== null && event.auroraLowestLatitude <= 30) importance += 0.5;
-      importance = Math.min(10, importance);
 
       return {
         event,
@@ -862,27 +946,9 @@ export default function TimelineCanvas({
         color,
         importance,
         collapsed: false,
+        labelX: x1 + barW / 2,
       };
     });
-
-    // Phase 1.5: determine which events to collapse based on density
-    // If there are many visible events, collapse lower-importance ones
-    const pxPerEvent = w / Math.max(1, layouts.length);
-    const crowded = pxPerEvent < 120 * dpr; // less than ~120px per event = crowded
-    if (crowded && layouts.length > 8) {
-      // Sort by importance descending to determine threshold
-      const sortedByImportance = [...layouts].sort((a, b) => b.importance - a.importance);
-      // Keep the top N events expanded based on available space
-      const maxExpanded = Math.max(6, Math.floor(w / (120 * dpr)));
-      for (let i = maxExpanded; i < sortedByImportance.length; i++) {
-        const layout = sortedByImportance[i];
-        // Never collapse hovered or selected events
-        if (hoveredEvent?.id === layout.event.id || hoveredEventId === layout.event.id ||
-            selectedEvent?.id === layout.event.id) continue;
-        layout.collapsed = true;
-        layout.barH = 12 * dpr; // much smaller bar
-      }
-    }
 
     // Phase 2: apply stable lane-based displacement (viewport-independent)
     // Events in lane 0 stay at their metric Y; lane 1+ are displaced downward.
@@ -896,8 +962,60 @@ export default function TimelineCanvas({
       }
     }
 
-    // Phase 3: draw everything – collapsed events first (behind), then expanded
-    const expandedLayouts = layouts.filter(l => !l.collapsed);
+    // Phase 2.5: label-driven collapse (pixel space)
+    // Lanes are assigned in years, but labels are ~150px wide, so at coarse zoom
+    // events in the same lane still produce overlapping text. Walk events in
+    // priority order and give each one its label only if it fits clear of the
+    // labels and bars already placed; an event whose label doesn't fit is
+    // collapsed to a small unlabelled marker. This is the only decluttering
+    // rule – zooming in frees space and progressively reveals more events.
+    interface Rect { x: number; y: number; w: number; h: number }
+    const overlaps = (a: Rect, b: Rect) =>
+      a.x < b.x + b.w && a.x + a.w > b.x && a.y < b.y + b.h && a.y + a.h > b.y;
+    const isPriority = (l: EventLayout) =>
+      hoveredEvent?.id === l.event.id || hoveredEventId === l.event.id || selectedEvent?.id === l.event.id;
+    const LABEL_H = 16 * dpr;
+    const LABEL_PAD = 12 * dpr; // gap between neighbours + slack for the larger hovered/selected font
+    const LABEL_MARGIN = 4 * dpr; // keep labels inside the plot area
+    const obstacles: Rect[] = [];
+    const byPriority = [...layouts].sort((a, b) => {
+      const pa = isPriority(a) ? 1 : 0;
+      const pb = isPriority(b) ? 1 : 0;
+      if (pa !== pb) return pb - pa;
+      return b.importance - a.importance;
+    });
+    for (const layout of byPriority) {
+      const { barX, barW, barH, displayY } = layout;
+      const labelW = (labelWidths.get(layout.event.id) ?? 0) + LABEL_PAD;
+      const eventY = displayY - barH / 2;
+      const bar: Rect = { x: barX, y: eventY, w: barW, h: barH };
+      // Mirror the placement rule in the draw loop: inside the bar if it fits, else
+      // centred above it, nudged inwards so it never runs off the canvas edge.
+      let label: Rect;
+      if (barW > labelW + 12 * dpr) {
+        label = { x: barX + 6 * dpr, y: eventY + barH / 2 - LABEL_H / 2, w: labelW, h: LABEL_H };
+      } else {
+        const minX = plotLeft + LABEL_MARGIN;
+        const maxX = w - LABEL_MARGIN - labelW;
+        const x = Math.max(minX, Math.min(maxX, barX + barW / 2 - labelW / 2));
+        label = { x, y: eventY - 8 * dpr - LABEL_H, w: labelW, h: LABEL_H };
+      }
+      layout.labelX = label.x + label.w / 2;
+      // Hovered/selected events are placed first and always keep their label.
+      const fits = isPriority(layout) || !obstacles.some(o => overlaps(o, label) || overlaps(o, bar));
+      if (fits) {
+        obstacles.push(label, bar);
+      } else {
+        layout.collapsed = true;
+        layout.barH = 12 * dpr; // much smaller bar
+      }
+    }
+
+    // Phase 3: draw everything – collapsed events first (behind), then expanded.
+    // Hovered/selected events are drawn last so their label is never overdrawn.
+    const expandedLayouts = layouts
+      .filter(l => !l.collapsed)
+      .sort((a, b) => (isPriority(a) ? 1 : 0) - (isPriority(b) ? 1 : 0));
     const collapsedLayouts = layouts.filter(l => l.collapsed);
 
     // Draw collapsed events as small colored rectangles
@@ -1160,16 +1278,16 @@ export default function TimelineCanvas({
           ? (isDark ? "rgba(255,255,255,0.95)" : "rgba(0,0,0,0.85)")
           : (isDark ? `rgba(255,255,255,${severity >= 3 ? 0.8 : 0.6})` : `rgba(0,0,0,${severity >= 3 ? 0.7 : 0.5})`);
         ctx.textAlign = "center";
-        const labelX = barX + barW / 2;
+        const labelX = layout.labelX;
         const labelY = eventY - 8 * dpr;
         ctx.fillText(labelText, labelX, labelY);
 
-        // Thin connector from label to bar
+        // Thin connector from label to bar (slanted if the label was nudged inwards)
         ctx.strokeStyle = isDark ? `rgba(255,255,255,${isHovered ? 0.2 : 0.08})` : `rgba(0,0,0,${isHovered ? 0.15 : 0.06})`;
         ctx.lineWidth = 1 * dpr;
         ctx.beginPath();
         ctx.moveTo(labelX, labelY + 3 * dpr);
-        ctx.lineTo(labelX, eventY - 1 * dpr);
+        ctx.lineTo(barX + barW / 2, eventY - 1 * dpr);
         ctx.stroke();
       }
     }
@@ -1191,6 +1309,7 @@ export default function TimelineCanvas({
     canvasSize,
     viewport,
     events,
+    eventLanes,
     hoveredEvent,
     hoveredEventId,
     selectedEvent,
@@ -1217,7 +1336,6 @@ export default function TimelineCanvas({
         ref={canvasRef}
         className="w-full h-full"
         style={{ cursor: isDraggingRef.current ? "grabbing" : "grab" }}
-        onWheel={handleWheel}
         onMouseDown={handleMouseDown}
         onMouseMove={handleMouseMove}
         onMouseUp={handleMouseUp}
