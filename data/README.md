@@ -41,7 +41,7 @@ See the schema for the authoritative contract. Key fields and units:
 | --- | --- | --- |
 | `id`, `slug` | string | Stable identifiers; `id` matches the filename |
 | `name`, `altNames` | string / string[] | Display name and alternates |
-| `startDate`, `peakDate`, `endDate` | ISO date(time) | Supports ancient dates (e.g. `0774-01-01`) |
+| `startDate`, `peakDate`, `endDate` | ISO date(time) | Supports ancient dates (e.g. `0774-01-01`). A leading minus is BC in plain counting, not astronomical numbering: `-0660-01-01` is 660 BC. |
 | `durationHours` | number | Event duration in hours |
 | `phenomena[]` | object[] | One of: geomag_storm, solar_flare, cme, sep, gle, radio_blackout, forbush_decrease |
 | `noaaGScale` / `noaaSScale` / `noaaRScale` | 1–5 or null | NOAA storm / radiation / radio-blackout scales |
@@ -54,12 +54,31 @@ See the schema for the authoritative contract. Key fields and units:
 | `bzMin` | number / null | Minimum (southward) IMF Bz, nT |
 | `protonFluxPeak` | number / null | Peak >10 MeV proton flux, pfu |
 | `solarCycleNumber` | number / null | Modern numbering; null/negative = unknown |
-| `cyclePhase` | enum | ascending, maximum, descending, minimum |
+| `cyclePhase` | enum | ascending, maximum, descending, minimum, or unknown (use `unknown` when no published estimate exists) |
+| `estimatedFields` | string[] | Optional. Names of fields whose values are published reconstructions/estimates rather than measurements (e.g. `peakDst` before 1957, `flareClass` before GOES). The app renders them with a ≈ marker. |
 | `sourceActiveRegion` | string / null | NOAA/Nable AR designation |
 | `sunspotNumberDaily` | number / null | Daily sunspot number |
 | `impacts[]` | object[] | Sector, severity, description, optional cost |
 | `auroraLowestLatitude` | number / null | Lowest geomagnetic latitude aurora was seen, ° |
 | `timeSeries[]` | object[] | Parameter + source (+ optional inline data points) |
 | `images[]` | object[] | url, caption, credit, date |
-| `papers[]` | object[] | doi, title, authors, year, journal, keyFinding |
+| `papers[]` | object[] | doi (preferred) or url (for agency reports etc.), title, authors, year, journal, keyFinding |
 | `summary`, `description` | string | Short and long prose |
+
+## Sunspot backdrop (`sunspots/`)
+
+The timeline's solar-activity curve is compiled from these files by the
+`scripts/build-*.mts` scripts into `src/data/sunspots-*.ts`:
+
+| File | Span | Source | Build script |
+| --- | --- | --- | --- |
+| `SN_m_tot_V2.0.csv` | 1749–present, monthly | WDC-SILSO, Royal Observatory of Belgium (refreshed monthly by CI) | `build-sunspots.mts` |
+| `SN_y_tot_V2.0.csv` | 1700–present, yearly | WDC-SILSO | (inlined in `src/data/sunspots.ts`) |
+| `GN_y_V3.0.csv` | 1610–1699 used, yearly group number | WDC-SILSO | `build-pre1700.mts` |
+| `usoskin2021_osn.csv` | 971–1899, yearly with 1σ | Usoskin et al. (2021), A&A 649, A141, CDS `J/A+A/649/A141` table `osn` | `build-c14.mts` |
+
+Precedence on the timeline is observed over reconstructed: SILSO from 1610
+onward, the ¹⁴C reconstruction only before that. The ¹⁴C series is a
+physics-based reconstruction from tree-ring radiocarbon, not a count — it is
+drawn dashed with its uncertainty band and can be negative in the raw file
+(activity below the sunspot-formation threshold), which the app clamps to zero.

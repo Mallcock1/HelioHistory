@@ -21,7 +21,8 @@ field documentation is in [`data/README.md`](data/README.md).
 2. Validate locally:
    ```bash
    npm install
-   npm run data:validate
+   npm run data:validate               # schema + integrity rules (dates, NOAA scales, estimates)
+   npm run data:validate -- --check-dois   # also resolve every DOI on CrossRef (network; CI runs this)
    ```
 3. Build (optional locally; `npm run dev` does it automatically):
    ```bash
@@ -38,10 +39,18 @@ This is what makes the catalogue trustworthy:
   has indices or flare data but no `papers`.
 - Prefer **peer-reviewed literature** and authoritative data centres
   (WDC Kyoto for Dst, GFZ Potsdam for Kp, NOAA SWPC, NMDB, etc.).
+- **Copy reference metadata from the DOI record, not from memory.** Look the
+  paper up on CrossRef or ADS, paste the DOI, and take title/authors/year from
+  the resolved record. CI resolves every DOI and fails on a mismatch.
 - For **pre-instrumental or reconstructed** events, report the published
-  estimate and describe its uncertainty in `description` (e.g. a Dst range).
-  Don't invent precision the sources don't support.
-- Use `null` for genuinely unknown values, never a guessed placeholder.
+  estimate, describe its uncertainty in `description` (e.g. a Dst range), and
+  list the field in `estimatedFields` so the app marks it as approximate.
+  Fields that predate their instrument (Kp/Ap 1932, Dst 1957, in-situ solar
+  wind 1962, GOES flare classes 1975) must be either `null` or estimated.
+- NOAA G/S/R scales are derived quantities: they must agree with the stored
+  peak Kp, >10 MeV proton flux, and flare class respectively.
+- Use `null` for genuinely unknown values, never a guessed placeholder; use
+  `cyclePhase: "unknown"` where no published estimate exists.
 
 ### Inclusion criteria
 

@@ -163,7 +163,11 @@ export default function NeutronMonitorChart({
     return () => window.removeEventListener("theme-change", handler);
   }, []);
 
-  drawRef.current = draw;
+  // Keep the theme-change handler pointing at the latest draw closure (updated
+  // in an effect, not during render, per react-hooks/refs).
+  useEffect(() => {
+    drawRef.current = draw;
+  });
 
   return (
     <FigureFrame filename={downloadName}>

@@ -23,7 +23,7 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   title: "HelioHistory – Space Weather Through History",
   description:
-    "An interactive timeline exploring historical space weather events, their impacts, and scientific data from 774 AD to present.",
+    "An interactive timeline exploring historical space weather events, their impacts, and scientific data from the last Ice Age to the present.",
 };
 
 export default function RootLayout({

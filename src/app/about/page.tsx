@@ -4,11 +4,50 @@ import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import CopyButton from "@/components/CopyButton";
 import { EVENTS } from "@/data/events";
+import { dateToYear, formatYear } from "@/lib/timeline-utils";
 import {
   PROJECT,
   projectCitation,
   projectBibtex,
 } from "@/lib/citation";
+
+const EARLIEST_YEAR = Math.min(...EVENTS.map((e) => dateToYear(e.startDate)));
+
+// Upstream datasets the site is built on. Attribution requirements: SILSO asks
+// for the observatory to be credited; GFZ Kp is CC BY 4.0; CDS/A&A data is free
+// for research use with citation of the paper.
+const DATA_SOURCES = [
+  {
+    name: "WDC-SILSO, Royal Observatory of Belgium",
+    what: "Monthly and yearly total sunspot numbers (v2.0) and yearly group numbers – the solar-cycle backdrop of the timeline from 1610.",
+    href: "https://www.sidc.be/SILSO/",
+  },
+  {
+    name: "Usoskin et al. (2021), A&A 649, A141",
+    what: "Annual sunspot numbers 971–1899 reconstructed from tree-ring radiocarbon (CDS J/A+A/649/A141) – the dashed ¹⁴C series before 1610.",
+    href: "https://doi.org/10.1051/0004-6361/202140711",
+  },
+  {
+    name: "WDC for Geomagnetism, Kyoto",
+    what: "Hourly Dst index series for individual storms.",
+    href: "https://wdc.kugi.kyoto-u.ac.jp/",
+  },
+  {
+    name: "GFZ German Research Centre for Geosciences",
+    what: "3-hourly Kp index (Matzka et al. 2021, doi:10.5880/Kp.0001, CC BY 4.0).",
+    href: "https://kp.gfz-potsdam.de/",
+  },
+  {
+    name: "NMDB – Neutron Monitor Database",
+    what: "Ground-level enhancement profiles from Oulu and Dome C; modelled profiles are labelled as such.",
+    href: "https://www.nmdb.eu/",
+  },
+  {
+    name: "Shea & Smart GLE list / gle.oulu.fi",
+    what: "Ground-level enhancement numbering.",
+    href: "https://gle.oulu.fi/",
+  },
+];
 
 function Section({
   title,
@@ -73,7 +112,7 @@ export default function AboutPage() {
                 <span className="font-mono text-solar">{EVENTS.length}</span>{" "}
                 events catalogued
               </span>
-              <span>774 AD – present</span>
+              <span>{formatYear(EARLIEST_YEAR)} – present</span>
               <span>JSON · CSV · JSON Schema</span>
             </div>
           </div>
@@ -113,7 +152,7 @@ export default function AboutPage() {
                   charts) is permissively licensed for any use.
                 </p>
                 <a
-                  href={`${PROJECT.url}/blob/main/LICENSE`}
+                  href={`${PROJECT.url}/blob/master/LICENSE`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-xs text-solar hover:text-solar-bright transition-colors"
@@ -187,6 +226,31 @@ export default function AboutPage() {
             </div>
           </Section>
 
+          {/* Data sources */}
+          <Section title="Data sources">
+            <p className="text-sm text-foreground/60 leading-relaxed">
+              The catalogue compiles published research (each event lists its
+              papers); the charts and timeline backdrop draw on these upstream
+              datasets, which should be credited alongside HelioHistory when
+              reused.
+            </p>
+            <ul className="space-y-2">
+              {DATA_SOURCES.map((d) => (
+                <li key={d.name} className="glass rounded-lg p-3 text-xs">
+                  <a
+                    href={d.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-medium text-foreground/85 hover:text-foreground"
+                  >
+                    {d.name}
+                  </a>
+                  <span className="text-foreground/50"> — {d.what}</span>
+                </li>
+              ))}
+            </ul>
+          </Section>
+
           {/* Contributing */}
           <Section title="Contributing">
             <p className="text-sm text-foreground/60 leading-relaxed">
@@ -197,7 +261,7 @@ export default function AboutPage() {
             </p>
             <div className="flex flex-wrap gap-2">
               <a
-                href={`${PROJECT.url}/blob/main/CONTRIBUTING.md`}
+                href={`${PROJECT.url}/blob/master/CONTRIBUTING.md`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-3 py-1.5 rounded-md text-xs font-medium border border-overlay/10 text-foreground/60 hover:text-foreground/90 hover:bg-overlay/5 transition-colors"

@@ -28,8 +28,11 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Validate event files against JSON Schema
-        run: npm run data:validate
+      - name: Validate event files (schema, integrity rules, DOI resolution)
+        run: npm run data:validate -- --check-dois
+
+      - name: Lint
+        run: npm run lint
 
       - name: Build compiled dataset
         run: npm run data:build

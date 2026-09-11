@@ -1,7 +1,7 @@
 # HelioHistory
 
-**A living, open database of space weather history**, from the 774 AD Miyake
-event to modern superstorms, with an interactive timeline, cross-event
+**A living, open database of space weather history**, from the extreme solar
+particle events of the last Ice Age and the AD 774 Miyake event to modern superstorms, with an interactive timeline, cross-event
 analytics, and downloadable, machine-readable data.
 
 > Status: early development. The catalogue currently holds 45 curated events

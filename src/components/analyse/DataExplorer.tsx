@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useRef, useState } from "react";
+import { useMemo, useState } from "react";
 import type { SpaceWeatherEvent } from "@/lib/types";
 import { PHENOMENON_CONFIG } from "@/lib/types";
 import CopyButton from "@/components/CopyButton";
@@ -62,7 +62,7 @@ const SINGLE: FieldDef[] = [
     label: "Solar-cycle phase",
     kind: "single",
     cat: (e) => e.cyclePhase ?? null,
-    order: ["ascending", "maximum", "descending", "minimum"],
+    order: ["ascending", "maximum", "descending", "minimum", "unknown"],
   },
   {
     key: "gScale",
@@ -249,11 +249,12 @@ const PRESETS: Preset[] = [
 
 // ── Component ───────────────────────────────────────────────────────────────
 
-export default function DataExplorer({ events }: { events: SpaceWeatherEvent[] }) {
-  const nextId = useRef(1);
-  const mkFilter = (f: Omit<Filter, "id">): Filter => ({ ...f, id: nextId.current++ });
+// Monotonic id source for filter rows (module-level so it needs no ref access during render).
+let filterSeq = 1;
+const mkFilter = (f: Omit<Filter, "id">): Filter => ({ ...f, id: filterSeq++ });
 
-  const [filters, setFilters] = useState<Filter[]>([mkFilter(PRESETS[0].filters[0])]);
+export default function DataExplorer({ events }: { events: SpaceWeatherEvent[] }) {
+  const [filters, setFilters] = useState<Filter[]>(() => [mkFilter(PRESETS[0].filters[0])]);
   const [groupBy, setGroupBy] = useState<string>("cyclePhase");
   const [metric, setMetric] = useState<Metric>("share");
   const [valueKey, setValueKey] = useState<string>("peakDst");
