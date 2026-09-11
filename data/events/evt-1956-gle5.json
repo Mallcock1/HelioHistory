@@ -31,16 +31,16 @@
   ],
   "noaaGScale": 4,
   "noaaSScale": 5,
-  "noaaRScale": 3,
+  "noaaRScale": null,
   "peakDst": -130,
   "peakKp": 8,
   "peakAp": 154,
   "peakAE": null,
-  "flareClass": "X20",
+  "flareClass": null,
   "cmeSpeedKmS": null,
   "solarWindSpeedPeak": null,
   "bzMin": null,
-  "protonFluxPeak": 100000,
+  "protonFluxPeak": null,
   "solarCycleNumber": 19,
   "cyclePhase": "ascending",
   "sourceActiveRegion": null,
@@ -80,14 +80,18 @@
       "keyFinding": "Measured a 4554% increase in cosmic ray intensity at the Leeds monitor, establishing GLE #5 as the largest solar particle event on record, and derived the interplanetary propagation of the particles."
     },
     {
-      "doi": "10.1029/2011SW000743",
-      "title": "The historical progression of SEP and GLE research",
-      "authors": "Shea, M. A., Smart, D. F.",
-      "year": 2012,
-      "journal": "Space Science Reviews",
-      "keyFinding": "Placed GLE #5 in historical context, confirming it as the most intense GLE by ground-level count rate increase of any event in the 70+ year catalog."
+      "doi": "10.1016/j.asr.2018.11.005",
+      "title": "Flight safety implications of the extreme solar proton event of 23 February 1956",
+      "authors": "Copeland, K., Atwell, W.",
+      "year": 2019,
+      "journal": "Advances in Space Research",
+      "keyFinding": "Assessed the aviation radiation dose implications of the February 1956 event as an upper benchmark for flight safety."
     }
   ],
-  "summary": "The February 23, 1956 solar particle event produced the largest ground-level enhancement ever recorded – a 4554% increase at the Leeds neutron monitor – driven by solar protons accelerated to energies exceeding 10 GeV, far beyond any other event in the modern catalog.",
-  "description": "At approximately 0330 UT on February 23, 1956, neutron monitors at stations across the globe registered a sudden, dramatic surge in secondary cosmic ray intensity. The Leeds monitor in England recorded a peak increase of 4554% above background – by far the largest in the GLE catalog of 73 events spanning seven decades. The particle energies extended to at least 10–20 GeV, allowing the protons to deeply penetrate Earth's magnetic field and atmosphere even at mid-latitudes. The associated X-class white-light flare is believed to have accelerated particles in an extremely efficient shock or flare process. The geomagnetic storm was relatively moderate (Dst ~−130 nT), suggesting the particle acceleration and the bulk CME properties were somewhat decoupled. This event remains the benchmark for extreme SEP scenarios in spacecraft shielding design, polar aviation radiation dose assessment, and nuclear facility event planning."
+  "summary": "The February 23, 1956 solar particle event produced the largest ground-level enhancement ever recorded – a 4554% increase at the Leeds neutron monitor – driven by solar protons accelerated to energies exceeding 10 GeV, far beyond any other event in the modern catalogue.",
+  "description": "At approximately 0330 UT on February 23, 1956, neutron monitors at stations across the globe registered a sudden, dramatic surge in secondary cosmic ray intensity. The Leeds monitor in England recorded a peak increase of 4554% above background – by far the largest in the GLE catalogue of 73 events spanning seven decades. The particle energies extended to at least 10–20 GeV, allowing the protons to deeply penetrate Earth's magnetic field and atmosphere even at mid-latitudes. The associated X-class white-light flare is believed to have accelerated particles in an extremely efficient shock or flare process. The geomagnetic storm was relatively moderate (Dst ~−130 nT), suggesting the particle acceleration and the bulk CME properties were somewhat decoupled. This event remains the benchmark for extreme SEP scenarios in spacecraft shielding design, polar aviation radiation dose assessment, and nuclear facility event planning.",
+  "estimatedFields": [
+    "noaaSScale",
+    "peakDst"
+  ]
 }

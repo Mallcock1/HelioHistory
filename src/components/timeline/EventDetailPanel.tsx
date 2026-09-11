@@ -3,7 +3,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import type { SpaceWeatherEvent } from "@/lib/types";
 import { PHENOMENON_CONFIG, G_SCALE_LABELS } from "@/lib/types";
-import { formatEventDate } from "@/lib/timeline-utils";
+import { formatEventDate, isEstimated, ESTIMATED_HINT } from "@/lib/timeline-utils";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -24,18 +24,26 @@ function IndexCard({
   label,
   value,
   unit,
+  estimated,
 }: {
   label: string;
   value: string | number | null;
   unit?: string;
+  estimated?: boolean;
 }) {
   if (value === null || value === undefined) return null;
   return (
     <div className="glass rounded-lg p-3 flex flex-col gap-1">
       <span className="text-[11px] uppercase tracking-wider text-foreground/40">
         {label}
+        {estimated && (
+          <span className="ml-1 normal-case tracking-normal text-foreground/30" title={ESTIMATED_HINT}>
+            est.
+          </span>
+        )}
       </span>
       <span className="text-lg font-mono font-semibold text-foreground">
+        {estimated && <span className="text-foreground/40 mr-0.5" title={ESTIMATED_HINT}>≈</span>}
         {value}
         {unit && (
           <span className="text-xs text-foreground/50 ml-1">{unit}</span>
@@ -158,17 +166,18 @@ export default function EventDetailPanel({
                 <div className="flex gap-2 flex-wrap">
                   {event.noaaGScale && (
                     <Badge className="bg-geomag/20 text-geomag border-geomag/30 text-xs">
+                      {isEstimated(event, "noaaGScale") && "≈"}
                       {G_SCALE_LABELS[event.noaaGScale]}
                     </Badge>
                   )}
                   {event.noaaSScale && (
                     <Badge className="bg-sep/20 text-sep border-sep/30 text-xs">
-                      S{event.noaaSScale}
+                      {isEstimated(event, "noaaSScale") && "≈"}S{event.noaaSScale}
                     </Badge>
                   )}
                   {event.noaaRScale && (
                     <Badge className="bg-radio-blackout/20 text-radio-blackout border-radio-blackout/30 text-xs">
-                      R{event.noaaRScale}
+                      {isEstimated(event, "noaaRScale") && "≈"}R{event.noaaRScale}
                     </Badge>
                   )}
                 </div>
@@ -215,21 +224,23 @@ export default function EventDetailPanel({
                   Key Indices
                 </h3>
                 <div className="grid grid-cols-2 gap-2">
-                  <IndexCard label="Peak Dst" value={event.peakDst} unit="nT" />
-                  <IndexCard label="Peak Kp" value={event.peakKp} />
-                  <IndexCard label="Peak Ap" value={event.peakAp} />
-                  <IndexCard label="Flare Class" value={event.flareClass} />
+                  <IndexCard label="Peak Dst" value={event.peakDst} unit="nT" estimated={isEstimated(event, "peakDst")} />
+                  <IndexCard label="Peak Kp" value={event.peakKp} estimated={isEstimated(event, "peakKp")} />
+                  <IndexCard label="Peak Ap" value={event.peakAp} estimated={isEstimated(event, "peakAp")} />
+                  <IndexCard label="Flare Class" value={event.flareClass} estimated={isEstimated(event, "flareClass")} />
                   <IndexCard
                     label="CME Speed"
                     value={event.cmeSpeedKmS}
                     unit="km/s"
+                    estimated={isEstimated(event, "cmeSpeedKmS")}
                   />
                   <IndexCard
                     label="Solar Wind"
                     value={event.solarWindSpeedPeak}
                     unit="km/s"
+                    estimated={isEstimated(event, "solarWindSpeedPeak")}
                   />
-                  <IndexCard label="Bz Min" value={event.bzMin} unit="nT" />
+                  <IndexCard label="Bz Min" value={event.bzMin} unit="nT" estimated={isEstimated(event, "bzMin")} />
                   <IndexCard
                     label="Proton Flux"
                     value={
@@ -238,8 +249,14 @@ export default function EventDetailPanel({
                         : null
                     }
                     unit="pfu"
+                    estimated={isEstimated(event, "protonFluxPeak")}
                   />
                 </div>
+                {event.estimatedFields && event.estimatedFields.length > 0 && (
+                  <p className="mt-2 text-[11px] text-foreground/35">
+                    ≈ marks values reconstructed from historical records or published estimates rather than instrumental measurements.
+                  </p>
+                )}
               </div>
 
               <Separator className="bg-overlay/10" />
@@ -342,6 +359,11 @@ export default function EventDetailPanel({
                           {ts.neutronMonitor && (
                             <div className="glass rounded-lg p-3 overflow-x-auto">
                               <NeutronMonitorChart data={ts.neutronMonitor} width={400} height={170} domain={sharedDomain} downloadName={`${event.id}-neutron-monitor`} />
+                              {ts.neutronMonitorModelled && (
+                                <p className="mt-1 text-[11px] text-foreground/40">
+                                  Modelled profile: a parametric curve fitted to the published peak enhancement, not archived neutron-monitor data.
+                                </p>
+                              )}
                             </div>
                           )}
                         </div>
@@ -402,6 +424,16 @@ export default function EventDetailPanel({
                               className="text-xs text-solar hover:text-solar-bright transition-colors"
                             >
                               {paper.doi}
+                            </a>
+                          )}
+                          {!paper.doi && paper.url && (
+                            <a
+                              href={paper.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-xs text-solar hover:text-solar-bright transition-colors break-all"
+                            >
+                              {paper.url.replace(/^https?:\/\//, "")}
                             </a>
                           )}
                           {paper.keyFinding && (

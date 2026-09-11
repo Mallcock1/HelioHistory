@@ -63,12 +63,12 @@
   "images": [],
   "papers": [
     {
-      "doi": "10.1029/JZ066i010p03311",
-      "title": "The great geomagnetic storm of September 13, 1957",
-      "authors": "Akasofu, S.-I., Chapman, S.",
+      "doi": "10.1029/jz066i005p01321",
+      "title": "The ring current, geomagnetic disturbance, and the Van Allen radiation belts",
+      "authors": "Akasofu, S., Chapman, S.",
       "year": 1961,
       "journal": "Journal of Geophysical Research",
-      "keyFinding": "Provided detailed analysis of the September 1957 storm as one of the premier events studied during the International Geophysical Year, establishing key morphological patterns of extreme storms."
+      "keyFinding": "Foundational analysis of ring-current development during the great IGY-era storms, including September 1957, establishing the modern picture of storm main-phase morphology."
     }
   ],
   "summary": "The September 1957 great storm (Dst ~ −427 nT) was one of the first major events of the space age, occurring during the International Geophysical Year and the maximum of Solar Cycle 19 – the strongest solar cycle on record – providing unprecedented scientific documentation of an extreme geomagnetic storm.",

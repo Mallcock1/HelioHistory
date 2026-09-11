@@ -8,9 +8,9 @@
     "1967 Near Nuclear Incident"
   ],
   "startDate": "1967-05-23",
-  "peakDate": "1967-05-23",
-  "endDate": "1967-05-25",
-  "durationHours": 48,
+  "peakDate": "1967-05-26",
+  "endDate": "1967-05-27",
+  "durationHours": 96,
   "phenomena": [
     {
       "type": "solar_flare",
@@ -34,12 +34,12 @@
   ],
   "noaaGScale": 5,
   "noaaSScale": 3,
-  "noaaRScale": 4,
+  "noaaRScale": null,
   "peakDst": -387,
   "peakKp": 9,
   "peakAp": 236,
   "peakAE": null,
-  "flareClass": "X",
+  "flareClass": null,
   "cmeSpeedKmS": null,
   "solarWindSpeedPeak": null,
   "bzMin": null,
@@ -75,7 +75,7 @@
   "images": [],
   "papers": [
     {
-      "doi": "10.1029/2016SW001423",
+      "doi": "10.1002/2016sw001423",
       "title": "The May 1967 great storm and radio disruption event: Extreme space weather and extraordinary responses",
       "authors": "Knipp, D. J., Ramsay, A. C., Beard, E. D., et al.",
       "year": 2016,

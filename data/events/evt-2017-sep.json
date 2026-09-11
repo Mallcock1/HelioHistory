@@ -64,7 +64,7 @@
     {
       "sector": "navigation",
       "location": "Puerto Rico, Caribbean, Florida",
-      "description": "GPS and GNSS positioning errors of 10–50 m reported during peak radio blackout phases; critically impaired relief coordination during concurrent Hurricane Irma response operations – a compound disaster scenario.",
+      "description": "GNSS positioning was disturbed during the flare and storm phases, adding to the difficulties of concurrent Hurricane Irma response operations – a compound disaster scenario.",
       "severity": "severe",
       "durationHours": 24
     },
@@ -94,22 +94,22 @@
   "images": [],
   "papers": [
     {
-      "doi": "10.1029/2018SW001927",
-      "title": "September 2017's geoeffective space weather and impacts to Caribbean and US communication systems",
-      "authors": "Redmon, R. J., Seaton, D. B., Steenburgh, R., He, J., Rodriguez, J. V.",
+      "doi": "10.1029/2018sw001897",
+      "title": "September 2017's Geoeffective Space Weather and Impacts to Caribbean Radio Communications During Hurricane Response",
+      "authors": "Redmon, R. J., Seaton, D. B., Steenburgh, R., et al.",
       "year": 2018,
       "journal": "Space Weather",
       "keyFinding": "Documented how the September 2017 space weather events compounded the humanitarian impacts of Hurricane Irma by degrading GPS accuracy and HF radio communications during active relief operations in the Caribbean."
     },
     {
-      "doi": "10.1029/2018SW001932",
-      "title": "Ionospheric radio occultation measurements during the September 2017 solar events",
+      "doi": "10.1029/2018sw001932",
+      "title": "The 6 September 2017 X‐Class Solar Flares and Their Impacts on the Ionosphere, GNSS, and HF Radio Wave Propagation",
       "authors": "Yasyukevich, Y., Astafyeva, E., Padokhin, A., et al.",
       "year": 2018,
       "journal": "Space Weather",
-      "keyFinding": "Measured strong ionospheric disturbances and GPS signal delays attributable to the September 2017 flares using radio occultation data from LEO satellite constellations."
+      "keyFinding": "Quantified the ionospheric, GNSS and HF-propagation impacts of the 6 September 2017 X-class flares."
     }
   ],
-  "summary": "The September 2017 storm sequence – featuring the X9.3 flare (largest of Solar Cycle 24), GLE #72, and a G4 geomagnetic storm – critically disrupted GPS and HF communications during concurrent Hurricane Irma emergency response operations in the Caribbean, illustrating the compound risk of space and terrestrial weather disasters.",
-  "description": "Active region AR 12673 was the most productive flare-producing region of the weak Solar Cycle 24, generating an X2.2 and then an X9.3 flare (the cycle's largest) on September 6, 2017, followed by an X8.2 on September 10. The CME from the X9.3 event arrived September 7–8 and drove a G4 storm (Dst −142 nT, Kp 8). A major SEP event and GLE #72 – the first GLE of Cycle 24 – accompanied the September 10 X8.2. GPS positioning errors of 10–50 m were documented across the Caribbean and Florida during the peak radio blackout phases, critically affecting relief coordination for Hurricane Irma, which was simultaneously making landfall. This compound disaster scenario – extreme space weather superimposed on a major tropical cyclone emergency – illustrated a major gap in infrastructure resilience planning. HF emergency communications, relied upon as a backup when terrestrial networks fail during hurricanes, were themselves disrupted by the solar radio blackouts."
+  "summary": "The September 2017 storm sequence – featuring the X9.3 flare (largest of Solar Cycle 24), GLE #72, and a G4 geomagnetic storm – disrupted HF radio communications used in Hurricane Irma emergency response in the Caribbean, illustrating the compound risk of space and terrestrial weather disasters.",
+  "description": "Active region AR 12673 was the most productive flare-producing region of the weak Solar Cycle 24, generating an X2.2 and then an X9.3 flare (the cycle's largest) on September 6, 2017, followed by an X8.2 on September 10. The CME from the X9.3 event arrived September 7–8 and drove a G4 storm (Dst −142 nT, Kp 8). A major SEP event and GLE #72 – only the second GLE of the weak Cycle 24, after GLE #71 in May 2012 – accompanied the September 10 X8.2. The flares' radio blackouts degraded HF communications in the Caribbean while Hurricane Irma was making landfall, and GNSS positioning was disturbed during the flare and storm phases. This compound disaster scenario – extreme space weather superimposed on a major tropical cyclone emergency – illustrated a major gap in infrastructure resilience planning. HF emergency communications, relied upon as a backup when terrestrial networks fail during hurricanes, were themselves disrupted by the solar radio blackouts."
 }

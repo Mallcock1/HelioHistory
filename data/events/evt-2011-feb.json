@@ -72,9 +72,9 @@
       "authors": "Schrijver, C. J., Title, A. M., Yeates, A. R., et al.",
       "year": 2011,
       "journal": "The Astrophysical Journal",
-      "keyFinding": "Analyzed the first X-class flare of SC24 using SDO/AIA data, demonstrating the capabilities of the new Solar Dynamics Observatory for studying major solar eruptions."
+      "keyFinding": "Analysed the first X-class flare of SC24 using SDO/AIA data, demonstrating the capabilities of the new Solar Dynamics Observatory for studying major solar eruptions."
     }
   ],
-  "summary": "The X2.2 flare on February 15, 2011 from AR 11158 was the first X-class flare of Solar Cycle 24, signaling the Sun's awakening from an unusually prolonged solar minimum and providing one of the first major events for the recently launched Solar Dynamics Observatory.",
+  "summary": "The X2.2 flare on February 15, 2011 from AR 11158 was the first X-class flare of Solar Cycle 24, signalling the Sun's awakening from an unusually prolonged solar minimum and providing one of the first major events for the recently launched Solar Dynamics Observatory.",
   "description": "On February 15, 2011, AR 11158 produced an X2.2 flare – the first X-class flare of Solar Cycle 24, which had begun after an unusually extended and deep solar minimum. The event marked a milestone in solar activity and was one of the first major eruptions observed by NASA's Solar Dynamics Observatory (SDO), launched in February 2010. SDO's unprecedented high-cadence, multi-wavelength imaging provided extraordinary detail of the flare dynamics, including the associated sunquake and CME initiation. While the geomagnetic impact was relatively modest (Dst ~ −55 nT), the event's significance lay in confirming that Solar Cycle 24 was indeed producing major activity and in demonstrating SDO's transformative observing capabilities."
 }

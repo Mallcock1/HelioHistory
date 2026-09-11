@@ -9,8 +9,8 @@
   ],
   "startDate": "2024-03-23",
   "peakDate": "2024-03-24",
-  "endDate": "2024-04-02",
-  "durationHours": 240,
+  "endDate": "2024-03-25",
+  "durationHours": 48,
   "phenomena": [
     {
       "type": "solar_flare",
@@ -76,13 +76,14 @@
   "images": [],
   "papers": [
     {
-      "title": "Solar cycle 25 progress and the March 2024 solar activity period",
+      "url": "https://www.spaceweather.gov/news/severe-g4-geomagnetic-storms-observed-24-march-2024",
+      "title": "Severe (G4) Geomagnetic Storms Observed - 24 March 2024",
       "authors": "NOAA Space Weather Prediction Center",
       "year": 2024,
-      "journal": "NOAA SWPC Technical Report",
-      "keyFinding": "Documented the March 2024 flare series as part of the rapidly intensifying Solar Cycle 25 activity, which was tracking well above cycle 25 predictions and setting the stage for the extreme May 2024 event."
+      "journal": "NOAA SWPC news release",
+      "keyFinding": "Operational report that the CME launched on 23 March reached Earth at about 14:11 UTC on 24 March and drove severe (G4) geomagnetic storming expected to persist into 25 March."
     }
   ],
   "summary": "Late-March 2024 activity from AR 13615 produced X-class flares and a severe (G4) geomagnetic storm on March 24 (Kp 8, Dst ~ −130 nT) – the strongest storm of Solar Cycle 25 up to that point and a precursor to the extreme May 2024 Gannon Superstorm six weeks later.",
-  "description": "In late March 2024, active region AR 13615 produced a series of M- and X-class flares as Solar Cycle 25 continued its unexpectedly vigorous rise, tracking well above the original 2019 prediction consensus. An X1.1 flare on March 23 (01:33 UT) launched a coronal mass ejection that, together with additional CMEs, drove a severe (G4) geomagnetic storm on March 24–25 – the NOAA SWPC observed G4 conditions with Kp reaching 8 and Dst approximately −130 nT, the strongest storm of the cycle to that date. HF radio communications experienced R3-class disruption during the flares, and aurora was visible across the northern United States and Canada. The same region produced further X-class flaring (including an X1.1 on March 28) before rotating off the disk. The episode is now remembered mainly as a harbinger of the extreme May 2024 Gannon Superstorm, which followed six weeks later from an even more productive active region."
+  "description": "In late March 2024, active region AR 13615 produced a series of M- and X-class flares as Solar Cycle 25 continued its unexpectedly vigorous rise, tracking well above the original 2019 prediction consensus. An X1.1 flare on March 23 (01:33 UT) launched a coronal mass ejection that, together with additional CMEs, drove a severe (G4) geomagnetic storm on March 24–25 – the NOAA SWPC observed G4 conditions with Kp reaching 8 and Dst approximately −130 nT, the strongest storm of the cycle to that date. HF radio communications experienced R3-class disruption during the flares, and aurora was visible across the northern United States and Canada. The same region produced further X-class flaring (including an X1.1 on March 28, after the storm window catalogued here) before rotating off the disk. The episode is now remembered mainly as a harbinger of the extreme May 2024 Gannon Superstorm, which followed six weeks later from an even more productive active region."
 }

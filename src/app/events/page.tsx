@@ -3,9 +3,9 @@
 import { useState, useMemo } from "react";
 import { EVENTS } from "@/data/events";
 import NavBar from "@/components/NavBar";
-import { PHENOMENON_CONFIG, G_SCALE_LABELS } from "@/lib/types";
+import { PHENOMENON_CONFIG } from "@/lib/types";
 import type { SpaceWeatherEvent, PhenomenonType } from "@/lib/types";
-import { formatEventDate, getEventSeverity, getEventColor, dateToYear } from "@/lib/timeline-utils";
+import { formatEventDate, getEventSeverity, dateToYear, isEstimated, ESTIMATED_HINT } from "@/lib/timeline-utils";
 import { Badge } from "@/components/ui/badge";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import EventDetailPanel from "@/components/timeline/EventDetailPanel";
@@ -272,13 +272,14 @@ export default function EventsPage() {
                       </td>
                       <td className="px-4 py-3">
                         <div className="flex gap-1 flex-wrap">
-                          {event.phenomena.slice(0, 3).map((p, i) => (
+                          {/* One chip per phenomenon type (an event may list several flares). */}
+                          {Array.from(new Set(event.phenomena.map((p) => p.type))).slice(0, 3).map((type) => (
                             <span
-                              key={i}
+                              key={type}
                               className="text-[11px] px-1.5 py-0.5 rounded border border-overlay/10"
-                              style={{ color: PHENOMENON_CONFIG[p.type].color }}
+                              style={{ color: PHENOMENON_CONFIG[type].color }}
                             >
-                              {PHENOMENON_CONFIG[p.type].shortLabel}
+                              {PHENOMENON_CONFIG[type].shortLabel}
                             </span>
                           ))}
                         </div>
@@ -314,6 +315,7 @@ export default function EventsPage() {
                                   : "text-foreground/60"
                             }
                           >
+                            {isEstimated(event, "peakDst") && <span title={ESTIMATED_HINT}>≈</span>}
                             {event.peakDst}
                           </span>
                         ) : (
@@ -331,6 +333,7 @@ export default function EventsPage() {
                                   : "text-foreground/60"
                             }
                           >
+                            {isEstimated(event, "peakKp") && <span title={ESTIMATED_HINT}>≈</span>}
                             {event.peakKp}
                           </span>
                         ) : (
@@ -338,7 +341,12 @@ export default function EventsPage() {
                         )}
                       </td>
                       <td className="px-4 py-3 text-center font-mono text-xs text-solar">
-                        {event.flareClass || (
+                        {event.flareClass ? (
+                          <>
+                            {isEstimated(event, "flareClass") && <span title={ESTIMATED_HINT}>≈</span>}
+                            {event.flareClass}
+                          </>
+                        ) : (
                           <span className="text-foreground/20">–</span>
                         )}
                       </td>

@@ -65,20 +65,20 @@
   "images": [],
   "papers": [
     {
-      "doi": "10.1029/2004JA010552",
-      "title": "The radio burst of November 4, 2003 and its implications for solar physics and space weather",
+      "doi": "10.1029/2003gl019345",
+      "title": "Ionosphere gives size of greatest solar flare",
       "authors": "Thomson, N. R., Rodger, C. J., Dowden, R. L.",
       "year": 2004,
       "journal": "Geophysical Research Letters",
-      "keyFinding": "Used subionospheric VLF radio wave absorption to reconstruct the true peak soft X-ray flux at approximately X28, despite sensor saturation in GOES."
+      "keyFinding": "Used ionospheric VLF phase measurements to estimate the saturated 4 November 2003 flare at about X45, the largest in the GOES era."
     },
     {
-      "doi": "10.1029/2005GL023779",
-      "title": "Anisotropic diffusion model of cosmic ray transport applied to the November 4, 2003 event",
+      "doi": "10.1029/2004ja010960",
+      "title": "X‐ray magnitude of the 4 November 2003 solar flare inferred from the ionospheric attenuation of the galactic radio background",
       "authors": "Brodrick, D., Tingay, S., Wieringa, M.",
       "year": 2005,
-      "journal": "Geophysical Research Letters",
-      "keyFinding": "Estimated the peak flare intensity at X34 ± 6 using radio array ionospheric response measurements, consistent with other reconstructions in the X28–X45 range."
+      "journal": "Journal of Geophysical Research: Space Physics",
+      "keyFinding": "Inferred the flare's X-ray magnitude (roughly X34–X48) from ionospheric attenuation of the galactic radio background."
     }
   ],
   "summary": "The November 4, 2003 X28+ flare – with its GOES sensors saturated at X17.4 and true intensity reconstructed at X28–X45 – produced the most extreme radio blackout in the modern GOES record, blacking out HF communications across the entire sunlit hemisphere for over 30 minutes.",

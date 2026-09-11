@@ -23,7 +23,7 @@
   ],
   "noaaGScale": 5,
   "noaaSScale": null,
-  "noaaRScale": 4,
+  "noaaRScale": null,
   "peakDst": -373,
   "peakKp": 9,
   "peakAp": null,
@@ -62,14 +62,25 @@
   "images": [],
   "papers": [
     {
-      "doi": "10.1029/2020SW002601",
-      "title": "The extreme space weather events in September 1941",
-      "authors": "Hayakawa, H., Ebihara, Y., et al.",
-      "year": 2021,
-      "journal": "Space Weather",
-      "keyFinding": "Documented the September 1941 storm series during WWII, including military impacts and estimated Dst ~ −373 nT."
+      "doi": "10.1126/science.94.2444.413",
+      "title": "Auroral Display and Geomagnetic Storm of September 18-19, 1941",
+      "authors": "McNish, A. G.",
+      "year": 1941,
+      "journal": "Science",
+      "keyFinding": "Contemporary scientific report of the auroral display and geomagnetic storm of 18–19 September 1941."
+    },
+    {
+      "doi": "10.1029/2016eo059319",
+      "title": "The Geomagnetic Blitz of September 1941",
+      "authors": "Love, J., Coïsson, P.",
+      "year": 2016,
+      "journal": "Eos",
+      "keyFinding": "Retrospective of the September 1941 storm in its wartime context, including radio disruption and low-latitude aurora, and its magnetic intensity."
     }
   ],
   "summary": "The September 1941 geomagnetic storms occurred during World War II, causing severe radio disruptions that confused Allied military communications – some commanders initially suspected enemy jamming – while producing aurora visible at low latitudes.",
-  "description": "In September 1941, during the descending phase of Solar Cycle 17, a series of geomagnetic storms struck Earth at a critical period of World War II. The strongest storm on September 18–19 reached an estimated Dst of approximately −373 nT. The severe HF radio blackouts disrupted military communications on multiple fronts; some Allied commanders reportedly suspected enemy jamming before the solar origin was recognized. The wartime blackout conditions in Europe ironically provided excellent viewing conditions for the resulting aurora. The event highlights the military significance of space weather, a concern that would become more prominent during the Cold War era."
+  "description": "In September 1941, during the descending phase of Solar Cycle 17, a series of geomagnetic storms struck Earth at a critical period of World War II. The strongest storm on September 18–19 reached an estimated Dst of approximately −373 nT. The severe HF radio blackouts disrupted military communications on multiple fronts; some Allied commanders reportedly suspected enemy jamming before the solar origin was recognised. The wartime blackout conditions in Europe ironically provided excellent viewing conditions for the resulting aurora. The event highlights the military significance of space weather, a concern that would become more prominent during the Cold War era.",
+  "estimatedFields": [
+    "peakDst"
+  ]
 }

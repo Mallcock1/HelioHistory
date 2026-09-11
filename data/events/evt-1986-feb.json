@@ -37,7 +37,7 @@
     {
       "sector": "communications",
       "location": "High latitudes",
-      "description": "HF radio disruptions on polar routes; unexpected given the solar minimum conditions.",
+      "description": "HF radio disruptions on polar routes; unexpected given the solar-minimum conditions.",
       "severity": "moderate"
     },
     {
@@ -52,14 +52,14 @@
   "images": [],
   "papers": [
     {
-      "doi": "10.1029/JA093iA12p14343",
-      "title": "The February 1986 magnetic storm",
-      "authors": "Cliver, E. W., Crooker, N. U.",
+      "doi": "10.1029/ja093ia12p14343",
+      "title": "Ring current development during the great geomagnetic storm of February 1986",
+      "authors": "Hamilton, D. C., Gloeckler, G., Ipavich, F. M., et al.",
       "year": 1988,
-      "journal": "Journal of Geophysical Research",
-      "keyFinding": "Analyzed the February 1986 storm as a notable example of an intense geomagnetic storm occurring during solar minimum, driven by a coronal hole high-speed stream interaction region."
+      "journal": "Journal of Geophysical Research: Space Physics",
+      "keyFinding": "Analysed the February 1986 storm as a notable example of an intense geomagnetic storm occurring during solar minimum, driven by a coronal hole high-speed stream interaction region."
     }
   ],
-  "summary": "The February 1986 storm (Dst ~ −312 nT) is notable for occurring during solar minimum, demonstrating that significant geomagnetic storms can arise even during periods of low solar activity, likely driven by coronal hole high-speed stream interactions.",
-  "description": "On February 6–8, 1986, an intense geomagnetic storm drove the Dst index to approximately −312 nT during the solar minimum between Solar Cycles 21 and 22, when the daily sunspot number was only ~13. This event demonstrated that significant geomagnetic storms are not confined to solar maximum; the storm was likely driven by a coronal hole high-speed stream and its associated co-rotating interaction region, which can produce sustained southward Bz conditions even during solar minimum. The event surprised forecasters and became an important case study in space weather prediction, illustrating that infrastructure must be prepared for severe storms at any phase of the solar cycle."
+  "summary": "The February 1986 storm (Dst ~ −312 nT) struck during the deep minimum between Solar Cycles 21 and 22, driven by a coronal mass ejection from a single large active region that erupted repeatedly in early February – a reminder that intense storms can come from isolated regions even when overall activity is low.",
+  "description": "On February 6–8, 1986, an intense geomagnetic storm drove the Dst index to approximately −312 nT during the solar minimum between Solar Cycles 21 and 22. The driver was not a coronal-hole stream but a fast coronal mass ejection: a single large active region produced a series of major flares between February 4 and 7, and the resulting ejecta reached Earth on February 8 with a sustained southward magnetic field. Hamilton et al. (1988) used the storm to study ring-current development, finding an unusually large contribution from ionospheric oxygen ions at storm peak. The event surprised forecasters and remains an important case study: it showed that infrastructure must be prepared for severe storms at any phase of the solar cycle, since one energetic active region is sufficient."
 }

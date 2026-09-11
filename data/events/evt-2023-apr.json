@@ -62,12 +62,20 @@
   "images": [],
   "papers": [
     {
-      "doi": "10.1029/2023SW003816",
-      "title": "The April 2023 G4 geomagnetic storm: An early marker of Solar Cycle 25 vigor",
-      "authors": "Piersanti, M., et al.",
+      "doi": "10.1029/2023sw003847",
+      "title": "GOLD Observations of Equatorial Plasma Bubbles Reaching Mid‐Latitudes During the 23 April 2023 Geomagnetic Storm",
+      "authors": "Karan, D. K., Martinis, C. R., Eastes, R. W., et al.",
       "year": 2024,
       "journal": "Space Weather",
-      "keyFinding": "Characterized the April 2023 storm as the strongest of SC25's ascending phase, reinforcing evidence that SC25 was tracking well above initial weak-cycle predictions."
+      "keyFinding": "GOLD observations of equatorial plasma bubbles reaching mid-latitudes during the 23 April 2023 storm."
+    },
+    {
+      "doi": "10.1029/2024sw004253",
+      "title": "Observations and Modeling Investigations of Ionospheric Response to 23–24 April 2023, G4‐Class Geomagnetic Storm Over Indian Sector",
+      "authors": "Barad, R. K., Sripathi, S., Singh, R., et al.",
+      "year": 2025,
+      "journal": "Space Weather",
+      "keyFinding": "Observations and modelling of the ionospheric response to the 23–24 April 2023 G4 storm."
     }
   ],
   "summary": "The April 2023 geomagnetic storm (Dst ~ −212 nT) was the strongest event of Solar Cycle 25 prior to the May 2024 Gannon superstorm, producing aurora at mid-latitudes and providing further evidence that SC25 was significantly exceeding initial weak-cycle forecasts.",

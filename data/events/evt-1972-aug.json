@@ -44,7 +44,7 @@
   "cmeSpeedKmS": 2850,
   "solarWindSpeedPeak": 1600,
   "bzMin": -45,
-  "protonFluxPeak": 150000,
+  "protonFluxPeak": 86000,
   "solarCycleNumber": 20,
   "cyclePhase": "descending",
   "sourceActiveRegion": "McMath 11976",
@@ -81,14 +81,19 @@
   "images": [],
   "papers": [
     {
-      "doi": "10.1029/2018SW001900",
-      "title": "Anatomy of a Solar Particle Storm",
-      "authors": "Knipp, D. J., Tobiska, W. K., Emery, B. A.",
+      "doi": "10.1029/2018sw002024",
+      "title": "On the Little‐Known Consequences of the 4 August 1972 Ultra‐Fast Coronal Mass Ejecta: Facts, Commentary, and Call to Action",
+      "authors": "Knipp, D. J., Fraser, B. J., Shea, M. A., et al.",
       "year": 2018,
       "journal": "Space Weather",
-      "keyFinding": "Confirmed that the August 1972 SEP event would have delivered a lethal radiation dose to Apollo astronauts in transit and documented the spontaneous detonation of sea mines in Vietnam as a direct consequence of the geomagnetic field fluctuations."
+      "keyFinding": "Documented the ~14.6-hour Sun-to-Earth transit of the 4 August 1972 CME, the associated proton event, and the detonation of US Navy sea mines off Vietnam."
     }
   ],
   "summary": "Falling between the Apollo 16 and 17 missions in a stroke of luck, the August 1972 solar storm produced the fastest CME transit of the 20th century (~14.6 hours) and an SEP event that would have been lethal to astronauts in transit to the Moon, while also detonating thousands of US Navy sea mines in Vietnamese waters.",
-  "description": "The August 1972 event complex began with a series of large solar flares starting August 2, culminating in an extreme X-class event on August 4. The associated CME had the fastest transit time of the 20th century – arriving at Earth just ~14.6 hours after the flare, implying a CME speed of approximately 2850 km/s. The proton flux at energies >10 MeV reached an estimated 1.5×10⁵ particles flux units (pfu) – sufficient to deliver a lethal or severely incapacitating radiation dose (~4+ Sv) to astronauts in the lunar transit trajectory within hours. NASA's post-event analysis determined that crew survival would have been in serious jeopardy. Separately, the fluctuating magnetic field in the Gulf of Tonkin triggered the magnetic-influence fuzes of approximately 4,000 US sea mines, detonating them prematurely. The geomagnetic storm itself (Dst −125 nT) was moderate compared to the particle event severity, highlighting that Dst alone is not a reliable proxy for radiation storm intensity."
+  "description": "The August 1972 event complex began with a series of large solar flares starting August 2, culminating in an extreme X-class event on August 4. The associated CME had the fastest transit time of the 20th century – arriving at Earth just ~14.6 hours after the flare, implying a CME speed of approximately 2850 km/s. The proton flux at energies >10 MeV reached an estimated ~9×10⁴ particle flux units (pfu), with some reconstructions exceeding 10⁵ pfu – sufficient to deliver a lethal or severely incapacitating radiation dose (~4+ Sv) to astronauts in the lunar transit trajectory within hours. NASA's post-event analysis determined that crew survival would have been in serious jeopardy. Separately, the fluctuating magnetic field in the Gulf of Tonkin triggered the magnetic-influence fuzes of approximately 4,000 US sea mines, detonating them prematurely. The geomagnetic storm itself (Dst −125 nT) was moderate compared to the particle event severity, highlighting that Dst alone is not a reliable proxy for radiation storm intensity.",
+  "estimatedFields": [
+    "flareClass",
+    "protonFluxPeak",
+    "cmeSpeedKmS"
+  ]
 }

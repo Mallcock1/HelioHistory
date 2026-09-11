@@ -32,7 +32,7 @@
   ],
   "noaaGScale": 5,
   "noaaSScale": 4,
-  "noaaRScale": 4,
+  "noaaRScale": 3,
   "peakDst": -298,
   "peakKp": 9,
   "peakAp": 246,
@@ -77,12 +77,12 @@
   "images": [],
   "papers": [
     {
-      "doi": "10.1029/91JA01202",
-      "title": "The great storm of March 1991: An extreme event in the solar-terrestrial environment",
-      "authors": "Li, X., Roth, I., Temerin, M., et al.",
-      "year": 1993,
+      "doi": "10.1029/92gl00624",
+      "title": "Injection of electrons and protons with energies of tens of MeV into L &lt; 3 on 24 March 1991",
+      "authors": "Blake, J. B., Kolasinski, W. A., Fillius, R. W., et al.",
+      "year": 1992,
       "journal": "Geophysical Research Letters",
-      "keyFinding": "Documented the formation of a new radiation belt at ~2.5 RE during the March 1991 storm, produced by the extraordinarily large sudden storm commencement impulse of ~134 nT."
+      "keyFinding": "CRRES observations of the sudden injection of tens-of-MeV electrons and protons to L < 3 during the 24 March 1991 storm sudden commencement, forming a new radiation belt."
     }
   ],
   "summary": "The March 1991 storm, driven by an X9.4 flare and fast CME, produced one of the largest sudden storm commencements ever recorded (~134 nT), forming a new radiation belt at ~2.5 Earth radii and causing widespread satellite anomalies and aurora at low latitudes.",

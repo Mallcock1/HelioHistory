@@ -86,28 +86,28 @@
   "images": [],
   "papers": [
     {
-      "doi": "10.1109/61.105006",
-      "title": "Geomagnetic disturbance and its effects on power systems",
+      "doi": "10.1029/89eo00409",
+      "title": "Effects of the March 1989 solar activity",
+      "authors": "Allen, J., Sauer, H., Frank, L., et al.",
+      "year": 1989,
+      "journal": "Eos, Transactions American Geophysical Union",
+      "keyFinding": "Contemporary summary of the technological effects of the March 1989 solar activity across power, satellite and communication systems."
+    },
+    {
+      "doi": "10.1016/s1364-6826(02)00128-1",
+      "title": "GIC observations and studies in the Hydro-Québec power system",
       "authors": "Bolduc, L.",
       "year": 2002,
       "journal": "Journal of Atmospheric and Solar-Terrestrial Physics",
-      "keyFinding": "Detailed analysis of the Hydro-Québec cascade failure, finding the grid collapsed in 92 seconds due to GIC-induced relay misoperation, and recommending protective measures."
+      "keyFinding": "Hydro-Québec account of GIC observations and the 13 March 1989 system collapse, and the mitigation measures adopted afterwards."
     },
     {
-      "doi": "10.1029/89EO00316",
-      "title": "The effects of geomagnetic disturbances on electrical systems at the earth's surface",
-      "authors": "Allen, J., Frank, L., Sauer, H., Reiff, P.",
-      "year": 1989,
-      "journal": "Eos, Transactions American Geophysical Union",
-      "keyFinding": "Catalogued the extensive range of electrical and technological impacts of the March 1989 storm in the immediate aftermath."
-    },
-    {
-      "doi": "10.1029/2018SW002054",
-      "title": "Reanalysis of the March 1989 great geomagnetic storm",
+      "doi": "10.1029/2019sw002278",
+      "title": "A 21st Century View of the March 1989 Magnetic Storm",
       "authors": "Boteler, D. H.",
       "year": 2019,
       "journal": "Space Weather",
-      "keyFinding": "Revised storm chronology and GIC estimates, confirming the Quebec blackout mechanism and providing updated infrastructure vulnerability assessments."
+      "keyFinding": "Modern reanalysis of the March 1989 storm: solar source, interplanetary drivers, the Dst −589 nT main phase, and the sequence of events in the Hydro-Québec collapse."
     }
   ],
   "summary": "The March 13, 1989 geomagnetic storm (Dst −589 nT) drove geomagnetically induced currents that collapsed the Hydro-Québec power grid in 92 seconds, leaving 6 million people without electricity for up to 9 hours – the most significant space weather power grid failure in North American history.",

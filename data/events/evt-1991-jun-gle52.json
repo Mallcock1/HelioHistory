@@ -1,9 +1,9 @@
 {
-  "id": "evt-1991-jun-gle51",
-  "slug": "1991-june-gle51",
-  "name": "1991 June GLE#51",
+  "id": "evt-1991-jun-gle52",
+  "slug": "1991-june-gle52",
+  "name": "1991 June GLE #52",
   "altNames": [
-    "GLE 51",
+    "GLE 52",
     "June 15 1991 GLE",
     "1991 June Solar Particle Event"
   ],
@@ -14,7 +14,7 @@
   "phenomena": [
     {
       "type": "gle",
-      "subtype": "GLE#51",
+      "subtype": "GLE #52",
       "details": "Ground-level enhancement #51; one of the larger GLEs in the record, detected by neutron monitors worldwide."
     },
     {
@@ -30,7 +30,7 @@
   ],
   "noaaGScale": null,
   "noaaSScale": 4,
-  "noaaRScale": 5,
+  "noaaRScale": 4,
   "peakDst": null,
   "peakKp": null,
   "peakAp": null,
@@ -63,14 +63,22 @@
   "images": [],
   "papers": [
     {
-      "doi": "10.1029/93GL00052",
-      "title": "Observations of the June 1991 ground level enhancement with the Climax neutron monitor",
-      "authors": "Shea, M. A., Smart, D. F.",
-      "year": 1993,
-      "journal": "Geophysical Research Letters",
-      "keyFinding": "Documented GLE#51 as one of the major ground-level enhancements of Solar Cycle 22, with significant neutron monitor count rate increases observed worldwide."
+      "doi": "10.1063/1.45194",
+      "title": "The relativistic solar proton ground-level enhancements associated with the solar neutron events of 11 June, 15 June 1991",
+      "authors": "Smart, D. F., Shea, M. A., Gentile, L. C.",
+      "year": 1994,
+      "journal": "AIP Conference Proceedings",
+      "keyFinding": "Analysed the relativistic solar proton ground-level enhancements of June 1991, including GLE 52 on 15 June, from the neutron-monitor network."
+    },
+    {
+      "doi": "10.1086/174969",
+      "title": "Gamma-ray and millimeter-wave emissions from the 1991 June X-class solar flares",
+      "authors": "Ramaty, R., Schwartz, R. A., Enome, S., et al.",
+      "year": 1994,
+      "journal": "The Astrophysical Journal",
+      "keyFinding": "Gamma-ray and millimetre-wave observations of the June 1991 X-class flares from AR 6659, including the 15 June X12 flare."
     }
   ],
-  "summary": "GLE#51 on June 15, 1991, produced by an X12.0 flare from the highly active AR 6659, was one of the largest ground-level enhancements of Solar Cycle 22, with significant radiation implications for aviation and severe radio blackouts.",
-  "description": "On June 15, 1991, active region AR 6659 – one of the most prolific active regions of Solar Cycle 22 – produced an X12.0 flare that generated GLE#51, a major ground-level enhancement detected by neutron monitors worldwide. The associated SEP event produced >10 MeV proton fluxes exceeding 10,000 pfu. The X12.0 flare caused severe radio blackouts across the sunlit hemisphere. The event was one of several major eruptions from AR 6659, which also produced X-class flares earlier in June 1991. The radiation dose rates at aviation altitudes on polar routes were significantly elevated, making this event one of the key case studies for aviation radiation exposure guidelines."
+  "summary": "GLE #52 on June 15, 1991, produced by an X12.0 flare from the highly active AR 6659, was one of the largest ground-level enhancements of Solar Cycle 22, with significant radiation implications for aviation and severe radio blackouts.",
+  "description": "On June 15, 1991, active region AR 6659 – one of the most prolific active regions of Solar Cycle 22 – produced an X12.0 flare that generated GLE #52 – the second GLE of the month, after GLE #51 on 11 June – a major ground-level enhancement detected by neutron monitors worldwide. The associated SEP event produced >10 MeV proton fluxes exceeding 10,000 pfu. The X12.0 flare caused severe radio blackouts across the sunlit hemisphere. The event was one of several major eruptions from AR 6659, which also produced X-class flares earlier in June 1991. The radiation dose rates at aviation altitudes on polar routes were significantly elevated, making this event one of the key case studies for aviation radiation exposure guidelines."
 }

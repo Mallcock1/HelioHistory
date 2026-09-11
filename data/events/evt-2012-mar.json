@@ -78,12 +78,12 @@
   "images": [],
   "papers": [
     {
-      "doi": "10.1029/2012JA017536",
-      "title": "The March 2012 solar event complex: SDO observations and space weather implications",
-      "authors": "Patsourakos, S., Georgoulis, M. K., et al.",
+      "doi": "10.3847/0004-637x/817/1/14",
+      "title": "THE MAJOR GEOEFFECTIVE SOLAR ERUPTIONS OF 2012 MARCH 7: COMPREHENSIVE SUN-TO-EARTH ANALYSIS",
+      "authors": "Patsourakos, S., Georgoulis, M. K., Vourlidas, A., et al.",
       "year": 2016,
       "journal": "The Astrophysical Journal",
-      "keyFinding": "Detailed SDO/AIA analysis of the March 7 flares and CME initiation from AR 11429, one of the most productive active regions of SC24."
+      "keyFinding": "Comprehensive Sun-to-Earth analysis of the 7 March 2012 eruptions from AR 11429 and the resulting geomagnetic storm."
     }
   ],
   "summary": "The March 2012 storm, driven by an X5.4 flare from AR 11429 and a fast CME, produced a G3 storm (Dst ~ −131 nT) with a significant SEP event (>6000 pfu), causing radio blackouts, aviation radiation alerts, and aurora at mid-latitudes.",

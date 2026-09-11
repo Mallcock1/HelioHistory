@@ -30,7 +30,7 @@
   "bzMin": null,
   "protonFluxPeak": null,
   "solarCycleNumber": null,
-  "cyclePhase": "minimum",
+  "cyclePhase": "unknown",
   "sourceActiveRegion": null,
   "sunspotNumberDaily": null,
   "impacts": [

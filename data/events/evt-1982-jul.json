@@ -33,7 +33,7 @@
   "peakKp": 8,
   "peakAp": 207,
   "peakAE": null,
-  "flareClass": "X",
+  "flareClass": null,
   "cmeSpeedKmS": null,
   "solarWindSpeedPeak": 800,
   "bzMin": -25,
@@ -67,12 +67,20 @@
   "images": [],
   "papers": [
     {
-      "doi": "10.1029/JA089iA09p07413",
-      "title": "Great geomagnetic storms of July 1982",
-      "authors": "Allen, J. H., Sauer, H. H., Frank, L. A., Reiff, P.",
-      "year": 1984,
-      "journal": "Journal of Geophysical Research",
-      "keyFinding": "Documented the July 1982 storm as one of the strongest of Solar Cycle 21, with extensive technological impacts on communications and satellite systems."
+      "doi": "10.1016/j.asr.2005.08.055",
+      "title": "Great geomagnetic storms and extreme impulsive geomagnetic field disturbance events – An analysis of observational evidence including the great storm of May 1921",
+      "authors": "Kappenman, J. G.",
+      "year": 2006,
+      "journal": "Advances in Space Research",
+      "keyFinding": "Placed the 13–14 July 1982 storm among the great impulsive geomagnetic disturbances relevant to power-grid risk."
+    },
+    {
+      "doi": "10.5194/angeo-27-1775-2009",
+      "title": "Space weather events in July 1982 and October 2003 and the effects of geomagnetically induced currents on Swedish technical systems",
+      "authors": "Wik, M., Pirjola, R., Lundstedt, H., et al.",
+      "year": 2009,
+      "journal": "Annales Geophysicae",
+      "keyFinding": "Analysed the July 1982 storm's geomagnetically induced currents and their effects on Swedish power and railway systems."
     }
   ],
   "summary": "The July 1982 geomagnetic storm (Dst ~ −325 nT) was one of the strongest events of Solar Cycle 21, causing severe HF radio blackouts, satellite anomalies, and GIC effects in power grids.",

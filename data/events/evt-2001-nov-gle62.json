@@ -1,9 +1,9 @@
 {
-  "id": "evt-2001-nov-gle60",
-  "slug": "2001-november-gle60",
-  "name": "2001 November GLE#61",
+  "id": "evt-2001-nov-gle62",
+  "slug": "2001-november-gle62",
+  "name": "2001 November GLE #62",
   "altNames": [
-    "GLE 61",
+    "GLE 62",
     "November 4 2001 GLE",
     "2001 November SEP Event"
   ],
@@ -14,7 +14,7 @@
   "phenomena": [
     {
       "type": "gle",
-      "subtype": "GLE#61",
+      "subtype": "GLE #62",
       "details": "Ground-level enhancement #61; significant neutron monitor count rate increases observed globally."
     },
     {
@@ -34,7 +34,7 @@
     }
   ],
   "noaaGScale": 4,
-  "noaaSScale": 3,
+  "noaaSScale": 4,
   "noaaRScale": 3,
   "peakDst": -292,
   "peakKp": 8,
@@ -74,14 +74,22 @@
   "images": [],
   "papers": [
     {
-      "doi": "10.1029/2003JA010064",
-      "title": "The November 2001 solar energetic particle event and GLE 60",
-      "authors": "Tylka, A. J., Cohen, C. M. S., Dietrich, W. F., et al.",
-      "year": 2003,
-      "journal": "Journal of Geophysical Research",
-      "keyFinding": "Characterized GLE#61 and the associated SEP event, providing insights into particle acceleration by the CME-driven shock."
+      "doi": "10.1029/165gm27",
+      "title": "Fifty Years of Ground Level Solar Particle Event Observations",
+      "authors": "",
+      "year": 2006,
+      "journal": "Solar Eruptions and Energetic Particles",
+      "keyFinding": "Review of fifty years of ground-level solar particle event observations, including GLE 62 on 4 November 2001."
+    },
+    {
+      "doi": "10.1029/2007ja012321",
+      "title": "Solar and interplanetary sources of major geomagnetic storms ( Dst ≤ −100 nT) during 1996–2005",
+      "authors": "Zhang, J., Richardson, I. G., Webb, D. F., et al.",
+      "year": 2007,
+      "journal": "Journal of Geophysical Research: Space Physics",
+      "keyFinding": "Catalogue of solar and interplanetary sources of all Dst ≤ −100 nT storms 1996–2005, including the 6 November 2001 storm."
     }
   ],
-  "summary": "GLE#61 on November 4, 2001 was a significant ground-level enhancement and solar energetic particle event from an X1.0 flare, followed by a strong geomagnetic storm (Dst ~ −292 nT), causing aviation radiation concerns and severe radio blackouts.",
-  "description": "On November 4, 2001, an X1.0 flare from AR 9684 produced GLE#61, a significant ground-level enhancement detected by neutron monitors worldwide. The event was accompanied by a fast CME (~1800 km/s) and a major SEP event with >10 MeV proton flux reaching ~31,700 pfu. The SEP event elevated radiation dose rates at aviation altitudes, particularly on polar routes, leading some airlines to reroute transpolar flights. Severe HF radio blackouts affected global communications. The CME subsequently drove a strong geomagnetic storm reaching Dst ~ −292 nT on November 6. This event demonstrated the compound hazard posed by solar eruptions: simultaneous radiation, communication, and geomagnetic impacts requiring a multi-faceted space weather response."
+  "summary": "GLE #62 on November 4, 2001 was a significant ground-level enhancement and solar energetic particle event from an X1.0 flare, followed by a strong geomagnetic storm (Dst ~ −292 nT), causing aviation radiation concerns and severe radio blackouts.",
+  "description": "On November 4, 2001, an X1.0 flare from AR 9684 produced GLE #62, a significant ground-level enhancement detected by neutron monitors worldwide. The event was accompanied by a fast CME (~1800 km/s) and a major SEP event with >10 MeV proton flux reaching ~31,700 pfu. The SEP event elevated radiation dose rates at aviation altitudes, particularly on polar routes, leading some airlines to reroute transpolar flights. Severe HF radio blackouts affected global communications. The CME subsequently drove a strong geomagnetic storm reaching Dst ~ −292 nT on November 6. This event demonstrated the compound hazard posed by solar eruptions: simultaneous radiation, communication, and geomagnetic impacts requiring a multi-faceted space weather response."
 }

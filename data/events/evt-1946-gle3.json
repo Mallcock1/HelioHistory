@@ -1,9 +1,9 @@
 {
-  "id": "evt-1946-gle1",
-  "slug": "1946-gle1",
-  "name": "1946 GLE #1",
+  "id": "evt-1946-gle3",
+  "slug": "1946-gle3",
+  "name": "1946 GLE #3",
   "altNames": [
-    "GLE #1",
+    "GLE #3",
     "July 1946 Solar Cosmic Ray Event",
     "Forbush GLE"
   ],
@@ -15,7 +15,7 @@
     {
       "type": "gle",
       "subtype": "GLE #1",
-      "details": "First recognized ground-level enhancement, recorded at Cheltenham and Climax neutron monitors. Established the GLE catalog.",
+      "details": "First recognised ground-level enhancement, recorded at Cheltenham and Climax neutron monitors. Established the GLE catalogue.",
       "peakTime": "1946-07-25T09:00:00Z"
     },
     {
@@ -28,13 +28,13 @@
     }
   ],
   "noaaGScale": null,
-  "noaaSScale": 3,
+  "noaaSScale": null,
   "noaaRScale": null,
   "peakDst": null,
   "peakKp": null,
   "peakAp": null,
   "peakAE": null,
-  "flareClass": "X",
+  "flareClass": null,
   "cmeSpeedKmS": null,
   "solarWindSpeedPeak": null,
   "bzMin": null,
@@ -47,7 +47,7 @@
     {
       "sector": "aviation",
       "location": "High latitudes",
-      "description": "Elevated radiation dose to aircraft passengers and crew at high altitudes; not recognized as a hazard at the time but now understood to represent an S3-class radiation environment.",
+      "description": "Elevated radiation dose to aircraft passengers and crew at high altitudes; not recognised as a hazard at the time but now understood to represent a significant radiation environment (no proton-flux measurements exist for 1946, so no NOAA S-scale is assigned).",
       "severity": "moderate"
     }
   ],
@@ -60,17 +60,18 @@
       "authors": "Forbush, S. E.",
       "year": 1946,
       "journal": "Physical Review",
-      "keyFinding": "First documentation of a solar-associated increase in ground-level cosmic ray flux, establishing the concept of the ground-level enhancement."
+      "keyFinding": "First documentation of a solar-associated increase in ground-level cosmic ray flux, establishing the concept of the ground-level enhancement.",
+      "doi": "10.1103/physrev.70.771"
     },
     {
-      "doi": "10.1029/2011SW000743",
-      "title": "The historical progression of SEP and GLE research",
-      "authors": "Shea, M. A., Smart, D. F.",
-      "year": 2012,
-      "journal": "Space Science Reviews",
-      "keyFinding": "Historical review placing GLE #1 in context of the catalog of 71 ground-level enhancements recorded through 2012."
+      "doi": "10.22323/1.358.1149",
+      "title": "Re-examination of the First Five Ground-Level Events",
+      "authors": "Shea, M. A., Smart, D.",
+      "year": 2019,
+      "journal": "Proceedings of 36th International Cosmic Ray Conference — PoS(ICRC2019)",
+      "keyFinding": "Re-examined the first five ground-level events (1942–1956), including 25 July 1946 (GLE 3), using the original ionisation-chamber records."
     }
   ],
-  "summary": "The July 25, 1946 event is recognized as the first ground-level enhancement (GLE #1) in the modern catalog, marking the discovery that solar energetic particles can be energetic enough to penetrate Earth's atmosphere and be detected at ground level.",
-  "description": "Scott Forbush and colleagues at the Cheltenham and Climax cosmic ray stations observed an anomalous increase in ground-level ionization on July 25, 1946, that could not be explained by secondary cosmic rays from galactic sources. The event was eventually identified as solar energetic protons and nuclei with energies exceeding ~1 GeV, sufficient to produce secondary particle cascades detectable by ground-based neutron monitors. This observation founded the GLE catalog, which by 2024 numbers 73 events. The event occurred during the ascending phase of Solar Cycle 18, one of the moderately active cycles of the mid-20th century. The scientific significance of GLE #1 lies not in its intensity – subsequent GLEs have been far larger – but in establishing the paradigm of solar cosmic ray production."
+  "summary": "The 25 July 1946 solar cosmic-ray increase – GLE #3 in the modern catalogue, after the two 1942 events – was recorded by Scott Forbush's ionisation chambers and helped establish that the Sun can accelerate particles to GeV energies.",
+  "description": "Scott Forbush's ionisation chambers at Cheltenham (Maryland), Christchurch (New Zealand) and Godhavn (Greenland) registered a sudden increase in cosmic-ray intensity on 25 July 1946, following a large solar flare. Together with the two increases of 28 February and 7 March 1942, Forbush (1946) argued the particles came from the Sun – the first identification of solar cosmic rays. The three events are numbered GLE #1, #2 and #3 in the modern ground-level enhancement catalogue, which by 2025 exceeded 75 events; the 1946 event is the third, not the first, and predates the neutron-monitor era (Climax, the first monitor, opened in 1951). Its scientific significance lies not in its intensity – later GLEs have been far larger – but in establishing that solar energetic particles can reach ground level."
 }

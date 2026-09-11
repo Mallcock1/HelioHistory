@@ -5,13 +5,8 @@ import { EVENTS } from "@/data/events";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import { PHENOMENON_CONFIG, G_SCALE_LABELS } from "@/lib/types";
-import type { SpaceWeatherEvent } from "@/lib/types";
-import { formatEventDate, getEventSeverity, getEventColor } from "@/lib/timeline-utils";
-import { Badge } from "@/components/ui/badge";
-import { Separator } from "@/components/ui/separator";
-import { ScrollArea } from "@/components/ui/scroll-area";
+import { formatEventDate, getEventColor, isEstimated, ESTIMATED_HINT } from "@/lib/timeline-utils";
 import DstChart from "@/components/charts/DstChart";
-import KpChart from "@/components/charts/KpChart";
 import { getEventTimeSeries } from "@/data/timeseries";
 
 function EventSelector({
@@ -52,10 +47,13 @@ function ComparisonRow({
   label,
   values,
   format,
+  estimated,
 }: {
   label: string;
   values: (string | number | null)[];
   format?: (v: string | number | null) => string;
+  /** Per-column flag: value is a reconstruction/estimate, shown with a "≈" prefix. */
+  estimated?: boolean[];
 }) {
   const fmt = format || ((v) => (v !== null && v !== undefined ? String(v) : "–"));
   return (
@@ -65,6 +63,9 @@ function ComparisonRow({
       </div>
       {values.map((v, i) => (
         <div key={i} className="flex-1 px-4 py-2 text-sm font-mono text-foreground/80 text-center">
+          {estimated?.[i] && v !== null && v !== undefined && (
+            <span className="text-foreground/40 mr-0.5" title={ESTIMATED_HINT}>≈</span>
+          )}
           {fmt(v)}
         </div>
       ))}
@@ -148,6 +149,7 @@ export default function ComparePage() {
               <ComparisonRow
                 label="NOAA G Scale"
                 values={selectedEvents.map((e) => e.noaaGScale)}
+                estimated={selectedEvents.map((e) => isEstimated(e, "noaaGScale"))}
                 format={(v) =>
                   v ? G_SCALE_LABELS[v as number] || `G${v}` : "–"
                 }
@@ -155,29 +157,35 @@ export default function ComparePage() {
               <ComparisonRow
                 label="Peak Dst"
                 values={selectedEvents.map((e) => e.peakDst)}
+                estimated={selectedEvents.map((e) => isEstimated(e, "peakDst"))}
                 format={(v) => (v !== null ? `${v} nT` : "–")}
               />
               <ComparisonRow
                 label="Peak Kp"
                 values={selectedEvents.map((e) => e.peakKp)}
+                estimated={selectedEvents.map((e) => isEstimated(e, "peakKp"))}
               />
               <ComparisonRow
                 label="Flare Class"
                 values={selectedEvents.map((e) => e.flareClass)}
+                estimated={selectedEvents.map((e) => isEstimated(e, "flareClass"))}
               />
               <ComparisonRow
                 label="CME Speed"
                 values={selectedEvents.map((e) => e.cmeSpeedKmS)}
+                estimated={selectedEvents.map((e) => isEstimated(e, "cmeSpeedKmS"))}
                 format={(v) => (v !== null ? `${v} km/s` : "–")}
               />
               <ComparisonRow
                 label="Solar Wind"
                 values={selectedEvents.map((e) => e.solarWindSpeedPeak)}
+                estimated={selectedEvents.map((e) => isEstimated(e, "solarWindSpeedPeak"))}
                 format={(v) => (v !== null ? `${v} km/s` : "–")}
               />
               <ComparisonRow
                 label="Bz Min"
                 values={selectedEvents.map((e) => e.bzMin)}
+                estimated={selectedEvents.map((e) => isEstimated(e, "bzMin"))}
                 format={(v) => (v !== null ? `${v} nT` : "–")}
               />
               <ComparisonRow

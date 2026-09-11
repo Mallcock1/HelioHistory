@@ -190,6 +190,17 @@ export function getVisibleEvents(
   });
 }
 
+/**
+ * True when the event marks `field` as a published reconstruction/estimate rather
+ * than an instrumental measurement (see `estimatedFields` in the schema).
+ */
+export function isEstimated(event: SpaceWeatherEvent, field: keyof SpaceWeatherEvent): boolean {
+  return event.estimatedFields?.includes(field as string) ?? false;
+}
+
+/** Tooltip text shown on the "≈" marker next to estimated values. */
+export const ESTIMATED_HINT = "Reconstructed or estimated value, not an instrumental measurement";
+
 /** Format a year number for display */
 export function formatYear(year: number): string {
   if (year < 0) return `${Math.abs(Math.round(year))} BC`;

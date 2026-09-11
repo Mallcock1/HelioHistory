@@ -9,7 +9,7 @@
  *
  * NEUTRON MONITOR DATA:
  *   Observational: 2003-halloween (Oulu), 2006-dec GLE#70 (Oulu), 2017-sep GLE#72 (Dome C)
- *   Representative: 1991-jun GLE#51 (Kerguelen), 2001-nov (Forbush), 2005-jan GLE#69 (South Pole)
+ *   Representative: 1991-jun GLE#52 (Kerguelen), 2001-nov (Forbush), 2005-jan GLE#69 (South Pole)
  *     These use parametric profiles based on published peak magnitudes.
  *
  * All data points are { time: ISO string, value: number }.
@@ -737,10 +737,10 @@ const kp2023apr: TimeSeriesDataPoint[] = [
 // (modelled from published GLE/Forbush magnitudes; no hourly archive available)
 // ══════════════════════════════════════════════════════════
 
-// ── GLE #51 – June 15, 1991 (Kerguelen – peak responding station, ~200%) ──
-// Kerguelen (sub-Antarctic) showed one of the highest enhancements for GLE#51.
+// ── GLE #52 – June 15, 1991 (Kerguelen – peak responding station, ~200%) ──
+// Kerguelen (sub-Antarctic) showed one of the highest enhancements for GLE #52.
 // Representative hourly profile based on published peak magnitude.
-const nm1991gle51: TimeSeriesDataPoint[] = [
+const nm1991gle52: TimeSeriesDataPoint[] = [
   ...hourly(1991, 6, 14, [0.3,0.4,0.2,-0.1,0.3,0.5,0.4,0.2,0.0,-0.3,0.1,0.4,0.6,0.5,0.3,0.0,-0.1,-0.3,0.1,0.4,0.6,1.0,1.5,1.8]),
   ...hourly(1991, 6, 15, [2.1,2.8,5.0,22.0,75.0,145.0,185.0,200.0,160.0,105.0,62.0,38.0,24.0,16.0,11.0,8.0,5.5,4.0,3.0,2.2,1.5,0.8,0.2,-0.3]),
   ...hourly(1991, 6, 16, [-0.8,-1.2,-1.6,-2.0,-2.4,-2.7,-3.0,-3.2,-3.3,-3.3,-3.2,-3.0,-2.8,-2.6,-2.4,-2.2,-2.0,-1.8,-1.6,-1.5,-1.3,-1.2,-1.1,-1.0]),
@@ -776,6 +776,8 @@ export interface EventTimeSeriesData {
   kp?: TimeSeriesDataPoint[];
   protonFlux?: TimeSeriesDataPoint[];
   neutronMonitor?: TimeSeriesDataPoint[];
+  /** True when `neutronMonitor` is a parametric profile fitted to a published peak, not archive data. */
+  neutronMonitorModelled?: boolean;
 }
 
 export const TIME_SERIES_DATA: Record<string, EventTimeSeriesData> = {
@@ -789,17 +791,17 @@ export const TIME_SERIES_DATA: Record<string, EventTimeSeriesData> = {
   "evt-1986-feb": { dst: dst1986feb, kp: kp1986feb },
   "evt-1989-quebec": { dst: dst1989, kp: kp1989 },
   "evt-1991-mar": { dst: dst1991mar, kp: kp1991mar },
-  "evt-1991-jun-gle51": { dst: dst1991jun, kp: kp1991jun, neutronMonitor: nm1991gle51 },
+  "evt-1991-jun-gle52": { dst: dst1991jun, kp: kp1991jun, neutronMonitor: nm1991gle52, neutronMonitorModelled: true },
   "evt-1994-jan": { dst: dst1994jan, kp: kp1994jan },
   "evt-1997-telstar": { dst: dst1997, kp: kp1997 },
   "evt-1998-may": { dst: dst1998may, kp: kp1998may },
   "evt-2000-bastille": { dst: dst2000, kp: kp2000 },
   "evt-2001-mar": { dst: dst2001mar, kp: kp2001mar },
   "evt-2001-apr": { dst: dst2001apr, kp: kp2001apr },
-  "evt-2001-nov-gle60": { dst: dst2001nov, kp: kp2001nov, neutronMonitor: nm2001nov },
+  "evt-2001-nov-gle62": { dst: dst2001nov, kp: kp2001nov, neutronMonitor: nm2001nov, neutronMonitorModelled: true },
   "evt-2003-halloween": { dst: dst2003halloween, kp: kp2003halloween, neutronMonitor: nm2003halloween },
   "evt-2003-x28": { dst: dst2003nov, kp: kp2003nov },
-  "evt-2005-jan-gle69": { dst: dst2005jan, kp: kp2005jan, neutronMonitor: nm2005gle69 },
+  "evt-2005-jan-gle69": { dst: dst2005jan, kp: kp2005jan, neutronMonitor: nm2005gle69, neutronMonitorModelled: true },
   "evt-2006-dec": { dst: dst2006, kp: kp2006, neutronMonitor: nm2006gle70 },
   "evt-2011-feb": { dst: dst2011feb, kp: kp2011feb },
   "evt-2012-mar": { dst: dst2012mar, kp: kp2012mar },

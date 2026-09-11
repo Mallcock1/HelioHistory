@@ -59,14 +59,17 @@
   "images": [],
   "papers": [
     {
-      "doi": "10.1029/2019JA027062",
-      "title": "The extreme space weather events in January 1938",
-      "authors": "Hayakawa, H., Ebihara, Y., et al.",
+      "doi": "10.3847/1538-4357/abc427",
+      "title": "The Intensity and Evolution of the Extreme Solar and Geomagnetic Storms in 1938 January",
+      "authors": "Hayakawa, H., Hattori, K., Pevtsov, A. A., et al.",
       "year": 2021,
-      "journal": "Journal of Geophysical Research: Space Physics",
-      "keyFinding": "Documented the January 1938 storm intensity and global aurora extent, estimating Dcx/Dst ~ −336 nT and confirming visibility at magnetic latitudes below 30°."
+      "journal": "The Astrophysical Journal",
+      "keyFinding": "Reconstructed the January 1938 storm sequence from magnetograms and auroral reports, estimating a minimum Dst of about −336 nT and an auroral oval reaching unusually low latitudes."
     }
   ],
   "summary": "The January 1938 great aurora storm produced one of the most spectacular worldwide aurora displays of the 20th century, with aurora visible at magnetic latitudes below 30° during an intense geomagnetic storm (Dst ~ −336 nT) just after Solar Cycle 17 maximum.",
-  "description": "On January 25–26, 1938, a powerful geomagnetic storm struck Earth during the descending phase of Solar Cycle 17 (which peaked in 1937). The storm produced an estimated Dst of approximately −336 nT (Hayakawa et al. 2021) and drove aurora visible at remarkably low latitudes across both hemispheres. (A smaller storm had occurred earlier in the month around January 16–17.) Newspaper reports from across Europe, North America, and Asia described vivid red and green aurora. The intense red glow was widely mistaken for distant fires, prompting calls to fire brigades in several European cities - the New York Times of 26 January 1938 ran 'Aurora Borealis Startles Europe; People Flee in Fear, Call Firemen.' Radio communications were severely disrupted, and telegraph systems experienced interference. Occurring just before the outbreak of World War II, the storm is culturally remembered by some Roman Catholics as the 'night illumined by an unknown light' foretold in the Second Secret of Fatima - hence its popular name, the 'Fatima Storm' - a religious interpretation rather than a scientific claim."
+  "description": "On January 25–26, 1938, a powerful geomagnetic storm struck Earth during the descending phase of Solar Cycle 17 (which peaked in 1937). The storm produced an estimated Dst of approximately −336 nT (Hayakawa et al. 2021) and drove aurora visible at remarkably low latitudes across both hemispheres. (A smaller storm had occurred earlier in the month around January 16–17.) Newspaper reports from across Europe, North America, and Asia described vivid red and green aurora. The intense red glow was widely mistaken for distant fires, prompting calls to fire brigades in several European cities - the New York Times of 26 January 1938 ran 'Aurora Borealis Startles Europe; People Flee in Fear, Call Firemen.' Radio communications were severely disrupted, and telegraph systems experienced interference. Occurring just before the outbreak of World War II, the storm is culturally remembered by some Roman Catholics as the 'night illumined by an unknown light' foretold in the Second Secret of Fatima - hence its popular name, the 'Fatima Storm' - a religious interpretation rather than a scientific claim.",
+  "estimatedFields": [
+    "peakDst"
+  ]
 }

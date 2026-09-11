@@ -11,7 +11,7 @@ export type PhenomenonType =
   | "radio_blackout"
   | "forbush_decrease";
 
-export type CyclePhase = "ascending" | "maximum" | "descending" | "minimum";
+export type CyclePhase = "ascending" | "maximum" | "descending" | "minimum" | "unknown";
 
 export type ImpactSector =
   | "power"
@@ -63,6 +63,8 @@ export interface EventImage {
 
 export interface ScientificPaper {
   doi?: string;
+  /** Link for sources without a DOI (e.g. agency reports). */
+  url?: string;
   title: string;
   authors: string;
   year: number;
@@ -103,6 +105,13 @@ export interface SpaceWeatherEvent {
   cyclePhase: CyclePhase;
   sourceActiveRegion: string | null;
   sunspotNumberDaily: number | null;
+
+  /**
+   * Top-level fields whose values are published reconstructions or estimates
+   * rather than instrumental measurements (e.g. peakDst before 1957, flareClass
+   * before GOES). Optional; absent means all values are measured.
+   */
+  estimatedFields?: string[];
 
   // Impacts
   impacts: Impact[];

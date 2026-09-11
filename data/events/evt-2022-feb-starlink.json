@@ -52,12 +52,28 @@
   "images": [],
   "papers": [
     {
-      "doi": "10.1029/2022SW003152",
-      "title": "Satellite drag and the February 2022 Starlink deorbit event",
+      "doi": "10.1029/2022sw003152",
+      "title": "Unveiling the Space Weather During the Starlink Satellites Destruction Event on 4 February 2022",
       "authors": "Dang, T., Li, X., Luo, B., et al.",
       "year": 2022,
       "journal": "Space Weather",
-      "keyFinding": "Analyzed how a minor G1 geomagnetic storm caused thermospheric density increases of up to 60% at 210 km altitude, sufficient to prevent orbit-raising of the newly deployed Starlink satellites."
+      "keyFinding": "Characterised the thermospheric density enhancement during the 3–4 February 2022 storms that raised drag on the newly launched Starlink satellites."
+    },
+    {
+      "doi": "10.1051/swsc/2022034",
+      "title": "Unexpected space weather causing the reentry of 38 Starlink satellites in February 2022",
+      "authors": "Kataoka, R., Shiota, D., Fujiwara, H., et al.",
+      "year": 2022,
+      "journal": "Journal of Space Weather and Space Climate",
+      "keyFinding": "Identified the unexpected space weather – two minor storms in succession – that caused the reentry of 38 Starlink satellites."
+    },
+    {
+      "doi": "10.1029/2022sw003193",
+      "title": "Space Weather Environment During the SpaceX Starlink Satellite Loss in February 2022",
+      "authors": "Fang, T., Kubaryk, A., Goldstein, D., et al.",
+      "year": 2022,
+      "journal": "Space Weather",
+      "keyFinding": "Described the space weather environment and thermospheric response during the Starlink loss."
     }
   ],
   "summary": "A minor G1 geomagnetic storm (Dst ~ −68 nT) on February 4, 2022 caused the loss of 38 out of 49 newly launched Starlink satellites when thermospheric heating increased drag beyond their ability to raise orbits – demonstrating that even minor storms can have catastrophic satellite impacts at low deployment altitudes.",

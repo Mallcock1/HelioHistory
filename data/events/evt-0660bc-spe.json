@@ -35,7 +35,7 @@
   "bzMin": null,
   "protonFluxPeak": null,
   "solarCycleNumber": null,
-  "cyclePhase": "maximum",
+  "cyclePhase": "unknown",
   "sourceActiveRegion": null,
   "sunspotNumberDaily": null,
   "impacts": [
@@ -82,5 +82,5 @@
     }
   ],
   "summary": "A hard-spectrum extreme solar proton event around 664-663 BC, confirmed independently by radiocarbon in tree rings and by 10Be and 36Cl in ice cores, with a fluence comparable to the AD 774 event.",
-  "description": "First identified as a radiocarbon peak around 660 BC (Park et al. 2017) and later confirmed as a genuine solar proton event by O'Hare et al. (2019) using sub-annual 10Be from the NGRIP ice core together with GRIP 10Be and 36Cl records, this is one of the firmly established pre-instrumental extreme solar particle events. A 2024 study refined its timing to between 664 and 663 BCE. The inferred integral proton fluences, F(>30 MeV) = 2.09 (+/-0.75) x 10^10 cm^-2 and F(>200 MeV) = 6.3 x 10^9 cm^-2, indicate an unusually hard spectrum and a total fluence comparable to (roughly 26% smaller than, but consistent within uncertainty with) the AD 774/775 event, and about an order of magnitude larger than the strongest event of the instrumental era. The 3-4 year rise in radiocarbon has prompted suggestions that the signal may represent one exceptional event or a short cluster of energetic events."
+  "description": "First identified as a radiocarbon peak around 660 BC (Park et al. 2017) and later confirmed as a genuine solar proton event by O'Hare et al. (2019) using sub-annual 10Be from the NGRIP ice core together with GRIP 10Be and 36Cl records, this is one of the firmly established pre-instrumental extreme solar particle events. Sakurai et al. (2020) refined its timing to between 664 and 663 BCE. The inferred integral proton fluences, F(>30 MeV) = 2.09 (+/-0.75) x 10^10 cm^-2 and F(>200 MeV) = 6.3 x 10^9 cm^-2, indicate an unusually hard spectrum and a total fluence comparable to (roughly 26% smaller than, but consistent within uncertainty with) the AD 774/775 event, and about an order of magnitude larger than the strongest event of the instrumental era. The 3-4 year rise in radiocarbon has prompted suggestions that the signal may represent one exceptional event or a short cluster of energetic events."
 }

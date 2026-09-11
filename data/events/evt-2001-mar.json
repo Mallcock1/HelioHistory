@@ -67,12 +67,20 @@
   "images": [],
   "papers": [
     {
-      "doi": "10.1029/2003JA010050",
-      "title": "Storm and substorm effects on the ring current and the radiation belts during the March 2001 event",
-      "authors": "Daglis, I. A., Kozyra, J. U.",
-      "year": 2003,
-      "journal": "Journal of Geophysical Research",
-      "keyFinding": "Analyzed the ring current and radiation belt response to the March 2001 storm, one of the most intense events of Solar Cycle 23."
+      "doi": "10.1029/2001ja000284",
+      "title": "Observations of bow shock and magnetopause crossings from geosynchronous orbit on 31 March 2001",
+      "authors": "Ober, D. M., Thomsen, M. F., Maynard, N. C.",
+      "year": 2002,
+      "journal": "Journal of Geophysical Research: Space Physics",
+      "keyFinding": "Reported bow shock and magnetopause crossings observed from geosynchronous orbit on 31 March 2001, evidence of extreme magnetospheric compression."
+    },
+    {
+      "doi": "10.1029/2007ja012321",
+      "title": "Solar and interplanetary sources of major geomagnetic storms ( Dst ≤ −100 nT) during 1996–2005",
+      "authors": "Zhang, J., Richardson, I. G., Webb, D. F., et al.",
+      "year": 2007,
+      "journal": "Journal of Geophysical Research: Space Physics",
+      "keyFinding": "Catalogue of solar and interplanetary sources of all Dst ≤ −100 nT storms 1996–2005, including the 31 March 2001 storm."
     }
   ],
   "summary": "The March 2001 geomagnetic storm (Dst ~ −387 nT) was one of the strongest events of Solar Cycle 23, driven by an X1.7 flare from AR 9393, producing aurora visible at latitudes below 30° and causing widespread GIC effects in power grids.",

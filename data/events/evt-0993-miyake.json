@@ -1,7 +1,7 @@
 {
   "id": "evt-0993-miyake",
   "slug": "993-ad-miyake-event",
-  "name": "993 AD Miyake Event",
+  "name": "AD 993 Miyake Event",
   "altNames": [
     "Miyake 993",
     "993–994 Carbon-14 Event",
@@ -47,11 +47,11 @@
   "images": [],
   "papers": [
     {
-      "doi": "10.1038/ngeo1823",
+      "doi": "10.1038/ncomms2783",
       "title": "Another rapid event in the carbon-14 content of tree rings",
       "authors": "Miyake, F., Masuda, K., Nakamura, T.",
       "year": 2013,
-      "journal": "Nature Geoscience",
+      "journal": "Nature Communications",
       "keyFinding": "Identified a second rapid 14C increase (~9‰) at AD 993–994, establishing that extreme solar particle events recur on timescales of centuries."
     }
   ],

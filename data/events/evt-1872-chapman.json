@@ -66,5 +66,10 @@
     }
   ],
   "summary": "The February 1872 Chapman-Silverman storm, with an estimated Dst of approximately −834 nT, produced aurora visible as far south as Bombay (India) at ~10° magnetic latitude, rivaling the Carrington Event in intensity and ranking among the most extreme geomagnetic storms in recorded history.",
-  "description": "On February 4, 1872, an extreme geomagnetic storm struck Earth during the descending phase of Solar Cycle 11. Contemporary magnetograms from multiple observatories, analyzed by Hayakawa et al. (2023), indicate a Dst of approximately −834 nT, making this one of the most intense storms in the instrumental record. Aurora was observed at extraordinarily low latitudes including Bombay (India), Shanghai, Egypt, Colombia, and Caribbean islands, with magnetic latitude reaching as low as ~10°. Telegraph systems worldwide experienced severe disruptions, with some lines reportedly operating on geomagnetically induced currents alone. The event had been previously underappreciated relative to the 1859 Carrington Event but recent reanalysis has established it as a comparable or near-comparable storm."
+  "description": "On February 4, 1872, an extreme geomagnetic storm struck Earth during the descending phase of Solar Cycle 11. Contemporary magnetograms from multiple observatories, analysed by Hayakawa et al. (2023), indicate a Dst of approximately −834 nT, making this one of the most intense storms in the instrumental record. Aurora was observed at extraordinarily low latitudes including Bombay (India), Shanghai, Egypt, Colombia, and Caribbean islands, with magnetic latitude reaching as low as ~10°. Telegraph systems worldwide experienced severe disruptions, with some lines reportedly operating on geomagnetically induced currents alone. The event had been previously underappreciated relative to the 1859 Carrington Event but recent reanalysis has established it as a comparable or near-comparable storm.",
+  "estimatedFields": [
+    "peakDst",
+    "peakKp",
+    "noaaGScale"
+  ]
 }

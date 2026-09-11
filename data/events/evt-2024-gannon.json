@@ -36,8 +36,8 @@
     }
   ],
   "noaaGScale": 5,
-  "noaaSScale": 2,
-  "noaaRScale": 4,
+  "noaaSScale": 3,
+  "noaaRScale": 3,
   "peakDst": -412,
   "peakKp": 9,
   "peakAp": 309,
@@ -85,14 +85,14 @@
   "images": [],
   "papers": [
     {
-      "doi": "10.1029/2025SW004182",
-      "title": "The Gannon Superstorm of May 2024: Observations, impacts, and implications for space weather preparedness",
-      "authors": "Hayakawa, H., Oliveira, D. M., Guerrero, J. M., et al.",
+      "doi": "10.3847/1538-4357/ad9335",
+      "title": "The Solar and Geomagnetic Storms in 2024 May: A Flash Data Report",
+      "authors": "Hayakawa, H., Ebihara, Y., Mishev, A., et al.",
       "year": 2025,
-      "journal": "Space Weather",
-      "keyFinding": "Comprehensive characterization of the May 2024 G5 storm, confirming Dst −412 nT, worldwide aurora to within 25° of the equator, and extensive GPS disruption – the first G5 event since Halloween 2003."
+      "journal": "The Astrophysical Journal",
+      "keyFinding": "Flash data report on the May 2024 storms: the AR 13664 flare and CME sequence, the Dst −412 nT extreme storm, and worldwide low-latitude aurora."
     }
   ],
-  "summary": "The May 2024 Gannon Superstorm – the first G5 geomagnetic storm since 2003 – sent aurora dancing across the skies of Florida, Mexico, and Japan at latitudes near 25°, while disabling GPS systems during spring planting season and stressing satellite orbits, demonstrating Solar Cycle 25's surprising vigor.",
-  "description": "Active region AR 13664, one of the most productive of Solar Cycle 25's ascending phase, began erupting on May 8, 2024, producing a rapid sequence of X-class flares and CMEs over four days. The compound CME arrival on May 10–11 drove a G5 extreme geomagnetic storm – the first since the Halloween Storms of October 2003 – with a peak Dst of −412 nT and Kp 9. The southward component of the interplanetary magnetic field (Bz) reached −68 nT. Aurora was visible to the naked eye at geographic latitudes as low as ~25°N across North America, Europe, and Asia, including from Florida, Texas, northern Mexico, southern Spain, and Japan. Social media delivered the aurora display to a global audience as never before. The GPS/GNSS community documented widespread positioning errors of 10–100+ m, affecting agriculture (spring planting), aviation, and emergency services. The storm was informally named the 'Gannon Superstorm' in recognition of space weather scientist Jennifer Gannon. Solar Cycle 25, which had been forecast in 2019 to be weak, was by this point tracking well above predictions – raising new questions about solar cycle forecasting."
+  "summary": "The May 2024 Gannon Superstorm – the first G5 geomagnetic storm since 2003 – sent aurora dancing across the skies of Florida, Mexico, and Japan at latitudes near 25°, while disabling GPS systems during spring planting season and stressing satellite orbits, demonstrating Solar Cycle 25's surprising vigour.",
+  "description": "Active region AR 13664, one of the most productive of Solar Cycle 25's ascending phase, began erupting on May 8, 2024, producing a rapid sequence of X-class flares and CMEs over four days. The compound CME arrival on May 10–11 drove a G5 extreme geomagnetic storm – the first since the Halloween Storms of October 2003 – with a peak Dst of −412 nT (provisional WDC Kyoto value) and Kp 9. The southward component of the interplanetary magnetic field (Bz) reached −68 nT. Aurora was visible to the naked eye at geographic latitudes as low as ~25°N across North America, Europe, and Asia, including from Florida, Texas, northern Mexico, southern Spain, and Japan. Social media delivered the aurora display to a global audience as never before. The GPS/GNSS community documented widespread positioning errors of 10–100+ m, affecting agriculture (spring planting), aviation, and emergency services. The storm was informally named the 'Gannon Superstorm' in recognition of space weather scientist Jennifer Gannon. Solar Cycle 25, which had been forecast in 2019 to be weak, was by this point tracking well above predictions – raising new questions about solar cycle forecasting."
 }

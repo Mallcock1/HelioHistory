@@ -9,8 +9,8 @@
   ],
   "startDate": "2003-10-19",
   "peakDate": "2003-10-30",
-  "endDate": "2003-11-04",
-  "durationHours": 384,
+  "endDate": "2003-11-03",
+  "durationHours": 360,
   "phenomena": [
     {
       "type": "solar_flare",
@@ -41,7 +41,7 @@
   ],
   "noaaGScale": 5,
   "noaaSScale": 4,
-  "noaaRScale": 5,
+  "noaaRScale": 4,
   "peakDst": -383,
   "peakKp": 9,
   "peakAp": 204,
@@ -89,22 +89,22 @@
   "images": [],
   "papers": [
     {
-      "doi": "10.1029/2004JA010958",
-      "title": "Interplanetary events and solar wind preconditioning during the October–November 2003 storms",
+      "doi": "10.1029/2004ja010958",
+      "title": "Coronal mass ejections and other extreme characteristics of the 2003 October–November solar eruptions",
       "authors": "Gopalswamy, N., Yashiro, S., Liu, Y., et al.",
       "year": 2005,
-      "journal": "Journal of Geophysical Research",
+      "journal": "Journal of Geophysical Research: Space Physics",
       "keyFinding": "Analysed the complex sequence of CMEs and their interactions en route to Earth, showing how CME–CME interaction enhanced the geoeffectiveness of the Halloween storm complex."
     },
     {
-      "doi": "10.1029/2004JA010910",
-      "title": "Energetic particles at high latitudes during the October–November 2003 Halloween events",
-      "authors": "Lopez, R. E., Wiltberger, M., Elkington, S., Lyon, J. G.",
-      "year": 2004,
-      "journal": "Journal of Geophysical Research",
-      "keyFinding": "Documented GLEs #65 and #66 during the Halloween storms and the enhanced radiation environment in the magnetosphere."
+      "doi": "10.1029/2004sw000123",
+      "title": "Geomagnetic storm of 29–31 October 2003: Geomagnetically induced currents and their relation to problems in the Swedish high‐voltage power transmission system",
+      "authors": "Pulkkinen, A., Lindahl, S., Viljanen, A., et al.",
+      "year": 2005,
+      "journal": "Space Weather",
+      "keyFinding": "Analysed the geomagnetically induced currents of 29–31 October 2003 and their relation to the Malmö, Sweden power outage."
     }
   ],
-  "summary": "The October–November 2003 Halloween Storms were a multi-week barrage of extreme solar activity – including X17.2 and X28+ flares, Dst −383 nT, GLE #65 and #66, and 47+ satellite anomalies – representing the most comprehensive space weather event complex of the Space Age.",
-  "description": "From October 19 through November 4, 2003, active region AR 10486 (the largest sunspot group in over a decade) produced a relentless series of major flares and CMEs near Solar Cycle 23's descending phase. The October 28 X17.2 flare and subsequent ~2000 km/s CME drove a G5 storm on October 30 (Dst −383 nT). The October 29 X10 flare added GLE #66. The November 4 X28+ event (see separate entry) produced the largest known radio blackout in the GOES era. Over 47 satellites suffered anomalies, including the permanent loss of Japan's ADEOS-2 (~$640M). Sweden's Malmö experienced a 50-minute power outage affecting 50,000 customers. The FAA rerouted polar aviation for days. Aurora was visible at 25–30° N latitude on multiple nights. The Halloween Storms became the single most studied space weather event complex and revealed critical gaps in infrastructure protection that have driven policy reforms ever since."
+  "summary": "The October–November 2003 Halloween Storms were a multi-week barrage of extreme solar activity – including an X17.2 flare, Dst −383 nT, GLE #65, #66 and #67, and 47+ satellite anomalies – representing the most comprehensive space weather event complex of the Space Age.",
+  "description": "From October 19 through November 3, 2003, active region AR 10486 (the largest sunspot group in over a decade) produced a relentless series of major flares and CMEs near Solar Cycle 23's descending phase. The October 28 X17.2 flare and subsequent ~2000 km/s CME drove a G5 storm on October 30 (Dst −383 nT). The October 29 X10 flare added GLE #66. The sequence closed with the November 4 X28+ flare, catalogued as its own event. Over 47 satellites suffered anomalies, including the permanent loss of Japan's ADEOS-2 (~$640M). Sweden's Malmö experienced a 50-minute power outage affecting 50,000 customers. The FAA rerouted polar aviation for days. Aurora was visible at 25–30° N latitude on multiple nights. The Halloween Storms became the single most studied space weather event complex and revealed critical gaps in infrastructure protection that have driven policy reforms ever since."
 }

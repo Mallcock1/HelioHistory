@@ -40,11 +40,11 @@
   "noaaRScale": 5,
   "peakDst": -850,
   "peakKp": 9,
-  "peakAp": 400,
+  "peakAp": null,
   "peakAE": null,
   "flareClass": "X45",
   "cmeSpeedKmS": 2380,
-  "solarWindSpeedPeak": 2300,
+  "solarWindSpeedPeak": null,
   "bzMin": null,
   "protonFluxPeak": null,
   "solarCycleNumber": 10,
@@ -130,5 +130,14 @@
     }
   ],
   "summary": "The Carrington Event of September 1859 is the most intense geomagnetic storm and the largest solar flare in the recorded instrumental era, collapsing telegraph networks worldwide and producing aurora visible to within 18° of the equator.",
-  "description": "On September 1, 1859, astronomers Richard Carrington and Richard Hodgson independently observed a brilliant white-light brightening on the solar disk – the first ever recorded solar flare. Approximately 17.5 hours later, the leading edge of an extremely fast coronal mass ejection (CME) struck Earth, compressing the magnetosphere and driving the most powerful geomagnetic storm measured by the Colaba observatory in Bombay, with a peak horizontal-field depression estimated at −850 to −1760 nT depending on interpretation. The global telegraph network – the internet of its day – went haywire: operators received electric shocks, some paper in relay stations caught fire, and remarkably, some lines operated autonomously using only the geomagnetically induced current (GIC) for power. The event occurred at the maximum of Solar Cycle 10, sourced from the largest sunspot group observed to that date. Modern risk assessments estimate a comparable event striking today's infrastructure could cause $1–2 trillion in damage and take months to years to fully restore electrical grids."
+  "description": "On September 1, 1859, astronomers Richard Carrington and Richard Hodgson independently observed a brilliant white-light brightening on the solar disk – the first ever recorded solar flare. Approximately 17.5 hours later, the leading edge of an extremely fast coronal mass ejection (CME) struck Earth, compressing the magnetosphere and driving the most powerful geomagnetic storm measured by the Colaba observatory in Bombay, with a peak horizontal-field depression estimated at −850 to −1760 nT depending on interpretation. The global telegraph network – the internet of its day – went haywire: operators received electric shocks, some paper in relay stations caught fire, and remarkably, some lines operated autonomously using only the geomagnetically induced current (GIC) for power. The event occurred at the maximum of Solar Cycle 10, sourced from the largest sunspot group observed to that date. Modern risk assessments estimate a comparable event striking today's infrastructure could cause $1–2 trillion in damage and take months to years to fully restore electrical grids.",
+  "estimatedFields": [
+    "peakDst",
+    "peakKp",
+    "noaaGScale",
+    "noaaSScale",
+    "noaaRScale",
+    "flareClass",
+    "cmeSpeedKmS"
+  ]
 }

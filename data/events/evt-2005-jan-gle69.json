@@ -35,7 +35,7 @@
   ],
   "noaaGScale": 3,
   "noaaSScale": 3,
-  "noaaRScale": 4,
+  "noaaRScale": 3,
   "peakDst": -105,
   "peakKp": 7,
   "peakAp": 60,
@@ -74,12 +74,12 @@
   "images": [],
   "papers": [
     {
-      "doi": "10.1029/2005GL024573",
-      "title": "The January 20, 2005 GLE: The largest neutron monitor event since GLE#5 in February 1956",
-      "authors": "Mewaldt, R. A., Cohen, C. M. S., Labrador, A. W., et al.",
-      "year": 2005,
-      "journal": "Geophysical Research Letters",
-      "keyFinding": "Confirmed GLE#69 as the largest ground-level enhancement since 1956, with South Pole neutron monitor increases exceeding 4800%, and characterized the relativistic proton spectrum."
+      "doi": "10.1088/0004-637x/771/2/92",
+      "title": "GIANT GROUND LEVEL ENHANCEMENT OF RELATIVISTIC SOLAR PROTONS ON 2005 JANUARY 20. I. SPACESHIP EARTH OBSERVATIONS",
+      "authors": "Bieber, J. W., Clem, J., Evenson, P., et al.",
+      "year": 2013,
+      "journal": "The Astrophysical Journal",
+      "keyFinding": "Spaceship Earth neutron-monitor analysis of the giant 20 January 2005 ground-level enhancement, the largest since 1956."
     }
   ],
   "summary": "GLE#69 on January 20, 2005 was the largest ground-level enhancement since 1956 (GLE#5), driven by an X7.1 flare from AR 10720. The South Pole neutron monitor recorded increases exceeding 4800%, prompting extreme aviation radiation alerts and widespread flight diversions from polar routes.",

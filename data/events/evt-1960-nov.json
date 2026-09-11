@@ -35,16 +35,16 @@
   ],
   "noaaGScale": 5,
   "noaaSScale": 4,
-  "noaaRScale": 5,
+  "noaaRScale": null,
   "peakDst": -339,
   "peakKp": 9,
   "peakAp": 300,
   "peakAE": null,
-  "flareClass": "X",
+  "flareClass": null,
   "cmeSpeedKmS": null,
   "solarWindSpeedPeak": null,
   "bzMin": null,
-  "protonFluxPeak": 10000,
+  "protonFluxPeak": null,
   "solarCycleNumber": 19,
   "cyclePhase": "descending",
   "sourceActiveRegion": null,
@@ -76,13 +76,17 @@
   "images": [],
   "papers": [
     {
-      "title": "Solar and Terrestrial Relationships During the International Geophysical Year",
-      "authors": "Akasofu, S.-I., Chapman, S.",
-      "year": 1963,
-      "journal": "Geophysics (various chapters)",
-      "keyFinding": "Comprehensive analysis of solar-terrestrial connections during 1957–1962, including the November 1960 storm complex during the highest sunspot maximum of the modern era."
+      "doi": "10.1007/bf00152170",
+      "title": "A summary of major solar proton events",
+      "authors": "Shea, M. A., Smart, D. F.",
+      "year": 1990,
+      "journal": "Solar Physics",
+      "keyFinding": "Catalogue of major solar proton events, including the November 1960 sequence, with estimated fluxes and associated flares."
     }
   ],
   "summary": "The November 1960 geomagnetic storm (Dst −339 nT, Kp 9) was one of the largest events of Solar Cycle 19 – the most active sunspot cycle in recorded history – causing widespread radio blackouts, communication disruptions, and aurora visible across the continental United States.",
-  "description": "Solar Cycle 19 (peaked 1958) was the strongest cycle in the modern record with a smoothed sunspot maximum of 201.3. While the all-time peak had passed, the Sun remained highly active into late 1960. The November 1960 storm complex began with multiple X-class flares producing severe radio blackouts, followed by fast CMEs that drove a peak Dst of −339 nT and Kp 9 on November 13. Major solar energetic particle events (GLE #8 and #9, November 12 and 15) added an S4-class radiation storm. Telegraph and telephone communications in Canada and northern Europe were disrupted for days by GICs, while aurora reached latitudes of ~30°N in the United States. The event demonstrated the compounding hazard of multiple phenomena (flares, CMEs, SEPs) occurring in rapid succession during the declining phase of a strong solar cycle."
+  "description": "Solar Cycle 19 (peaked 1958) was the strongest cycle in the modern record with a smoothed sunspot maximum of 285.0 (SILSO version 2.0). While the all-time peak had passed, the Sun remained highly active into late 1960. The November 1960 storm complex began with multiple large flares (pre-dating GOES X-ray classification) producing severe radio blackouts, followed by fast CMEs that drove a peak Dst of −339 nT and Kp 9 on November 13. Major solar energetic particle events (GLE #10, #11 and #12 on November 12, 15 and 20) added an S4-class radiation storm. Telegraph and telephone communications in Canada and northern Europe were disrupted for days by GICs, while aurora reached latitudes of ~30°N in the United States. The event demonstrated the compounding hazard of multiple phenomena (flares, CMEs, SEPs) occurring in rapid succession during the declining phase of a strong solar cycle.",
+  "estimatedFields": [
+    "noaaSScale"
+  ]
 }

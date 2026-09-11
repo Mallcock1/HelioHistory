@@ -65,12 +65,20 @@
   "images": [],
   "papers": [
     {
-      "doi": "10.1029/97GL02975",
-      "title": "Satellite anomalies linked to electron increase in the magnetosphere",
-      "authors": "Baker, D. N., Kanekal, S. G., Pulkkinen, A., Blake, J. B.",
-      "year": 1997,
-      "journal": "Geophysical Research Letters",
-      "keyFinding": "Demonstrated a statistical link between enhanced relativistic electron flux in the outer radiation belt and the January 1997 Telstar 401 failure, establishing the 'killer electron' paradigm for satellite failures."
+      "doi": "10.1029/97ja03236",
+      "title": "The relativistic electron response at geosynchronous orbit during the January 1997 magnetic storm",
+      "authors": "Reeves, G. D., Friedel, R. H. W., Belian, R. D., et al.",
+      "year": 1998,
+      "journal": "Journal of Geophysical Research: Space Physics",
+      "keyFinding": "Documented the relativistic electron response at geosynchronous orbit during the January 1997 storm, the environment in which Telstar 401 failed."
+    },
+    {
+      "doi": "10.1029/97ja03329",
+      "title": "Coronal mass ejections, magnetic clouds, and relativistic magnetospheric electron events: ISTP",
+      "authors": "Baker, D. N., Pulkkinen, T. I., Li, X., et al.",
+      "year": 1998,
+      "journal": "Journal of Geophysical Research: Space Physics",
+      "keyFinding": "ISTP study linking the January 1997 CME and magnetic cloud to the relativistic electron enhancement associated with the Telstar 401 loss."
     }
   ],
   "summary": "The loss of AT&T's Telstar 401 communications satellite on January 11, 1997, during an otherwise moderate geomagnetic storm, established the paradigm of 'killer electrons' – enhanced relativistic electron flux in the outer radiation belt causing deep dielectric charging and catastrophic electrostatic discharge in spacecraft.",

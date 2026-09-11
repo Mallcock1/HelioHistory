@@ -32,7 +32,7 @@
   "noaaRScale": null,
   "peakDst": -907,
   "peakKp": 9,
-  "peakAp": 400,
+  "peakAp": null,
   "peakAE": null,
   "flareClass": null,
   "cmeSpeedKmS": null,
@@ -76,22 +76,35 @@
   "images": [],
   "papers": [
     {
-      "doi": "10.1029/2001SW000021",
-      "title": "The great geomagnetic storm of May 1921: observations and brief commentary",
+      "doi": "10.1016/s1364-6826(00)00174-7",
+      "title": "Low-latitude auroras: the magnetic storm of 14–15 May 1921",
       "authors": "Silverman, S. M., Cliver, E. W.",
       "year": 2001,
       "journal": "Journal of Atmospheric and Solar-Terrestrial Physics",
-      "keyFinding": "Compiled historical observations to characterize the storm's global impact and estimated Dst from extant magnetograms."
+      "keyFinding": "Compiled worldwide auroral reports for 14–15 May 1921, including sightings from Samoa, establishing it as one of the lowest-latitude auroral displays on record."
     },
     {
-      "doi": "10.1029/2019SW002320",
-      "title": "Extreme and Superextreme Geomagnetic Storms",
+      "doi": "10.1029/2019sw002250",
+      "title": "Intensity and Impact of the New York Railroad Superstorm of May 1921",
       "authors": "Love, J. J., Hayakawa, H., Cliver, E. W.",
       "year": 2019,
       "journal": "Space Weather",
-      "keyFinding": "Revised peak Dst for May 1921 storm to approximately −907 nT using the Apia, Samoa magnetogram, placing it as the second-largest storm in the instrumental record."
+      "keyFinding": "Estimated a peak Dst of about −907 ± 132 nT from the Apia magnetogram, ranking the May 1921 storm second only to 1859, and documented the New York railroad and telegraph fires."
+    },
+    {
+      "doi": "10.1029/2019sw002195",
+      "title": "The Great Storm of May 1921: An Exemplar of a Dangerous Space Weather Event",
+      "authors": "Hapgood, M.",
+      "year": 2019,
+      "journal": "Space Weather",
+      "keyFinding": "Reviewed the technological impacts of the May 1921 storm as an exemplar of a dangerous space weather event for modern risk planning."
     }
   ],
   "summary": "The May 1921 geomagnetic storm, with a peak Dst of approximately −907 nT, is the second most intense storm in the instrumental record, setting telegraph relay stations ablaze and producing aurora visible from Samoa at just 14° S latitude.",
-  "description": "During May 13–15, 1921, a powerful sequence of solar eruptions drove an extreme geomagnetic storm that overwhelmed telegraph and early electrical systems across North America and Europe. Geomagnetically induced currents (GICs) were strong enough to ignite fires in railroad signal relay stations in New York State, with the most dramatic reports coming from near Brewster, New York, where the signal house burned. In Sweden, all telephone and telegraph service was interrupted for nearly two hours. The storm's Dst has been estimated at −907 nT from the Apia (Western Samoa) magnetogram – the most equatorial observatory that recorded the event – making it the second largest storm after 1859. Aurora was observed from Samoa at approximately 14° S geographic latitude, one of the lowest confirmed latitudes for aurora in the historical record. The storm occurred during the descending phase of Solar Cycle 15 (which peaked in 1917)."
+  "description": "During May 13–15, 1921, a powerful sequence of solar eruptions drove an extreme geomagnetic storm that overwhelmed telegraph and early electrical systems across North America and Europe. Geomagnetically induced currents (GICs) were strong enough to ignite fires in railroad signal relay stations in New York State, with the most dramatic reports coming from near Brewster, New York, where the signal house burned. In Sweden, all telephone and telegraph service was interrupted for nearly two hours. The storm's Dst has been estimated at −907 nT from the Apia (Western Samoa) magnetogram – the most equatorial observatory that recorded the event – making it the second largest storm after 1859. Aurora was observed from Samoa at approximately 14° S geographic latitude, one of the lowest confirmed latitudes for aurora in the historical record. The storm occurred during the descending phase of Solar Cycle 15 (which peaked in 1917).",
+  "estimatedFields": [
+    "peakDst",
+    "peakKp",
+    "noaaGScale"
+  ]
 }

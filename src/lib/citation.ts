@@ -49,9 +49,11 @@ export function eventCitation(event: SpaceWeatherEvent): string {
     `${PROJECT.authors} (${PROJECT.year}). "${event.name}" (${eventYear(event)}). ` +
     `In ${PROJECT.title} [Data set]. ${PROJECT.url} (event id: ${event.id}).`;
 
-  const dois = event.papers.map((p) => p.doi).filter(Boolean) as string[];
-  if (dois.length === 0) return base;
+  // DOI links preferred; fall back to a plain URL for sources without one.
+  const sources = event.papers
+    .map((p) => (p.doi ? `https://doi.org/${p.doi}` : p.url))
+    .filter(Boolean) as string[];
+  if (sources.length === 0) return base;
 
-  const sources = dois.map((d) => `https://doi.org/${d}`).join("; ");
-  return `${base} Primary sources: ${sources}`;
+  return `${base} Primary sources: ${sources.join("; ")}`;
 }

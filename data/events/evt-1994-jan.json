@@ -54,14 +54,6 @@
   "images": [],
   "papers": [
     {
-      "doi": "10.1029/98JA01285",
-      "title": "The Anik satellite failures of 1994 January: What happened and why",
-      "authors": "Lam, H.-L., Hruska, J.",
-      "year": 1998,
-      "journal": "Journal of Geophysical Research",
-      "keyFinding": "Attributed the Anik E1 and E2 failures to electrostatic discharge caused by deep dielectric charging from sustained elevated relativistic electron fluxes in the outer radiation belt."
-    },
-    {
       "doi": "10.1029/2012SW000811",
       "title": "Anik-E1 and E2 satellite failures of January 1994 revisited",
       "authors": "Lam, H.-L., Boteler, D. H., et al.",

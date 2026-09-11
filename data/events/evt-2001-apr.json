@@ -67,12 +67,12 @@
   "images": [],
   "papers": [
     {
-      "doi": "10.1029/2001JA009154",
-      "title": "April 2001 geomagnetic storm and its effects",
-      "authors": "Tsurutani, B. T., Gonzalez, W. D., et al.",
-      "year": 2003,
-      "journal": "Journal of Geophysical Research",
-      "keyFinding": "Analyzed the April 2001 storm as part of a cluster of intense storms during the active SC23 maximum, examining the role of southward Bz in driving the ring current."
+      "doi": "10.1029/2007ja012321",
+      "title": "Solar and interplanetary sources of major geomagnetic storms ( Dst ≤ −100 nT) during 1996–2005",
+      "authors": "Zhang, J., Richardson, I. G., Webb, D. F., et al.",
+      "year": 2007,
+      "journal": "Journal of Geophysical Research: Space Physics",
+      "keyFinding": "Catalogue of solar and interplanetary sources of all Dst ≤ −100 nT storms 1996–2005, identifying the source of the April 2001 storm."
     }
   ],
   "summary": "The April 2001 storm (Dst ~ −271 nT), driven by an X2.3 flare from AR 9415, was part of an unusually active period during Solar Cycle 23 maximum that produced multiple intense geomagnetic storms in rapid succession.",

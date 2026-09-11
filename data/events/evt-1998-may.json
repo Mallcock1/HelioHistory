@@ -62,12 +62,12 @@
   "images": [],
   "papers": [
     {
-      "doi": "10.1029/1998GL900173",
-      "title": "Galaxy IV – when bad things happen to good satellites",
-      "authors": "Baker, D. N.",
+      "doi": "10.1029/98eo00359",
+      "title": "Disturbed space environment may have been related to pager satellite failure",
+      "authors": "Baker, D. N., Allen, J. H., Kanekal, S. G., et al.",
       "year": 1998,
       "journal": "Eos, Transactions American Geophysical Union",
-      "keyFinding": "Raised the hypothesis that the elevated relativistic-electron environment may have contributed to the Galaxy IV failure; the operator later attributed the failure to tin-whisker short circuits, and the space-weather role remains unproven."
+      "keyFinding": "Raised the hypothesis that the disturbed space environment of May 1998 contributed to the Galaxy IV failure; the operator later attributed the failure to tin whiskers."
     }
   ],
   "summary": "The May 4, 1998 geomagnetic storm (Dst ~ −205 nT) and its exceptional weeks-long relativistic-electron enhancement created a transient new radiation belt and a sustained satellite-charging hazard. The famous Galaxy IV pager-satellite failure two weeks later is often linked to this period but was officially attributed to tin whiskers, not space weather.",

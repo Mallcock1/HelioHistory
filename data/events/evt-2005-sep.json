@@ -39,7 +39,7 @@
   ],
   "noaaGScale": 4,
   "noaaSScale": 3,
-  "noaaRScale": 5,
+  "noaaRScale": 4,
   "peakDst": -139,
   "peakKp": 8,
   "peakAp": 120,
@@ -57,7 +57,7 @@
     {
       "sector": "communications",
       "location": "Global",
-      "description": "Extreme R5 radio blackout from the X17 flare on September 7; complete HF radio absorption across the entire sunlit hemisphere for several hours.",
+      "description": "Severe R4 radio blackout from the X17 flare on September 7; near-complete HF radio absorption across the entire sunlit hemisphere for several hours.",
       "severity": "extreme"
     },
     {
@@ -78,14 +78,22 @@
   "images": [],
   "papers": [
     {
-      "doi": "10.1029/2006JA011710",
-      "title": "Solar and interplanetary sources of the September 2005 events",
-      "authors": "Gopalswamy, N., Yashiro, S., Akiyama, S.",
+      "doi": "10.1029/2007ja012321",
+      "title": "Solar and interplanetary sources of major geomagnetic storms ( Dst ≤ −100 nT) during 1996–2005",
+      "authors": "Zhang, J., Richardson, I. G., Webb, D. F., et al.",
       "year": 2007,
-      "journal": "Journal of Geophysical Research",
-      "keyFinding": "Analyzed the September 2005 event sequence, demonstrating how AR 10808 produced multiple X-class flares and CMEs in rapid succession during the descending phase of SC23."
+      "journal": "Journal of Geophysical Research: Space Physics",
+      "keyFinding": "Catalogue of solar and interplanetary sources of all Dst ≤ −100 nT storms 1996–2005, including September 2005."
+    },
+    {
+      "doi": "10.1088/0004-637x/703/1/757",
+      "title": "SUCCESSIVE SOLAR FLARES AND CORONAL MASS EJECTIONS ON 2005 SEPTEMBER 13 FROM NOAA AR 10808",
+      "authors": "Liu, C., Lee, J., Karlický, M., et al.",
+      "year": 2009,
+      "journal": "The Astrophysical Journal",
+      "keyFinding": "Analysed the successive flares and CMEs from AR 10808 in September 2005, part of the sequence that included the X17 flare of 7 September."
     }
   ],
-  "summary": "The September 2005 storm sequence featured an X17.0 flare – one of the largest in the GOES record – that caused an extreme R5 radio blackout, along with multiple X-class flares from AR 10808, significant SEP events, and a G4 geomagnetic storm, demonstrating the continued vigor of Solar Cycle 23 during its descending phase.",
-  "description": "In September 2005, AR 10808 produced a remarkable sequence of major solar eruptions during the descending phase of Solar Cycle 23. The X17.0 flare on September 7 was one of the five largest flares in the GOES record and caused an extreme R5 radio blackout – complete HF absorption across the entire sunlit hemisphere. An X6.2 flare followed on September 9. The associated CMEs drove a G4 geomagnetic storm with Dst ~ −139 nT and a significant SEP event. The event sequence demonstrated that the descending phase of the solar cycle can produce extremely powerful individual flares even as overall activity declines, and it contributed to the 'extended maximum' character of Solar Cycle 23."
+  "summary": "The September 2005 storm sequence featured an X17.0 flare – one of the largest in the GOES record – that caused a severe R4 radio blackout, along with multiple X-class flares from AR 10808, significant SEP events, and a G4 geomagnetic storm, demonstrating the continued vigour of Solar Cycle 23 during its descending phase.",
+  "description": "In September 2005, AR 10808 produced a remarkable sequence of major solar eruptions during the descending phase of Solar Cycle 23. The X17.0 flare on September 7 was one of the five largest flares in the GOES record and caused a severe R4 radio blackout – near-complete HF absorption across the entire sunlit hemisphere. An X6.2 flare followed on September 9. The associated CMEs drove a G4 geomagnetic storm with Dst ~ −139 nT and a significant SEP event. The event sequence demonstrated that the descending phase of the solar cycle can produce extremely powerful individual flares even as overall activity declines, and it contributed to the 'extended maximum' character of Solar Cycle 23."
 }

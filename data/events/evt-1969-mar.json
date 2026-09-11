@@ -28,7 +28,7 @@
   "peakKp": 8,
   "peakAp": null,
   "peakAE": null,
-  "flareClass": "X",
+  "flareClass": null,
   "cmeSpeedKmS": null,
   "solarWindSpeedPeak": null,
   "bzMin": null,
@@ -62,14 +62,14 @@
   "images": [],
   "papers": [
     {
-      "doi": "10.1029/JA076i019p04349",
-      "title": "Geomagnetic activity during the March 1969 storm period",
-      "authors": "Caan, M. N., McPherron, R. L., Russell, C. T.",
-      "year": 1971,
+      "doi": "10.1029/ja075i028p05553",
+      "title": "Threshold rigidity change during the magnetic storm of March 23-24, 1969",
+      "authors": "Wolfson, C. J., Nobles, R. A.",
+      "year": 1970,
       "journal": "Journal of Geophysical Research",
-      "keyFinding": "Analyzed the March 1969 storm as a significant event in the emerging satellite era, with enhanced in-situ solar wind data providing improved understanding of storm drivers."
+      "keyFinding": "Measured cosmic-ray cutoff-rigidity changes during the 23–24 March 1969 magnetic storm, documenting its magnetospheric intensity."
     }
   ],
   "summary": "The March 23-24, 1969 geomagnetic storm (Dst ~ −228 nT) was a notable event during the declining phase of Solar Cycle 20, causing HF radio blackouts and aurora at mid-latitudes, studied with early satellite-era instrumentation.",
-  "description": "On March 23–24, 1969, during the declining phase of Solar Cycle 20, a major geomagnetic storm drove the Dst index to approximately −228 nT (WDC Kyoto final). An earlier date of March 8 was previously recorded in error; that day was geomagnetically quiet. The event occurred during the early satellite era when in-situ solar wind measurements were becoming available, providing a more complete picture of storm drivers than had been possible for earlier events. The storm caused significant HF radio disruptions, particularly on polar routes, and aurora was visible at mid-latitudes across North America and Europe. GIC effects were detected in power transmission infrastructure, though grid failures were not as severe as those that would occur in later, more infrastructure-dependent decades."
+  "description": "On March 23–24, 1969, during the declining phase of Solar Cycle 20, a major geomagnetic storm drove the Dst index to approximately −228 nT (WDC Kyoto final). The event occurred during the early satellite era when in-situ solar wind measurements were becoming available, providing a more complete picture of storm drivers than had been possible for earlier events. The storm caused significant HF radio disruptions, particularly on polar routes, and aurora was visible at mid-latitudes across North America and Europe. GIC effects were detected in power transmission infrastructure, though grid failures were not as severe as those that would occur in later, more infrastructure-dependent decades."
 }

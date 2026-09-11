@@ -63,12 +63,12 @@
   "images": [],
   "papers": [
     {
-      "doi": "10.1002/2015JA021524",
-      "title": "The 17 March 2015 storm: A problem for space weather forecasting",
+      "doi": "10.1002/2015sw001213",
+      "title": "No Major Solar Flares but the Largest Geomagnetic Storm in the Present Solar Cycle",
       "authors": "Kamide, Y., Kusano, K.",
       "year": 2015,
-      "journal": "Journal of Geophysical Research: Space Physics",
-      "keyFinding": "Highlighted the St Patrick's Day 2015 storm as a forecasting challenge, as the responsible CME originated from relatively modest solar activity (C-class flare, filament eruption), yet produced the strongest geomagnetic storm of SC24 at that time."
+      "journal": "Space Weather",
+      "keyFinding": "Highlighted that the largest storm of Solar Cycle 24 came without a major flare, from a CME associated with a C-class flare and filament eruption – a forecasting challenge."
     }
   ],
   "summary": "The 2015 St Patrick's Day storm (Dst ~ −223 nT) was the strongest geomagnetic storm of Solar Cycle 24 until May 2024, notable for being driven by relatively modest solar activity (C-class flare) that was underestimated by forecasters – highlighting persistent challenges in space weather prediction.",

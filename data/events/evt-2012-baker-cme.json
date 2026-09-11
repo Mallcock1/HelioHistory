@@ -48,7 +48,7 @@
     {
       "sector": "power",
       "location": "Global (hypothetical)",
-      "description": "Modeling studies estimate that if the CME had struck Earth, it would have driven a geomagnetic storm comparable to or exceeding the Carrington Event, with peak Dst estimated at −1182 nT. Direct economic losses could have exceeded $2.6 trillion in the US alone with 1–2 year recovery time.",
+      "description": "Modelling studies estimate that if the CME had struck Earth, it would have driven a geomagnetic storm comparable to or exceeding the Carrington Event, with peak Dst estimated at −1182 nT. Direct economic losses could have exceeded $2.6 trillion in the US alone with 1–2 year recovery time.",
       "severity": "extreme",
       "economicCostUsd": 2600000000000
     },
@@ -64,15 +64,7 @@
   "images": [],
   "papers": [
     {
-      "doi": "10.1002/swe.20097",
-      "title": "A major solar eruptive event in July 2012: Defining extreme space weather scenarios",
-      "authors": "Baker, D. N., Li, X., Pulkkinen, A., et al.",
-      "year": 2013,
-      "journal": "Space Weather",
-      "keyFinding": "Characterized the July 23, 2012 CME as a Carrington-class event based on STEREO-A in-situ measurements; estimated that if Earth-directed, it would have driven Dst ~ −1182 nT."
-    },
-    {
-      "doi": "10.1002/swe.20095",
+      "doi": "10.1029/2011sw000734",
       "title": "On the probability of occurrence of extreme space weather events",
       "authors": "Riley, P.",
       "year": 2012,
@@ -80,14 +72,22 @@
       "keyFinding": "Calculated the probability of a Carrington-class event occurring within a decade at approximately 12%, using extreme value statistics."
     },
     {
-      "doi": "10.1088/0004-637X/785/1/7",
-      "title": "Sun-to-Earth characteristics of the 2012 July 23 ultra-fast transit solar storm",
+      "doi": "10.1002/swe.20097",
+      "title": "A major solar eruptive event in July 2012: Defining extreme space weather scenarios",
+      "authors": "Baker, D. N., Li, X., Pulkkinen, A., et al.",
+      "year": 2013,
+      "journal": "Space Weather",
+      "keyFinding": "Characterised the July 23, 2012 CME as a Carrington-class event based on STEREO-A in-situ measurements; estimated that if Earth-directed, it would have driven Dst ~ −1182 nT."
+    },
+    {
+      "doi": "10.1038/ncomms4481",
+      "title": "Observations of an extreme storm in interplanetary space caused by successive coronal mass ejections",
       "authors": "Liu, Y. D., Luhmann, J. G., Kajdič, P., et al.",
       "year": 2014,
-      "journal": "The Astrophysical Journal",
+      "journal": "Nature Communications",
       "keyFinding": "Reconstructed the full solar-to-Earth propagation characteristics of the July 23 CME, finding it was preceded by a 'clearing' CME on July 19 that reduced the ambient solar wind density and allowed the July 23 CME to maintain its extreme speed."
     }
   ],
-  "summary": "The July 23, 2012 CME – traveling at ~2500 km/s with an in-situ Bz of −60 nT at STEREO-A – was a Carrington-class solar superstorm that narrowly missed Earth by approximately one week, with modeling estimates suggesting it would have caused over $2.6 trillion in damage to global infrastructure.",
-  "description": "On July 23, 2012, active region AR 11520 – which was facing Earth just one week earlier – erupted with an extreme coronal mass ejection traveling at approximately 2500 km/s. Because Earth had moved on in its orbit, the CME passed through the point where Earth had been without striking our planet. STEREO-A, a NASA spacecraft positioned approximately 120° ahead of Earth in its orbit, was struck directly and measured the event in unprecedented detail. The in-situ solar wind data revealed a peak magnetic field southward component (Bz) of −60 nT sustained for hours – a configuration that, if directed at Earth, would have driven a storm rivaling or exceeding the 1859 Carrington Event. Baker et al. (2013) estimated the resulting Dst would have been approximately −1182 nT, and insurance and economic modeling placed potential losses at $1–2.6 trillion in the United States alone. The event is now a central reference point in government and industry space weather preparedness planning."
+  "summary": "The July 23, 2012 CME – travelling at ~2500 km/s with an in-situ Bz of −60 nT at STEREO-A – was a Carrington-class solar superstorm that narrowly missed Earth by approximately one week, with modelling estimates suggesting it would have caused over $2.6 trillion in damage to global infrastructure.",
+  "description": "On July 23, 2012, active region AR 11520 – which was facing Earth just one week earlier – erupted with an extreme coronal mass ejection travelling at approximately 2500 km/s. Because Earth had moved on in its orbit, the CME passed through the point where Earth had been without striking our planet. STEREO-A, a NASA spacecraft positioned approximately 120° ahead of Earth in its orbit, was struck directly and measured the event in unprecedented detail. The in-situ solar wind data revealed a peak magnetic field southward component (Bz) of −60 nT sustained for hours – a configuration that, if directed at Earth, would have driven a storm rivaling or exceeding the 1859 Carrington Event. Baker et al. (2013) estimated the resulting Dst would have been approximately −1182 nT, and insurance and economic modelling placed potential losses at $1–2.6 trillion in the United States alone. The event is now a central reference point in government and industry space weather preparedness planning."
 }

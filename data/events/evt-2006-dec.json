@@ -36,8 +36,8 @@
     }
   ],
   "noaaGScale": 4,
-  "noaaSScale": 2,
-  "noaaRScale": 4,
+  "noaaSScale": 3,
+  "noaaRScale": 3,
   "peakDst": -162,
   "peakKp": 8,
   "peakAp": 132,
@@ -55,7 +55,7 @@
     {
       "sector": "communications",
       "location": "Global (sunlit hemisphere)",
-      "description": "R4 severe radio blackout disrupted shortwave HF communications for several hours; GPS navigation errors were measured to be up to 50 m during the X-ray pulse peak.",
+      "description": "R3 strong radio blackout disrupted shortwave HF communications for several hours; GPS navigation errors were measured to be up to 50 m during the X-ray pulse peak.",
       "severity": "severe",
       "durationHours": 6
     },
@@ -72,14 +72,22 @@
   "images": [],
   "papers": [
     {
-      "doi": "10.1029/2007GL033330",
-      "title": "Long-term energetic particle observations and the December 2006 SEP event",
-      "authors": "Mewaldt, R. A., Davis, A. J., Lave, K. A., et al.",
-      "year": 2008,
-      "journal": "Geophysical Research Letters",
-      "keyFinding": "Characterized the December 2006 SEP event and GLE #70 particle energy spectra; noted the surprisingly high intensity given the solar cycle minimum conditions."
+      "doi": "10.1016/j.asr.2013.12.026",
+      "title": "Response of the Earth’s lower ionosphere to the Ground Level Enhancement event of December 13, 2006",
+      "authors": "Žigman, V., Kudela, K., Grubor, D.",
+      "year": 2014,
+      "journal": "Advances in Space Research",
+      "keyFinding": "Measured the lower-ionosphere response to the December 2006 ground-level enhancement."
+    },
+    {
+      "doi": "10.1007/s11207-016-0877-2",
+      "title": "Analysis of the Ground-Level Enhancements on 14 July 2000 and 13 December 2006 Using Neutron Monitor Data",
+      "authors": "Mishev, A., Usoskin, I.",
+      "year": 2016,
+      "journal": "Solar Physics",
+      "keyFinding": "Neutron-monitor analysis of GLE 70 (13 December 2006), deriving its spectrum and anisotropy."
     }
   ],
   "summary": "The December 2006 X9.0 flare and GLE #70, occurring unexpectedly near Solar Cycle 23/24 minimum from isolated active region AR 10930, demonstrated that large solar events can occur at any phase of the solar cycle and disrupted GPS accuracy globally.",
-  "description": "Active region AR 10930, appearing in an otherwise quiet Sun near the transition between Solar Cycles 23 and 24, produced an X9.0 flare on December 5, 2006 – one of the largest of the entire cycle, yet occurring at or near solar minimum. The flare caused an R4 severe radio blackout on the sunlit hemisphere and measurable GPS positioning errors of up to 50 m due to ionospheric disturbances. An associated fast CME (~1774 km/s) drove a severe (G4) geomagnetic storm (Dst −162 nT) on December 14–15. A separate X3.4 flare on December 13 from the same active region (AR 10930) produced GLE #70, with >100% enhancements at high-latitude neutron monitors. The December 2006 events served as an important reminder that infrastructure planners cannot assume quiescence near solar minimum and that isolated, powerful active regions can produce extreme events out of cycle phase."
+  "description": "Active region AR 10930, appearing in an otherwise quiet Sun near the transition between Solar Cycles 23 and 24, produced an X9.0 flare on December 5, 2006 – one of the largest of the entire cycle, yet occurring at or near solar minimum. The flare caused an R3 strong radio blackout on the sunlit hemisphere and measurable GPS positioning errors of up to 50 m due to ionospheric disturbances. An associated fast CME (~1774 km/s) drove a severe (G4) geomagnetic storm (Dst −162 nT) on December 14–15. A separate X3.4 flare on December 13 from the same active region (AR 10930) produced GLE #70, with >100% enhancements at high-latitude neutron monitors. The December 2006 events served as an important reminder that infrastructure planners cannot assume quiescence near solar minimum and that isolated, powerful active regions can produce extreme events out of cycle phase."
 }

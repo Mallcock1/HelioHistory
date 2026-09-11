@@ -108,7 +108,14 @@
     },
     "cyclePhase": {
       "type": "string",
-      "enum": ["ascending", "maximum", "descending", "minimum"]
+      "description": "Phase of the solar cycle at the time of the event. Use \"unknown\" where no published estimate exists (typical for pre-telescopic events).",
+      "enum": ["ascending", "maximum", "descending", "minimum", "unknown"]
+    },
+    "estimatedFields": {
+      "type": "array",
+      "description": "Names of top-level fields whose values are published reconstructions or estimates rather than instrumental measurements (e.g. peakDst before 1957, flareClass before GOES, peakKp before 1932). The app marks these as approximate.",
+      "items": { "type": "string" },
+      "uniqueItems": true
     },
     "sourceActiveRegion": { "type": ["string", "null"] },
     "sunspotNumberDaily": { "type": ["number", "null"], "minimum": 0 },
@@ -243,6 +250,11 @@
       "required": ["title", "authors", "year"],
       "properties": {
         "doi": { "type": "string" },
+        "url": {
+          "type": "string",
+          "format": "uri",
+          "description": "Link for sources without a DOI (agency reports, data-centre notices). Prefer a DOI where one exists."
+        },
         "title": { "type": "string", "minLength": 1 },
         "authors": { "type": "string" },
         "year": { "type": "integer" },

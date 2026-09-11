@@ -1,12 +1,15 @@
 import type { TimeSeriesDataPoint } from "@/lib/types";
-import { TIME_SERIES_DATA, type EventTimeSeriesData } from "./timeseries-data";
+import { TIME_SERIES_DATA } from "./timeseries-data";
 
 /**
  * Time series data for space weather events.
  *
- * All data is real, observed data from scientific archives:
+ * Dst and Kp series are observed data from scientific archives:
  *   Dst: WDC for Geomagnetism, Kyoto (wdc.kugi.kyoto-u.ac.jp)
- *   Neutron monitors: NMDB (nmdb.eu)
+ *   Kp:  GFZ Potsdam (doi:10.5880/Kp.0001)
+ * Neutron-monitor series are NMDB (nmdb.eu) observations except where
+ * `neutronMonitorModelled` is set, in which case they are parametric profiles
+ * fitted to a published peak magnitude and the UI labels them as modelled.
  */
 
 export interface EventTimeSeries {
@@ -14,6 +17,7 @@ export interface EventTimeSeries {
   kp?: TimeSeriesDataPoint[];
   protonFlux?: TimeSeriesDataPoint[];
   neutronMonitor?: TimeSeriesDataPoint[];
+  neutronMonitorModelled?: boolean;
 }
 
 /**
