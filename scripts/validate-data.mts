@@ -169,25 +169,37 @@ for (const file of files) {
 
 // ── Optional: resolve every DOI via CrossRef and compare the registered title ──
 if (checkDois) {
-  const seen = new Map<string, { title: string } | null>();
-  for (const { file, doi, title } of doiChecks) {
-    if (!seen.has(doi)) {
+  // A confirmed 404 is an error (the DOI does not exist). Throttling, server
+  // errors and network failures are retried and then reported as warnings, so
+  // a flaky connection on a CI runner cannot fail the build on its own.
+  type Lookup = { title: string } | "missing" | "unavailable";
+  const seen = new Map<string, Lookup>();
+  const lookup = async (doi: string): Promise<Lookup> => {
+    for (let attempt = 1; attempt <= 3; attempt++) {
       try {
         const res = await fetch(`https://api.crossref.org/works/${encodeURIComponent(doi)}`, {
           headers: { "User-Agent": "HelioHistory data validator (https://github.com/Mallcock1/HelioHistory)" },
         });
-        seen.set(doi, res.ok ? { title: ((await res.json()).message.title?.[0] ?? "") as string } : null);
+        if (res.ok) return { title: ((await res.json()).message.title?.[0] ?? "") as string };
+        if (res.status === 404) return "missing";
       } catch {
-        seen.set(doi, null);
+        // network error: fall through to retry
       }
+      await new Promise((r) => setTimeout(r, attempt * 2000));
     }
-    const rec = seen.get(doi);
-    if (rec === null) errors.push(`${file}: DOI ${doi} does not resolve on CrossRef`);
-    else if (rec && titleSimilarity(title, rec.title) < 0.5) {
+    return "unavailable";
+  };
+  for (const { file, doi, title } of doiChecks) {
+    if (!seen.has(doi)) seen.set(doi, await lookup(doi));
+    const rec = seen.get(doi)!;
+    if (rec === "missing") errors.push(`${file}: DOI ${doi} does not resolve on CrossRef`);
+    else if (rec === "unavailable") warnings.push(`${file}: could not reach CrossRef for DOI ${doi} (throttled or offline)`);
+    else if (titleSimilarity(title, rec.title) < 0.5) {
       errors.push(`${file}: DOI ${doi} resolves to "${rec.title.slice(0, 70)}", not "${title.slice(0, 70)}"`);
     }
   }
-  console.log(`   checked ${seen.size} unique DOIs against CrossRef`);
+  const unavailable = [...seen.values()].filter((v) => v === "unavailable").length;
+  console.log(`   checked ${seen.size} unique DOIs against CrossRef${unavailable ? ` (${unavailable} unreachable)` : ""}`);
 }
 
 if (warnings.length) {
