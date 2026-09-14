@@ -667,7 +667,7 @@ export default function TimelineCanvas({
         const x0 = Math.max(plotLeft, yearToPx(C14_FIRST_YEAR));
         const x1 = Math.min(w, yearToPx(C14_LAST_YEAR));
         if (x1 - x0 > 260 * dpr) {
-          ctx.fillStyle = "rgba(245, 158, 11, 0.35)";
+          ctx.fillStyle = "rgba(245, 158, 11, 0.6)";
           ctx.font = `400 ${10 * dpr}px system-ui, sans-serif`;
           ctx.textAlign = "center";
           ctx.fillText("¹⁴C reconstruction · Usoskin et al. 2021", (x0 + x1) / 2, baselineY + 14 * dpr);
@@ -772,7 +772,7 @@ export default function TimelineCanvas({
       const labelLeft = x - labelW / 2;
 
       if (labelLeft > lastLabelRight + 12 * dpr) {
-        ctx.fillStyle = isDark ? "rgba(255,255,255,0.35)" : "rgba(0,0,0,0.4)";
+        ctx.fillStyle = isDark ? "rgba(255,255,255,0.55)" : "rgba(0,0,0,0.55)";
         ctx.textAlign = "center";
         ctx.fillText(labelText, x, GRID_LABEL_Y * dpr);
         lastLabelRight = x + labelW / 2;
@@ -830,7 +830,7 @@ export default function TimelineCanvas({
 
     // Metric label (rotated)
     ctx.save();
-    ctx.fillStyle = isDark ? "rgba(255,255,255,0.35)" : "rgba(0,0,0,0.4)";
+    ctx.fillStyle = isDark ? "rgba(255,255,255,0.55)" : "rgba(0,0,0,0.55)";
     ctx.font = `600 ${13 * dpr}px system-ui, sans-serif`;
     ctx.textAlign = "center";
     ctx.translate(12 * dpr, trackTopY + trackArea * 0.35);
@@ -860,7 +860,7 @@ export default function TimelineCanvas({
       ctx.stroke();
       ctx.setLineDash([]);
       // Label
-      ctx.fillStyle = isDark ? "rgba(255,255,255,0.5)" : "rgba(0,0,0,0.55)";
+      ctx.fillStyle = isDark ? "rgba(255,255,255,0.6)" : "rgba(0,0,0,0.6)";
       ctx.fillText(tick.label, axisW - 8 * dpr, y + 4 * dpr);
     }
 
@@ -1276,7 +1276,7 @@ export default function TimelineCanvas({
       } else {
         ctx.fillStyle = isHovered || isSelected
           ? (isDark ? "rgba(255,255,255,0.95)" : "rgba(0,0,0,0.85)")
-          : (isDark ? `rgba(255,255,255,${severity >= 3 ? 0.8 : 0.6})` : `rgba(0,0,0,${severity >= 3 ? 0.7 : 0.5})`);
+          : (isDark ? `rgba(255,255,255,${severity >= 3 ? 0.85 : 0.65})` : `rgba(0,0,0,${severity >= 3 ? 0.75 : 0.6})`);
         ctx.textAlign = "center";
         const labelX = layout.labelX;
         const labelY = eventY - 8 * dpr;
@@ -1295,7 +1295,7 @@ export default function TimelineCanvas({
     eventRectsRef.current = newRects;
 
     // ── Viewport info ──
-    ctx.fillStyle = isDark ? "rgba(255,255,255,0.25)" : "rgba(0,0,0,0.3)";
+    ctx.fillStyle = isDark ? "rgba(255,255,255,0.55)" : "rgba(0,0,0,0.55)";
     ctx.font = `400 ${11 * dpr}px system-ui, sans-serif`;
     ctx.textAlign = "right";
     ctx.fillText(
@@ -1358,7 +1358,7 @@ export default function TimelineCanvas({
               end: Math.min(MAX_YEAR, mid + nr / 2),
             });
           }}
-          className="w-8 h-8 rounded-lg glass-strong flex items-center justify-center text-foreground/50 hover:text-foreground hover:bg-overlay/[0.08] transition-all text-sm font-mono"
+          className="w-8 h-8 rounded-lg glass-strong flex items-center justify-center text-foreground/60 hover:text-foreground hover:bg-overlay/[0.08] transition-all text-sm font-mono"
         >
           +
         </button>
@@ -1372,19 +1372,19 @@ export default function TimelineCanvas({
               end: Math.min(MAX_YEAR, mid + nr / 2),
             });
           }}
-          className="w-8 h-8 rounded-lg glass-strong flex items-center justify-center text-foreground/50 hover:text-foreground hover:bg-overlay/[0.08] transition-all text-sm font-mono"
+          className="w-8 h-8 rounded-lg glass-strong flex items-center justify-center text-foreground/60 hover:text-foreground hover:bg-overlay/[0.08] transition-all text-sm font-mono"
         >
           -
         </button>
         <button
           onClick={() => setViewport({ start: MIN_YEAR, end: MAX_YEAR })}
-          className="h-8 px-3 rounded-lg glass-strong flex items-center justify-center text-foreground/40 hover:text-foreground hover:bg-overlay/[0.08] transition-all text-[11px] tracking-wider uppercase"
+          className="h-8 px-3 rounded-lg glass-strong flex items-center justify-center text-foreground/55 hover:text-foreground hover:bg-overlay/[0.08] transition-all text-[11px] tracking-wider uppercase"
         >
           Fit All
         </button>
       </div>
 
-      <div className="absolute bottom-5 left-16 text-foreground/20 text-[11px] tracking-wider">
+      <div className="absolute bottom-5 left-16 text-foreground/55 text-[11px] tracking-wider">
         Scroll to zoom · Drag or swipe to pan · Click an event for details
       </div>
     </div>

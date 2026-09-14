@@ -32,7 +32,7 @@ export default function EventTooltip({
         >
           <div className="glass-strong rounded-lg px-3 py-2.5 min-w-[200px] max-w-[300px] shadow-2xl shadow-foreground/30">
             <p className="heading-display text-sm text-foreground">{event.name}</p>
-            <p className="text-xs text-foreground/50 mt-0.5">
+            <p className="text-xs text-foreground/60 mt-0.5">
               {formatEventDate(event.startDate)}
               {event.startDate !== event.endDate &&
                 ` – ${formatEventDate(event.endDate)}`}
@@ -50,7 +50,7 @@ export default function EventTooltip({
               ))}
             </div>
             {event.peakDst && (
-              <p className="text-xs text-foreground/40 mt-1 font-mono">
+              <p className="text-xs text-foreground/55 mt-1 font-mono">
                 Dst: {event.peakDst} nT
                 {event.peakKp && ` · Kp: ${event.peakKp}`}
               </p>

@@ -36,7 +36,7 @@ export default function FigureFrame({
         onClick={handleDownload}
         title="Download PNG"
         aria-label="Download figure as PNG"
-        className="absolute top-1 right-1 p-1 rounded-md text-foreground/30 hover:text-foreground/70 bg-overlay/5 hover:bg-overlay/10 border border-overlay/10 opacity-0 group-hover/fig:opacity-100 focus-visible:opacity-100 transition-all"
+        className="absolute top-1 right-1 p-1 rounded-md text-foreground/55 hover:text-foreground/90 bg-overlay/5 hover:bg-overlay/10 border border-overlay/10 opacity-0 group-hover/fig:opacity-100 focus-visible:opacity-100 transition-all"
       >
         <Download className="w-3.5 h-3.5" />
       </button>

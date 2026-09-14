@@ -114,7 +114,7 @@ export default function EventsPage() {
             placeholder="Search events, impacts, descriptions…"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="w-full max-w-md bg-overlay/5 border border-overlay/10 rounded-lg px-4 py-2 text-sm text-foreground placeholder:text-foreground/30 focus:outline-none focus:border-solar/50 focus:ring-1 focus:ring-solar/20 transition-colors"
+            className="w-full max-w-md bg-overlay/5 border border-overlay/10 rounded-lg px-4 py-2 text-sm text-foreground placeholder:text-foreground/50 focus:outline-none focus:border-solar/50 focus:ring-1 focus:ring-solar/20 transition-colors"
           />
 
           {/* Phenomena filter */}
@@ -135,7 +135,7 @@ export default function EventsPage() {
                   className={`px-2.5 py-1 rounded-md text-xs font-medium transition-colors border ${
                     isActive
                       ? "border-overlay/20 bg-overlay/10 text-foreground"
-                      : "border-overlay/5 text-foreground/40 hover:text-foreground/60 hover:bg-overlay/5"
+                      : "border-overlay/5 text-foreground/55 hover:text-foreground/80 hover:bg-overlay/5"
                   }`}
                   style={isActive ? { color: config.color } : undefined}
                 >
@@ -157,7 +157,7 @@ export default function EventsPage() {
                     className={`px-2.5 py-1 text-xs font-medium transition-colors ${
                       matchMode === mode
                         ? "bg-overlay/10 text-foreground"
-                        : "text-foreground/40 hover:text-foreground/60"
+                        : "text-foreground/55 hover:text-foreground/80"
                     }`}
                   >
                     {mode === "any" ? "Match any" : "Match all"}
@@ -168,7 +168,7 @@ export default function EventsPage() {
             {selectedPhenomena.length > 0 && (
               <button
                 onClick={() => setSelectedPhenomena([])}
-                className="px-2.5 py-1 rounded-md text-xs text-foreground/30 hover:text-foreground/50 transition-colors"
+                className="px-2.5 py-1 rounded-md text-xs text-foreground/55 hover:text-foreground/80 transition-colors"
               >
                 Clear
               </button>
@@ -182,11 +182,11 @@ export default function EventsPage() {
           <div className="min-w-[900px] px-8">
             <table className="w-full">
               <thead className="sticky top-0 bg-background/90 backdrop-blur-xl z-10">
-                <tr className="border-b border-overlay/5 text-xs text-foreground/40 uppercase tracking-wider">
+                <tr className="border-b border-overlay/5 text-xs text-foreground/55 uppercase tracking-wider">
                   <th className="px-4 py-3 text-left font-medium">
                     <button
                       onClick={() => toggleSort("date")}
-                      className="hover:text-foreground/70 transition-colors"
+                      className="hover:text-foreground/90 transition-colors"
                     >
                       Date {sortKey === "date" && (sortDir === "asc" ? "↑" : "↓")}
                     </button>
@@ -194,7 +194,7 @@ export default function EventsPage() {
                   <th className="px-4 py-3 text-left font-medium">
                     <button
                       onClick={() => toggleSort("name")}
-                      className="hover:text-foreground/70 transition-colors"
+                      className="hover:text-foreground/90 transition-colors"
                     >
                       Event {sortKey === "name" && (sortDir === "asc" ? "↑" : "↓")}
                     </button>
@@ -203,7 +203,7 @@ export default function EventsPage() {
                   <th className="px-4 py-3 text-center font-medium">
                     <button
                       onClick={() => toggleSort("severity")}
-                      className="hover:text-foreground/70 transition-colors"
+                      className="hover:text-foreground/90 transition-colors"
                     >
                       G {sortKey === "severity" && (sortDir === "asc" ? "↑" : "↓")}
                     </button>
@@ -211,7 +211,7 @@ export default function EventsPage() {
                   <th className="px-4 py-3 text-right font-medium">
                     <button
                       onClick={() => toggleSort("dst")}
-                      className="hover:text-foreground/70 transition-colors"
+                      className="hover:text-foreground/90 transition-colors"
                     >
                       Dst {sortKey === "dst" && (sortDir === "asc" ? "↑" : "↓")}
                     </button>
@@ -219,7 +219,7 @@ export default function EventsPage() {
                   <th className="px-4 py-3 text-center font-medium">
                     <button
                       onClick={() => toggleSort("kp")}
-                      className="hover:text-foreground/70 transition-colors"
+                      className="hover:text-foreground/90 transition-colors"
                     >
                       Kp {sortKey === "kp" && (sortDir === "asc" ? "↑" : "↓")}
                     </button>
@@ -227,7 +227,7 @@ export default function EventsPage() {
                   <th className="px-4 py-3 text-center font-medium">
                     <button
                       onClick={() => toggleSort("flare")}
-                      className="hover:text-foreground/70 transition-colors"
+                      className="hover:text-foreground/90 transition-colors"
                     >
                       Flare {sortKey === "flare" && (sortDir === "asc" ? "↑" : "↓")}
                     </button>
@@ -235,7 +235,7 @@ export default function EventsPage() {
                   <th className="px-4 py-3 text-right font-medium">
                     <button
                       onClick={() => toggleSort("duration")}
-                      className="hover:text-foreground/70 transition-colors"
+                      className="hover:text-foreground/90 transition-colors"
                     >
                       Duration {sortKey === "duration" && (sortDir === "asc" ? "↑" : "↓")}
                     </button>
@@ -243,7 +243,7 @@ export default function EventsPage() {
                   <th className="px-4 py-3 text-right font-medium">
                     <button
                       onClick={() => toggleSort("impacts")}
-                      className="hover:text-foreground/70 transition-colors"
+                      className="hover:text-foreground/90 transition-colors"
                     >
                       Impacts {sortKey === "impacts" && (sortDir === "asc" ? "↑" : "↓")}
                     </button>
@@ -259,14 +259,14 @@ export default function EventsPage() {
                       onClick={() => setSelectedEvent(event)}
                       className="border-b border-overlay/3 hover:bg-overlay/3 cursor-pointer transition-colors group"
                     >
-                      <td className="px-4 py-3 text-xs text-foreground/50 font-mono whitespace-nowrap">
+                      <td className="px-4 py-3 text-xs text-foreground/60 font-mono whitespace-nowrap">
                         {formatEventDate(event.startDate)}
                       </td>
                       <td className="px-4 py-3">
                         <span className="text-sm font-medium text-foreground group-hover:text-solar transition-colors">
                           {event.name}
                         </span>
-                        <p className="text-xs text-foreground/30 mt-0.5 line-clamp-1">
+                        <p className="text-xs text-foreground/55 mt-0.5 line-clamp-1">
                           {event.summary}
                         </p>
                       </td>
@@ -301,7 +301,7 @@ export default function EventsPage() {
                             G{event.noaaGScale}
                           </Badge>
                         ) : (
-                          <span className="text-xs text-foreground/20">–</span>
+                          <span className="text-xs text-foreground/40">–</span>
                         )}
                       </td>
                       <td className="px-4 py-3 text-right font-mono text-xs">
@@ -319,7 +319,7 @@ export default function EventsPage() {
                             {event.peakDst}
                           </span>
                         ) : (
-                          <span className="text-foreground/20">–</span>
+                          <span className="text-foreground/40">–</span>
                         )}
                       </td>
                       <td className="px-4 py-3 text-center font-mono text-xs">
@@ -337,7 +337,7 @@ export default function EventsPage() {
                             {event.peakKp}
                           </span>
                         ) : (
-                          <span className="text-foreground/20">–</span>
+                          <span className="text-foreground/40">–</span>
                         )}
                       </td>
                       <td className="px-4 py-3 text-center font-mono text-xs text-solar">
@@ -347,14 +347,14 @@ export default function EventsPage() {
                             {event.flareClass}
                           </>
                         ) : (
-                          <span className="text-foreground/20">–</span>
+                          <span className="text-foreground/40">–</span>
                         )}
                       </td>
-                      <td className="px-4 py-3 text-right text-xs text-foreground/50">
+                      <td className="px-4 py-3 text-right text-xs text-foreground/60">
                         {event.durationHours}h
                       </td>
                       <td className="px-4 py-3 text-right">
-                        <span className="text-xs text-foreground/40">
+                        <span className="text-xs text-foreground/55">
                           {event.impacts.length}
                         </span>
                       </td>

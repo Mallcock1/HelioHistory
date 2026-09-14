@@ -192,7 +192,7 @@
   --flare: oklch(0.80 0.16 60);
   --cme: oklch(0.72 0.22 38);
   --sep: oklch(0.68 0.28 25);
-  --gle: oklch(0.58 0.25 300);
+  --gle: oklch(0.66 0.24 300);
   --radio-blackout: oklch(0.68 0.15 220);
   --geomag: oklch(0.72 0.22 155);
 }

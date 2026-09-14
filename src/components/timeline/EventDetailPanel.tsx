@@ -34,19 +34,19 @@ function IndexCard({
   if (value === null || value === undefined) return null;
   return (
     <div className="glass rounded-lg p-3 flex flex-col gap-1">
-      <span className="text-[11px] uppercase tracking-wider text-foreground/40">
+      <span className="text-[11px] uppercase tracking-wider text-foreground/55">
         {label}
         {estimated && (
-          <span className="ml-1 normal-case tracking-normal text-foreground/30" title={ESTIMATED_HINT}>
+          <span className="ml-1 normal-case tracking-normal text-foreground/55" title={ESTIMATED_HINT}>
             est.
           </span>
         )}
       </span>
       <span className="text-lg font-mono font-semibold text-foreground">
-        {estimated && <span className="text-foreground/40 mr-0.5" title={ESTIMATED_HINT}>≈</span>}
+        {estimated && <span className="text-foreground/55 mr-0.5" title={ESTIMATED_HINT}>≈</span>}
         {value}
         {unit && (
-          <span className="text-xs text-foreground/50 ml-1">{unit}</span>
+          <span className="text-xs text-foreground/60 ml-1">{unit}</span>
         )}
       </span>
     </div>
@@ -88,7 +88,7 @@ function ImpactCard({
           {impact.sector}
         </span>
         {impact.location && (
-          <span className="text-xs text-foreground/40">· {impact.location}</span>
+          <span className="text-xs text-foreground/55">· {impact.location}</span>
         )}
       </div>
       <p className="text-sm text-foreground/80 leading-relaxed">
@@ -132,7 +132,7 @@ export default function EventDetailPanel({
                 <h2 className="heading-display-lg text-2xl text-foreground mb-2">
                   {event.name}
                 </h2>
-                <div className="flex items-center gap-2 text-sm text-foreground/50 mb-3">
+                <div className="flex items-center gap-2 text-sm text-foreground/60 mb-3">
                   <span>{formatEventDate(event.startDate)}</span>
                   {event.startDate !== event.endDate && (
                     <>
@@ -140,7 +140,7 @@ export default function EventDetailPanel({
                       <span>{formatEventDate(event.endDate)}</span>
                     </>
                   )}
-                  <span className="text-foreground/30">·</span>
+                  <span className="text-foreground/55">·</span>
                   <span>{event.durationHours}h</span>
                 </div>
 
@@ -205,10 +205,10 @@ export default function EventDetailPanel({
                         loading="lazy"
                         className="w-full h-auto bg-overlay/5"
                       />
-                      <figcaption className="p-3 text-xs text-foreground/50 leading-relaxed">
+                      <figcaption className="p-3 text-xs text-foreground/60 leading-relaxed">
                         {img.caption}
                         {img.credit && (
-                          <span className="block text-foreground/30 mt-1">{img.credit}</span>
+                          <span className="block text-foreground/55 mt-1">{img.credit}</span>
                         )}
                       </figcaption>
                     </figure>
@@ -220,7 +220,7 @@ export default function EventDetailPanel({
 
               {/* Key Indices */}
               <div>
-                <h3 className="text-xs uppercase tracking-wider text-foreground/40 mb-3">
+                <h3 className="text-xs uppercase tracking-wider text-foreground/55 mb-3">
                   Key Indices
                 </h3>
                 <div className="grid grid-cols-2 gap-2">
@@ -253,7 +253,7 @@ export default function EventDetailPanel({
                   />
                 </div>
                 {event.estimatedFields && event.estimatedFields.length > 0 && (
-                  <p className="mt-2 text-[11px] text-foreground/35">
+                  <p className="mt-2 text-[11px] text-foreground/55">
                     ≈ marks values reconstructed from historical records or published estimates rather than instrumental measurements.
                   </p>
                 )}
@@ -263,7 +263,7 @@ export default function EventDetailPanel({
 
               {/* Solar Context */}
               <div>
-                <h3 className="text-xs uppercase tracking-wider text-foreground/40 mb-3">
+                <h3 className="text-xs uppercase tracking-wider text-foreground/55 mb-3">
                   Solar Context
                 </h3>
                 <div className="grid grid-cols-2 gap-2">
@@ -295,7 +295,7 @@ export default function EventDetailPanel({
                 <>
                   <Separator className="bg-overlay/10" />
                   <div>
-                    <h3 className="text-xs uppercase tracking-wider text-foreground/40 mb-3">
+                    <h3 className="text-xs uppercase tracking-wider text-foreground/55 mb-3">
                       Aurora Visibility
                     </h3>
                     <div className="glass rounded-lg p-3 flex items-center gap-3">
@@ -308,7 +308,7 @@ export default function EventDetailPanel({
                           </span>{" "}
                           magnetic latitude
                         </p>
-                        <p className="text-xs text-foreground/40">
+                        <p className="text-xs text-foreground/55">
                           {event.auroraLowestLatitude <= 20
                             ? "Tropical aurora – extremely rare"
                             : event.auroraLowestLatitude <= 30
@@ -341,7 +341,7 @@ export default function EventDetailPanel({
                   <>
                     <Separator className="bg-overlay/10" />
                     <div>
-                      <h3 className="text-xs uppercase tracking-wider text-foreground/40 mb-3">
+                      <h3 className="text-xs uppercase tracking-wider text-foreground/55 mb-3">
                         Time Series Data
                       </h3>
                       {hasData ? (
@@ -360,7 +360,7 @@ export default function EventDetailPanel({
                             <div className="glass rounded-lg p-3 overflow-x-auto">
                               <NeutronMonitorChart data={ts.neutronMonitor} width={400} height={170} domain={sharedDomain} downloadName={`${event.id}-neutron-monitor`} />
                               {ts.neutronMonitorModelled && (
-                                <p className="mt-1 text-[11px] text-foreground/40">
+                                <p className="mt-1 text-[11px] text-foreground/55">
                                   Modelled profile: a parametric curve fitted to the published peak enhancement, not archived neutron-monitor data.
                                 </p>
                               )}
@@ -369,10 +369,10 @@ export default function EventDetailPanel({
                         </div>
                       ) : (
                         <div className="glass rounded-lg p-4 text-center">
-                          <p className="text-xs text-foreground/30">
+                          <p className="text-xs text-foreground/55">
                             No time series data for this event.
                           </p>
-                          <p className="text-xs text-foreground/20 mt-1">
+                          <p className="text-xs text-foreground/40 mt-1">
                             Peak indices are shown above.
                           </p>
                         </div>
@@ -387,7 +387,7 @@ export default function EventDetailPanel({
               {/* Impacts */}
               {event.impacts.length > 0 && (
                 <div>
-                  <h3 className="text-xs uppercase tracking-wider text-foreground/40 mb-3">
+                  <h3 className="text-xs uppercase tracking-wider text-foreground/55 mb-3">
                     Impacts ({event.impacts.length})
                   </h3>
                   <div className="space-y-2">
@@ -403,7 +403,7 @@ export default function EventDetailPanel({
                 <>
                   <Separator className="bg-overlay/10" />
                   <div>
-                    <h3 className="text-xs uppercase tracking-wider text-foreground/40 mb-3">
+                    <h3 className="text-xs uppercase tracking-wider text-foreground/55 mb-3">
                       Scientific References ({event.papers.length})
                     </h3>
                     <div className="space-y-3">
@@ -412,7 +412,7 @@ export default function EventDetailPanel({
                           <p className="text-foreground/80 leading-relaxed">
                             {paper.title}
                           </p>
-                          <p className="text-xs text-foreground/40 mt-0.5">
+                          <p className="text-xs text-foreground/55 mt-0.5">
                             {paper.authors} ({paper.year})
                             {paper.journal && ` – ${paper.journal}`}
                           </p>
@@ -437,7 +437,7 @@ export default function EventDetailPanel({
                             </a>
                           )}
                           {paper.keyFinding && (
-                            <p className="text-xs text-foreground/50 mt-1 italic">
+                            <p className="text-xs text-foreground/60 mt-1 italic">
                               {paper.keyFinding}
                             </p>
                           )}

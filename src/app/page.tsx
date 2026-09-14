@@ -110,7 +110,7 @@ export default function Home() {
                   className={`px-2 py-0.5 rounded text-[11px] font-medium transition-all border ${
                     isActive
                       ? "border-overlay/20 bg-overlay/10 text-foreground"
-                      : "border-overlay/[0.06] text-foreground/50 hover:text-foreground/75 hover:bg-overlay/[0.03]"
+                      : "border-overlay/[0.06] text-foreground/60 hover:text-foreground/75 hover:bg-overlay/[0.03]"
                   }`}
                   style={
                     isActive
@@ -137,7 +137,7 @@ export default function Home() {
                     className={`px-1.5 py-0.5 text-[11px] font-medium transition-colors ${
                       matchMode === mode
                         ? "bg-overlay/10 text-foreground"
-                        : "text-foreground/50 hover:text-foreground/75"
+                        : "text-foreground/60 hover:text-foreground/75"
                     }`}
                   >
                     {mode === "any" ? "Any" : "All"}
@@ -148,7 +148,7 @@ export default function Home() {
             {activeFilters.size > 0 && (
               <button
                 onClick={() => setActiveFilters(new Set())}
-                className="text-[11px] text-foreground/50 hover:text-foreground/80 ml-1 transition-colors"
+                className="text-[11px] text-foreground/60 hover:text-foreground/80 ml-1 transition-colors"
               >
                 Clear
               </button>

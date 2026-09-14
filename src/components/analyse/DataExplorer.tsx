@@ -316,7 +316,7 @@ export default function DataExplorer({ events }: { events: SpaceWeatherEvent[] }
       <div className="flex items-start justify-between gap-4 flex-wrap">
         <div>
           <h3 className="heading-display text-lg text-foreground mb-1">Data Explorer</h3>
-          <p className="text-sm text-foreground/40">
+          <p className="text-sm text-foreground/55">
             Filter, group, and aggregate the catalogue to answer questions directly.
           </p>
         </div>
@@ -325,7 +325,7 @@ export default function DataExplorer({ events }: { events: SpaceWeatherEvent[] }
             <button
               key={p.label}
               onClick={() => applyPreset(p)}
-              className="px-2.5 py-1 rounded-md text-[12px] font-medium border border-overlay/10 text-foreground/50 hover:text-foreground/80 hover:bg-overlay/5 transition-colors"
+              className="px-2.5 py-1 rounded-md text-[12px] font-medium border border-overlay/10 text-foreground/60 hover:text-foreground/80 hover:bg-overlay/5 transition-colors"
             >
               {p.label}
             </button>
@@ -336,7 +336,7 @@ export default function DataExplorer({ events }: { events: SpaceWeatherEvent[] }
       {/* Filters */}
       <div className="space-y-2">
         <div className="flex items-center gap-2">
-          <span className="text-xs uppercase tracking-wider text-foreground/40">Filters</span>
+          <span className="text-xs uppercase tracking-wider text-foreground/55">Filters</span>
           <button
             onClick={() => setFilters((prev) => [...prev, mkFilter({ fieldKey: "peakDst", op: "<=", value: "" })])}
             className="text-xs text-solar hover:text-solar-bright transition-colors"
@@ -346,7 +346,7 @@ export default function DataExplorer({ events }: { events: SpaceWeatherEvent[] }
           {filters.length > 0 && (
             <button
               onClick={() => setFilters([])}
-              className="text-xs text-foreground/30 hover:text-foreground/50 transition-colors"
+              className="text-xs text-foreground/55 hover:text-foreground/80 transition-colors"
             >
               Clear
             </button>
@@ -354,7 +354,7 @@ export default function DataExplorer({ events }: { events: SpaceWeatherEvent[] }
         </div>
 
         {filters.length === 0 && (
-          <p className="text-xs text-foreground/30">No filters: all {events.length} events included.</p>
+          <p className="text-xs text-foreground/55">No filters: all {events.length} events included.</p>
         )}
 
         {filters.map((f) => {
@@ -405,7 +405,7 @@ export default function DataExplorer({ events }: { events: SpaceWeatherEvent[] }
                 </>
               ) : (
                 <>
-                  <span className="text-xs text-foreground/40">{field.kind === "multi" ? "includes" : "is"}</span>
+                  <span className="text-xs text-foreground/55">{field.kind === "multi" ? "includes" : "is"}</span>
                   <select
                     value={f.value}
                     onChange={(e) => setFilters((prev) => prev.map((x) => (x.id === f.id ? { ...x, value: e.target.value } : x)))}
@@ -419,7 +419,7 @@ export default function DataExplorer({ events }: { events: SpaceWeatherEvent[] }
 
               <button
                 onClick={() => setFilters((prev) => prev.filter((x) => x.id !== f.id))}
-                className="text-foreground/30 hover:text-foreground/60 transition-colors text-sm px-1"
+                className="text-foreground/55 hover:text-foreground/80 transition-colors text-sm px-1"
                 aria-label="Remove filter"
               >
                 ×
@@ -432,14 +432,14 @@ export default function DataExplorer({ events }: { events: SpaceWeatherEvent[] }
       {/* Group & metric */}
       <div className="flex items-center gap-4 flex-wrap border-t border-overlay/5 pt-4">
         <div className="flex items-center gap-2">
-          <label className="text-xs uppercase tracking-wider text-foreground/40">Group by</label>
+          <label className="text-xs uppercase tracking-wider text-foreground/55">Group by</label>
           <select value={groupBy} onChange={(e) => setGroupBy(e.target.value)} className={selectCls}>
             <option value="__overall__" className="bg-background">(overall)</option>
             {SINGLE.map((f) => <option key={f.key} value={f.key} className="bg-background">{f.label}</option>)}
           </select>
         </div>
         <div className="flex items-center gap-2">
-          <label className="text-xs uppercase tracking-wider text-foreground/40">Metric</label>
+          <label className="text-xs uppercase tracking-wider text-foreground/55">Metric</label>
           <select value={metric} onChange={(e) => setMetric(e.target.value as Metric)} className={selectCls}>
             <option value="count" className="bg-background">Count</option>
             <option value="share" className="bg-background">Share of matched (%)</option>
@@ -467,10 +467,10 @@ export default function DataExplorer({ events }: { events: SpaceWeatherEvent[] }
         </div>
 
         {matched.length === 0 ? (
-          <p className="text-sm text-foreground/30 py-4">No events match the current filters.</p>
+          <p className="text-sm text-foreground/55 py-4">No events match the current filters.</p>
         ) : (
           <div className="glass rounded-lg overflow-hidden">
-            <div className="flex px-4 py-2 border-b border-overlay/5 text-[11px] uppercase tracking-wider text-foreground/40">
+            <div className="flex px-4 py-2 border-b border-overlay/5 text-[11px] uppercase tracking-wider text-foreground/55">
               <div className="flex-1">{groupField ? groupField.label : "Result"}</div>
               <div className="w-20 text-right">Count</div>
               <div className="w-40 text-right">{metricLabel}</div>
@@ -478,7 +478,7 @@ export default function DataExplorer({ events }: { events: SpaceWeatherEvent[] }
             {rowsWithMetric.map((r) => (
               <div key={r.key} className="flex items-center px-4 py-2 border-b border-overlay/3 last:border-0">
                 <div className="flex-1 text-sm text-foreground/80 capitalize">{r.key}</div>
-                <div className="w-20 text-right text-sm font-mono text-foreground/50">{r.count}</div>
+                <div className="w-20 text-right text-sm font-mono text-foreground/60">{r.count}</div>
                 <div className="w-40 flex items-center justify-end gap-2">
                   <div className="flex-1 h-1.5 rounded-full bg-overlay/5 overflow-hidden">
                     <div

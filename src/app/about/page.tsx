@@ -58,7 +58,7 @@ function Section({
 }) {
   return (
     <section className="space-y-3">
-      <h2 className="text-xs uppercase tracking-wider text-foreground/40">
+      <h2 className="text-xs uppercase tracking-wider text-foreground/55">
         {title}
       </h2>
       {children}
@@ -107,7 +107,7 @@ export default function AboutPage() {
               and CSV against a public schema, so anyone can analyse and build
               on them.
             </p>
-            <div className="flex flex-wrap gap-x-6 gap-y-1 text-xs text-foreground/40 pt-1">
+            <div className="flex flex-wrap gap-x-6 gap-y-1 text-xs text-foreground/55 pt-1">
               <span>
                 <span className="font-mono text-solar">{EVENTS.length}</span>{" "}
                 events catalogued
@@ -127,7 +127,7 @@ export default function AboutPage() {
                 <p className="text-xs font-mono text-aurora-green">
                   {PROJECT.dataLicense}
                 </p>
-                <p className="text-xs text-foreground/50 leading-relaxed">
+                <p className="text-xs text-foreground/60 leading-relaxed">
                   Share and adapt freely, including commercially, as long as
                   you cite the dataset.
                 </p>
@@ -145,7 +145,7 @@ export default function AboutPage() {
                 <p className="text-xs font-mono text-aurora-green">
                   {PROJECT.codeLicense}
                 </p>
-                <p className="text-xs text-foreground/50 leading-relaxed">
+                <p className="text-xs text-foreground/60 leading-relaxed">
                   The code that builds the website, pipeline and charts. Use it
                   for anything; keep the licence notice. A chart&apos;s
                   content is data, so publishing one still requires citation.
@@ -174,7 +174,7 @@ export default function AboutPage() {
 
             <div className="glass rounded-lg p-4 space-y-2">
               <div className="flex items-center justify-between gap-3">
-                <span className="text-[11px] uppercase tracking-wider text-foreground/40">
+                <span className="text-[11px] uppercase tracking-wider text-foreground/55">
                   Citation
                 </span>
                 <CopyButton value={citation} label="Copy" />
@@ -186,7 +186,7 @@ export default function AboutPage() {
 
             <div className="glass rounded-lg p-4 space-y-2">
               <div className="flex items-center justify-between gap-3">
-                <span className="text-[11px] uppercase tracking-wider text-foreground/40">
+                <span className="text-[11px] uppercase tracking-wider text-foreground/55">
                   BibTeX
                 </span>
                 <CopyButton value={bibtex} label="Copy" />
@@ -211,9 +211,9 @@ export default function AboutPage() {
                     <span className="text-sm font-mono text-foreground group-hover:text-solar transition-colors">
                       {d.label}
                     </span>
-                    <p className="text-xs text-foreground/40 mt-0.5">{d.desc}</p>
+                    <p className="text-xs text-foreground/55 mt-0.5">{d.desc}</p>
                   </div>
-                  <span className="text-xs text-foreground/30 group-hover:text-foreground/60 transition-colors">
+                  <span className="text-xs text-foreground/55 group-hover:text-foreground/80 transition-colors">
                     Download ↓
                   </span>
                 </a>
@@ -239,7 +239,7 @@ export default function AboutPage() {
                   >
                     {d.name}
                   </a>
-                  <span className="text-foreground/50"> — {d.what}</span>
+                  <span className="text-foreground/60"> — {d.what}</span>
                 </li>
               ))}
             </ul>

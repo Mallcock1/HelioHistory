@@ -27,7 +27,7 @@ function EventSelector({
             className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all border ${
               isSelected
                 ? "border-overlay/20 bg-overlay/10 text-foreground shadow-lg"
-                : "border-overlay/5 text-foreground/30 hover:text-foreground/60 hover:bg-overlay/5"
+                : "border-overlay/5 text-foreground/55 hover:text-foreground/80 hover:bg-overlay/5"
             }`}
             style={
               isSelected
@@ -58,13 +58,13 @@ function ComparisonRow({
   const fmt = format || ((v) => (v !== null && v !== undefined ? String(v) : "–"));
   return (
     <div className="flex border-b border-overlay/3">
-      <div className="w-36 flex-none px-4 py-2 text-xs text-foreground/40 uppercase tracking-wider">
+      <div className="w-36 flex-none px-4 py-2 text-xs text-foreground/55 uppercase tracking-wider">
         {label}
       </div>
       {values.map((v, i) => (
         <div key={i} className="flex-1 px-4 py-2 text-sm font-mono text-foreground/80 text-center">
           {estimated?.[i] && v !== null && v !== undefined && (
-            <span className="text-foreground/40 mr-0.5" title={ESTIMATED_HINT}>≈</span>
+            <span className="text-foreground/55 mr-0.5" title={ESTIMATED_HINT}>≈</span>
           )}
           {fmt(v)}
         </div>
@@ -100,7 +100,7 @@ export default function ComparePage() {
           <h2 className="heading-display text-xl text-foreground mb-1">
             Event Comparison
           </h2>
-          <p className="text-sm text-foreground/40">
+          <p className="text-sm text-foreground/55">
             Select up to 4 events to compare side-by-side.
           </p>
         </div>
@@ -109,7 +109,7 @@ export default function ComparePage() {
         <EventSelector selectedIds={selectedIds} onToggle={toggleEvent} />
 
         {selectedEvents.length === 0 ? (
-          <div className="text-center py-20 text-foreground/30">
+          <div className="text-center py-20 text-foreground/55">
             Select events above to compare
           </div>
         ) : (
@@ -126,7 +126,7 @@ export default function ComparePage() {
                   <h3 className="text-sm font-medium text-foreground">
                     {event.name}
                   </h3>
-                  <p className="text-xs text-foreground/40">
+                  <p className="text-xs text-foreground/55">
                     {formatEventDate(event.startDate)}
                   </p>
                   <div className="flex gap-1 justify-center mt-1.5 flex-wrap">
@@ -221,7 +221,7 @@ export default function ComparePage() {
             {/* Dst Charts side by side – only shown when real data is available */}
             {selectedEvents.some((e) => getEventTimeSeries(e.id).dst) && (
               <div>
-                <h3 className="text-xs uppercase tracking-wider text-foreground/40 mb-3">
+                <h3 className="text-xs uppercase tracking-wider text-foreground/55 mb-3">
                   Dst Time Series Comparison
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -230,7 +230,7 @@ export default function ComparePage() {
                     if (!ts.dst) return null;
                     return (
                       <div key={event.id} className="glass rounded-lg p-3">
-                        <p className="text-xs text-foreground/50 mb-2">{event.name}</p>
+                        <p className="text-xs text-foreground/60 mb-2">{event.name}</p>
                         <DstChart data={ts.dst} width={320} height={150} downloadName={`${event.id}-dst`} />
                       </div>
                     );
@@ -241,7 +241,7 @@ export default function ComparePage() {
 
             {/* Impact comparison */}
             <div>
-              <h3 className="text-xs uppercase tracking-wider text-foreground/40 mb-3">
+              <h3 className="text-xs uppercase tracking-wider text-foreground/55 mb-3">
                 Impact Summary
               </h3>
               <div className="flex border-b border-overlay/5 pb-2">
@@ -249,7 +249,7 @@ export default function ComparePage() {
                 {selectedEvents.map((e) => (
                   <div
                     key={e.id}
-                    className="flex-1 px-3 text-xs text-foreground/50 text-center"
+                    className="flex-1 px-3 text-xs text-foreground/60 text-center"
                   >
                     {e.name}
                   </div>
@@ -261,7 +261,7 @@ export default function ComparePage() {
                     key={sector}
                     className="flex border-b border-overlay/3"
                   >
-                    <div className="w-36 flex-none px-4 py-2 text-xs text-foreground/40 capitalize">
+                    <div className="w-36 flex-none px-4 py-2 text-xs text-foreground/55 capitalize">
                       {sector}
                     </div>
                     {selectedEvents.map((event) => {
@@ -286,7 +286,7 @@ export default function ComparePage() {
                               {impact.severity}
                             </span>
                           ) : (
-                            <span className="text-foreground/15">–</span>
+                            <span className="text-foreground/40">–</span>
                           )}
                         </div>
                       );

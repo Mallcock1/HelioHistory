@@ -34,7 +34,7 @@ export default function CopyButton({ value, label = "Copy", className }: CopyBut
         "inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-medium border transition-colors",
         copied
           ? "border-aurora-green/30 text-aurora-green bg-aurora-green/10"
-          : "border-overlay/10 text-foreground/50 hover:text-foreground/80 bg-overlay/5 hover:bg-overlay/10",
+          : "border-overlay/10 text-foreground/60 hover:text-foreground/80 bg-overlay/5 hover:bg-overlay/10",
         className
       )}
       aria-label={copied ? "Copied" : label}

@@ -349,7 +349,7 @@ function ScatterPlot({
         onClick={handleDownload}
         title="Download PNG"
         aria-label="Download figure as PNG"
-        className="absolute top-2 left-2 p-1 rounded-md text-foreground/30 hover:text-foreground/70 bg-overlay/10 hover:bg-overlay/15 border border-overlay/10 opacity-0 group-hover/fig:opacity-100 focus-visible:opacity-100 transition-all"
+        className="absolute top-2 left-2 p-1 rounded-md text-foreground/55 hover:text-foreground/90 bg-overlay/10 hover:bg-overlay/15 border border-overlay/10 opacity-0 group-hover/fig:opacity-100 focus-visible:opacity-100 transition-all"
       >
         <Download className="w-3.5 h-3.5" />
       </button>
@@ -361,7 +361,7 @@ function ScatterPlot({
           Reset Zoom
         </button>
       )}
-      <div className="absolute bottom-14 right-2 text-[11px] text-foreground/20">
+      <div className="absolute bottom-14 right-2 text-[11px] text-foreground/55">
         Scroll to zoom · Drag or swipe to pan
       </div>
       {tooltip && (
@@ -383,27 +383,27 @@ function ScatterPlot({
                 {tooltip.event.name}
               </span>
             </div>
-            <p className="text-[11px] text-foreground/40 mb-2">
+            <p className="text-[11px] text-foreground/55 mb-2">
               {formatEventDate(tooltip.event.startDate)}
             </p>
             <div className="space-y-1">
               <div className="flex justify-between text-xs gap-4">
-                <span className="text-foreground/40">{PARAM_LABELS[xParam]}</span>
+                <span className="text-foreground/55">{PARAM_LABELS[xParam]}</span>
                 <span className="font-mono text-foreground/80">{tooltip.xVal}</span>
               </div>
               <div className="flex justify-between text-xs gap-4">
-                <span className="text-foreground/40">{PARAM_LABELS[yParam]}</span>
+                <span className="text-foreground/55">{PARAM_LABELS[yParam]}</span>
                 <span className="font-mono text-foreground/80">{tooltip.yVal}</span>
               </div>
               {tooltip.event.peakDst !== null && xParam !== "peakDst" && yParam !== "peakDst" && (
                 <div className="flex justify-between text-xs gap-4">
-                  <span className="text-foreground/40">Peak Dst</span>
+                  <span className="text-foreground/55">Peak Dst</span>
                   <span className="font-mono text-foreground/80">{tooltip.event.peakDst} nT</span>
                 </div>
               )}
               {tooltip.event.noaaGScale && (
                 <div className="flex justify-between text-xs gap-4">
-                  <span className="text-foreground/40">NOAA Scale</span>
+                  <span className="text-foreground/55">NOAA Scale</span>
                   <span className="font-mono text-foreground/80">G{tooltip.event.noaaGScale}</span>
                 </div>
               )}
@@ -456,7 +456,7 @@ function RankingTable({
   return (
     <div className="glass rounded-lg overflow-hidden">
       <div className="px-4 py-2 border-b border-overlay/5">
-        <h3 className="text-xs uppercase tracking-wider text-foreground/40">
+        <h3 className="text-xs uppercase tracking-wider text-foreground/55">
           Top 10 by {PARAM_LABELS[sortParam]}
         </h3>
       </div>
@@ -466,7 +466,7 @@ function RankingTable({
             key={event.id}
             className="px-4 py-2 flex items-center gap-3 hover:bg-overlay/3 transition-colors"
           >
-            <span className="text-xs font-mono text-foreground/30 w-5">
+            <span className="text-xs font-mono text-foreground/55 w-5">
               {i + 1}
             </span>
             <div
@@ -510,7 +510,7 @@ export default function AnalyzePage() {
           <h2 className="heading-display text-xl text-foreground mb-1">
             Cross-Event Analytics
           </h2>
-          <p className="text-sm text-foreground/40">
+          <p className="text-sm text-foreground/55">
             Explore relationships between parameters across all {EVENTS.length}{" "}
             catalogued events. Values for pre-instrumental events are published
             reconstructions (marked ≈ on event pages) and are included here.
@@ -524,7 +524,7 @@ export default function AnalyzePage() {
         <div className="glass rounded-xl p-6 space-y-4">
           <div className="flex items-center gap-4 flex-wrap">
             <div className="flex items-center gap-2">
-              <label className="text-xs text-foreground/40 uppercase tracking-wider">
+              <label className="text-xs text-foreground/55 uppercase tracking-wider">
                 X Axis
               </label>
               <select
@@ -539,9 +539,9 @@ export default function AnalyzePage() {
                 ))}
               </select>
             </div>
-            <span className="text-foreground/20">vs</span>
+            <span className="text-foreground/55">vs</span>
             <div className="flex items-center gap-2">
-              <label className="text-xs text-foreground/40 uppercase tracking-wider">
+              <label className="text-xs text-foreground/55 uppercase tracking-wider">
                 Y Axis
               </label>
               <select
@@ -607,7 +607,7 @@ export default function AnalyzePage() {
             },
           ].map((stat) => (
             <div key={stat.label} className="glass rounded-lg p-4">
-              <p className="text-[11px] uppercase tracking-wider text-foreground/40 mb-1">
+              <p className="text-[11px] uppercase tracking-wider text-foreground/55 mb-1">
                 {stat.label}
               </p>
               <p className="text-xl font-mono font-semibold text-solar">
