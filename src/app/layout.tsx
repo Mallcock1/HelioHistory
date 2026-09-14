@@ -21,7 +21,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "HelioHistory – Space Weather Through History",
+  title: "HelioHistory – A space weather living archive",
   description:
     "An interactive timeline exploring historical space weather events, their impacts, and scientific data from the last Ice Age to the present.",
 };

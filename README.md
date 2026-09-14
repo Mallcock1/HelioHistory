@@ -1,18 +1,20 @@
 # HelioHistory
 
-**A living, open database of space weather history**, from the extreme solar
-particle events of the last Ice Age and the AD 774 Miyake event to modern superstorms, with an interactive timeline, cross-event
-analytics, and downloadable, machine-readable data.
+**A space weather living archive**: an open catalogue of major space weather
+events, from the extreme solar particle events of the last Ice Age to modern
+superstorms, with an interactive timeline, cross-event analytics, and
+downloadable, machine-readable data.
 
-> Status: early development. The catalogue currently holds 45 curated events
-> spanning ~1,250 years.
+> Status: early development. The catalogue holds 57 events spanning
+> ~14,000 years; every reference is resolved against CrossRef in CI.
 
 ## What's here
 
 - **A curated dataset** of major space weather events with geomagnetic indices,
   solar context, impacts, and scientific references. See [`data/`](data/).
 - **A web app** (Next.js) to explore it: timeline, event detail, side-by-side
-  comparison, and a cross-event analytics page.
+  comparison, and cross-event analytics. Values reconstructed for
+  pre-instrumental events are marked ≈.
 - **Open downloads**: the full dataset as JSON and CSV, plus a JSON Schema.
 
 ## Using the data
@@ -32,7 +34,7 @@ Quick analysis example (Python):
 import pandas as pd
 df = pd.read_csv("public/data/events.csv")
 
-# What proportion of Kp>7 storms occurred on the descending phase?
+# What proportion of storms with Kp above 7 occurred on the descending phase?
 strong = df[df.peakKp > 7]
 print((strong.cyclePhase == "descending").mean())
 ```
@@ -49,17 +51,19 @@ npm run dev          # builds the dataset, then starts the dev server
 Other commands:
 
 ```bash
-npm run data:validate   # validate data/events/*.json against the schema
+npm run data:validate   # schema + integrity rules; add -- --check-dois to resolve DOIs
 npm run data:build      # compile JSON → app module + public/data artifacts
+npm run lint            # ESLint
 npm run build           # validate + build data, then build the app
 ```
 
 ## Contributing
 
-Corrections and new events are very welcome. This is a community catalogue.
-Start with [CONTRIBUTING.md](CONTRIBUTING.md). In short: edit/add a JSON file
-under `data/events/`, run `npm run data:validate`, cite your sources in
-`papers[]`, and open a pull request. CI validates every change automatically.
+Corrections and new events are welcome. Start with
+[CONTRIBUTING.md](CONTRIBUTING.md). In short: edit or add a JSON file under
+`data/events/`, run `npm run data:validate`, cite your sources in `papers[]`
+with DOIs, and open a pull request. CI validates every change, including
+resolving each DOI.
 
 ## Licensing
 
@@ -71,4 +75,5 @@ This project is **dual-licensed**:
 ## Citing
 
 Please cite the dataset using [CITATION.cff](CITATION.cff) (GitHub shows a
-"Cite this repository" button) and pin a released version where possible.
+"Cite this repository" button). Figures exported from the site carry a credit
+line; the data behind them is CC BY 4.0, so publishing one requires citation.

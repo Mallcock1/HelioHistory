@@ -1,11 +1,12 @@
 {
   "id": "evt-2022-feb-starlink",
   "slug": "2022-february-starlink-loss",
-  "name": "2022 February Starlink Loss",
+  "name": "February 2022 Starlink Loss",
   "altNames": [
     "February 2022 Starlink Event",
     "Starlink Deorbit Event",
-    "February 3 2022 CME"
+    "February 3 2022 CME",
+    "2022 February Starlink Loss"
   ],
   "startDate": "2022-02-03",
   "peakDate": "2022-02-04",

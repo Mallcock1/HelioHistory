@@ -221,25 +221,25 @@ interface Preset {
 
 const PRESETS: Preset[] = [
   {
-    label: "Kp > 7 storms by cycle phase",
+    label: "Storms with Kp above 7, by cycle phase",
     filters: [{ fieldKey: "peakKp", op: ">", value: "7" }],
     groupBy: "cyclePhase",
     metric: "share",
   },
   {
-    label: "Severe storms (Dst ≤ −250) by cycle phase",
+    label: "Severe storms (Dst ≤ −250 nT), by cycle phase",
     filters: [{ fieldKey: "peakDst", op: "<=", value: "-250" }],
     groupBy: "cyclePhase",
     metric: "share",
   },
   {
-    label: "GLE events by solar cycle",
+    label: "GLE events, by solar cycle",
     filters: [{ fieldKey: "anyPhenomenon", op: "includes", value: "Ground Level Enhancement" }],
     groupBy: "solarCycle",
     metric: "count",
   },
   {
-    label: "Mean peak Dst by cycle phase",
+    label: "Mean peak Dst, by cycle phase",
     filters: [],
     groupBy: "cyclePhase",
     metric: "mean",

@@ -306,16 +306,16 @@ export default function EventDetailPanel({
                           <span className="font-mono font-semibold text-aurora-green">
                             {event.auroraLowestLatitude}°
                           </span>{" "}
-                          latitude
+                          magnetic latitude
                         </p>
                         <p className="text-xs text-foreground/40">
                           {event.auroraLowestLatitude <= 20
                             ? "Tropical aurora – extremely rare"
                             : event.auroraLowestLatitude <= 30
-                              ? "Visible from subtropics"
+                              ? "Subtropical aurora – very rare"
                               : event.auroraLowestLatitude <= 40
-                                ? "Visible at mid-latitudes"
-                                : "Northern/Southern regions"}
+                                ? "Mid-latitude aurora"
+                                : "High-latitude aurora"}
                         </p>
                       </div>
                     </div>
@@ -370,7 +370,7 @@ export default function EventDetailPanel({
                       ) : (
                         <div className="glass rounded-lg p-4 text-center">
                           <p className="text-xs text-foreground/30">
-                            No observed time series data available for this event.
+                            No time series data for this event.
                           </p>
                           <p className="text-xs text-foreground/20 mt-1">
                             Peak indices are shown above.

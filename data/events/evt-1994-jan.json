@@ -1,11 +1,12 @@
 {
   "id": "evt-1994-jan",
   "slug": "1994-january-anik-e2",
-  "name": "1994 January Anik E2 Failure",
+  "name": "January 1994 Anik E2 Failure",
   "altNames": [
     "January 1994 Relativistic Electron Event",
     "Anik E1/E2 Satellite Failures",
-    "1994 Satellite Internal-Charging Event"
+    "1994 Satellite Internal-Charging Event",
+    "1994 January Anik E2 Failure"
   ],
   "startDate": "1994-01-20",
   "peakDate": "1994-01-20",

@@ -1,10 +1,11 @@
 {
   "id": "evt-2005-sep",
   "slug": "2005-september-storms",
-  "name": "2005 September Storms",
+  "name": "September 2005 Storms",
   "altNames": [
     "September 2005 Solar Storms",
-    "2005 September X-class Flare Sequence"
+    "2005 September X-class Flare Sequence",
+    "2005 September Storms"
   ],
   "startDate": "2005-09-07",
   "peakDate": "2005-09-11",

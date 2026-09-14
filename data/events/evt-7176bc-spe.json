@@ -1,10 +1,11 @@
 {
   "id": "evt-7176bc-spe",
   "slug": "7176-bc-solar-proton-event",
-  "name": "7176 BC Solar Proton Event",
+  "name": "7176 BC Solar Particle Event",
   "altNames": [
     "Miyake 7176 BCE",
-    "9125 BP event"
+    "9125 BP event",
+    "7176 BC Solar Proton Event"
   ],
   "startDate": "-7176-01-01",
   "peakDate": "-7176-06-01",

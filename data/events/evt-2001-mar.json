@@ -1,10 +1,11 @@
 {
   "id": "evt-2001-mar",
   "slug": "2001-march-storm",
-  "name": "2001 March Storm",
+  "name": "March 2001 Storm",
   "altNames": [
     "March 2001 Geomagnetic Storm",
-    "March 31 2001 Storm"
+    "March 31 2001 Storm",
+    "2001 March Storm"
   ],
   "startDate": "2001-03-29",
   "peakDate": "2001-03-31",

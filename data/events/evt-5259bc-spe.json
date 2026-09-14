@@ -1,9 +1,10 @@
 {
   "id": "evt-5259bc-spe",
   "slug": "5259-bc-solar-proton-event",
-  "name": "5259 BC Solar Proton Event",
+  "name": "5259 BC Solar Particle Event",
   "altNames": [
-    "Miyake 5259 BCE"
+    "Miyake 5259 BCE",
+    "5259 BC Solar Proton Event"
   ],
   "startDate": "-5259-01-01",
   "peakDate": "-5259-06-01",

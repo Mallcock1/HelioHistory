@@ -5,7 +5,8 @@
 import type { SpaceWeatherEvent } from "@/lib/types";
 
 export const PROJECT = {
-  title: "HelioHistory: A Living Database of Space Weather History",
+  title: "HelioHistory: A space weather living archive",
+  tagline: "A space weather living archive",
   authors: "Allcock, M. and HelioHistory contributors",
   year: 2026,
   url: "https://github.com/Mallcock1/HelioHistory",

@@ -1385,7 +1385,7 @@ export default function TimelineCanvas({
       </div>
 
       <div className="absolute bottom-5 left-16 text-foreground/20 text-[11px] tracking-wider">
-        Scroll to zoom · Drag to pan · Click event for details
+        Scroll to zoom · Drag or swipe to pan · Click an event for details
       </div>
     </div>
   );

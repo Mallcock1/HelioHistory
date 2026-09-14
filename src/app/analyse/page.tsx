@@ -362,7 +362,7 @@ function ScatterPlot({
         </button>
       )}
       <div className="absolute bottom-14 right-2 text-[11px] text-foreground/20">
-        Scroll to zoom · Drag to pan
+        Scroll to zoom · Drag or swipe to pan
       </div>
       {tooltip && (
         <div
@@ -512,7 +512,8 @@ export default function AnalyzePage() {
           </h2>
           <p className="text-sm text-foreground/40">
             Explore relationships between parameters across all {EVENTS.length}{" "}
-            catalogued events.
+            catalogued events. Values for pre-instrumental events are published
+            reconstructions (marked ≈ on event pages) and are included here.
           </p>
         </div>
 

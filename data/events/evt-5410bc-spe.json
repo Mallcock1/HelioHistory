@@ -1,10 +1,11 @@
 {
   "id": "evt-5410bc-spe",
   "slug": "5410-bc-solar-proton-event",
-  "name": "5410 BC Solar Proton Event",
+  "name": "5410 BC Solar Particle Event",
   "altNames": [
     "Miyake 5410 BCE",
-    "5411-5410 BCE event"
+    "5411-5410 BCE event",
+    "5410 BC Solar Proton Event"
   ],
   "startDate": "-5411-01-01",
   "peakDate": "-5410-01-01",

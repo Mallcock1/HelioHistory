@@ -4,6 +4,10 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { useTheme } from "@/lib/theme";
+import { EVENTS } from "@/data/events";
+import { dateToYear, formatYear } from "@/lib/timeline-utils";
+
+const COVERAGE = `${formatYear(Math.min(...EVENTS.map((e) => dateToYear(e.startDate))))} – present`;
 
 const NAV_ITEMS = [
   { href: "/", label: "Timeline" },
@@ -80,7 +84,7 @@ export default function NavBar({ eventCount }: { eventCount: number }) {
               HelioHistory
             </h1>
             <span className="text-[11px] text-foreground/30 tracking-widest uppercase leading-tight">
-              Space Weather Living Archive
+              A space weather living archive
             </span>
           </div>
         </Link>
@@ -106,7 +110,7 @@ export default function NavBar({ eventCount }: { eventCount: number }) {
       <div className="flex items-center gap-5 text-[12px] text-foreground/30">
         <span className="font-mono tracking-wide">{eventCount} events catalogued</span>
         <span className="w-px h-3 bg-overlay/10" />
-        <span className="tracking-wider">12,350 BC – Present</span>
+        <span className="tracking-wider">{COVERAGE}</span>
         <span className="w-px h-3 bg-overlay/10" />
         <button
           onClick={toggleTheme}

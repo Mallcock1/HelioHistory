@@ -1,10 +1,11 @@
 {
   "id": "evt-2012-mar",
   "slug": "2012-march-storm",
-  "name": "2012 March Storm",
+  "name": "March 2012 Storm",
   "altNames": [
     "March 2012 Geomagnetic Storm",
-    "March 7 2012 CME Event"
+    "March 7 2012 CME Event",
+    "2012 March Storm"
   ],
   "startDate": "2012-03-07",
   "peakDate": "2012-03-09",

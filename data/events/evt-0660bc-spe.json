@@ -1,11 +1,12 @@
 {
   "id": "evt-0660bc-spe",
   "slug": "660-bc-solar-proton-event",
-  "name": "660 BC Solar Proton Event",
+  "name": "660 BC Solar Particle Event",
   "altNames": [
     "664-663 BCE event",
     "2610 BP event",
-    "Miyake 660 BC"
+    "Miyake 660 BC",
+    "660 BC Solar Proton Event"
   ],
   "startDate": "-0664-01-01",
   "peakDate": "-0663-06-01",

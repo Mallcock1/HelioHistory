@@ -111,7 +111,7 @@ export default function EventsPage() {
           {/* Search */}
           <input
             type="text"
-            placeholder="Search events, impacts, descriptions..."
+            placeholder="Search events, impacts, descriptions…"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             className="w-full max-w-md bg-overlay/5 border border-overlay/10 rounded-lg px-4 py-2 text-sm text-foreground placeholder:text-foreground/30 focus:outline-none focus:border-solar/50 focus:ring-1 focus:ring-solar/20 transition-colors"

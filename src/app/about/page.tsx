@@ -113,7 +113,6 @@ export default function AboutPage() {
                 events catalogued
               </span>
               <span>{formatYear(EARLIEST_YEAR)} – present</span>
-              <span>JSON · CSV · JSON Schema</span>
             </div>
           </div>
 
@@ -138,7 +137,7 @@ export default function AboutPage() {
                   rel="noopener noreferrer"
                   className="text-xs text-solar hover:text-solar-bright transition-colors"
                 >
-                  Read the licence →
+                  View licence →
                 </a>
               </div>
               <div className="glass rounded-lg p-4 space-y-1.5">
@@ -147,8 +146,9 @@ export default function AboutPage() {
                   {PROJECT.codeLicense}
                 </p>
                 <p className="text-xs text-foreground/50 leading-relaxed">
-                  The website, data pipeline and charts. Use them for anything;
-                  keep the licence notice.
+                  The code that builds the website, pipeline and charts. Use it
+                  for anything; keep the licence notice. A chart&apos;s
+                  content is data, so publishing one still requires citation.
                 </p>
                 <a
                   href={`${PROJECT.url}/blob/master/LICENSE`}
@@ -156,7 +156,7 @@ export default function AboutPage() {
                   rel="noopener noreferrer"
                   className="text-xs text-solar hover:text-solar-bright transition-colors"
                 >
-                  View LICENSE →
+                  View licence →
                 </a>
               </div>
             </div>
@@ -165,10 +165,11 @@ export default function AboutPage() {
           {/* How to cite */}
           <Section title="How to cite">
             <p className="text-sm text-foreground/60 leading-relaxed">
-              Please cite the dataset when you use it. If you rely on a
-              specific event, cite its primary sources too: each event lists
-              them, and its “Cite” button produces a citation that includes
-              them.
+              Please cite the dataset when you use it, including figures
+              exported from this site (each carries a credit line). If you rely
+              on a specific event, cite its primary sources too: each event
+              lists them, and its “Cite” button produces a citation that
+              includes them.
             </p>
 
             <div className="glass rounded-lg p-4 space-y-2">
@@ -194,11 +195,6 @@ export default function AboutPage() {
                 {bibtex}
               </pre>
             </div>
-
-            <p className="text-xs text-foreground/40">
-              A versioned Zenodo release with its own DOI is planned; once it
-              exists, cite that version.
-            </p>
           </Section>
 
           {/* Downloads */}

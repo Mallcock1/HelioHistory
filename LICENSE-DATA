@@ -34,8 +34,8 @@ How to attribute
 
 When you use the dataset, please credit it as described in CITATION.cff, e.g.:
 
-  Allcock, M. and HelioHistory contributors. "HelioHistory: A Living Database of Space
-  Weather History." Version <x.y.z>, <year>. CC BY 4.0.
+  Allcock, M. and HelioHistory contributors. "HelioHistory: A space weather living
+  archive." Version <x.y.z>, <year>. CC BY 4.0.
   https://github.com/Mallcock1/HelioHistory
 
 Note on facts: individual scientific facts and measurements are generally not
