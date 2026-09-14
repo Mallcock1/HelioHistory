@@ -54,6 +54,16 @@ export default function Footer() {
           >
             Matt
           </a>
+          <span className="text-foreground/40 mx-2">·</span>
+          Powered by{" "}
+          <a
+            href="https://www.hoplonspace.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-foreground/60 hover:text-solar transition-colors"
+          >
+            Hoplon Space
+          </a>
         </div>
       </div>
     </footer>

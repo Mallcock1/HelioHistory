@@ -288,6 +288,21 @@ export default function AboutPage() {
               , with thanks to the researchers and observatories whose work the
               catalogue compiles.
             </p>
+            <p className="text-sm text-foreground/60 leading-relaxed">
+              HelioHistory is powered by{" "}
+              <a
+                href="https://www.hoplonspace.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-foreground/85 hover:text-solar transition-colors"
+              >
+                Hoplon Space
+              </a>
+              , a space weather education and resilience company, which hosts
+              and promotes the project. The catalogue, its content and its code
+              remain an independent open project: Hoplon does not author or
+              edit the data.
+            </p>
           </Section>
 
           <Footer />

@@ -8,6 +8,10 @@ downloadable, machine-readable data.
 > Status: early development. The catalogue holds 57 events spanning
 > ~14,000 years; every reference is resolved against CrossRef in CI.
 
+Powered by [Hoplon Space](https://www.hoplonspace.com/), which hosts and
+publicises the project. Authorship and editorial control stay with the project
+and its contributors.
+
 ## What's here
 
 - **A curated dataset** of major space weather events with geomagnetic indices,
