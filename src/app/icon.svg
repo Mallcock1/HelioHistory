@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
+  <defs>
+    <radialGradient id="corona"><stop offset="0%" stop-color="#f59e0b"/><stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/></radialGradient>
+    <radialGradient id="body"><stop offset="0%" stop-color="#fbbf24"/><stop offset="60%" stop-color="#f59e0b"/><stop offset="100%" stop-color="#d97706"/></radialGradient>
+    <radialGradient id="core"><stop offset="0%" stop-color="#fef3c7"/><stop offset="100%" stop-color="#fbbf24" stop-opacity="0.6"/></radialGradient>
+  </defs>
+  <circle cx="20" cy="20" r="20" fill="url(#corona)" opacity="0.5"/>
+  <line x1="33.00" y1="20.00" x2="39.00" y2="20.00" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="20.00" y1="33.00" x2="20.00" y2="39.00" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="7.00" y1="20.00" x2="1.00" y2="20.00" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="20.00" y1="7.00" x2="20.00" y2="1.00" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="20" cy="20" r="11.5" fill="url(#body)"/>
+  <circle cx="20" cy="20" r="5.5" fill="url(#core)"/>
+</svg>
