@@ -6,7 +6,7 @@ import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import { PHENOMENON_CONFIG, G_SCALE_LABELS } from "@/lib/types";
 import { formatEventDate, getEventColor, isEstimated, ESTIMATED_HINT } from "@/lib/timeline-utils";
-import DstChart from "@/components/charts/DstChart";
+import OverlayChart, { OVERLAY_COLORS } from "@/components/charts/OverlayChart";
 import { getEventTimeSeries } from "@/data/timeseries";
 
 function EventSelector({
@@ -218,26 +218,58 @@ export default function ComparePage() {
               />
             </div>
 
-            {/* Dst Charts side by side – only shown when real data is available */}
-            {selectedEvents.some((e) => getEventTimeSeries(e.id).dst) && (
-              <div>
-                <h3 className="text-xs uppercase tracking-wider text-foreground/55 mb-3">
-                  Dst Time Series Comparison
-                </h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {selectedEvents.map((event) => {
-                    const ts = getEventTimeSeries(event.id);
-                    if (!ts.dst) return null;
-                    return (
-                      <div key={event.id} className="glass rounded-lg p-3">
-                        <p className="text-xs text-foreground/60 mb-2">{event.name}</p>
-                        <DstChart data={ts.dst} width={320} height={150} downloadName={`${event.id}-dst`} />
+            {/* Time series overlaid on shared axes, aligned on each storm's peak */}
+            {(() => {
+              const withColor = selectedEvents.map((e, i) => ({ event: e, color: OVERLAY_COLORS[i % OVERLAY_COLORS.length] }));
+              const dstSeries = withColor.flatMap(({ event, color }) => {
+                const ts = getEventTimeSeries(event.id);
+                return ts.dst ? [{ id: event.id, name: event.name, color, data: ts.dst }] : [];
+              });
+              const kpSeries = withColor.flatMap(({ event, color }) => {
+                const ts = getEventTimeSeries(event.id);
+                return ts.kp ? [{ id: event.id, name: event.name, color, data: ts.kp }] : [];
+              });
+              const missing = selectedEvents.filter((e) => !getEventTimeSeries(e.id).dst);
+              if (dstSeries.length === 0 && kpSeries.length === 0) return null;
+              return (
+                <div>
+                  <h3 className="text-xs uppercase tracking-wider text-foreground/55 mb-1">
+                    Time Series Comparison
+                  </h3>
+                  <p className="text-xs text-foreground/60 mb-3">
+                    Shared axes; time is measured from each storm&apos;s own peak so
+                    events of different dates can be compared directly.
+                    {missing.length > 0 && (
+                      <> No time series for {missing.map((e) => e.name).join(", ")}.</>
+                    )}
+                  </p>
+                  <div className="space-y-4">
+                    {dstSeries.length > 0 && (
+                      <div className="glass rounded-lg p-3 overflow-x-auto">
+                        <OverlayChart
+                          series={dstSeries}
+                          yLabel="Dst Index (nT)"
+                          alignOn="min"
+                          downloadName="compare-dst"
+                        />
                       </div>
-                    );
-                  })}
+                    )}
+                    {kpSeries.length > 0 && (
+                      <div className="glass rounded-lg p-3 overflow-x-auto">
+                        <OverlayChart
+                          series={kpSeries}
+                          yLabel="Kp"
+                          alignOn="max"
+                          yDomain={[0, 9]}
+                          height={200}
+                          downloadName="compare-kp"
+                        />
+                      </div>
+                    )}
+                  </div>
                 </div>
-              </div>
-            )}
+              );
+            })()}
 
             {/* Impact comparison */}
             <div>
