@@ -97,7 +97,7 @@ export default function Home() {
         <div className="absolute top-3 left-1/2 -translate-x-1/2 flex items-center gap-4">
           {/* Phenomenon filters */}
           <div className="flex items-center gap-1.5">
-            <label className="text-[11px] text-foreground/30 uppercase tracking-widest mr-0.5">
+            <label className="text-[11px] text-foreground/55 uppercase tracking-widest mr-0.5">
               Filter
             </label>
             {ALL_PHENOMENON_TYPES.map((type) => {
@@ -110,7 +110,7 @@ export default function Home() {
                   className={`px-2 py-0.5 rounded text-[11px] font-medium transition-all border ${
                     isActive
                       ? "border-overlay/20 bg-overlay/10 text-foreground"
-                      : "border-overlay/[0.06] text-foreground/30 hover:text-foreground/50 hover:bg-overlay/[0.03]"
+                      : "border-overlay/[0.06] text-foreground/50 hover:text-foreground/75 hover:bg-overlay/[0.03]"
                   }`}
                   style={
                     isActive
@@ -137,7 +137,7 @@ export default function Home() {
                     className={`px-1.5 py-0.5 text-[11px] font-medium transition-colors ${
                       matchMode === mode
                         ? "bg-overlay/10 text-foreground"
-                        : "text-foreground/30 hover:text-foreground/50"
+                        : "text-foreground/50 hover:text-foreground/75"
                     }`}
                   >
                     {mode === "any" ? "Any" : "All"}
@@ -148,7 +148,7 @@ export default function Home() {
             {activeFilters.size > 0 && (
               <button
                 onClick={() => setActiveFilters(new Set())}
-                className="text-[11px] text-foreground/30 hover:text-foreground/60 ml-1 transition-colors"
+                className="text-[11px] text-foreground/50 hover:text-foreground/80 ml-1 transition-colors"
               >
                 Clear
               </button>
@@ -159,7 +159,7 @@ export default function Home() {
 
           {/* Vertical metric selector */}
           <div className="flex items-center gap-2">
-            <label className="text-[11px] text-foreground/30 uppercase tracking-widest">
+            <label className="text-[11px] text-foreground/55 uppercase tracking-widest">
               Y-Axis
             </label>
             <select

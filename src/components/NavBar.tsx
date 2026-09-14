@@ -83,7 +83,7 @@ export default function NavBar({ eventCount }: { eventCount: number }) {
             <h1 className="heading-display text-[15px] text-foreground tracking-wide leading-tight">
               HelioHistory
             </h1>
-            <span className="text-[11px] text-foreground/30 tracking-widest uppercase leading-tight">
+            <span className="text-[11px] text-foreground/55 tracking-widest uppercase leading-tight">
               A space weather living archive
             </span>
           </div>
@@ -98,7 +98,7 @@ export default function NavBar({ eventCount }: { eventCount: number }) {
                 "px-3.5 py-1.5 rounded-md text-xs font-medium transition-all duration-200",
                 pathname === item.href
                   ? "bg-overlay/[0.08] text-foreground shadow-sm shadow-overlay/5"
-                  : "text-foreground/35 hover:text-foreground/70 hover:bg-overlay/[0.04]"
+                  : "text-foreground/60 hover:text-foreground/90 hover:bg-overlay/[0.04]"
               )}
             >
               {item.label}
@@ -107,7 +107,7 @@ export default function NavBar({ eventCount }: { eventCount: number }) {
         </nav>
       </div>
 
-      <div className="flex items-center gap-5 text-[12px] text-foreground/30">
+      <div className="flex items-center gap-5 text-[12px] text-foreground/55">
         <span className="font-mono tracking-wide">{eventCount} events catalogued</span>
         <span className="w-px h-3 bg-overlay/10" />
         <span className="tracking-wider">{COVERAGE}</span>
