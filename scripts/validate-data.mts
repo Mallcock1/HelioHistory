@@ -172,13 +172,18 @@ if (checkDois) {
   // A confirmed 404 is an error (the DOI does not exist). Throttling, server
   // errors and network failures are retried and then reported as warnings, so
   // a flaky connection on a CI runner cannot fail the build on its own.
+  // CrossRef's "polite pool" (a mailto in the User-Agent) gets more reliable
+  // service; set CROSSREF_MAILTO in CI to opt in. Requests are also spaced out
+  // so a shared runner IP is not seen as a burst.
+  const mailto = process.env.CROSSREF_MAILTO;
+  const userAgent = `HelioHistory data validator (https://github.com/Mallcock1/HelioHistory${mailto ? `; mailto:${mailto}` : ""})`;
   type Lookup = { title: string } | "missing" | "unavailable";
   const seen = new Map<string, Lookup>();
   const lookup = async (doi: string): Promise<Lookup> => {
     for (let attempt = 1; attempt <= 3; attempt++) {
       try {
         const res = await fetch(`https://api.crossref.org/works/${encodeURIComponent(doi)}`, {
-          headers: { "User-Agent": "HelioHistory data validator (https://github.com/Mallcock1/HelioHistory)" },
+          headers: { "User-Agent": userAgent },
         });
         if (res.ok) return { title: ((await res.json()).message.title?.[0] ?? "") as string };
         if (res.status === 404) return "missing";
@@ -190,7 +195,10 @@ if (checkDois) {
     return "unavailable";
   };
   for (const { file, doi, title } of doiChecks) {
-    if (!seen.has(doi)) seen.set(doi, await lookup(doi));
+    if (!seen.has(doi)) {
+      seen.set(doi, await lookup(doi));
+      await new Promise((r) => setTimeout(r, 150));
+    }
     const rec = seen.get(doi)!;
     if (rec === "missing") errors.push(`${file}: DOI ${doi} does not resolve on CrossRef`);
     else if (rec === "unavailable") warnings.push(`${file}: could not reach CrossRef for DOI ${doi} (throttled or offline)`);
