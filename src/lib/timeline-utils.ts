@@ -203,7 +203,8 @@ export const ESTIMATED_HINT = "Reconstructed or estimated value, not an instrume
 
 /** Format a year number for display */
 export function formatYear(year: number): string {
-  if (year < 0) return `${Math.abs(Math.round(year))} BC`;
+  // BC years can run to five digits; group them ("12,350 BC") as the nav bar does.
+  if (year < 0) return `${Math.abs(Math.round(year)).toLocaleString("en-GB")} BC`;
   if (year < 1000) return `${Math.round(year)} AD`;
   return `${Math.round(year)}`;
 }

@@ -100,12 +100,12 @@ export default function AboutPage() {
               About &amp; Data
             </h1>
             <p className="text-sm text-foreground/70 leading-relaxed">
-              HelioHistory is an open, community-curated catalogue of major space
-              weather events from antiquity to the present: geomagnetic indices,
-              solar context, terrestrial impacts, and the scientific references
-              behind every record. The data are published as machine-readable
-              JSON and CSV, validated against a public JSON Schema, so anyone can
-              analyse, reuse, and build on them.
+              HelioHistory is an open catalogue of major space weather events,
+              from the last Ice Age to the present. Each record carries the
+              geomagnetic indices, solar context, terrestrial impacts and
+              scientific references behind it. The data are published as JSON
+              and CSV against a public schema, so anyone can analyse and build
+              on them.
             </p>
             <div className="flex flex-wrap gap-x-6 gap-y-1 text-xs text-foreground/40 pt-1">
               <span>
@@ -120,8 +120,7 @@ export default function AboutPage() {
           {/* Licensing */}
           <Section title="Licensing">
             <p className="text-sm text-foreground/60 leading-relaxed">
-              The project is dual-licensed so the data and the software can be
-              reused with the right terms for each.
+              The data and the software carry separate licences.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <div className="glass rounded-lg p-4 space-y-1.5">
@@ -130,8 +129,8 @@ export default function AboutPage() {
                   {PROJECT.dataLicense}
                 </p>
                 <p className="text-xs text-foreground/50 leading-relaxed">
-                  Free to share and adapt, including commercially, provided you
-                  give appropriate credit, i.e. cite the dataset.
+                  Share and adapt freely, including commercially, as long as
+                  you cite the dataset.
                 </p>
                 <a
                   href="https://creativecommons.org/licenses/by/4.0/"
@@ -148,8 +147,8 @@ export default function AboutPage() {
                   {PROJECT.codeLicense}
                 </p>
                 <p className="text-xs text-foreground/50 leading-relaxed">
-                  The application code (this website, the data pipeline, and
-                  charts) is permissively licensed for any use.
+                  The website, data pipeline and charts. Use them for anything;
+                  keep the licence notice.
                 </p>
                 <a
                   href={`${PROJECT.url}/blob/master/LICENSE`}
@@ -166,10 +165,10 @@ export default function AboutPage() {
           {/* How to cite */}
           <Section title="How to cite">
             <p className="text-sm text-foreground/60 leading-relaxed">
-              If you use HelioHistory data in research, writing, or a product,
-              please cite the dataset. Where you rely on a specific event, also
-              cite its primary sources; each event lists them, and the per-event
-              “Cite” button includes their DOIs.
+              Please cite the dataset when you use it. If you rely on a
+              specific event, cite its primary sources too: each event lists
+              them, and its “Cite” button produces a citation that includes
+              them.
             </p>
 
             <div className="glass rounded-lg p-4 space-y-2">
@@ -197,8 +196,8 @@ export default function AboutPage() {
             </div>
 
             <p className="text-xs text-foreground/40">
-              A versioned, DOI-archived release (via Zenodo) is planned; once
-              available, cite the specific version and DOI.
+              A versioned Zenodo release with its own DOI is planned; once it
+              exists, cite that version.
             </p>
           </Section>
 
@@ -229,10 +228,9 @@ export default function AboutPage() {
           {/* Data sources */}
           <Section title="Data sources">
             <p className="text-sm text-foreground/60 leading-relaxed">
-              The catalogue compiles published research (each event lists its
-              papers); the charts and timeline backdrop draw on these upstream
-              datasets, which should be credited alongside HelioHistory when
-              reused.
+              Event records compile published research, listed on each event.
+              The timeline backdrop and charts use the datasets below; credit
+              them alongside HelioHistory if you reuse that data.
             </p>
             <ul className="space-y-2">
               {DATA_SOURCES.map((d) => (
@@ -254,10 +252,10 @@ export default function AboutPage() {
           {/* Contributing */}
           <Section title="Contributing">
             <p className="text-sm text-foreground/60 leading-relaxed">
-              HelioHistory is a living archive. Corrections and new events are
-              welcome. Each event is a single JSON file validated against the
-              schema, and every quantitative claim should cite a source. See the
-              contributing guide to propose a change.
+              Corrections and new events are welcome. Each event is one JSON
+              file, validated against the schema, and every quantitative claim
+              needs a source. The contributing guide explains how to propose a
+              change.
             </p>
             <div className="flex flex-wrap gap-2">
               <a
